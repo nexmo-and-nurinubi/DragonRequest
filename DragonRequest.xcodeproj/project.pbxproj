@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1837F4451A4E484E00075299 /* dragon_orange_bt01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4391A4E484E00075299 /* dragon_orange_bt01@2x.png */; };
+		1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43A1A4E484E00075299 /* dragon_orange_bt02@2x.png */; };
+		1837F4471A4E484E00075299 /* dragon_orange_bt03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43B1A4E484E00075299 /* dragon_orange_bt03@2x.png */; };
+		1837F4481A4E484E00075299 /* dragon_orange_lr01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43C1A4E484E00075299 /* dragon_orange_lr01@2x.png */; };
+		1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43D1A4E484E00075299 /* dragon_orange_lr02@2x.png */; };
+		1837F44A1A4E484E00075299 /* dragon_orange_lr03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43E1A4E484E00075299 /* dragon_orange_lr03@2x.png */; };
+		1837F44B1A4E484E00075299 /* dragon_orange_rl01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F43F1A4E484E00075299 /* dragon_orange_rl01@2x.png */; };
+		1837F44C1A4E484E00075299 /* dragon_orange_rl02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4401A4E484E00075299 /* dragon_orange_rl02@2x.png */; };
+		1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4411A4E484E00075299 /* dragon_orange_rl03@2x.png */; };
+		1837F44E1A4E484E00075299 /* dragon_orange_tb01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4421A4E484E00075299 /* dragon_orange_tb01@2x.png */; };
+		1837F44F1A4E484E00075299 /* dragon_orange_tb02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4431A4E484E00075299 /* dragon_orange_tb02@2x.png */; };
+		1837F4501A4E484E00075299 /* dragon_orange_tb03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4441A4E484E00075299 /* dragon_orange_tb03@2x.png */; };
+		1837F45D1A4E48C100075299 /* bt01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4511A4E48C100075299 /* bt01.png */; };
+		1837F45E1A4E48C100075299 /* bt02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4521A4E48C100075299 /* bt02.png */; };
+		1837F45F1A4E48C100075299 /* bt03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4531A4E48C100075299 /* bt03.png */; };
+		1837F4601A4E48C100075299 /* lr01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4541A4E48C100075299 /* lr01.png */; };
+		1837F4611A4E48C100075299 /* lr02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4551A4E48C100075299 /* lr02.png */; };
+		1837F4621A4E48C100075299 /* lr03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4561A4E48C100075299 /* lr03.png */; };
+		1837F4631A4E48C100075299 /* rl01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4571A4E48C100075299 /* rl01.png */; };
+		1837F4641A4E48C100075299 /* rl02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4581A4E48C100075299 /* rl02.png */; };
+		1837F4651A4E48C100075299 /* rl03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4591A4E48C100075299 /* rl03.png */; };
+		1837F4661A4E48C100075299 /* tb01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F45A1A4E48C100075299 /* tb01.png */; };
+		1837F4671A4E48C100075299 /* tb02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F45B1A4E48C100075299 /* tb02.png */; };
+		1837F4681A4E48C100075299 /* tb03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F45C1A4E48C100075299 /* tb03.png */; };
+		1837F4791A4E48ED00075299 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4691A4E48ED00075299 /* back1.png */; };
+		1837F47A1A4E48ED00075299 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46A1A4E48ED00075299 /* back2.png */; };
+		1837F47B1A4E48ED00075299 /* back3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46B1A4E48ED00075299 /* back3.png */; };
+		1837F47C1A4E48ED00075299 /* back4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46C1A4E48ED00075299 /* back4.png */; };
+		1837F47D1A4E48ED00075299 /* front1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46D1A4E48ED00075299 /* front1.png */; };
+		1837F47E1A4E48ED00075299 /* front2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46E1A4E48ED00075299 /* front2.png */; };
+		1837F47F1A4E48ED00075299 /* front3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F46F1A4E48ED00075299 /* front3.png */; };
+		1837F4801A4E48ED00075299 /* front4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4701A4E48ED00075299 /* front4.png */; };
+		1837F4811A4E48ED00075299 /* left1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4711A4E48ED00075299 /* left1.png */; };
+		1837F4821A4E48ED00075299 /* left2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4721A4E48ED00075299 /* left2.png */; };
+		1837F4831A4E48ED00075299 /* left3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4731A4E48ED00075299 /* left3.png */; };
+		1837F4841A4E48ED00075299 /* left4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4741A4E48ED00075299 /* left4.png */; };
+		1837F4851A4E48ED00075299 /* right1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4751A4E48ED00075299 /* right1.png */; };
+		1837F4861A4E48ED00075299 /* right2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4761A4E48ED00075299 /* right2.png */; };
+		1837F4871A4E48ED00075299 /* right3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4771A4E48ED00075299 /* right3.png */; };
+		1837F4881A4E48ED00075299 /* right4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4781A4E48ED00075299 /* right4.png */; };
+		189F86121A32DCCE0016D4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F86111A32DCCE0016D4EE /* main.m */; };
+		189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F86141A32DCCE0016D4EE /* AppDelegate.m */; };
+		189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189F86161A32DCCE0016D4EE /* DragonRequest.xcdatamodeld */; };
+		189F861E1A32DCCE0016D4EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189F861C1A32DCCE0016D4EE /* Main.storyboard */; };
+		189F86201A32DCCE0016D4EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189F861F1A32DCCE0016D4EE /* Images.xcassets */; };
+		189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F86211A32DCCE0016D4EE /* LaunchScreen.xib */; };
+		189F862F1A32DCCE0016D4EE /* DragonRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F862E1A32DCCE0016D4EE /* DragonRequestTests.m */; };
+		18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */; };
+		18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */; };
+		18A0B2881A3C111100CDCF8A /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2811A3C111100CDCF8A /* Human.m */; };
+		18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2851A3C111100CDCF8A /* MyHero.m */; };
+		18A0B28C1A3C11C300CDCF8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18A0B28B1A3C11C300CDCF8A /* Info.plist */; };
+		18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B28D1A3C11EA00CDCF8A /* ViewController.m */; };
+		18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0B28F1A3C15C500CDCF8A /* taran.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		189F86291A32DCCE0016D4EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189F86041A32DCCE0016D4EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 189F860B1A32DCCE0016D4EE;
+			remoteInfo = DragonRequest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1837F4391A4E484E00075299 /* dragon_orange_bt01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_bt01@2x.png"; sourceTree = "<group>"; };
+		1837F43A1A4E484E00075299 /* dragon_orange_bt02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_bt02@2x.png"; sourceTree = "<group>"; };
+		1837F43B1A4E484E00075299 /* dragon_orange_bt03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_bt03@2x.png"; sourceTree = "<group>"; };
+		1837F43C1A4E484E00075299 /* dragon_orange_lr01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_lr01@2x.png"; sourceTree = "<group>"; };
+		1837F43D1A4E484E00075299 /* dragon_orange_lr02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_lr02@2x.png"; sourceTree = "<group>"; };
+		1837F43E1A4E484E00075299 /* dragon_orange_lr03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_lr03@2x.png"; sourceTree = "<group>"; };
+		1837F43F1A4E484E00075299 /* dragon_orange_rl01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_rl01@2x.png"; sourceTree = "<group>"; };
+		1837F4401A4E484E00075299 /* dragon_orange_rl02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_rl02@2x.png"; sourceTree = "<group>"; };
+		1837F4411A4E484E00075299 /* dragon_orange_rl03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_rl03@2x.png"; sourceTree = "<group>"; };
+		1837F4421A4E484E00075299 /* dragon_orange_tb01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_tb01@2x.png"; sourceTree = "<group>"; };
+		1837F4431A4E484E00075299 /* dragon_orange_tb02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_tb02@2x.png"; sourceTree = "<group>"; };
+		1837F4441A4E484E00075299 /* dragon_orange_tb03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon_orange_tb03@2x.png"; sourceTree = "<group>"; };
+		1837F4511A4E48C100075299 /* bt01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt01.png; sourceTree = "<group>"; };
+		1837F4521A4E48C100075299 /* bt02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt02.png; sourceTree = "<group>"; };
+		1837F4531A4E48C100075299 /* bt03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt03.png; sourceTree = "<group>"; };
+		1837F4541A4E48C100075299 /* lr01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lr01.png; sourceTree = "<group>"; };
+		1837F4551A4E48C100075299 /* lr02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lr02.png; sourceTree = "<group>"; };
+		1837F4561A4E48C100075299 /* lr03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lr03.png; sourceTree = "<group>"; };
+		1837F4571A4E48C100075299 /* rl01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rl01.png; sourceTree = "<group>"; };
+		1837F4581A4E48C100075299 /* rl02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rl02.png; sourceTree = "<group>"; };
+		1837F4591A4E48C100075299 /* rl03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rl03.png; sourceTree = "<group>"; };
+		1837F45A1A4E48C100075299 /* tb01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tb01.png; sourceTree = "<group>"; };
+		1837F45B1A4E48C100075299 /* tb02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tb02.png; sourceTree = "<group>"; };
+		1837F45C1A4E48C100075299 /* tb03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tb03.png; sourceTree = "<group>"; };
+		1837F4691A4E48ED00075299 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
+		1837F46A1A4E48ED00075299 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		1837F46B1A4E48ED00075299 /* back3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3.png; sourceTree = "<group>"; };
+		1837F46C1A4E48ED00075299 /* back4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4.png; sourceTree = "<group>"; };
+		1837F46D1A4E48ED00075299 /* front1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front1.png; sourceTree = "<group>"; };
+		1837F46E1A4E48ED00075299 /* front2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front2.png; sourceTree = "<group>"; };
+		1837F46F1A4E48ED00075299 /* front3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front3.png; sourceTree = "<group>"; };
+		1837F4701A4E48ED00075299 /* front4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front4.png; sourceTree = "<group>"; };
+		1837F4711A4E48ED00075299 /* left1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left1.png; sourceTree = "<group>"; };
+		1837F4721A4E48ED00075299 /* left2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left2.png; sourceTree = "<group>"; };
+		1837F4731A4E48ED00075299 /* left3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left3.png; sourceTree = "<group>"; };
+		1837F4741A4E48ED00075299 /* left4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left4.png; sourceTree = "<group>"; };
+		1837F4751A4E48ED00075299 /* right1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right1.png; sourceTree = "<group>"; };
+		1837F4761A4E48ED00075299 /* right2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right2.png; sourceTree = "<group>"; };
+		1837F4771A4E48ED00075299 /* right3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right3.png; sourceTree = "<group>"; };
+		1837F4781A4E48ED00075299 /* right4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right4.png; sourceTree = "<group>"; };
+		189F860C1A32DCCE0016D4EE /* DragonRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		189F86111A32DCCE0016D4EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		189F86131A32DCCE0016D4EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		189F86141A32DCCE0016D4EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		189F86171A32DCCE0016D4EE /* DragonRequest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonRequest.xcdatamodel; sourceTree = "<group>"; };
+		189F86191A32DCCE0016D4EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		189F861D1A32DCCE0016D4EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		189F861F1A32DCCE0016D4EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		189F86221A32DCCE0016D4EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		189F86281A32DCCE0016D4EE /* DragonRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		189F862D1A32DCCE0016D4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189F862E1A32DCCE0016D4EE /* DragonRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonRequestTests.m; sourceTree = "<group>"; };
+		18A0B2791A3C0F8E00CDCF8A /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = DragonRequest/Common/common.h; sourceTree = "<group>"; };
+		18A0B27C1A3C111100CDCF8A /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyBoss.h; path = DragonRequest/Soures/EnemyBoss.h; sourceTree = "<group>"; };
+		18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyBoss.m; path = DragonRequest/Soures/EnemyBoss.m; sourceTree = "<group>"; };
+		18A0B27E1A3C111100CDCF8A /* EnemyMarine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyMarine.h; path = DragonRequest/Soures/EnemyMarine.h; sourceTree = "<group>"; };
+		18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyMarine.m; path = DragonRequest/Soures/EnemyMarine.m; sourceTree = "<group>"; };
+		18A0B2801A3C111100CDCF8A /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Human.h; path = DragonRequest/Soures/Human.h; sourceTree = "<group>"; };
+		18A0B2811A3C111100CDCF8A /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Human.m; path = DragonRequest/Soures/Human.m; sourceTree = "<group>"; };
+		18A0B2841A3C111100CDCF8A /* MyHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyHero.h; path = DragonRequest/Soures/MyHero.h; sourceTree = "<group>"; };
+		18A0B2851A3C111100CDCF8A /* MyHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyHero.m; path = DragonRequest/Soures/MyHero.m; sourceTree = "<group>"; };
+		18A0B28B1A3C11C300CDCF8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A0B28D1A3C11EA00CDCF8A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18A0B28F1A3C15C500CDCF8A /* taran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = taran.jpg; path = DragonRequest/taran.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		189F86091A32DCCE0016D4EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189F86251A32DCCE0016D4EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		189F86031A32DCCE0016D4EE = {
+			isa = PBXGroup;
+			children = (
+				18A0B2781A3C0DFF00CDCF8A /* common */,
+				18A0B2761A3C067C00CDCF8A /* Objects */,
+				18A0B2771A3C0CC400CDCF8A /* Resource */,
+				189F860E1A32DCCE0016D4EE /* DragonRequest */,
+				189F862B1A32DCCE0016D4EE /* DragonRequestTests */,
+				189F860D1A32DCCE0016D4EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		189F860D1A32DCCE0016D4EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				189F860C1A32DCCE0016D4EE /* DragonRequest.app */,
+				189F86281A32DCCE0016D4EE /* DragonRequestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		189F860E1A32DCCE0016D4EE /* DragonRequest */ = {
+			isa = PBXGroup;
+			children = (
+				189F86191A32DCCE0016D4EE /* ViewController.h */,
+				18A0B28D1A3C11EA00CDCF8A /* ViewController.m */,
+				18A0B2751A3C05DB00CDCF8A /* App */,
+				189F860F1A32DCCE0016D4EE /* Supporting Files */,
+			);
+			path = DragonRequest;
+			sourceTree = "<group>";
+		};
+		189F860F1A32DCCE0016D4EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18A0B28B1A3C11C300CDCF8A /* Info.plist */,
+				189F86111A32DCCE0016D4EE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		189F862B1A32DCCE0016D4EE /* DragonRequestTests */ = {
+			isa = PBXGroup;
+			children = (
+				189F862E1A32DCCE0016D4EE /* DragonRequestTests.m */,
+				189F862C1A32DCCE0016D4EE /* Supporting Files */,
+			);
+			path = DragonRequestTests;
+			sourceTree = "<group>";
+		};
+		189F862C1A32DCCE0016D4EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				189F862D1A32DCCE0016D4EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18A0B2751A3C05DB00CDCF8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				189F86131A32DCCE0016D4EE /* AppDelegate.h */,
+				189F86141A32DCCE0016D4EE /* AppDelegate.m */,
+				189F861C1A32DCCE0016D4EE /* Main.storyboard */,
+				189F861F1A32DCCE0016D4EE /* Images.xcassets */,
+				189F86211A32DCCE0016D4EE /* LaunchScreen.xib */,
+				189F86161A32DCCE0016D4EE /* DragonRequest.xcdatamodeld */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		18A0B2761A3C067C00CDCF8A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				18A0B2801A3C111100CDCF8A /* Human.h */,
+				18A0B2811A3C111100CDCF8A /* Human.m */,
+				18A0B2841A3C111100CDCF8A /* MyHero.h */,
+				18A0B2851A3C111100CDCF8A /* MyHero.m */,
+				18A0B27E1A3C111100CDCF8A /* EnemyMarine.h */,
+				18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */,
+				18A0B27C1A3C111100CDCF8A /* EnemyBoss.h */,
+				18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		18A0B2771A3C0CC400CDCF8A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18A0B2E41A3C182500CDCF8A /* EnemyMarine */,
+				18A0B2E51A3C185E00CDCF8A /* human */,
+				18A0B2E31A3C17EB00CDCF8A /* boss */,
+				18A0B28F1A3C15C500CDCF8A /* taran.jpg */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		18A0B2781A3C0DFF00CDCF8A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				18A0B2791A3C0F8E00CDCF8A /* common.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		18A0B2E31A3C17EB00CDCF8A /* boss */ = {
+			isa = PBXGroup;
+			children = (
+				1837F4391A4E484E00075299 /* dragon_orange_bt01@2x.png */,
+				1837F43A1A4E484E00075299 /* dragon_orange_bt02@2x.png */,
+				1837F43B1A4E484E00075299 /* dragon_orange_bt03@2x.png */,
+				1837F43C1A4E484E00075299 /* dragon_orange_lr01@2x.png */,
+				1837F43D1A4E484E00075299 /* dragon_orange_lr02@2x.png */,
+				1837F43E1A4E484E00075299 /* dragon_orange_lr03@2x.png */,
+				1837F43F1A4E484E00075299 /* dragon_orange_rl01@2x.png */,
+				1837F4401A4E484E00075299 /* dragon_orange_rl02@2x.png */,
+				1837F4411A4E484E00075299 /* dragon_orange_rl03@2x.png */,
+				1837F4421A4E484E00075299 /* dragon_orange_tb01@2x.png */,
+				1837F4431A4E484E00075299 /* dragon_orange_tb02@2x.png */,
+				1837F4441A4E484E00075299 /* dragon_orange_tb03@2x.png */,
+			);
+			name = boss;
+			sourceTree = "<group>";
+		};
+		18A0B2E41A3C182500CDCF8A /* EnemyMarine */ = {
+			isa = PBXGroup;
+			children = (
+				1837F4691A4E48ED00075299 /* back1.png */,
+				1837F46A1A4E48ED00075299 /* back2.png */,
+				1837F46B1A4E48ED00075299 /* back3.png */,
+				1837F46C1A4E48ED00075299 /* back4.png */,
+				1837F46D1A4E48ED00075299 /* front1.png */,
+				1837F46E1A4E48ED00075299 /* front2.png */,
+				1837F46F1A4E48ED00075299 /* front3.png */,
+				1837F4701A4E48ED00075299 /* front4.png */,
+				1837F4711A4E48ED00075299 /* left1.png */,
+				1837F4721A4E48ED00075299 /* left2.png */,
+				1837F4731A4E48ED00075299 /* left3.png */,
+				1837F4741A4E48ED00075299 /* left4.png */,
+				1837F4751A4E48ED00075299 /* right1.png */,
+				1837F4761A4E48ED00075299 /* right2.png */,
+				1837F4771A4E48ED00075299 /* right3.png */,
+				1837F4781A4E48ED00075299 /* right4.png */,
+			);
+			name = EnemyMarine;
+			sourceTree = "<group>";
+		};
+		18A0B2E51A3C185E00CDCF8A /* human */ = {
+			isa = PBXGroup;
+			children = (
+				1837F4511A4E48C100075299 /* bt01.png */,
+				1837F4521A4E48C100075299 /* bt02.png */,
+				1837F4531A4E48C100075299 /* bt03.png */,
+				1837F4541A4E48C100075299 /* lr01.png */,
+				1837F4551A4E48C100075299 /* lr02.png */,
+				1837F4561A4E48C100075299 /* lr03.png */,
+				1837F4571A4E48C100075299 /* rl01.png */,
+				1837F4581A4E48C100075299 /* rl02.png */,
+				1837F4591A4E48C100075299 /* rl03.png */,
+				1837F45A1A4E48C100075299 /* tb01.png */,
+				1837F45B1A4E48C100075299 /* tb02.png */,
+				1837F45C1A4E48C100075299 /* tb03.png */,
+			);
+			name = human;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		189F860B1A32DCCE0016D4EE /* DragonRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189F86321A32DCCE0016D4EE /* Build configuration list for PBXNativeTarget "DragonRequest" */;
+			buildPhases = (
+				189F86081A32DCCE0016D4EE /* Sources */,
+				189F86091A32DCCE0016D4EE /* Frameworks */,
+				189F860A1A32DCCE0016D4EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragonRequest;
+			productName = DragonRequest;
+			productReference = 189F860C1A32DCCE0016D4EE /* DragonRequest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		189F86271A32DCCE0016D4EE /* DragonRequestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189F86351A32DCCE0016D4EE /* Build configuration list for PBXNativeTarget "DragonRequestTests" */;
+			buildPhases = (
+				189F86241A32DCCE0016D4EE /* Sources */,
+				189F86251A32DCCE0016D4EE /* Frameworks */,
+				189F86261A32DCCE0016D4EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				189F862A1A32DCCE0016D4EE /* PBXTargetDependency */,
+			);
+			name = DragonRequestTests;
+			productName = DragonRequestTests;
+			productReference = 189F86281A32DCCE0016D4EE /* DragonRequestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		189F86041A32DCCE0016D4EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					189F860B1A32DCCE0016D4EE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					189F86271A32DCCE0016D4EE = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 189F860B1A32DCCE0016D4EE;
+					};
+				};
+			};
+			buildConfigurationList = 189F86071A32DCCE0016D4EE /* Build configuration list for PBXProject "DragonRequest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 189F86031A32DCCE0016D4EE;
+			productRefGroup = 189F860D1A32DCCE0016D4EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				189F860B1A32DCCE0016D4EE /* DragonRequest */,
+				189F86271A32DCCE0016D4EE /* DragonRequestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		189F860A1A32DCCE0016D4EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1837F47B1A4E48ED00075299 /* back3.png in Resources */,
+				1837F4481A4E484E00075299 /* dragon_orange_lr01@2x.png in Resources */,
+				1837F44E1A4E484E00075299 /* dragon_orange_tb01@2x.png in Resources */,
+				1837F4661A4E48C100075299 /* tb01.png in Resources */,
+				1837F4811A4E48ED00075299 /* left1.png in Resources */,
+				1837F4631A4E48C100075299 /* rl01.png in Resources */,
+				1837F4851A4E48ED00075299 /* right1.png in Resources */,
+				1837F45D1A4E48C100075299 /* bt01.png in Resources */,
+				1837F4451A4E484E00075299 /* dragon_orange_bt01@2x.png in Resources */,
+				1837F47D1A4E48ED00075299 /* front1.png in Resources */,
+				1837F4791A4E48ED00075299 /* back1.png in Resources */,
+				1837F4831A4E48ED00075299 /* left3.png in Resources */,
+				1837F47F1A4E48ED00075299 /* front3.png in Resources */,
+				1837F4621A4E48C100075299 /* lr03.png in Resources */,
+				1837F44F1A4E484E00075299 /* dragon_orange_tb02@2x.png in Resources */,
+				1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */,
+				1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */,
+				1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */,
+				1837F4861A4E48ED00075299 /* right2.png in Resources */,
+				1837F4801A4E48ED00075299 /* front4.png in Resources */,
+				189F861E1A32DCCE0016D4EE /* Main.storyboard in Resources */,
+				189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */,
+				1837F4471A4E484E00075299 /* dragon_orange_bt03@2x.png in Resources */,
+				1837F4821A4E48ED00075299 /* left2.png in Resources */,
+				1837F4881A4E48ED00075299 /* right4.png in Resources */,
+				1837F4681A4E48C100075299 /* tb03.png in Resources */,
+				1837F4501A4E484E00075299 /* dragon_orange_tb03@2x.png in Resources */,
+				1837F45E1A4E48C100075299 /* bt02.png in Resources */,
+				1837F44A1A4E484E00075299 /* dragon_orange_lr03@2x.png in Resources */,
+				1837F4641A4E48C100075299 /* rl02.png in Resources */,
+				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,
+				1837F44C1A4E484E00075299 /* dragon_orange_rl02@2x.png in Resources */,
+				1837F4841A4E48ED00075299 /* left4.png in Resources */,
+				1837F45F1A4E48C100075299 /* bt03.png in Resources */,
+				18A0B28C1A3C11C300CDCF8A /* Info.plist in Resources */,
+				1837F47A1A4E48ED00075299 /* back2.png in Resources */,
+				1837F44B1A4E484E00075299 /* dragon_orange_rl01@2x.png in Resources */,
+				1837F47C1A4E48ED00075299 /* back4.png in Resources */,
+				1837F47E1A4E48ED00075299 /* front2.png in Resources */,
+				1837F4871A4E48ED00075299 /* right3.png in Resources */,
+				1837F4671A4E48C100075299 /* tb02.png in Resources */,
+				1837F4651A4E48C100075299 /* rl03.png in Resources */,
+				189F86201A32DCCE0016D4EE /* Images.xcassets in Resources */,
+				1837F4601A4E48C100075299 /* lr01.png in Resources */,
+				1837F4611A4E48C100075299 /* lr02.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189F86261A32DCCE0016D4EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		189F86081A32DCCE0016D4EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A0B2881A3C111100CDCF8A /* Human.m in Sources */,
+				18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */,
+				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
+				18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */,
+				18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */,
+				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
+				189F86121A32DCCE0016D4EE /* main.m in Sources */,
+				18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189F86241A32DCCE0016D4EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189F862F1A32DCCE0016D4EE /* DragonRequestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		189F862A1A32DCCE0016D4EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 189F860B1A32DCCE0016D4EE /* DragonRequest */;
+			targetProxy = 189F86291A32DCCE0016D4EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		189F861C1A32DCCE0016D4EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189F861D1A32DCCE0016D4EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		189F86211A32DCCE0016D4EE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189F86221A32DCCE0016D4EE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		189F86301A32DCCE0016D4EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		189F86311A32DCCE0016D4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		189F86331A32DCCE0016D4EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DragonRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		189F86341A32DCCE0016D4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DragonRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		189F86361A32DCCE0016D4EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DragonRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonRequest.app/DragonRequest";
+			};
+			name = Debug;
+		};
+		189F86371A32DCCE0016D4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DragonRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonRequest.app/DragonRequest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		189F86071A32DCCE0016D4EE /* Build configuration list for PBXProject "DragonRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189F86301A32DCCE0016D4EE /* Debug */,
+				189F86311A32DCCE0016D4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189F86321A32DCCE0016D4EE /* Build configuration list for PBXNativeTarget "DragonRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189F86331A32DCCE0016D4EE /* Debug */,
+				189F86341A32DCCE0016D4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189F86351A32DCCE0016D4EE /* Build configuration list for PBXNativeTarget "DragonRequestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189F86361A32DCCE0016D4EE /* Debug */,
+				189F86371A32DCCE0016D4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		189F86161A32DCCE0016D4EE /* DragonRequest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				189F86171A32DCCE0016D4EE /* DragonRequest.xcdatamodel */,
+			);
+			currentVersion = 189F86171A32DCCE0016D4EE /* DragonRequest.xcdatamodel */;
+			path = DragonRequest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 189F86041A32DCCE0016D4EE /* Project object */;
+}
