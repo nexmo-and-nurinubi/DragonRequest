@@ -99,9 +99,13 @@
 
 -(void)moveRand
 {
-    DirectionType direction = (DirectionType)random() % 4;
+    if (_moveRestCount == 0) {
+        _direction = (DirectionType)arc4random() % 4;
+        _moveRestCount = arc4random() % maxMoveCount + 1;
+    }
+    _moveRestCount--;
     
-    [self move:direction];
+    [self move:_direction];
     
 }
 -(void)stopToWalk
@@ -114,8 +118,6 @@
 {
     
     CGPoint position = self.position;
-    
-    NSLog(@"move ");
     
     switch (direction) {
             
