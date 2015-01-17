@@ -40,8 +40,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 // ヒーロー初期情報
 #define heroStepX                       12
 #define heroStepY                       12
-#define heroImageSizeWidth              6
-#define heroImageSizeHeight             6
+#define heroImageSizeWidth              16
+#define heroImageSizeHeight             16
 
 #define heroDefaultName                 @"まさと"
 #define heroDefaultPower                50

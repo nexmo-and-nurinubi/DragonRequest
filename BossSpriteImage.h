@@ -1,33 +1,33 @@
 //
-//  EnemyBoss.h
-//  textgame
+//  BossSpriteImage.h
+//  DragonRequest
 //
-//  Created by masato_arai2 on 2014/11/05.
-//  Copyright (c) 2014年 masato_arai2. All rights reserved.
+//  Created by 長沢　遼 on 2015/01/17.
+//  Copyright (c) 2015年 Apple. All rights reserved.
 //
-//-----------------------------------------------------------
-// EnemyBoss
-//-----------------------------------------------------------
 
-#import "Human.h"
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "heroSpriteImageTrim.h"
-#import "BossSpriteImage.h"
 
-@interface EnemyBoss : Human
-@property (nonatomic) UIImage *orgImage;
+@interface BossSpriteImage: NSObject
+
+
+@property (nonatomic) UIImage *image;
 
 @property (nonatomic) int width;
 @property (nonatomic) int height;
 
+//@property (nonatomic) NSString *imageName;
 
 @property (nonatomic) NSArray *frontArray;
 @property (nonatomic) NSArray *backArray;
 @property (nonatomic) NSArray *leftArray;
 @property (nonatomic) NSArray *rightArray;
+
 - (id)initWithImageName:(NSString *)imageName
          charactarWidth:(int)charactarWidth
         charactarHeight:(int)charactarHeiht;
+
+
 
 @end
