@@ -32,17 +32,17 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define screenSizeY                 568
 
 // ヒュマン初期情報
-#define humanStepX                    4
-#define humanStepY                    4
-#define humanImageSizeWidth              24
-#define humanImageSizeHeight             24
+#define humanStepX                      8
+#define humanStepY                      8
+#define humanImageSizeWidth             16
+#define humanImageSizeHeight            16
 #define maxMoveCount                    5
 
 // ヒーロー初期情報
-#define heroStepX                       12
-#define heroStepY                       12
-#define heroImageSizeWidth              6
-#define heroImageSizeHeight             6
+#define heroStepX                       8
+#define heroStepY                       8
+#define heroImageSizeWidth              16
+#define heroImageSizeHeight             16
 
 #define heroDefaultName                 @"まさと"
 #define heroDefaultPower                50
@@ -52,10 +52,10 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 //marine初期情報
 #define marineMoveTimeInterval          1.0f
-#define marineStepX                     10
-#define marineStepY                     10
-#define marineImageSizeWidth            24
-#define marineImageSizeHeight           24
+#define marineStepX                     8
+#define marineStepY                     8
+#define marineImageSizeWidth            16
+#define marineImageSizeHeight           16
 
 #define marineDefaultName               @"Marine"
 #define marineDefaultPower              10
@@ -66,8 +66,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 //boss初期情報
 #define bossMoveTimeInterval            1.0f
 
-#define bossStepX                       20
-#define bossStepY                       20
+#define bossStepX                       16
+#define bossStepY                       16
 #define bossImageSizeWidth              48
 #define bossImageSizeHeight             48
 

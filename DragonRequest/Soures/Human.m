@@ -147,8 +147,8 @@
             break;
     }
     
-    position.x = MIN(MAX(0,position.x),_screenSizeX-_stepX); //限界地点判別
-    position.y = MIN(MAX(0,position.y),_screenSizeY-_stepY); //限界地点判別
+    position.x = MIN(MAX(0,position.x),_screenSizeX-_imageWidth); //限界地点判別
+    position.y = MIN(MAX(0,position.y),_screenSizeY-_imageHeight); //限界地点判別
     
     self.position = position;
     
