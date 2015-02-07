@@ -11,7 +11,7 @@
 @implementation EnemyBoss
 
 - (id)init :(CGPoint)initPos{
-
+    
     self = [super init:initPos];
     
     if (self) {
@@ -37,7 +37,7 @@
 {
     NSLog(@"EnemyBoss Image");
     
-    UIImage *img = [UIImage imageNamed:@"front01.png"];
+    UIImage *img = [UIImage imageNamed:@"dragon3.png"];
     
     if(_animationImage == nil)
         _animationImage = [[UIImageView alloc]initWithImage:img];
@@ -46,46 +46,44 @@
     [parentView addSubview:_animationImage];
     
 }
--(void)setAnimation:(DirectionType)direction
-{
-    NSArray *ImsArray = nil;
+
+- (UIImage *)createImageArrayWithPosX:(int)posX posY:(int)posY {
     
+    CGRect trimArea = CGRectMake(posX, posY, _imageWidth, _imageHeight);
+    CGImageRef imageRef = [_orgImage CGImage];
+    CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
+    UIImage *trimeImage = [UIImage imageWithCGImage:trimeImageRef];
+    
+    return trimeImage;
+}-(void)setAnimation:(DirectionType)direction
+{
+    NSArray *imsArray = nil;
+    
+    _width = 48;
+    _height = 48;
+    
+    BossSpriteImage *bossSpriteImage = [[BossSpriteImage alloc] initWithImageName:@"dragon1.png" charactarWidth:73 charactarHeight:58];
     
     if (direction == DirectionTypeFromRightToLeft) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"dragon_orange_rl01@2x.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"dragon_orange_rl02@2x.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"dragon_orange_rl03@2x.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        imsArray = bossSpriteImage.rightArray;
     }
     if (direction == DirectionTypeFromLeftToRight) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"dragon_orange_lr01@2x.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"dragon_orange_lr02@2x.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"dragon_orange_lr03@2x.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
-        
+        imsArray= bossSpriteImage.leftArray;
     }
     if (direction == DirectionTypeFromBottomToTop) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"dragon_orange_bt01@2x.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"dragon_orange_bt02@2x.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"dragon_orange_bt03@2x.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        imsArray = bossSpriteImage.backArray;
     }
     if (direction == DirectionTypeFromTopToBottom) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"dragon_orange_tb01@2x.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"dragon_orange_tb02@2x.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"dragon_orange_tb03@2x.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        imsArray = bossSpriteImage.frontArray;
     }
     
-    _animationImage.animationImages = ImsArray;
+    _animationImage.animationImages = imsArray;
     _animationImage.animationDuration = 0.5;
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,
                                        bossImageSizeWidth,bossImageSizeHeight);
     
+    [_animationImage startAnimating];
 }
+
 
 @end
