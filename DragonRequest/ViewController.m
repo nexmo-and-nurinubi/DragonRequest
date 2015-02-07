@@ -37,8 +37,26 @@
     [timer fire];
 }
 
+
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
+    //タッチイベントを取り出す
+    UITouch *touch = [touches anyObject];
+    //タッチイベントから座標を取得
+    CGPoint point = [touch locationInView:self.view];
+    //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
+   
+    [_enemyBoss moveRand];
+
+    [_hero moveToPoint:point];
+}
+
 - (void)bossMove{
     [_enemyBoss moveRand];
+
 }
 
 
@@ -55,7 +73,8 @@
     
     //Bossのインスタンス作成
     CGPoint bossPos = CGPointMake(100,screenSizeY/2);
-    _enemyBoss = [[EnemyBoss alloc]init:bossPos];
+    _enemyBoss = [[EnemyBoss alloc] init:bossPos
+                                   alpha:1.0];
     _enemyBoss.orgImage = [UIImage imageNamed:@"dragonSprite_orange.png"];
     //Bossのイメージを設定
     [_enemyBoss setImage:self.view];
@@ -78,7 +97,6 @@
     [super didReceiveMemoryWarning];
 
 }
-
 
 - (IBAction)moveAction:(id)sender {
     

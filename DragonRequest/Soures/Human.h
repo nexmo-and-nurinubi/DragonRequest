@@ -41,6 +41,8 @@
     int _screenSizeY;
     
     
+    // 透明度
+    float alphaFloat;
 }
 
 //キャラクター名
@@ -58,7 +60,12 @@
 //自分のキャラクターサイズ
 @property (nonatomic,assign) CGRect frameSize;
 
+
+
 - (id)init :(CGPoint)initPos;
+/** 透明度を設定したい！！ */
+- (id)init :(CGPoint)initPos
+      alpha:(float)alpha;
 
 - (NSString *)whoAreYou;
 - (NSString *)whereAreYou;
@@ -68,6 +75,7 @@
 -(void)removeImage;
 -(void)moveRand;
 -(void)move:(DirectionType) direction;
+-(void)moveToPoint:(CGPoint)toPoint;
 -(void)stopToWalk;
 -(void)setAnimation:(DirectionType)direction;
 

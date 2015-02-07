@@ -26,8 +26,8 @@
 @property (nonatomic) NSArray *backArray;
 @property (nonatomic) NSArray *leftArray;
 @property (nonatomic) NSArray *rightArray;
-- (id)initWithImageName:(NSString *)imageName
-         charactarWidth:(int)charactarWidth
-        charactarHeight:(int)charactarHeiht;
+//- (id)initWithImageName:(NSString *)imageName
+//         charactarWidth:(int)charactarWidth
+//        charactarHeight:(int)charactarHeiht;
 
 @end
