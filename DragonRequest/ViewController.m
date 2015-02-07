@@ -120,25 +120,33 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    CGPoint h_position = _hero.position;
+    CGPoint e_position = _enemyMarine.position;
+    CGPoint b_position = _enemyBoss.position;
+
     UITouch *touch = [touches anyObject];
     NSInteger tag = touch.view.tag;
     BOOL dead = NO;
     switch (tag) {
         case HumanTypeEnemy:
-            dead = [_hero fight:_enemyMarine];
-            if (dead) {
-                [_enemyMarine removeImage];
-                _enemyMarine = nil;
+            if (ABS(h_position.x - e_position.x) <= heroReach && ABS(h_position.y - e_position.y) <= heroReach) {
+                dead = [_hero fight:_enemyMarine];
+                if (dead) {
+                    [_enemyMarine removeImage];
+                    _enemyMarine = nil;
+                }
             }
             break;
         case HumanTypeHero:
-            //なし
+            // 処理なし
             break;
         case HumanTypeBoss:
-            dead = [_hero fight:_enemyBoss];
-            if (dead) {
-                [_enemyBoss removeImage];
-                _enemyBoss = nil;
+            if (ABS(h_position.x - b_position.x) <= heroReach && ABS(h_position.y - b_position.y) <= heroReach) {
+                dead = [_hero fight:_enemyBoss];
+                if (dead) {
+                    [_enemyBoss removeImage];
+                    _enemyBoss = nil;
+                }
             }
             break;
         default:
