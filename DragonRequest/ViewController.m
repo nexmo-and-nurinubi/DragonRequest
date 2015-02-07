@@ -32,8 +32,9 @@
     [super viewDidLoad];
     
     [self reset];
-    self.view.multipleTouchEnabled = YES;
-        
+    
+    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    [timer fire];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -47,6 +48,10 @@
     [_enemyBoss moveRand];
 
     [_hero moveToPoint:point];
+}
+
+- (void)bossMove{
+    [_enemyBoss moveRand];
 
 }
 
