@@ -23,6 +23,8 @@
     _stepX = humanStepX;
     _stepY = humanStepY;
     
+    _reach = humanReach;
+    
     _screenSizeX = screenSizeX;
     _screenSizeY = screenSizeY;
     
@@ -101,9 +103,11 @@
 - (BOOL)fight:(Human *)target {
     
     //human super class
-    target.power -= self.minusPower;
-    if (target.power <= 0) {
-        return YES;
+    if (ABS(self.position.x - target.position.x) <= _reach && ABS(self.position.y - target.position.y) <= _reach) {
+        target.power -= self.minusPower;
+        if (target.power <= 0) {
+            return YES;
+        }
     }
     
     return NO;

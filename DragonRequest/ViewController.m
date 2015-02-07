@@ -43,15 +43,41 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
-    //タッチイベントを取り出す
+    //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
+    NSInteger tag = touch.view.tag;
+    
     //タッチイベントから座標を取得
     CGPoint point = [touch locationInView:self.view];
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
-   
+    
     [_enemyBoss moveRand];
-
+    
     [_hero moveToPoint:point];
+    
+    //タッチしたのが敵なら攻撃する
+    BOOL dead = NO;
+    switch (tag) {
+        case HumanTypeEnemy:
+            dead = [_hero fight:_enemyMarine];
+            if (dead) {
+                [_enemyMarine removeImage];
+                _enemyMarine = nil;
+            }
+            break;
+        case HumanTypeHero:
+            // 処理なし
+            break;
+        case HumanTypeBoss:
+            dead = [_hero fight:_enemyBoss];
+            if (dead) {
+                [_enemyBoss removeImage];
+                _enemyBoss = nil;
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)bossMove{
@@ -135,41 +161,6 @@
     //キャラクター位置出力
     _positionTextField.text = [_enemyBoss whereAreYou];
 
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    CGPoint h_position = _hero.position;
-    CGPoint e_position = _enemyMarine.position;
-    CGPoint b_position = _enemyBoss.position;
-
-    UITouch *touch = [touches anyObject];
-    NSInteger tag = touch.view.tag;
-    BOOL dead = NO;
-    switch (tag) {
-        case HumanTypeEnemy:
-            if (ABS(h_position.x - e_position.x) <= heroReach && ABS(h_position.y - e_position.y) <= heroReach) {
-                dead = [_hero fight:_enemyMarine];
-                if (dead) {
-                    [_enemyMarine removeImage];
-                    _enemyMarine = nil;
-                }
-            }
-            break;
-        case HumanTypeHero:
-            // 処理なし
-            break;
-        case HumanTypeBoss:
-            if (ABS(h_position.x - b_position.x) <= heroReach && ABS(h_position.y - b_position.y) <= heroReach) {
-                dead = [_hero fight:_enemyBoss];
-                if (dead) {
-                    [_enemyBoss removeImage];
-                    _enemyBoss = nil;
-                }
-            }
-            break;
-        default:
-            break;
-    }
 }
 
 @end

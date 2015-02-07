@@ -36,6 +36,9 @@
     int _stepX;
     int _stepY;
     
+    //攻撃範囲
+    int _reach;
+    
     //画面サイズ
     int _screenSizeX;
     int _screenSizeY;

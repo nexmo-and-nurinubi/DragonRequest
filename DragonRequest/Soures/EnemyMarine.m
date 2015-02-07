@@ -26,6 +26,8 @@
         _stepX = marineStepX;
         _stepY = marineStepY;
         
+        _reach = marineReach;
+        
         _imageWidth = marineImageSizeWidth;
         _imageHeight = marineImageSizeHeight;
         

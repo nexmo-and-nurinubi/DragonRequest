@@ -26,6 +26,8 @@
         _stepX = bossStepX;
         _stepY = bossStepY;
         
+        _reach = bossReach;
+        
         _imageWidth = bossImageSizeWidth;
         _imageHeight = bossImageSizeHeight;
         

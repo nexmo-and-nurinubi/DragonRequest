@@ -26,6 +26,8 @@
         _stepX = heroStepX;
         _stepY = heroStepY;
         
+        _reach = heroReach;
+        
         _imageWidth = heroImageSizeWidth;
         _imageHeight = heroImageSizeHeight;
         
