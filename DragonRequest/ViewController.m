@@ -32,7 +32,13 @@
     [super viewDidLoad];
     
     [self reset];
-        
+    
+    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    [timer fire];
+}
+
+- (void)bossMove{
+    [_enemyBoss moveRand];
 }
 
 
@@ -75,8 +81,6 @@
 
 
 - (IBAction)moveAction:(id)sender {
-    
-    [_enemyBoss moveRand];
     
     DirectionType direction = DirectionTypeFromLeftToRight;
     
