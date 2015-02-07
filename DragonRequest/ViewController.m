@@ -36,9 +36,13 @@
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
     [timer fire];
 }
+
+
+
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touches count : %d (touchesBegan:withEvent:)", [touches count]);
+    NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントを取り出す
     UITouch *touch = [touches anyObject];
     //タッチイベントから座標を取得
@@ -69,7 +73,8 @@
     
     //Bossのインスタンス作成
     CGPoint bossPos = CGPointMake(100,screenSizeY/2);
-    _enemyBoss = [[EnemyBoss alloc]init:bossPos];
+    _enemyBoss = [[EnemyBoss alloc] init:bossPos
+                                   alpha:1.0];
     _enemyBoss.orgImage = [UIImage imageNamed:@"dragonSprite_orange.png"];
     //Bossのイメージを設定
     [_enemyBoss setImage:self.view];

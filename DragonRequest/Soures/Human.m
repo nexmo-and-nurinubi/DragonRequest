@@ -12,6 +12,33 @@
     
 }
 
+
+- (void)posInitWithPoint:(CGPoint)point
+{
+    self.position = CGPointMake(point.x, point.y);
+    
+    self.name = @"human";
+    self.power = 0;
+    
+    _stepX = humanStepX;
+    _stepY = humanStepY;
+    
+    _screenSizeX = screenSizeX;
+    _screenSizeY = screenSizeY;
+    
+    _imageWidth = humanImageSizeWidth;
+    _imageHeight = humanImageSizeHeight;
+    
+    _animationImage = nil;
+    
+    
+    // デフォルトでは透明度を１にしておく
+    alphaFloat = 1;
+    
+    srand((unsigned)time(NULL));
+}
+
+
 - (id)init {
     
     self = [super init];
@@ -19,34 +46,41 @@
     return self;
 }
 
+
 - (id)init :(CGPoint)initPos{
 
     self = [super init];
     
     if (self) {
         
-        self.position = CGPointMake(initPos.x, initPos.y);
-        
-        self.name = @"human";
-        self.power = 0;
-        
-        _stepX = humanStepX;
-        _stepY = humanStepY;
-        
-        _screenSizeX = screenSizeX;
-        _screenSizeY = screenSizeY;
-        
-        _imageWidth = humanImageSizeWidth;
-        _imageHeight = humanImageSizeHeight;
-        
-        _animationImage = nil;
-        
-        srand((unsigned)time(NULL));
+        [self posInitWithPoint:initPos];
     }
     
     return self;
    
 }
+
+
+/** 透明度を設定したい！！ */
+- (id)init :(CGPoint)initPos
+      alpha:(float)alpha {
+    
+    self = [super init];
+    
+    if (self) {
+        
+        [self posInitWithPoint:initPos];
+        
+        
+        // 透明度を設定
+        alphaFloat = alpha;
+    }
+    
+    return self;
+    
+}
+
+
 
 - (NSString *)whoAreYou {
     
@@ -114,7 +148,10 @@
    
 }
 
--(void)moveToPoint:(CGPoint)toPoint
+
+
+/** アニメーションの設定、開始 */
+- (void)moveToPoint:(CGPoint)toPoint
 {
     
     CGPoint fromPoint = self.position;
@@ -166,6 +203,11 @@
         [self setAnimation:direction];
     }
     
+    
+    
+//    _animationImage.alpha = alphaFloat;
+    
+    
 
     [_animationImage startAnimating];
 
@@ -175,7 +217,7 @@
 }
 
 
--(void)move:(DirectionType) direction
+- (void)move:(DirectionType) direction
 {
     
     CGPoint position = self.position;

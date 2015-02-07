@@ -17,6 +17,7 @@
 @property (nonatomic) int width;
 @property (nonatomic) int height;
 
+
 //@property (nonatomic) NSString *imageName;
 
 @property (nonatomic) NSArray *frontArray;
