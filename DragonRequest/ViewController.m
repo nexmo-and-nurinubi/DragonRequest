@@ -119,5 +119,31 @@
 
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    NSInteger tag = touch.view.tag;
+    BOOL dead = NO;
+    switch (tag) {
+        case HumanTypeEnemy:
+            dead = [_hero fight:_enemyMarine];
+            if (dead) {
+                [_enemyMarine removeImage];
+                _enemyMarine = nil;
+            }
+            break;
+        case HumanTypeHero:
+            //なし
+            break;
+        case HumanTypeBoss:
+            dead = [_hero fight:_enemyBoss];
+            if (dead) {
+                [_enemyBoss removeImage];
+                _enemyBoss = nil;
+            }
+            break;
+        default:
+            break;
+    }
+}
 
 @end

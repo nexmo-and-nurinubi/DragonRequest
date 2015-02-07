@@ -39,8 +39,11 @@
     
     UIImage *img = [UIImage imageNamed:@"dragon3.png"];
     
-    if(_animationImage == nil)
+    if(_animationImage == nil){
         _animationImage = [[UIImageView alloc]initWithImage:img];
+        _animationImage.tag = HumanTypeBoss;
+        _animationImage.userInteractionEnabled = YES;
+    }
     
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     [parentView addSubview:_animationImage];

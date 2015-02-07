@@ -62,9 +62,10 @@
 
 - (NSString *)whoAreYou;
 - (NSString *)whereAreYou;
-- (NSString *)fight:(NSInteger)enemyPower;
+- (BOOL)fight:(Human *)target;
 
 -(void)setImage:(UIView *)parentView;
+-(void)removeImage;
 -(void)moveRand;
 -(void)move:(DirectionType) direction;
 -(void)stopToWalk;

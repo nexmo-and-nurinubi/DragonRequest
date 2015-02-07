@@ -67,8 +67,11 @@
     
     UIImage *img = [UIImage imageNamed:@"hero3.png"];
     
-    if(_animationImage == nil)
+    if(_animationImage == nil){
         _animationImage = [[UIImageView alloc]initWithImage:img];
+        _animationImage.tag = HumanTypeHero;
+        _animationImage.userInteractionEnabled = YES;
+    }
     
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     

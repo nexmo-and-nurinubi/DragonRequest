@@ -10,7 +10,7 @@
 //-----------------------------------------------------------
 
 typedef NS_ENUM(NSUInteger, HumanType) {
-    HumanTypeEnemy,
+    HumanTypeEnemy = 100,
     HumanTypeHero,
     HumanTypeBoss
 };
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define marineImageSizeHeight           16
 
 #define marineDefaultName               @"Marine"
-#define marineDefaultPower              10
+#define marineDefaultPower              50
 #define marineMinusPower                1
 #define marineDefaultPosX               10
 #define marineDefaultPosY               10
@@ -73,7 +73,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossImageSizeHeight             48
 
 #define bossDefaultName                 @"Boss"
-#define bossDefaultPower                10
+#define bossDefaultPower                100
 #define bossMinusPower                  1
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10

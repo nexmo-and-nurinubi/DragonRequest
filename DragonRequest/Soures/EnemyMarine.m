@@ -40,8 +40,11 @@
     
     UIImage *img = [UIImage imageNamed:@"front1.png"];
     
-    if(_animationImage == nil)
+    if(_animationImage == nil){
         _animationImage = [[UIImageView alloc]initWithImage:img];
+        _animationImage.tag = HumanTypeEnemy;
+        _animationImage.userInteractionEnabled = YES;
+    }
     
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     [parentView addSubview:_animationImage];

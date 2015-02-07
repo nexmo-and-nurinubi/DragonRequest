@@ -64,12 +64,15 @@
     return str;
 }
 
-- (NSString *)fight:(NSInteger)enemyPower {
+- (BOOL)fight:(Human *)target {
     
     //human super class
+    target.power -= self.minusPower;
+    if (target.power <= 0) {
+        return YES;
+    }
     
-    return nil;
-    
+    return NO;
 }
 
 - (NSString *)sayToWin:(NSInteger)power {
@@ -95,6 +98,11 @@
 -(void)setAnimation:(DirectionType)direction
 {
     
+}
+
+- (void)removeImage
+{
+    [_animationImage removeFromSuperview];
 }
 
 -(void)moveRand
