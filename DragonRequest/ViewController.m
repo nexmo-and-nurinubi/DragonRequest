@@ -93,7 +93,6 @@
 
 }
 
-
 - (IBAction)moveAction:(id)sender {
     
     DirectionType direction = DirectionTypeFromLeftToRight;

@@ -136,7 +136,6 @@
 
     if(deltaX>0){
         
-        direction = DirectionTypeFromLeftToRight;
         fromPoint.x+=_stepX;
         self.position = fromPoint;
         [self setAnimation:direction];
@@ -144,7 +143,6 @@
     }
     else if(deltaX<0){
         
-        direction = DirectionTypeFromRightToLeft;
         fromPoint.x-=_stepX;
         self.position = fromPoint;
         [self setAnimation:direction];
@@ -152,7 +150,6 @@
 
     if(deltaY>0){
         
-        direction = DirectionTypeFromTopToBottom;
         fromPoint.y+=_stepY;
         self.position = fromPoint;
         [self setAnimation:direction];
@@ -160,13 +157,28 @@
     }
     else if(deltaY<0){
         
-        direction = DirectionTypeFromBottomToTop;
         fromPoint.y-=_stepY;
         self.position = fromPoint;
         [self setAnimation:direction];
     }
-    
 
+    if(abs(deltaX)>=abs(deltaY)){
+        
+        if(deltaX> 0)
+            direction = DirectionTypeFromLeftToRight;
+        else
+            direction = DirectionTypeFromRightToLeft;
+        
+    }else{
+        
+        if(deltaY > 0)
+            direction = DirectionTypeFromTopToBottom;
+        else
+            direction = DirectionTypeFromBottomToTop;
+        
+    }
+    
+    [self setAnimation:direction];
     [_animationImage startAnimating];
 
     NSLog(@"position: %@",NSStringFromCGPoint(self.position));
