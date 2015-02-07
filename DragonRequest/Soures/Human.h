@@ -64,6 +64,7 @@
 -(void)setImage:(UIView *)parentView;
 -(void)moveRand;
 -(void)move:(DirectionType) direction;
+-(void)moveToPoint:(CGPoint)toPoint;
 -(void)stopToWalk;
 -(void)setAnimation:(DirectionType)direction;
 

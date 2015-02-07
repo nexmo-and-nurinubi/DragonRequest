@@ -110,6 +110,67 @@
    
 }
 
+-(void)moveToPoint:(CGPoint)toPoint
+{
+    
+    CGPoint fromPoint = self.position;
+
+    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
+    NSLog(@"toPoint: %@",NSStringFromCGPoint(toPoint));
+    
+    if((fromPoint.x == toPoint.x)&&
+       (fromPoint.y == toPoint.y)){
+        
+        return ;
+        
+    }
+
+    float deltaX = toPoint.x - fromPoint.x;
+    float deltaY = toPoint.y - fromPoint.y;
+    
+    DirectionType direction = DirectionTypeFromLeftToRight;
+
+    if(deltaX>0){
+        
+        direction = DirectionTypeFromLeftToRight;
+        fromPoint.x+=_stepX;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+        
+    }
+    else if(deltaX<0){
+        
+        direction = DirectionTypeFromRightToLeft;
+        fromPoint.x-=_stepX;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+    }
+
+    if(deltaY>0){
+        
+        direction = DirectionTypeFromTopToBottom;
+        fromPoint.y+=_stepY;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+        
+    }
+    else if(deltaY<0){
+        
+        direction = DirectionTypeFromBottomToTop;
+        fromPoint.y-=_stepY;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+    }
+    
+
+    [_animationImage startAnimating];
+
+    NSLog(@"position: %@",NSStringFromCGPoint(self.position));
+
+
+}
+
+
 -(void)move:(DirectionType) direction
 {
     
@@ -144,6 +205,7 @@
         default:
             break;
     }
+    
     
     position.x = MIN(MAX(0,position.x),_screenSizeX-_stepX); //限界地点判別
     position.y = MIN(MAX(0,position.y),_screenSizeY-_stepY); //限界地点判別

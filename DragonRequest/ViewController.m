@@ -32,7 +32,22 @@
     [super viewDidLoad];
     
     [self reset];
+    self.view.multipleTouchEnabled = YES;
         
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touches count : %d (touchesBegan:withEvent:)", [touches count]);
+    //タッチイベントを取り出す
+    UITouch *touch = [touches anyObject];
+    //タッチイベントから座標を取得
+    CGPoint point = [touch locationInView:self.view];
+    //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
+   
+    [_enemyBoss moveRand];
+
+    [_hero moveToPoint:point];
+
 }
 
 
