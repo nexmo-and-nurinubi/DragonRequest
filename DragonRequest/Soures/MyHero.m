@@ -33,17 +33,45 @@
     return self;
 }
 
+- (id)initWithImageName:(NSString *)imageName
+         charactarWidth:(int)charactarWidth
+        charactarHeight:(int)charactarHeiht {
+    
+    if (self = [super init]) {
+        
+        _orgImage = [UIImage imageNamed:imageName];
+        _width = charactarWidth;
+        _height = charactarHeiht;
+        
+       
+    }
+    
+    return self;
+}
+
+
+
+- (UIImage *)createImageArrayWithPosX:(int)posX posY:(int)posY {
+    
+    CGRect trimArea = CGRectMake(posX, posY, _imageWidth, _imageHeight);
+    CGImageRef imageRef = [_orgImage CGImage];
+    CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
+    UIImage *trimeImage = [UIImage imageWithCGImage:trimeImageRef];
+    
+    return trimeImage;
+}
 
 -(void)setImage:(UIView *)parentView
 {
     NSLog(@"myhero setImage");
     
-    UIImage *img = [UIImage imageNamed:@"lr01.png"];
+    UIImage *img = [UIImage imageNamed:@"hero3.png"];
     
     if(_animationImage == nil)
         _animationImage = [[UIImageView alloc]initWithImage:img];
     
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    
     [parentView addSubview:_animationImage];
     
 }
@@ -52,38 +80,35 @@
 {
     NSArray *ImsArray = nil;
     
+    HeroSpriteImageTrim *scriptHeroImage = [[HeroSpriteImageTrim alloc] initWithImageName:@"hero1.png" charactarWidth:32 charactarHeight:32];
     
     if (direction == DirectionTypeFromRightToLeft) {
         
-        UIImage *imgLR01 = [UIImage imageNamed:@"rl01.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"rl02.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"rl03.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        ImsArray = scriptHeroImage.leftArray;
+
+
     }
     if (direction == DirectionTypeFromLeftToRight) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"lr01.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"lr02.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"lr03.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        ImsArray = scriptHeroImage.rightArray;
+
+    
+
+
     }
     if (direction == DirectionTypeFromBottomToTop) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"bt01.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"bt02.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"bt03.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        ImsArray = scriptHeroImage.backArray;
+
+ 
+
     }
     if (direction == DirectionTypeFromTopToBottom) {
-        
-        UIImage *imgLR01 = [UIImage imageNamed:@"tb01.png"];
-        UIImage *imgLR02 = [UIImage imageNamed:@"tb02.png"];
-        UIImage *imgLR03 = [UIImage imageNamed:@"tb03.png"];
-        ImsArray = @[imgLR01, imgLR02, imgLR03 ];
+        ImsArray = scriptHeroImage.frontArray;
+
+
     }
 
     _animationImage.animationImages = ImsArray;
-    _animationImage.animationDuration = 0.5;
+    _animationImage.animationDuration = 1;
     _animationImage.frame = CGRectMake(self.position.x,self.position.y,
                                        heroImageSizeWidth,heroImageSizeHeight);
 

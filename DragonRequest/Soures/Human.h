@@ -21,6 +21,9 @@
     
     //移動方向
     DirectionType _direction;
+    
+    //移動残り数
+    u_int32_t _moveRestCount;
 
     //キャラクターイメージを表示するiOS obect
     UIImageView *_animationImage;
