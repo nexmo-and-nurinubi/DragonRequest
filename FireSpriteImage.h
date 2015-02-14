@@ -1,5 +1,5 @@
 //
-//  HeroFightSpriteImage.h
+//  FireSpriteImage.h
 //  NurinubiGame
 //
 //  Created by 柴田　義也 on 2014/12/20.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HeroFightSpriteImage : NSObject
+@interface FireSpriteImage : NSObject
 
 
 @property (nonatomic) UIImage *image;

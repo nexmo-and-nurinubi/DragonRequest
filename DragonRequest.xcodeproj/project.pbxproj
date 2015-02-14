@@ -67,7 +67,7 @@
 		18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2851A3C111100CDCF8A /* MyHero.m */; };
 		18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B28D1A3C11EA00CDCF8A /* ViewController.m */; };
 		18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0B28F1A3C15C500CDCF8A /* taran.jpg */; };
-		18F0C2BA1A8F146D008595CB /* HeroFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */; };
+		18F0C2BA1A8F146D008595CB /* FireSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2B91A8F146D008595CB /* FireSpriteImage.m */; };
 		18F0C2BE1A8F170A008595CB /* BossFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */; };
 		18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */; };
 		18F0C2F31A8F1E01008595CB /* pipo-btleffect021.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */; };
@@ -237,8 +237,8 @@
 		18A0B28B1A3C11C300CDCF8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A0B28D1A3C11EA00CDCF8A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18A0B28F1A3C15C500CDCF8A /* taran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = taran.jpg; path = DragonRequest/taran.jpg; sourceTree = "<group>"; };
-		18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroFightSpriteImage.m; sourceTree = "<group>"; };
-		18F0C2BB1A8F14B6008595CB /* HeroFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroFightSpriteImage.h; sourceTree = "<group>"; };
+		18F0C2B91A8F146D008595CB /* FireSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSpriteImage.m; sourceTree = "<group>"; };
+		18F0C2BB1A8F14B6008595CB /* FireSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSpriteImage.h; sourceTree = "<group>"; };
 		18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossFightSpriteImage.h; sourceTree = "<group>"; };
 		18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossFightSpriteImage.m; sourceTree = "<group>"; };
 		18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFightSpriteImage.h; sourceTree = "<group>"; };
@@ -434,8 +434,8 @@
 				18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */,
 				0750AE321A6A2E5A00DD05A3 /* BossSpriteImage.h */,
 				0750AE331A6A2E7200DD05A3 /* BossSpriteImage.m */,
-				18F0C2BB1A8F14B6008595CB /* HeroFightSpriteImage.h */,
-				18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */,
+				18F0C2BB1A8F14B6008595CB /* FireSpriteImage.h */,
+				18F0C2B91A8F146D008595CB /* FireSpriteImage.m */,
 				18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */,
 				18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */,
 				18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */,
@@ -902,7 +902,7 @@
 				18A0B2881A3C111100CDCF8A /* Human.m in Sources */,
 				0703FD2C1A4EC145009B6D8E /* HeroSpriteImageTrim.m in Sources */,
 				18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */,
-				18F0C2BA1A8F146D008595CB /* HeroFightSpriteImage.m in Sources */,
+				18F0C2BA1A8F146D008595CB /* FireSpriteImage.m in Sources */,
 				18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */,

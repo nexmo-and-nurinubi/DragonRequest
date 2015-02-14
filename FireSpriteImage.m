@@ -1,14 +1,14 @@
 //
-//  HeroFightSpriteImage.m
+//  FireSpriteImage.m
 //  NurinubiGame
 //
 //  Created by 柴田　義也 on 2014/12/20.
 //  Copyright (c) 2014年 y.shibata. All rights reserved.
 //
 
-#import "HeroFightSpriteImage.h"
+#import "FireSpriteImage.h"
 
-@implementation HeroFightSpriteImage
+@implementation FireSpriteImage
 
 
 - (id)initWithImageName:(NSString *)imageName
