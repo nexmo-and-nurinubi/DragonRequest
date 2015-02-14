@@ -109,7 +109,6 @@
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    _actionTextView.text = @"";
     _positionTextField.text = [_hero whereAreYou];
     _resetBtn.hidden = YES;
 
@@ -155,8 +154,6 @@
 
     [_hero move:direction];
     
-    //キャラクターステータス出力
-    _actionTextView.text = [NSString stringWithFormat:@"%@は歩いている",_hero.name];
     
     //キャラクター位置出力
     _positionTextField.text = [_enemyBoss whereAreYou];
