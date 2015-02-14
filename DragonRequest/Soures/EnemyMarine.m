@@ -42,14 +42,14 @@
     
     UIImage *img = [UIImage imageNamed:@"front1.png"];
     
-    if(_animationImage == nil){
-        _animationImage = [[UIImageView alloc]initWithImage:img];
-        _animationImage.tag = HumanTypeEnemy;
-        _animationImage.userInteractionEnabled = YES;
+    if(self.animationImage == nil){
+        self.animationImage = [[UIImageView alloc]initWithImage:img];
+        self.animationImage.tag = HumanTypeEnemy;
+        self.animationImage.userInteractionEnabled = YES;
     }
     
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
-    [parentView addSubview:_animationImage];
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    [parentView addSubview:self.animationImage];
     
 }
 -(void)setAnimation:(DirectionType)direction
@@ -87,9 +87,9 @@
         ImsArray = @[imgLR01, imgLR02, imgLR03 ];
     }
     
-    _animationImage.animationImages = ImsArray;
-    _animationImage.animationDuration = 0.5;
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,
+    self.animationImage.animationImages = ImsArray;
+    self.animationImage.animationDuration = 0.5;
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,
                                        marineImageSizeWidth,marineImageSizeHeight);
 
 }

@@ -44,14 +44,14 @@
     
     UIImage *img = [UIImage imageNamed:@"dragon3.png"];
     
-    if(_animationImage == nil){
-        _animationImage = [[UIImageView alloc]initWithImage:img];
-        _animationImage.tag = HumanTypeBoss;
-        _animationImage.userInteractionEnabled = YES;
+    if(self.animationImage == nil){
+        self.animationImage = [[UIImageView alloc]initWithImage:img];
+        self.animationImage.tag = HumanTypeBoss;
+        self.animationImage.userInteractionEnabled = YES;
     }
     
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
-    [parentView addSubview:_animationImage];
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    [parentView addSubview:self.animationImage];
     
 }
 
@@ -96,17 +96,17 @@
         imsArray = bossSpriteImage.frontArray;
     }
     
-    _animationImage.animationImages = imsArray;
-    _animationImage.animationDuration = 0.5;
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,
+    self.animationImage.animationImages = imsArray;
+    self.animationImage.animationDuration = 0.5;
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,
                                        bossImageSizeWidth,bossImageSizeHeight);
     
     
     // 透明度を設定
-    _animationImage.alpha = alphaFloat;
+    self.animationImage.alpha = alphaFloat;
     
     
-    [_animationImage startAnimating];
+    [self.animationImage startAnimating];
 }
 
 

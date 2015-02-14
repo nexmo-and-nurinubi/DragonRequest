@@ -7,6 +7,7 @@
 //
 
 #import "MyHero.h"
+#import "HeroFightSpriteImage.h"
 
 @implementation MyHero
 
@@ -51,7 +52,30 @@
     return self;
 }
 
-
+- (BOOL)fight:(Human *)target {
+    
+    //human super class
+    if (ABS(self.animationImage.center.x - target.animationImage.center.x) <= _reach && ABS(self.animationImage.center.y - target.animationImage.center.y) <= _reach) {
+        // バトルアニメーション
+        HeroFightSpriteImage *spriteImage = [[HeroFightSpriteImage alloc] initWithImageName:@"pipo-btleffect024.png" charactarWidth:240 charactarHeight:240];
+        self.fightAnimationImage.frame = CGRectMake(0, 0, 64, 64);
+        self.fightAnimationImage.center = target.animationImage.center;
+        self.fightAnimationImage.animationImages = spriteImage.spriteArray;
+        self.fightAnimationImage.animationDuration = 1.0;
+        self.fightAnimationImage.animationRepeatCount = 1.0;
+        [self.fightAnimationImage startAnimating];
+        
+        // 体力を減らす
+        target.power -= self.minusPower;
+        if (target.power <= 0) {
+            return YES;
+        }
+    } else {
+        NSLog(@"a");
+    }
+    
+    return NO;
+}
 
 - (UIImage *)createImageArrayWithPosX:(int)posX posY:(int)posY {
     
@@ -69,16 +93,20 @@
     
     UIImage *img = [UIImage imageNamed:@"hero3.png"];
     
-    if(_animationImage == nil){
-        _animationImage = [[UIImageView alloc]initWithImage:img];
-        _animationImage.tag = HumanTypeHero;
-        _animationImage.userInteractionEnabled = YES;
+    if(self.animationImage == nil){
+        self.animationImage = [[UIImageView alloc]initWithImage:img];
+        self.animationImage.tag = HumanTypeHero;
+        self.animationImage.userInteractionEnabled = YES;
     }
     
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     
-    [parentView addSubview:_animationImage];
+    [parentView addSubview:self.animationImage];
     
+    
+    self.fightAnimationImage = [[UIImageView alloc] init];
+    
+    [parentView addSubview:self.fightAnimationImage];
 }
 
 -(void)setAnimation:(DirectionType)direction
@@ -112,9 +140,9 @@
 
     }
 
-    _animationImage.animationImages = ImsArray;
-    _animationImage.animationDuration = 1;
-    _animationImage.frame = CGRectMake(self.position.x,self.position.y,
+    self.animationImage.animationImages = ImsArray;
+    self.animationImage.animationDuration = 1;
+    self.animationImage.frame = CGRectMake(self.position.x,self.position.y,
                                        heroImageSizeWidth,heroImageSizeHeight);
 
 }

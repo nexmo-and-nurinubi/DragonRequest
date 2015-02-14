@@ -24,9 +24,6 @@
     
     //移動残り数
     u_int32_t _moveRestCount;
-
-    //キャラクターイメージを表示するiOS obect
-    UIImageView *_animationImage;
     
     //キャラクターサイズ
     int _imageWidth;
@@ -57,12 +54,20 @@
 //自分のパワー
 @property (nonatomic,assign) NSInteger power;
 
+//自分のレベル
+@property (nonatomic,assign) NSInteger level;
+
 //自分の位置
 @property (nonatomic,assign) CGPoint position;
 
 //自分のキャラクターサイズ
 @property (nonatomic,assign) CGRect frameSize;
 
+//キャラクターイメージを表示するiOS obect
+@property (nonatomic, strong) UIImageView *animationImage;
+
+//キャラクターバトルイメージを表示するiOS obect
+@property (nonatomic, strong) UIImageView *fightAnimationImage;
 
 
 - (id)init :(CGPoint)initPos;

@@ -32,6 +32,7 @@
     _imageHeight = humanImageSizeHeight;
     
     _animationImage = nil;
+    _fightAnimationImage = nil;
     
     
     // デフォルトでは透明度を１にしておく
