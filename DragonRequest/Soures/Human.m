@@ -18,6 +18,7 @@
     self.position = CGPointMake(point.x, point.y);
     
     self.name = @"human";
+    self.level = 1;
     self.power = 0;
     
     _stepX = humanStepX;
@@ -83,7 +84,11 @@
     
 }
 
-
+- (void)levelup {
+    self.level += 1;
+    self.minusPower += 5;
+    self.power += 5;
+}
 
 - (NSString *)whoAreYou {
     

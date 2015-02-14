@@ -8,22 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SpriteImage.h"
 
-@interface FireSpriteImage : NSObject
-
-
-@property (nonatomic) UIImage *image;
-
-@property (nonatomic) int width;
-@property (nonatomic) int height;
-
-//@property (nonatomic) NSString *imageName;
-
-@property (nonatomic) NSArray *spriteArray;
-
-- (id)initWithImageName:(NSString *)imageName
-         charactarWidth:(int)charactarWidth
-        charactarHeight:(int)charactarHeiht;
-
+@interface FireSpriteImage : SpriteImage
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MyHero.h"
 #import "FireSpriteImage.h"
+#import "FiraSpriteImage.h"
 
 @implementation MyHero
 
@@ -57,7 +58,13 @@
     //human super class
     if (ABS(self.animationImage.center.x - target.animationImage.center.x) <= _reach && ABS(self.animationImage.center.y - target.animationImage.center.y) <= _reach) {
         // バトルアニメーション
-        FireSpriteImage *spriteImage = [[FireSpriteImage alloc] initWithImageName:@"pipo-btleffect024.png" charactarWidth:240 charactarHeight:240];
+        SpriteImage *spriteImage;
+        if(self.level == 1){
+            spriteImage = [[FireSpriteImage alloc] initWithImageName:@"pipo-btleffect024.png" charactarWidth:240 charactarHeight:240];
+        }
+        else if(self.level == 2){
+            spriteImage = [[FiraSpriteImage alloc] initWithImageName:@"pipo-btleffect037.png" charactarWidth:240 charactarHeight:240];
+        }
         self.fightAnimationImage.frame = CGRectMake(0, 0, 64, 64);
         self.fightAnimationImage.center = target.animationImage.center;
         self.fightAnimationImage.animationImages = spriteImage.spriteArray;

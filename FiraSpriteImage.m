@@ -1,14 +1,14 @@
 //
-//  FireSpriteImage.m
-//  NurinubiGame
+//  FiraSpriteImage.m
+//  DragonRequest
 //
-//  Created by 柴田　義也 on 2014/12/20.
-//  Copyright (c) 2014年 y.shibata. All rights reserved.
+//  Created by apple on 2015/02/14.
+//  Copyright (c) 2015年 Apple. All rights reserved.
 //
 
-#import "FireSpriteImage.h"
+#import "FiraSpriteImage.h"
 
-@implementation FireSpriteImage
+@implementation FiraSpriteImage
 
 - (id)initWithImageName:(NSString *)imageName
          charactarWidth:(int)charactarWidth
