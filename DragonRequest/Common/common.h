@@ -40,8 +40,10 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define maxMoveCount                    5
 
 // ヒーロー初期情報
-#define heroStepX                       12
-#define heroStepY                       12
+#define heroMoveTimeInterval            0.1f
+
+#define heroStepX                       3
+#define heroStepY                       3
 #define heroReach                       12
 #define heroImageSizeWidth              16
 #define heroImageSizeHeight             16

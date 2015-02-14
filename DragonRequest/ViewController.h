@@ -15,15 +15,11 @@
 @interface ViewController : UIViewController
 
 
-@property (weak, nonatomic) IBOutlet UITextView *positionTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *resetBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *fieldView;
 
 @property (nonatomic) int xPos;
 @property (nonatomic) int yPos;
-
-- (IBAction)moveAction:(id)sender;
 
 - (IBAction)resetAction:(id)sender;
 
