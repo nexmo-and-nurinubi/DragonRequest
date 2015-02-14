@@ -67,6 +67,53 @@
 		18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2851A3C111100CDCF8A /* MyHero.m */; };
 		18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B28D1A3C11EA00CDCF8A /* ViewController.m */; };
 		18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0B28F1A3C15C500CDCF8A /* taran.jpg */; };
+		18F0C2BA1A8F146D008595CB /* HeroFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */; };
+		18F0C2BE1A8F170A008595CB /* BossFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */; };
+		18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */; };
+		18F0C2F31A8F1E01008595CB /* pipo-btleffect021.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */; };
+		18F0C2F41A8F1E01008595CB /* pipo-btleffect022.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C51A8F1E01008595CB /* pipo-btleffect022.png */; };
+		18F0C2F51A8F1E01008595CB /* pipo-btleffect023.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C61A8F1E01008595CB /* pipo-btleffect023.png */; };
+		18F0C2F61A8F1E01008595CB /* pipo-btleffect024.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C71A8F1E01008595CB /* pipo-btleffect024.png */; };
+		18F0C2F71A8F1E01008595CB /* pipo-btleffect025.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C81A8F1E01008595CB /* pipo-btleffect025.png */; };
+		18F0C2F81A8F1E01008595CB /* pipo-btleffect026.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C91A8F1E01008595CB /* pipo-btleffect026.png */; };
+		18F0C2F91A8F1E01008595CB /* pipo-btleffect027.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CA1A8F1E01008595CB /* pipo-btleffect027.png */; };
+		18F0C2FA1A8F1E01008595CB /* pipo-btleffect028.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CB1A8F1E01008595CB /* pipo-btleffect028.png */; };
+		18F0C2FB1A8F1E01008595CB /* pipo-btleffect029.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CC1A8F1E01008595CB /* pipo-btleffect029.png */; };
+		18F0C2FC1A8F1E01008595CB /* pipo-btleffect030.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CD1A8F1E01008595CB /* pipo-btleffect030.png */; };
+		18F0C2FD1A8F1E01008595CB /* pipo-btleffect031.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CE1A8F1E01008595CB /* pipo-btleffect031.png */; };
+		18F0C2FE1A8F1E01008595CB /* pipo-btleffect032.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2CF1A8F1E01008595CB /* pipo-btleffect032.png */; };
+		18F0C2FF1A8F1E01008595CB /* pipo-btleffect033.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D01A8F1E01008595CB /* pipo-btleffect033.png */; };
+		18F0C3001A8F1E01008595CB /* pipo-btleffect034.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D11A8F1E01008595CB /* pipo-btleffect034.png */; };
+		18F0C3011A8F1E01008595CB /* pipo-btleffect035.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D21A8F1E01008595CB /* pipo-btleffect035.png */; };
+		18F0C3021A8F1E01008595CB /* pipo-btleffect036.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D31A8F1E01008595CB /* pipo-btleffect036.png */; };
+		18F0C3031A8F1E01008595CB /* pipo-btleffect037.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D41A8F1E01008595CB /* pipo-btleffect037.png */; };
+		18F0C3041A8F1E01008595CB /* pipo-btleffect038.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D51A8F1E01008595CB /* pipo-btleffect038.png */; };
+		18F0C3051A8F1E01008595CB /* pipo-btleffect039.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D61A8F1E01008595CB /* pipo-btleffect039.png */; };
+		18F0C3061A8F1E01008595CB /* pipo-btleffect040.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D71A8F1E01008595CB /* pipo-btleffect040.png */; };
+		18F0C3071A8F1E01008595CB /* pipo-btleffect041.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D81A8F1E01008595CB /* pipo-btleffect041.png */; };
+		18F0C3081A8F1E01008595CB /* pipo-btleffect042.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2D91A8F1E01008595CB /* pipo-btleffect042.png */; };
+		18F0C3091A8F1E01008595CB /* pipo-btleffect021@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2DB1A8F1E01008595CB /* pipo-btleffect021@2x.png */; };
+		18F0C30A1A8F1E01008595CB /* pipo-btleffect022@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2DC1A8F1E01008595CB /* pipo-btleffect022@2x.png */; };
+		18F0C30B1A8F1E01008595CB /* pipo-btleffect023@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2DD1A8F1E01008595CB /* pipo-btleffect023@2x.png */; };
+		18F0C30C1A8F1E01008595CB /* pipo-btleffect024@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2DE1A8F1E01008595CB /* pipo-btleffect024@2x.png */; };
+		18F0C30D1A8F1E01008595CB /* pipo-btleffect025@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2DF1A8F1E01008595CB /* pipo-btleffect025@2x.png */; };
+		18F0C30E1A8F1E01008595CB /* pipo-btleffect026@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E01A8F1E01008595CB /* pipo-btleffect026@2x.png */; };
+		18F0C30F1A8F1E01008595CB /* pipo-btleffect027@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E11A8F1E01008595CB /* pipo-btleffect027@2x.png */; };
+		18F0C3101A8F1E01008595CB /* pipo-btleffect028@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E21A8F1E01008595CB /* pipo-btleffect028@2x.png */; };
+		18F0C3111A8F1E01008595CB /* pipo-btleffect029@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E31A8F1E01008595CB /* pipo-btleffect029@2x.png */; };
+		18F0C3121A8F1E01008595CB /* pipo-btleffect030@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E41A8F1E01008595CB /* pipo-btleffect030@2x.png */; };
+		18F0C3131A8F1E01008595CB /* pipo-btleffect031@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E51A8F1E01008595CB /* pipo-btleffect031@2x.png */; };
+		18F0C3141A8F1E01008595CB /* pipo-btleffect032@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E61A8F1E01008595CB /* pipo-btleffect032@2x.png */; };
+		18F0C3151A8F1E01008595CB /* pipo-btleffect033@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E71A8F1E01008595CB /* pipo-btleffect033@2x.png */; };
+		18F0C3161A8F1E01008595CB /* pipo-btleffect034@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E81A8F1E01008595CB /* pipo-btleffect034@2x.png */; };
+		18F0C3171A8F1E01008595CB /* pipo-btleffect035@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2E91A8F1E01008595CB /* pipo-btleffect035@2x.png */; };
+		18F0C3181A8F1E01008595CB /* pipo-btleffect036@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EA1A8F1E01008595CB /* pipo-btleffect036@2x.png */; };
+		18F0C3191A8F1E01008595CB /* pipo-btleffect037@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EB1A8F1E01008595CB /* pipo-btleffect037@2x.png */; };
+		18F0C31A1A8F1E01008595CB /* pipo-btleffect038@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EC1A8F1E01008595CB /* pipo-btleffect038@2x.png */; };
+		18F0C31B1A8F1E01008595CB /* pipo-btleffect039@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2ED1A8F1E01008595CB /* pipo-btleffect039@2x.png */; };
+		18F0C31C1A8F1E01008595CB /* pipo-btleffect040@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EE1A8F1E01008595CB /* pipo-btleffect040@2x.png */; };
+		18F0C31D1A8F1E01008595CB /* pipo-btleffect041@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EF1A8F1E01008595CB /* pipo-btleffect041@2x.png */; };
+		18F0C31E1A8F1E01008595CB /* pipo-btleffect042@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */; };
 		612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF21A85FEA00089573B /* BossLeftAttack1.png */; };
 		612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF31A85FEA00089573B /* BossLeftAttack2.png */; };
 		612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF41A85FEA00089573B /* BossLeftAttack3.png */; };
@@ -190,6 +237,58 @@
 		18A0B28B1A3C11C300CDCF8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A0B28D1A3C11EA00CDCF8A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18A0B28F1A3C15C500CDCF8A /* taran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = taran.jpg; path = DragonRequest/taran.jpg; sourceTree = "<group>"; };
+		18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroFightSpriteImage.m; sourceTree = "<group>"; };
+		18F0C2BB1A8F14B6008595CB /* HeroFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroFightSpriteImage.h; sourceTree = "<group>"; };
+		18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossFightSpriteImage.h; sourceTree = "<group>"; };
+		18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossFightSpriteImage.m; sourceTree = "<group>"; };
+		18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFightSpriteImage.h; sourceTree = "<group>"; };
+		18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFightSpriteImage.m; sourceTree = "<group>"; };
+		18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect021.png"; sourceTree = "<group>"; };
+		18F0C2C51A8F1E01008595CB /* pipo-btleffect022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect022.png"; sourceTree = "<group>"; };
+		18F0C2C61A8F1E01008595CB /* pipo-btleffect023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect023.png"; sourceTree = "<group>"; };
+		18F0C2C71A8F1E01008595CB /* pipo-btleffect024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect024.png"; sourceTree = "<group>"; };
+		18F0C2C81A8F1E01008595CB /* pipo-btleffect025.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect025.png"; sourceTree = "<group>"; };
+		18F0C2C91A8F1E01008595CB /* pipo-btleffect026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect026.png"; sourceTree = "<group>"; };
+		18F0C2CA1A8F1E01008595CB /* pipo-btleffect027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect027.png"; sourceTree = "<group>"; };
+		18F0C2CB1A8F1E01008595CB /* pipo-btleffect028.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect028.png"; sourceTree = "<group>"; };
+		18F0C2CC1A8F1E01008595CB /* pipo-btleffect029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect029.png"; sourceTree = "<group>"; };
+		18F0C2CD1A8F1E01008595CB /* pipo-btleffect030.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect030.png"; sourceTree = "<group>"; };
+		18F0C2CE1A8F1E01008595CB /* pipo-btleffect031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect031.png"; sourceTree = "<group>"; };
+		18F0C2CF1A8F1E01008595CB /* pipo-btleffect032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect032.png"; sourceTree = "<group>"; };
+		18F0C2D01A8F1E01008595CB /* pipo-btleffect033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect033.png"; sourceTree = "<group>"; };
+		18F0C2D11A8F1E01008595CB /* pipo-btleffect034.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect034.png"; sourceTree = "<group>"; };
+		18F0C2D21A8F1E01008595CB /* pipo-btleffect035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect035.png"; sourceTree = "<group>"; };
+		18F0C2D31A8F1E01008595CB /* pipo-btleffect036.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect036.png"; sourceTree = "<group>"; };
+		18F0C2D41A8F1E01008595CB /* pipo-btleffect037.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect037.png"; sourceTree = "<group>"; };
+		18F0C2D51A8F1E01008595CB /* pipo-btleffect038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect038.png"; sourceTree = "<group>"; };
+		18F0C2D61A8F1E01008595CB /* pipo-btleffect039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect039.png"; sourceTree = "<group>"; };
+		18F0C2D71A8F1E01008595CB /* pipo-btleffect040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect040.png"; sourceTree = "<group>"; };
+		18F0C2D81A8F1E01008595CB /* pipo-btleffect041.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect041.png"; sourceTree = "<group>"; };
+		18F0C2D91A8F1E01008595CB /* pipo-btleffect042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect042.png"; sourceTree = "<group>"; };
+		18F0C2DB1A8F1E01008595CB /* pipo-btleffect021@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect021@2x.png"; sourceTree = "<group>"; };
+		18F0C2DC1A8F1E01008595CB /* pipo-btleffect022@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect022@2x.png"; sourceTree = "<group>"; };
+		18F0C2DD1A8F1E01008595CB /* pipo-btleffect023@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect023@2x.png"; sourceTree = "<group>"; };
+		18F0C2DE1A8F1E01008595CB /* pipo-btleffect024@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect024@2x.png"; sourceTree = "<group>"; };
+		18F0C2DF1A8F1E01008595CB /* pipo-btleffect025@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect025@2x.png"; sourceTree = "<group>"; };
+		18F0C2E01A8F1E01008595CB /* pipo-btleffect026@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect026@2x.png"; sourceTree = "<group>"; };
+		18F0C2E11A8F1E01008595CB /* pipo-btleffect027@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect027@2x.png"; sourceTree = "<group>"; };
+		18F0C2E21A8F1E01008595CB /* pipo-btleffect028@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect028@2x.png"; sourceTree = "<group>"; };
+		18F0C2E31A8F1E01008595CB /* pipo-btleffect029@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect029@2x.png"; sourceTree = "<group>"; };
+		18F0C2E41A8F1E01008595CB /* pipo-btleffect030@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect030@2x.png"; sourceTree = "<group>"; };
+		18F0C2E51A8F1E01008595CB /* pipo-btleffect031@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect031@2x.png"; sourceTree = "<group>"; };
+		18F0C2E61A8F1E01008595CB /* pipo-btleffect032@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect032@2x.png"; sourceTree = "<group>"; };
+		18F0C2E71A8F1E01008595CB /* pipo-btleffect033@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect033@2x.png"; sourceTree = "<group>"; };
+		18F0C2E81A8F1E01008595CB /* pipo-btleffect034@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect034@2x.png"; sourceTree = "<group>"; };
+		18F0C2E91A8F1E01008595CB /* pipo-btleffect035@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect035@2x.png"; sourceTree = "<group>"; };
+		18F0C2EA1A8F1E01008595CB /* pipo-btleffect036@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect036@2x.png"; sourceTree = "<group>"; };
+		18F0C2EB1A8F1E01008595CB /* pipo-btleffect037@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect037@2x.png"; sourceTree = "<group>"; };
+		18F0C2EC1A8F1E01008595CB /* pipo-btleffect038@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect038@2x.png"; sourceTree = "<group>"; };
+		18F0C2ED1A8F1E01008595CB /* pipo-btleffect039@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect039@2x.png"; sourceTree = "<group>"; };
+		18F0C2EE1A8F1E01008595CB /* pipo-btleffect040@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect040@2x.png"; sourceTree = "<group>"; };
+		18F0C2EF1A8F1E01008595CB /* pipo-btleffect041@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect041@2x.png"; sourceTree = "<group>"; };
+		18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect042@2x.png"; sourceTree = "<group>"; };
+		18F0C2F11A8F1E01008595CB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		18F0C2F21A8F1E01008595CB /* ウディタアニメーション設定.dbtype */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ウディタアニメーション設定.dbtype"; sourceTree = "<group>"; };
 		612C6EF21A85FEA00089573B /* BossLeftAttack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack1.png; sourceTree = "<group>"; };
 		612C6EF31A85FEA00089573B /* BossLeftAttack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack2.png; sourceTree = "<group>"; };
 		612C6EF41A85FEA00089573B /* BossLeftAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack3.png; sourceTree = "<group>"; };
@@ -335,6 +434,12 @@
 				18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */,
 				0750AE321A6A2E5A00DD05A3 /* BossSpriteImage.h */,
 				0750AE331A6A2E7200DD05A3 /* BossSpriteImage.m */,
+				18F0C2BB1A8F14B6008595CB /* HeroFightSpriteImage.h */,
+				18F0C2B91A8F146D008595CB /* HeroFightSpriteImage.m */,
+				18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */,
+				18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */,
+				18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */,
+				18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -423,9 +528,79 @@
 			name = human;
 			sourceTree = "<group>";
 		};
+		18F0C2C21A8F1E01008595CB /* effect */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C2C31A8F1E01008595CB /* 320×240 */,
+				18F0C2DA1A8F1E01008595CB /* 640×480 */,
+				18F0C2F11A8F1E01008595CB /* readme.txt */,
+				18F0C2F21A8F1E01008595CB /* ウディタアニメーション設定.dbtype */,
+			);
+			path = effect;
+			sourceTree = "<group>";
+		};
+		18F0C2C31A8F1E01008595CB /* 320×240 */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */,
+				18F0C2C51A8F1E01008595CB /* pipo-btleffect022.png */,
+				18F0C2C61A8F1E01008595CB /* pipo-btleffect023.png */,
+				18F0C2C71A8F1E01008595CB /* pipo-btleffect024.png */,
+				18F0C2C81A8F1E01008595CB /* pipo-btleffect025.png */,
+				18F0C2C91A8F1E01008595CB /* pipo-btleffect026.png */,
+				18F0C2CA1A8F1E01008595CB /* pipo-btleffect027.png */,
+				18F0C2CB1A8F1E01008595CB /* pipo-btleffect028.png */,
+				18F0C2CC1A8F1E01008595CB /* pipo-btleffect029.png */,
+				18F0C2CD1A8F1E01008595CB /* pipo-btleffect030.png */,
+				18F0C2CE1A8F1E01008595CB /* pipo-btleffect031.png */,
+				18F0C2CF1A8F1E01008595CB /* pipo-btleffect032.png */,
+				18F0C2D01A8F1E01008595CB /* pipo-btleffect033.png */,
+				18F0C2D11A8F1E01008595CB /* pipo-btleffect034.png */,
+				18F0C2D21A8F1E01008595CB /* pipo-btleffect035.png */,
+				18F0C2D31A8F1E01008595CB /* pipo-btleffect036.png */,
+				18F0C2D41A8F1E01008595CB /* pipo-btleffect037.png */,
+				18F0C2D51A8F1E01008595CB /* pipo-btleffect038.png */,
+				18F0C2D61A8F1E01008595CB /* pipo-btleffect039.png */,
+				18F0C2D71A8F1E01008595CB /* pipo-btleffect040.png */,
+				18F0C2D81A8F1E01008595CB /* pipo-btleffect041.png */,
+				18F0C2D91A8F1E01008595CB /* pipo-btleffect042.png */,
+			);
+			path = "320×240";
+			sourceTree = "<group>";
+		};
+		18F0C2DA1A8F1E01008595CB /* 640×480 */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C2DB1A8F1E01008595CB /* pipo-btleffect021@2x.png */,
+				18F0C2DC1A8F1E01008595CB /* pipo-btleffect022@2x.png */,
+				18F0C2DD1A8F1E01008595CB /* pipo-btleffect023@2x.png */,
+				18F0C2DE1A8F1E01008595CB /* pipo-btleffect024@2x.png */,
+				18F0C2DF1A8F1E01008595CB /* pipo-btleffect025@2x.png */,
+				18F0C2E01A8F1E01008595CB /* pipo-btleffect026@2x.png */,
+				18F0C2E11A8F1E01008595CB /* pipo-btleffect027@2x.png */,
+				18F0C2E21A8F1E01008595CB /* pipo-btleffect028@2x.png */,
+				18F0C2E31A8F1E01008595CB /* pipo-btleffect029@2x.png */,
+				18F0C2E41A8F1E01008595CB /* pipo-btleffect030@2x.png */,
+				18F0C2E51A8F1E01008595CB /* pipo-btleffect031@2x.png */,
+				18F0C2E61A8F1E01008595CB /* pipo-btleffect032@2x.png */,
+				18F0C2E71A8F1E01008595CB /* pipo-btleffect033@2x.png */,
+				18F0C2E81A8F1E01008595CB /* pipo-btleffect034@2x.png */,
+				18F0C2E91A8F1E01008595CB /* pipo-btleffect035@2x.png */,
+				18F0C2EA1A8F1E01008595CB /* pipo-btleffect036@2x.png */,
+				18F0C2EB1A8F1E01008595CB /* pipo-btleffect037@2x.png */,
+				18F0C2EC1A8F1E01008595CB /* pipo-btleffect038@2x.png */,
+				18F0C2ED1A8F1E01008595CB /* pipo-btleffect039@2x.png */,
+				18F0C2EE1A8F1E01008595CB /* pipo-btleffect040@2x.png */,
+				18F0C2EF1A8F1E01008595CB /* pipo-btleffect041@2x.png */,
+				18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */,
+			);
+			path = "640×480";
+			sourceTree = "<group>";
+		};
 		612C6EF01A85FEA00089573B /* AnimationImage */ = {
 			isa = PBXGroup;
 			children = (
+				18F0C2C21A8F1E01008595CB /* effect */,
 				612C6EF11A85FEA00089573B /* boss */,
 				612C6EFB1A85FEA00089573B /* enemy */,
 				612C6F051A85FEA00089573B /* enemy2 */,
@@ -580,10 +755,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1837F47B1A4E48ED00075299 /* back3.png in Resources */,
+				18F0C30A1A8F1E01008595CB /* pipo-btleffect022@2x.png in Resources */,
+				18F0C3091A8F1E01008595CB /* pipo-btleffect021@2x.png in Resources */,
 				1837F4481A4E484E00075299 /* dragon_orange_lr01@2x.png in Resources */,
 				1837F44E1A4E484E00075299 /* dragon_orange_tb01@2x.png in Resources */,
 				612C6F241A85FEA00089573B /* EnemyLeftAttack3.png in Resources */,
 				1837F4661A4E48C100075299 /* tb01.png in Resources */,
+				18F0C3171A8F1E01008595CB /* pipo-btleffect035@2x.png in Resources */,
 				1837F4811A4E48ED00075299 /* left1.png in Resources */,
 				612C6F221A85FEA00089573B /* EnemyLeftAttack1.png in Resources */,
 				612C6F201A85FEA00089573B /* BossRightAttack2.png in Resources */,
@@ -596,7 +774,10 @@
 				612C6F211A85FEA00089573B /* BossRightAttack3.png in Resources */,
 				612C6F291A85FEA00089573B /* EnemyRightAttack2.png in Resources */,
 				1837F4851A4E48ED00075299 /* right1.png in Resources */,
+				18F0C30F1A8F1E01008595CB /* pipo-btleffect027@2x.png in Resources */,
 				1837F45D1A4E48C100075299 /* bt01.png in Resources */,
+				18F0C2FF1A8F1E01008595CB /* pipo-btleffect033.png in Resources */,
+				18F0C2F71A8F1E01008595CB /* pipo-btleffect025.png in Resources */,
 				612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */,
 				1837F4451A4E484E00075299 /* dragon_orange_bt01@2x.png in Resources */,
 				1837F47D1A4E48ED00075299 /* front1.png in Resources */,
@@ -604,7 +785,9 @@
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
 				1837F4831A4E48ED00075299 /* left3.png in Resources */,
+				18F0C31E1A8F1E01008595CB /* pipo-btleffect042@2x.png in Resources */,
 				612C6F381A85FEA00089573B /* HeroNomal2.png in Resources */,
+				18F0C2FD1A8F1E01008595CB /* pipo-btleffect031.png in Resources */,
 				1837F47F1A4E48ED00075299 /* front3.png in Resources */,
 				612C6F3A1A85FEA00089573B /* HeroRightAttack1.png in Resources */,
 				1837F4621A4E48C100075299 /* lr03.png in Resources */,
@@ -613,44 +796,73 @@
 				612C6F2E1A85FEA00089573B /* Enemy2Nomal1.png in Resources */,
 				1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */,
 				612C6F321A85FEA00089573B /* Enemy2RightAttack2.png in Resources */,
+				18F0C3021A8F1E01008595CB /* pipo-btleffect036.png in Resources */,
 				1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */,
+				18F0C3141A8F1E01008595CB /* pipo-btleffect032@2x.png in Resources */,
 				612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */,
 				0750AE401A6A5FC500DD05A3 /* hero3.png in Resources */,
+				18F0C2FA1A8F1E01008595CB /* pipo-btleffect028.png in Resources */,
+				18F0C2FB1A8F1E01008595CB /* pipo-btleffect029.png in Resources */,
 				612C6F1C1A85FEA00089573B /* BossNomal1.png in Resources */,
+				18F0C3151A8F1E01008595CB /* pipo-btleffect033@2x.png in Resources */,
 				612C6F351A85FEA00089573B /* HeroLeftAttack2.png in Resources */,
+				18F0C30B1A8F1E01008595CB /* pipo-btleffect023@2x.png in Resources */,
 				1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */,
 				1837F4861A4E48ED00075299 /* right2.png in Resources */,
 				1837F4801A4E48ED00075299 /* front4.png in Resources */,
 				189F861E1A32DCCE0016D4EE /* Main.storyboard in Resources */,
+				18F0C2F91A8F1E01008595CB /* pipo-btleffect027.png in Resources */,
 				612C6F1E1A85FEA00089573B /* BossNomal3.png in Resources */,
+				18F0C3041A8F1E01008595CB /* pipo-btleffect038.png in Resources */,
 				189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */,
+				18F0C3181A8F1E01008595CB /* pipo-btleffect036@2x.png in Resources */,
 				612C6F371A85FEA00089573B /* HeroNomal1.png in Resources */,
+				18F0C3081A8F1E01008595CB /* pipo-btleffect042.png in Resources */,
 				612C6F2B1A85FEA00089573B /* Enemy2LeftAttack1.png in Resources */,
 				1837F4471A4E484E00075299 /* dragon_orange_bt03@2x.png in Resources */,
+				18F0C3061A8F1E01008595CB /* pipo-btleffect040.png in Resources */,
+				18F0C3161A8F1E01008595CB /* pipo-btleffect034@2x.png in Resources */,
+				18F0C3071A8F1E01008595CB /* pipo-btleffect041.png in Resources */,
 				612C6F311A85FEA00089573B /* Enemy2RightAttack1.png in Resources */,
+				18F0C30C1A8F1E01008595CB /* pipo-btleffect024@2x.png in Resources */,
 				1837F4821A4E48ED00075299 /* left2.png in Resources */,
+				18F0C30E1A8F1E01008595CB /* pipo-btleffect026@2x.png in Resources */,
+				18F0C2F41A8F1E01008595CB /* pipo-btleffect022.png in Resources */,
+				18F0C3121A8F1E01008595CB /* pipo-btleffect030@2x.png in Resources */,
 				1837F4881A4E48ED00075299 /* right4.png in Resources */,
+				18F0C3101A8F1E01008595CB /* pipo-btleffect028@2x.png in Resources */,
 				612C6F231A85FEA00089573B /* EnemyLeftAttack2.png in Resources */,
 				1837F4681A4E48C100075299 /* tb03.png in Resources */,
 				1837F4501A4E484E00075299 /* dragon_orange_tb03@2x.png in Resources */,
+				18F0C3001A8F1E01008595CB /* pipo-btleffect034.png in Resources */,
 				612C6F261A85FEA00089573B /* EnemyNomal2.png in Resources */,
+				18F0C3011A8F1E01008595CB /* pipo-btleffect035.png in Resources */,
 				612C6F301A85FEA00089573B /* Enemy2Nomal3.png in Resources */,
 				1837F45E1A4E48C100075299 /* bt02.png in Resources */,
+				18F0C2F31A8F1E01008595CB /* pipo-btleffect021.png in Resources */,
 				1837F44A1A4E484E00075299 /* dragon_orange_lr03@2x.png in Resources */,
 				1837F4641A4E48C100075299 /* rl02.png in Resources */,
 				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,
 				612C6F1D1A85FEA00089573B /* BossNomal2.png in Resources */,
+				18F0C31D1A8F1E01008595CB /* pipo-btleffect041@2x.png in Resources */,
 				612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */,
 				1837F44C1A4E484E00075299 /* dragon_orange_rl02@2x.png in Resources */,
+				18F0C30D1A8F1E01008595CB /* pipo-btleffect025@2x.png in Resources */,
 				1837F4841A4E48ED00075299 /* left4.png in Resources */,
+				18F0C3111A8F1E01008595CB /* pipo-btleffect029@2x.png in Resources */,
+				18F0C2F61A8F1E01008595CB /* pipo-btleffect024.png in Resources */,
 				612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */,
 				1837F45F1A4E48C100075299 /* bt03.png in Resources */,
 				612C6F2D1A85FEA00089573B /* Enemy2LeftAttack3.png in Resources */,
+				18F0C3051A8F1E01008595CB /* pipo-btleffect039.png in Resources */,
 				1837F47A1A4E48ED00075299 /* back2.png in Resources */,
+				18F0C2F81A8F1E01008595CB /* pipo-btleffect026.png in Resources */,
 				1837F44B1A4E484E00075299 /* dragon_orange_rl01@2x.png in Resources */,
 				612C6F1F1A85FEA00089573B /* BossRightAttack1.png in Resources */,
+				18F0C31B1A8F1E01008595CB /* pipo-btleffect039@2x.png in Resources */,
 				612C6F2A1A85FEA00089573B /* EnemyRightAttack3.png in Resources */,
 				1837F47C1A4E48ED00075299 /* back4.png in Resources */,
+				18F0C2FE1A8F1E01008595CB /* pipo-btleffect032.png in Resources */,
 				1837F47E1A4E48ED00075299 /* front2.png in Resources */,
 				612C6F251A85FEA00089573B /* EnemyNomal1.png in Resources */,
 				1837F4871A4E48ED00075299 /* right3.png in Resources */,
@@ -658,11 +870,18 @@
 				0750AE361A6A44D000DD05A3 /* dragon1.png in Resources */,
 				612C6F2F1A85FEA00089573B /* Enemy2Nomal2.png in Resources */,
 				1837F4671A4E48C100075299 /* tb02.png in Resources */,
+				18F0C2F51A8F1E01008595CB /* pipo-btleffect023.png in Resources */,
+				18F0C31C1A8F1E01008595CB /* pipo-btleffect040@2x.png in Resources */,
+				18F0C3191A8F1E01008595CB /* pipo-btleffect037@2x.png in Resources */,
 				1837F4651A4E48C100075299 /* rl03.png in Resources */,
+				18F0C31A1A8F1E01008595CB /* pipo-btleffect038@2x.png in Resources */,
+				18F0C2FC1A8F1E01008595CB /* pipo-btleffect030.png in Resources */,
 				612C6F331A85FEA00089573B /* Enemy2RightAttack3.png in Resources */,
+				18F0C3131A8F1E01008595CB /* pipo-btleffect031@2x.png in Resources */,
 				189F86201A32DCCE0016D4EE /* Images.xcassets in Resources */,
 				1837F4601A4E48C100075299 /* lr01.png in Resources */,
 				1837F4611A4E48C100075299 /* lr02.png in Resources */,
+				18F0C3031A8F1E01008595CB /* pipo-btleffect037.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,12 +902,15 @@
 				18A0B2881A3C111100CDCF8A /* Human.m in Sources */,
 				0703FD2C1A4EC145009B6D8E /* HeroSpriteImageTrim.m in Sources */,
 				18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */,
+				18F0C2BA1A8F146D008595CB /* HeroFightSpriteImage.m in Sources */,
+				18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */,
 				18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */,
 				0750AE341A6A2E7200DD05A3 /* BossSpriteImage.m in Sources */,
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
+				18F0C2BE1A8F170A008595CB /* BossFightSpriteImage.m in Sources */,
 				0703FD2D1A4EC145009B6D8E /* SpriteImageTrim.m in Sources */,
 				18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */,
 			);
