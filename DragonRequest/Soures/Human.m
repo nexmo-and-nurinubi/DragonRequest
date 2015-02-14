@@ -9,13 +9,21 @@
 #import "Human.h"
 
 @implementation Human{
+
+    CGPoint _toPoint;
     
+    //タイマー
+    NSTimer *_humanTimer;
+    
+
 }
 
 
 - (void)posInitWithPoint:(CGPoint)point
 {
     self.position = CGPointMake(point.x, point.y);
+    
+    _toPoint = CGPointMake(point.x, point.y);
     
     self.name = @"human";
     self.level = 1;
@@ -35,6 +43,7 @@
     _animationImage = nil;
     _fightAnimationImage = nil;
     
+    _humanTimer = nil;
     
     // デフォルトでは透明度を１にしておく
     alphaFloat = 1;
@@ -171,24 +180,54 @@
 /** アニメーションの設定、開始 */
 - (void)moveToPoint:(CGPoint)toPoint
 {
-    
-    CGPoint fromPoint = self.position;
+    @try {
 
-    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
-    NSLog(@"toPoint: %@",NSStringFromCGPoint(toPoint));
+        if(_humanTimer!=nil){
+         
+            [_humanTimer invalidate];
+            _humanTimer = nil;
+            
+        }
+        
+        _humanTimer = [NSTimer scheduledTimerWithTimeInterval:heroMoveTimeInterval target:self selector:@selector(moving) userInfo:nil repeats:YES];
+        
+        _toPoint.x = toPoint.x;
+        _toPoint.y = toPoint.y;
+        
+        [_humanTimer fire];
+    }
+    @catch (NSException *exception) {
+        
+        NSLog(@"%@",exception.description);
+
+    }
+    @finally {
+
+    }
+
+
+}
+-(void)moving
+{
+    CGPoint fromPoint = self.position;
     
-    if((fromPoint.x == toPoint.x)&&
-       (fromPoint.y == toPoint.y)){
+    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
+    NSLog(@"toPoint: %@",NSStringFromCGPoint(_toPoint));
+    
+    if((abs(fromPoint.x - _toPoint.x)<=_stepX)&&
+       (abs(fromPoint.y - _toPoint.y)<=_stepX)){
+        
+        [_humanTimer invalidate];
         
         return ;
         
     }
-
-    float deltaX = toPoint.x - fromPoint.x;
-    float deltaY = toPoint.y - fromPoint.y;
+    
+    float deltaX = _toPoint.x - fromPoint.x;
+    float deltaY = _toPoint.y - fromPoint.y;
     
     DirectionType direction = DirectionTypeFromLeftToRight;
-
+    
     if(deltaX>0){
         
         fromPoint.x+=_stepX;
@@ -202,7 +241,7 @@
         self.position = fromPoint;
         [self setAnimation:direction];
     }
-
+    
     if(deltaY>0){
         
         fromPoint.y+=_stepY;
@@ -217,12 +256,6 @@
         [self setAnimation:direction];
     }
     
-    
-    
-//    _animationImage.alpha = alphaFloat;
-    
-    
-
     if(abs(deltaX)>=abs(deltaY)){
         
         if(deltaX> 0)
@@ -241,15 +274,13 @@
     
     [self setAnimation:direction];
     [_animationImage startAnimating];
-
-    NSLog(@"position: %@",NSStringFromCGPoint(self.position));
-
-
+    
 }
-
 
 - (void)move:(DirectionType) direction
 {
+    
+    //NSLog(@"position: %@",NSStringFromCGPoint(self.position));
     
     CGPoint position = self.position;
     

@@ -34,6 +34,7 @@
     [self reset];
     
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    
     [timer fire];
 }
 
@@ -109,8 +110,6 @@
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    _actionTextView.text = @"";
-    _positionTextField.text = [_hero whereAreYou];
     _resetBtn.hidden = YES;
 
 }
@@ -121,45 +120,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
-}
-
-- (IBAction)moveAction:(id)sender {
-    
-    DirectionType direction = DirectionTypeFromLeftToRight;
-    
-    // ↑（上）ボタンをタップした時の処理
-    
-    if ([sender tag] == KeyTAGUp){
-        direction = DirectionTypeFromBottomToTop;
-    }
-    
-    // →（右）ボタンをタップした時の処理
-    if ([sender tag] == KeyTAGRight){
-        
-        direction = DirectionTypeFromLeftToRight;
-    
-    }
-    
-    //↓ （下）ボタンをタップした時の処理
-    if ([sender tag] == KeyTAGDown){
-        direction = DirectionTypeFromTopToBottom;
-        
-    }
-    
-    // ←（左）ボタンをタップした時の処理
-    if ([sender tag] == KeyTAGLeft){
-        direction = DirectionTypeFromRightToLeft;
-        
-    }
-
-    [_hero move:direction];
-    
-    //キャラクターステータス出力
-    _actionTextView.text = [NSString stringWithFormat:@"%@は歩いている",_hero.name];
-    
-    //キャラクター位置出力
-    _positionTextField.text = [_enemyBoss whereAreYou];
 
 }
 
