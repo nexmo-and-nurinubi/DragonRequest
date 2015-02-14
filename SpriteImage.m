@@ -15,10 +15,10 @@
         charactarHeight:(int)charactarHeiht {
     
     if (self = [super init]) {
-        
+        UIScreen *mainScreen = [UIScreen mainScreen];
         self.image = [UIImage imageNamed:imageName];
-        self.width = charactarWidth;
-        self.height = charactarHeiht;
+        self.width = charactarWidth * mainScreen.scale;
+        self.height = charactarHeiht * mainScreen.scale;
         
         [self initArray];
     }

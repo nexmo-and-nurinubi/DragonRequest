@@ -10,22 +10,6 @@
 
 @implementation FireSpriteImage
 
-- (id)initWithImageName:(NSString *)imageName
-         charactarWidth:(int)charactarWidth
-        charactarHeight:(int)charactarHeiht {
-    
-    if (self = [super init]) {
-        
-        self.image = [UIImage imageNamed:imageName];
-        self.width = charactarWidth;
-        self.height = charactarHeiht;
-        
-        [self initArray];
-    }
-    
-    return self;
-}
-
 - (void)initArray {
     UIImage *image01 = [self createImageArrayWithPosX:self.width*0 posY:self.height*0];
     UIImage *image02 = [self createImageArrayWithPosX:self.width*1 posY:self.height*0];

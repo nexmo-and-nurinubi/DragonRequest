@@ -116,6 +116,7 @@
 		18F0C31E1A8F1E01008595CB /* pipo-btleffect042@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */; };
 		18F0C3231A8F3822008595CB /* FiraSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3221A8F3822008595CB /* FiraSpriteImage.m */; };
 		18F0C3261A8F3A78008595CB /* SpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3251A8F3A78008595CB /* SpriteImage.m */; };
+		18F0C3291A8F3DFE008595CB /* FiragaSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */; };
 		612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF21A85FEA00089573B /* BossLeftAttack1.png */; };
 		612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF31A85FEA00089573B /* BossLeftAttack2.png */; };
 		612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF41A85FEA00089573B /* BossLeftAttack3.png */; };
@@ -295,6 +296,8 @@
 		18F0C3221A8F3822008595CB /* FiraSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiraSpriteImage.m; sourceTree = "<group>"; };
 		18F0C3241A8F3A78008595CB /* SpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteImage.h; sourceTree = "<group>"; };
 		18F0C3251A8F3A78008595CB /* SpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteImage.m; sourceTree = "<group>"; };
+		18F0C3271A8F3DFE008595CB /* FiragaSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiragaSpriteImage.h; sourceTree = "<group>"; };
+		18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiragaSpriteImage.m; sourceTree = "<group>"; };
 		612C6EF21A85FEA00089573B /* BossLeftAttack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack1.png; sourceTree = "<group>"; };
 		612C6EF31A85FEA00089573B /* BossLeftAttack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack2.png; sourceTree = "<group>"; };
 		612C6EF41A85FEA00089573B /* BossLeftAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack3.png; sourceTree = "<group>"; };
@@ -446,6 +449,8 @@
 				18F0C2B91A8F146D008595CB /* FireSpriteImage.m */,
 				18F0C3211A8F3822008595CB /* FiraSpriteImage.h */,
 				18F0C3221A8F3822008595CB /* FiraSpriteImage.m */,
+				18F0C3271A8F3DFE008595CB /* FiragaSpriteImage.h */,
+				18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */,
 				18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */,
 				18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */,
 				18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */,
@@ -918,6 +923,7 @@
 				18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */,
+				18F0C3291A8F3DFE008595CB /* FiragaSpriteImage.m in Sources */,
 				18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */,
 				0750AE341A6A2E7200DD05A3 /* BossSpriteImage.m in Sources */,
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,

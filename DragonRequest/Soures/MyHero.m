@@ -9,6 +9,7 @@
 #import "MyHero.h"
 #import "FireSpriteImage.h"
 #import "FiraSpriteImage.h"
+#import "FiragaSpriteImage.h"
 
 @implementation MyHero
 
@@ -60,10 +61,13 @@
         // バトルアニメーション
         SpriteImage *spriteImage;
         if(self.level == 1){
-            spriteImage = [[FireSpriteImage alloc] initWithImageName:@"pipo-btleffect024.png" charactarWidth:240 charactarHeight:240];
+            spriteImage = [[FireSpriteImage alloc] initWithImageName:@"pipo-btleffect024.png" charactarWidth:120 charactarHeight:120];
         }
         else if(self.level == 2){
-            spriteImage = [[FiraSpriteImage alloc] initWithImageName:@"pipo-btleffect037.png" charactarWidth:240 charactarHeight:240];
+            spriteImage = [[FiraSpriteImage alloc] initWithImageName:@"pipo-btleffect037.png" charactarWidth:120 charactarHeight:120];
+        }
+        else if(self.level == 3){
+            spriteImage = [[FiragaSpriteImage alloc] initWithImageName:@"pipo-btleffect030.png" charactarWidth:320 charactarHeight:120];
         }
         self.fightAnimationImage.frame = CGRectMake(0, 0, 64, 64);
         self.fightAnimationImage.center = target.animationImage.center;
