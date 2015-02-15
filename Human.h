@@ -29,9 +29,6 @@
     //キャラクターイメージを表示するiOS obect
     UIImage *_originalAnimationImage;
     
-    //キャラクターイメージを表示するiOS obect
-    UIImageView *_animationImageView;
-
     //キャラクターPowerを表示するiOS obect
     UIImageView *_powerImageView;
 
@@ -60,14 +57,19 @@
     
     float _defaultPower;
     
-    NSArray *_multiSceanAnimArray;
+    NSInteger _level;
     
+    //向きアニメーション配列
+    NSMutableArray *_walkingSceanAnimArray;
+    
+    //向きことのアニメーション
     NSArray *_frontSceanAnimArray;
     NSArray *_backSceanAnimArray;
     NSArray *_leftSceanAnimArray;
     NSArray *_rightSceanAnimArray;
     
-    
+    //戦闘シーンアニメーション
+    NSMutableArray *_fightAnimArray;
     
 }
 
@@ -88,6 +90,12 @@
 
 // 透明度
 @property (nonatomic,assign) float alpha;
+
+//キャラクターイメージを表示するiOS obect
+@property (nonatomic, strong)UIImageView *animationImageView;
+
+//キャラクターバトルイメージを表示するiOS obect
+@property (nonatomic, strong) UIImageView *fightAnimationImageView;
 
 - (id)init :(CGPoint)initPos;
 

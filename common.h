@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define marineDefaultPosY               10
 
 //boss初期情報
-#define bossMoveTimeInterval            0.3f
+#define bossMoveTimeInterval            0.1f
 #define bossPatrolRadius                72
 
 #define bossStepX                       3

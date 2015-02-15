@@ -23,6 +23,11 @@
         self.power = heroDefaultPower;
         self.minusPower = heroMinusPower;
         
+        self.power = heroDefaultPower;
+        self.minusPower = heroMinusPower;
+        
+        _level = 0;
+        
         _stepX = heroStepX;
         _stepY = heroStepY;
         
@@ -54,21 +59,21 @@
                      countX:3
                      countY:4];
     
-
-    //初期化
+    //戦闘シーンアニメーションイメージ設定
+    [self setFightAnimImage];
     
     //表示イメージ
     UIImage *img = [UIImage imageNamed:@"hero3.png"];
     
-    if(_animationImageView == nil){
-        _animationImageView = [[UIImageView alloc]initWithImage:img];
-        _animationImageView.tag = HumanTypeHero;
-        _animationImageView.userInteractionEnabled = YES;
+    if(self.animationImageView == nil){
+        self.animationImageView = [[UIImageView alloc]initWithImage:img];
+        self.animationImageView.tag = HumanTypeHero;
+        self.animationImageView.userInteractionEnabled = YES;
     }
     
-    [parentView addSubview:_animationImageView];
+    [parentView addSubview:self.animationImageView];
 
-    _animationImageView.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    self.animationImageView.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     
 }
 
@@ -81,10 +86,10 @@
         [super setMoveAnimImage:originalImageName
                          countX:countX countY:countY];
         
-        _frontSceanAnimArray = [_multiSceanAnimArray objectAtIndex:0];
-        _leftSceanAnimArray  = [_multiSceanAnimArray objectAtIndex:1];
-        _rightSceanAnimArray = [_multiSceanAnimArray objectAtIndex:2];
-        _backSceanAnimArray  = [_multiSceanAnimArray objectAtIndex:3];
+        _frontSceanAnimArray = [_walkingSceanAnimArray objectAtIndex:0];
+        _leftSceanAnimArray  = [_walkingSceanAnimArray objectAtIndex:1];
+        _rightSceanAnimArray = [_walkingSceanAnimArray objectAtIndex:2];
+        _backSceanAnimArray  = [_walkingSceanAnimArray objectAtIndex:3];
         
     }
     @catch(NSException *exception){
@@ -96,5 +101,64 @@
     }
     
 }
+
+-(void)setFightAnimImage
+{
+    @try{
+        
+        if(_fightAnimArray==nil)_fightAnimArray = [NSMutableArray array];
+        
+        else [_fightAnimArray removeAllObjects];
+        
+        //fight アニメーションロード
+        UIImage *fightImage = nil;
+        
+        NSArray *fightSceanArray = nil;
+        
+        //fight アニメーションロード1
+        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:120
+                                             charactarHeight:120];
+        
+        [_fightAnimArray addObject:fightSceanArray];
+
+        //fight アニメーションロード2
+        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:120
+                                             charactarHeight:120];
+        
+        [_fightAnimArray addObject:fightSceanArray];
+        
+        //fight アニメーションロード3
+        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:320
+                                             charactarHeight:120];
+        
+        [_fightAnimArray addObject:fightSceanArray];
+        
+        
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
+    
+}
+
 
 @end

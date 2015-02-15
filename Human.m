@@ -27,7 +27,9 @@
     _toPoint = CGPointMake(point.x, point.y);
     
     self.name = @"human";
-    self.power = 0;
+    
+    _power = 0;
+    _level = 0;
     
     _stepX = humanStepX;
     _stepY = humanStepY;
@@ -64,12 +66,14 @@
     
     if(self){
     
-        _multiSceanAnimArray = nil;
+        _walkingSceanAnimArray = nil;
 
         _frontSceanAnimArray = nil;
         _backSceanAnimArray = nil;
         _leftSceanAnimArray = nil;
         _rightSceanAnimArray = nil;
+        
+        //_fightMultiSceanAnimArray = nil;
         
     }
     
@@ -103,19 +107,6 @@
     NSString *str = [NSString stringWithFormat:@" %@ [ %.0f : %.0f ]",self.name,self.position.x,self.position.y];
     
     return str;
-}
-
-- (BOOL)fight:(Human *)target {
-    
-    //human super class
-    if (ABS(self.position.x - target.position.x) <= _reach && ABS(self.position.y - target.position.y) <= _reach) {
-        target.power -= self.minusPower;
-        if (target.power <= 0) {
-            return YES;
-        }
-    }
-    
-    return NO;
 }
 
 - (NSString *)sayToWin:(NSInteger)power {
@@ -157,6 +148,10 @@
     
     [parentView addSubview:_powerBgImageView];
     [parentView addSubview:_powerImageView];
+
+    
+    self.fightAnimationImageView = [[UIImageView alloc] init];
+    [parentView addSubview:self.fightAnimationImageView];
     
 }
 
@@ -168,11 +163,11 @@
         
         UIImage *originalAnimationImage = [UIImage imageNamed:originalImageName];
         
-        _multiSceanAnimArray = [[DrUtil sharedInstance] animArray:originalAnimationImage
-                                                           countX:countX
-                                                           countY:countY
-                                                   charactarWidth:_imageCutSizeWidth
-                                                  charactarHeight:_imageCutSizeHeight];
+        _walkingSceanAnimArray = [[DrUtil sharedInstance] animArrayList:originalAnimationImage
+                                                               countX:countX
+                                                               countY:countY
+                                                       charactarWidth:_imageCutSizeWidth
+                                                      charactarHeight:_imageCutSizeHeight];
         
     }
     @catch(NSException *exception){
@@ -185,6 +180,16 @@
     
 }
 
+-(void)setPowerImage:(NSInteger)power
+{
+    
+    self.power = power;
+    
+    [self setPowerImage];
+    
+    
+}
+
 -(void)setPowerImage
 {
     _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
@@ -194,13 +199,8 @@
     
 }
 
--(void)setPowerImage:(NSInteger)power
+-(void)setFightAnimImage
 {
-
-    self.power = power;
-    
-    [self setPowerImage];
-    
     
 }
 
@@ -241,9 +241,6 @@
 
     _currentComma++;
     
-    
-//    _animationImageView.animationImages = sceanAnimArray;
-//    _animationImageView.animationDuration = 1;
     _animationImageView.frame = CGRectMake(self.position.x,
                                            self.position.y,
                                            _imageWidth,
@@ -269,7 +266,6 @@
 }
 -(void)stopToWalk
 {
-//    [_animationImageView stopAnimating];
    
 }
 
@@ -416,8 +412,38 @@
     
     [self setAnimation:direction];
     
-//    [_animationImageView startAnimating];
+}
+
+- (BOOL)fight:(Human *)target {
     
+    @try{
+        
+        if (ABS(self.animationImageView.center.x - target.animationImageView.center.x) <= _reach && ABS(self.animationImageView.center.y - target.animationImageView.center.y) <= _reach) {
+            // バトルアニメーション
+            self.fightAnimationImageView.frame = CGRectMake(0, 0, 64, 64);
+            self.fightAnimationImageView.center = target.animationImageView.center;
+            self.fightAnimationImageView.animationImages = _fightAnimArray[_level];
+            self.fightAnimationImageView.animationDuration = 1.0;
+            self.fightAnimationImageView.animationRepeatCount = 1.0;
+            [self.fightAnimationImageView startAnimating];
+            
+            // 体力を減らす
+            target.power -= self.minusPower;
+            if (target.power <= 0) {
+                return YES;
+            }
+        }
+        
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
+    
+    return NO;
 }
 
 

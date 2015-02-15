@@ -15,10 +15,17 @@
 + (DrUtil *)sharedInstance;
 
 - (id)init;
+
 - (NSArray *)animArray:(UIImage *)originalAnimationImage
                 countX:(NSInteger)countX
                 countY:(NSInteger)countY
         charactarWidth:(NSInteger)charactarWidth
        charactarHeight:(NSInteger)charactarHeiht;
+
+- (NSMutableArray *)animArrayList:(UIImage *)originalAnimationImage
+                           countX:(NSInteger)countX
+                           countY:(NSInteger)countY
+                   charactarWidth:(NSInteger)charactarWidth
+                  charactarHeight:(NSInteger)charactarHeiht;
 
 @end
