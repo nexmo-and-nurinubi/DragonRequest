@@ -12,6 +12,7 @@
 
     CGPoint _toPoint;
     
+    NSInteger _currentComma;
     //タイマー
     NSTimer *_humanTimer;
     
@@ -26,7 +27,6 @@
     _toPoint = CGPointMake(point.x, point.y);
     
     self.name = @"human";
-    self.level = 1;
     self.power = 0;
     
     _stepX = humanStepX;
@@ -40,13 +40,19 @@
     _imageWidth = humanImageSizeWidth;
     _imageHeight = humanImageSizeHeight;
     
-    _animationImage = nil;
-    _fightAnimationImage = nil;
+    _imageCutSizeWidth = humanImageCutSizeWidth;
+    _imageCutSizeHeight= humanImageCutSizeHeight;
+    
+    _countComma = humanCountAnimComma;
+    
+    _animationImageView = nil;
     
     _humanTimer = nil;
     
+    _currentComma = 0;
+    
     // デフォルトでは透明度を１にしておく
-    alphaFloat = 1;
+    _alpha = 1;
     
     srand((unsigned)time(NULL));
 }
@@ -56,9 +62,19 @@
     
     self = [super init];
     
+    if(self){
+    
+        _multiSceanAnimArray = nil;
+
+        _frontSceanAnimArray = nil;
+        _backSceanAnimArray = nil;
+        _leftSceanAnimArray = nil;
+        _rightSceanAnimArray = nil;
+        
+    }
+    
     return self;
 }
-
 
 - (id)init :(CGPoint)initPos{
 
@@ -71,32 +87,6 @@
     
     return self;
    
-}
-
-
-/** 透明度を設定したい！！ */
-- (id)init :(CGPoint)initPos
-      alpha:(float)alpha {
-    
-    self = [super init];
-    
-    if (self) {
-        
-        [self posInitWithPoint:initPos];
-        
-        
-        // 透明度を設定
-        alphaFloat = alpha;
-    }
-    
-    return self;
-    
-}
-
-- (void)levelup {
-    self.level += 1;
-    self.minusPower += 5;
-    self.power += 5;
 }
 
 - (NSString *)whoAreYou {
@@ -143,19 +133,127 @@
     return str;
     
 }
+
 -(void)setImage:(UIView *)parentView
 {
+    UIImage *img = [UIImage imageNamed:@"powerBg.png"];
+    
+    if(_powerBgImageView == nil){
+        _powerBgImageView = [[UIImageView alloc]initWithImage:img];
+        _powerBgImageView.tag = HumanTypeBoss;
+        _powerBgImageView.userInteractionEnabled = YES;
+    }
+    
+    img = [UIImage imageNamed:@"powerImg.png"];
+    
+    if(_powerImageView == nil){
+        _powerImageView = [[UIImageView alloc]initWithImage:img];
+        _powerImageView.tag = HumanTypeBoss;
+        _powerImageView.userInteractionEnabled = YES;
+    }
+    
+    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
+    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
+    
+    [parentView addSubview:_powerBgImageView];
+    [parentView addSubview:_powerImageView];
+    
+}
+
+-(void)setMoveAnimImage:(NSString *)originalImageName
+                 countX:(int)countX
+                 countY:(int)countY
+{
+    @try{
+        
+        UIImage *originalAnimationImage = [UIImage imageNamed:originalImageName];
+        
+        _multiSceanAnimArray = [[DrUtil sharedInstance] animArray:originalAnimationImage
+                                                           countX:countX
+                                                           countY:countY
+                                                   charactarWidth:_imageCutSizeWidth
+                                                  charactarHeight:_imageCutSizeHeight];
+        
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
+    
+}
+
+-(void)setPowerImage
+{
+    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
+    
+    NSInteger powerWidth = (float)(_power/_defaultPower)*(_imageWidth/10.0);
+    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,powerWidth,humanPowerImgHeight);
+    
+}
+
+-(void)setPowerImage:(NSInteger)power
+{
+
+    self.power = power;
+    
+    [self setPowerImage];
+    
     
 }
 
 -(void)setAnimation:(DirectionType)direction
 {
+    [self setPowerImage];
+    
+    NSArray *sceanAnimArray = nil;
+    
+    if (direction == DirectionTypeFromRightToLeft) {
+        
+        sceanAnimArray = _leftSceanAnimArray;
+        
+        
+    }
+    if (direction == DirectionTypeFromLeftToRight) {
+        sceanAnimArray = _rightSceanAnimArray;
+        
+        
+        
+        
+    }
+    if (direction == DirectionTypeFromBottomToTop) {
+        sceanAnimArray = _backSceanAnimArray;
+        
+        
+        
+    }
+    if (direction == DirectionTypeFromTopToBottom) {
+        sceanAnimArray = _frontSceanAnimArray;
+        
+        
+    }
+    
+    if(_currentComma>=_countComma)_currentComma=0;
+    
+    _animationImageView.image = sceanAnimArray[_currentComma];
+
+    _currentComma++;
+    
+    
+//    _animationImageView.animationImages = sceanAnimArray;
+//    _animationImageView.animationDuration = 1;
+    _animationImageView.frame = CGRectMake(self.position.x,
+                                           self.position.y,
+                                           _imageWidth,
+                                           _imageHeight);
     
 }
 
 - (void)removeImage
 {
-    [_animationImage removeFromSuperview];
+    [_animationImageView removeFromSuperview];
 }
 
 -(void)moveRand
@@ -171,7 +269,7 @@
 }
 -(void)stopToWalk
 {
-    [_animationImage stopAnimating];
+//    [_animationImageView stopAnimating];
    
 }
 
@@ -273,7 +371,6 @@
     }
     
     [self setAnimation:direction];
-    [_animationImage startAnimating];
     
 }
 
@@ -319,7 +416,7 @@
     
     [self setAnimation:direction];
     
-    [_animationImage startAnimating];
+//    [_animationImageView startAnimating];
     
 }
 

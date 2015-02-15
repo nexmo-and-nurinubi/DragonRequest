@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0703FD2C1A4EC145009B6D8E /* HeroSpriteImageTrim.m in Sources */ = {isa = PBXBuildFile; fileRef = 0703FD291A4EC145009B6D8E /* HeroSpriteImageTrim.m */; };
-		0703FD2D1A4EC145009B6D8E /* SpriteImageTrim.m in Sources */ = {isa = PBXBuildFile; fileRef = 0703FD2B1A4EC145009B6D8E /* SpriteImageTrim.m */; };
-		0750AE341A6A2E7200DD05A3 /* BossSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0750AE331A6A2E7200DD05A3 /* BossSpriteImage.m */; };
 		0750AE361A6A44D000DD05A3 /* dragon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE351A6A44D000DD05A3 /* dragon1.png */; };
 		0750AE381A6A546B00DD05A3 /* hero1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE371A6A546B00DD05A3 /* hero1.png */; };
 		0750AE3C1A6A5DE000DD05A3 /* dragon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE3B1A6A5DE000DD05A3 /* dragon3.png */; };
@@ -61,15 +58,7 @@
 		189F86201A32DCCE0016D4EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189F861F1A32DCCE0016D4EE /* Images.xcassets */; };
 		189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F86211A32DCCE0016D4EE /* LaunchScreen.xib */; };
 		189F862F1A32DCCE0016D4EE /* DragonRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F862E1A32DCCE0016D4EE /* DragonRequestTests.m */; };
-		18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */; };
-		18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */; };
-		18A0B2881A3C111100CDCF8A /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2811A3C111100CDCF8A /* Human.m */; };
-		18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B2851A3C111100CDCF8A /* MyHero.m */; };
-		18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0B28D1A3C11EA00CDCF8A /* ViewController.m */; };
 		18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0B28F1A3C15C500CDCF8A /* taran.jpg */; };
-		18F0C2BA1A8F146D008595CB /* FireSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2B91A8F146D008595CB /* FireSpriteImage.m */; };
-		18F0C2BE1A8F170A008595CB /* BossFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */; };
-		18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */; };
 		18F0C2F31A8F1E01008595CB /* pipo-btleffect021.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */; };
 		18F0C2F41A8F1E01008595CB /* pipo-btleffect022.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C51A8F1E01008595CB /* pipo-btleffect022.png */; };
 		18F0C2F51A8F1E01008595CB /* pipo-btleffect023.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2C61A8F1E01008595CB /* pipo-btleffect023.png */; };
@@ -114,9 +103,6 @@
 		18F0C31C1A8F1E01008595CB /* pipo-btleffect040@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EE1A8F1E01008595CB /* pipo-btleffect040@2x.png */; };
 		18F0C31D1A8F1E01008595CB /* pipo-btleffect041@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2EF1A8F1E01008595CB /* pipo-btleffect041@2x.png */; };
 		18F0C31E1A8F1E01008595CB /* pipo-btleffect042@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */; };
-		18F0C3231A8F3822008595CB /* FiraSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3221A8F3822008595CB /* FiraSpriteImage.m */; };
-		18F0C3261A8F3A78008595CB /* SpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3251A8F3A78008595CB /* SpriteImage.m */; };
-		18F0C3291A8F3DFE008595CB /* FiragaSpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */; };
 		612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF21A85FEA00089573B /* BossLeftAttack1.png */; };
 		612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF31A85FEA00089573B /* BossLeftAttack2.png */; };
 		612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6EF41A85FEA00089573B /* BossLeftAttack3.png */; };
@@ -153,6 +139,12 @@
 		612C6F3A1A85FEA00089573B /* HeroRightAttack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F161A85FEA00089573B /* HeroRightAttack1.png */; };
 		612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F171A85FEA00089573B /* HeroRightAttack2.png */; };
 		612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F181A85FEA00089573B /* HeroRightAttack3.png */; };
+		B802D4171A90B50E00305B21 /* DrUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4161A90B50E00305B21 /* DrUtil.m */; };
+		B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4191A90B53300305B21 /* EnemyBoss.m */; };
+		B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41B1A90B53300305B21 /* EnemyMarine.m */; };
+		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
+		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
+		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,12 +158,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0703FD281A4EC145009B6D8E /* HeroSpriteImageTrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroSpriteImageTrim.h; sourceTree = "<group>"; };
-		0703FD291A4EC145009B6D8E /* HeroSpriteImageTrim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroSpriteImageTrim.m; sourceTree = "<group>"; };
-		0703FD2A1A4EC145009B6D8E /* SpriteImageTrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteImageTrim.h; sourceTree = "<group>"; };
-		0703FD2B1A4EC145009B6D8E /* SpriteImageTrim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteImageTrim.m; sourceTree = "<group>"; };
-		0750AE321A6A2E5A00DD05A3 /* BossSpriteImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSpriteImage.h; sourceTree = "<group>"; };
-		0750AE331A6A2E7200DD05A3 /* BossSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossSpriteImage.m; sourceTree = "<group>"; };
 		0750AE351A6A44D000DD05A3 /* dragon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon1.png; sourceTree = "<group>"; };
 		0750AE371A6A546B00DD05A3 /* hero1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero1.png; sourceTree = "<group>"; };
 		0750AE3B1A6A5DE000DD05A3 /* dragon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon3.png; sourceTree = "<group>"; };
@@ -221,31 +207,14 @@
 		189F86131A32DCCE0016D4EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189F86141A32DCCE0016D4EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		189F86171A32DCCE0016D4EE /* DragonRequest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonRequest.xcdatamodel; sourceTree = "<group>"; };
-		189F86191A32DCCE0016D4EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		189F861D1A32DCCE0016D4EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		189F861F1A32DCCE0016D4EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189F86221A32DCCE0016D4EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		189F86281A32DCCE0016D4EE /* DragonRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189F862D1A32DCCE0016D4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189F862E1A32DCCE0016D4EE /* DragonRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonRequestTests.m; sourceTree = "<group>"; };
-		18A0B2791A3C0F8E00CDCF8A /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = DragonRequest/Common/common.h; sourceTree = "<group>"; };
-		18A0B27C1A3C111100CDCF8A /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyBoss.h; path = DragonRequest/Soures/EnemyBoss.h; sourceTree = "<group>"; };
-		18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyBoss.m; path = DragonRequest/Soures/EnemyBoss.m; sourceTree = "<group>"; };
-		18A0B27E1A3C111100CDCF8A /* EnemyMarine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyMarine.h; path = DragonRequest/Soures/EnemyMarine.h; sourceTree = "<group>"; };
-		18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyMarine.m; path = DragonRequest/Soures/EnemyMarine.m; sourceTree = "<group>"; };
-		18A0B2801A3C111100CDCF8A /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Human.h; path = DragonRequest/Soures/Human.h; sourceTree = "<group>"; };
-		18A0B2811A3C111100CDCF8A /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Human.m; path = DragonRequest/Soures/Human.m; sourceTree = "<group>"; };
-		18A0B2841A3C111100CDCF8A /* MyHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyHero.h; path = DragonRequest/Soures/MyHero.h; sourceTree = "<group>"; };
-		18A0B2851A3C111100CDCF8A /* MyHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyHero.m; path = DragonRequest/Soures/MyHero.m; sourceTree = "<group>"; };
 		18A0B28B1A3C11C300CDCF8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18A0B28D1A3C11EA00CDCF8A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18A0B28F1A3C15C500CDCF8A /* taran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = taran.jpg; path = DragonRequest/taran.jpg; sourceTree = "<group>"; };
-		18F0C2B91A8F146D008595CB /* FireSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireSpriteImage.m; sourceTree = "<group>"; };
-		18F0C2BB1A8F14B6008595CB /* FireSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireSpriteImage.h; sourceTree = "<group>"; };
-		18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossFightSpriteImage.h; sourceTree = "<group>"; };
-		18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossFightSpriteImage.m; sourceTree = "<group>"; };
-		18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyFightSpriteImage.h; sourceTree = "<group>"; };
-		18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFightSpriteImage.m; sourceTree = "<group>"; };
 		18F0C2C41A8F1E01008595CB /* pipo-btleffect021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect021.png"; sourceTree = "<group>"; };
 		18F0C2C51A8F1E01008595CB /* pipo-btleffect022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect022.png"; sourceTree = "<group>"; };
 		18F0C2C61A8F1E01008595CB /* pipo-btleffect023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect023.png"; sourceTree = "<group>"; };
@@ -292,12 +261,6 @@
 		18F0C2F01A8F1E01008595CB /* pipo-btleffect042@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect042@2x.png"; sourceTree = "<group>"; };
 		18F0C2F11A8F1E01008595CB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		18F0C2F21A8F1E01008595CB /* ウディタアニメーション設定.dbtype */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ウディタアニメーション設定.dbtype"; sourceTree = "<group>"; };
-		18F0C3211A8F3822008595CB /* FiraSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiraSpriteImage.h; sourceTree = "<group>"; };
-		18F0C3221A8F3822008595CB /* FiraSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiraSpriteImage.m; sourceTree = "<group>"; };
-		18F0C3241A8F3A78008595CB /* SpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteImage.h; sourceTree = "<group>"; };
-		18F0C3251A8F3A78008595CB /* SpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteImage.m; sourceTree = "<group>"; };
-		18F0C3271A8F3DFE008595CB /* FiragaSpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiragaSpriteImage.h; sourceTree = "<group>"; };
-		18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiragaSpriteImage.m; sourceTree = "<group>"; };
 		612C6EF21A85FEA00089573B /* BossLeftAttack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack1.png; sourceTree = "<group>"; };
 		612C6EF31A85FEA00089573B /* BossLeftAttack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack2.png; sourceTree = "<group>"; };
 		612C6EF41A85FEA00089573B /* BossLeftAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BossLeftAttack3.png; sourceTree = "<group>"; };
@@ -334,6 +297,19 @@
 		612C6F161A85FEA00089573B /* HeroRightAttack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack1.png; sourceTree = "<group>"; };
 		612C6F171A85FEA00089573B /* HeroRightAttack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack2.png; sourceTree = "<group>"; };
 		612C6F181A85FEA00089573B /* HeroRightAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack3.png; sourceTree = "<group>"; };
+		B802D4151A90B50E00305B21 /* DrUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrUtil.h; sourceTree = "<group>"; };
+		B802D4161A90B50E00305B21 /* DrUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrUtil.m; sourceTree = "<group>"; };
+		B802D4181A90B53300305B21 /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBoss.h; sourceTree = "<group>"; };
+		B802D4191A90B53300305B21 /* EnemyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBoss.m; sourceTree = "<group>"; };
+		B802D41A1A90B53300305B21 /* EnemyMarine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyMarine.h; sourceTree = "<group>"; };
+		B802D41B1A90B53300305B21 /* EnemyMarine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyMarine.m; sourceTree = "<group>"; };
+		B802D41C1A90B53300305B21 /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		B802D41D1A90B53300305B21 /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
+		B802D41E1A90B53300305B21 /* MyHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHero.h; sourceTree = "<group>"; };
+		B802D41F1A90B53300305B21 /* MyHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHero.m; sourceTree = "<group>"; };
+		B802D4241A90B5CB00305B21 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,8 +355,8 @@
 		189F860E1A32DCCE0016D4EE /* DragonRequest */ = {
 			isa = PBXGroup;
 			children = (
-				189F86191A32DCCE0016D4EE /* ViewController.h */,
-				18A0B28D1A3C11EA00CDCF8A /* ViewController.m */,
+				B802D4241A90B5CB00305B21 /* ViewController.h */,
+				B802D4251A90B5CB00305B21 /* ViewController.m */,
 				18A0B2751A3C05DB00CDCF8A /* App */,
 				189F860F1A32DCCE0016D4EE /* Supporting Files */,
 			);
@@ -429,32 +405,14 @@
 		18A0B2761A3C067C00CDCF8A /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				18F0C3241A8F3A78008595CB /* SpriteImage.h */,
-				18F0C3251A8F3A78008595CB /* SpriteImage.m */,
-				0703FD281A4EC145009B6D8E /* HeroSpriteImageTrim.h */,
-				0703FD291A4EC145009B6D8E /* HeroSpriteImageTrim.m */,
-				0703FD2A1A4EC145009B6D8E /* SpriteImageTrim.h */,
-				0703FD2B1A4EC145009B6D8E /* SpriteImageTrim.m */,
-				18A0B2801A3C111100CDCF8A /* Human.h */,
-				18A0B2811A3C111100CDCF8A /* Human.m */,
-				18A0B2841A3C111100CDCF8A /* MyHero.h */,
-				18A0B2851A3C111100CDCF8A /* MyHero.m */,
-				18A0B27E1A3C111100CDCF8A /* EnemyMarine.h */,
-				18A0B27F1A3C111100CDCF8A /* EnemyMarine.m */,
-				18A0B27C1A3C111100CDCF8A /* EnemyBoss.h */,
-				18A0B27D1A3C111100CDCF8A /* EnemyBoss.m */,
-				0750AE321A6A2E5A00DD05A3 /* BossSpriteImage.h */,
-				0750AE331A6A2E7200DD05A3 /* BossSpriteImage.m */,
-				18F0C2BB1A8F14B6008595CB /* FireSpriteImage.h */,
-				18F0C2B91A8F146D008595CB /* FireSpriteImage.m */,
-				18F0C3211A8F3822008595CB /* FiraSpriteImage.h */,
-				18F0C3221A8F3822008595CB /* FiraSpriteImage.m */,
-				18F0C3271A8F3DFE008595CB /* FiragaSpriteImage.h */,
-				18F0C3281A8F3DFE008595CB /* FiragaSpriteImage.m */,
-				18F0C2BF1A8F1772008595CB /* EnemyFightSpriteImage.h */,
-				18F0C2C01A8F1772008595CB /* EnemyFightSpriteImage.m */,
-				18F0C2BC1A8F170A008595CB /* BossFightSpriteImage.h */,
-				18F0C2BD1A8F170A008595CB /* BossFightSpriteImage.m */,
+				B802D41C1A90B53300305B21 /* Human.h */,
+				B802D41D1A90B53300305B21 /* Human.m */,
+				B802D41E1A90B53300305B21 /* MyHero.h */,
+				B802D41F1A90B53300305B21 /* MyHero.m */,
+				B802D4181A90B53300305B21 /* EnemyBoss.h */,
+				B802D4191A90B53300305B21 /* EnemyBoss.m */,
+				B802D41A1A90B53300305B21 /* EnemyMarine.h */,
+				B802D41B1A90B53300305B21 /* EnemyMarine.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -473,7 +431,9 @@
 		18A0B2781A3C0DFF00CDCF8A /* common */ = {
 			isa = PBXGroup;
 			children = (
-				18A0B2791A3C0F8E00CDCF8A /* common.h */,
+				B802D4271A90B61900305B21 /* common.h */,
+				B802D4151A90B50E00305B21 /* DrUtil.h */,
+				B802D4161A90B50E00305B21 /* DrUtil.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -914,23 +874,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A0B2881A3C111100CDCF8A /* Human.m in Sources */,
-				0703FD2C1A4EC145009B6D8E /* HeroSpriteImageTrim.m in Sources */,
-				18F0C3261A8F3A78008595CB /* SpriteImage.m in Sources */,
-				18A0B2871A3C111100CDCF8A /* EnemyMarine.m in Sources */,
-				18F0C2BA1A8F146D008595CB /* FireSpriteImage.m in Sources */,
-				18F0C3231A8F3822008595CB /* FiraSpriteImage.m in Sources */,
-				18F0C2C11A8F1772008595CB /* EnemyFightSpriteImage.m in Sources */,
+				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
-				18A0B2861A3C111100CDCF8A /* EnemyBoss.m in Sources */,
-				18F0C3291A8F3DFE008595CB /* FiragaSpriteImage.m in Sources */,
-				18A0B28E1A3C11EA00CDCF8A /* ViewController.m in Sources */,
-				0750AE341A6A2E7200DD05A3 /* BossSpriteImage.m in Sources */,
+				B802D4221A90B53300305B21 /* Human.m in Sources */,
+				B802D4261A90B5CB00305B21 /* ViewController.m in Sources */,
+				B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */,
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
-				18F0C2BE1A8F170A008595CB /* BossFightSpriteImage.m in Sources */,
-				0703FD2D1A4EC145009B6D8E /* SpriteImageTrim.m in Sources */,
-				18A0B28A1A3C111100CDCF8A /* MyHero.m in Sources */,
+				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
+				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

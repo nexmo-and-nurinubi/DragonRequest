@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 
 #import "common.h"
+#import "DrUtil.h"
 
 @interface Human : NSObject {
     
@@ -24,25 +25,50 @@
     
     //移動残り数
     u_int32_t _moveRestCount;
+
+    //キャラクターイメージを表示するiOS obect
+    UIImage *_originalAnimationImage;
+    
+    //キャラクターイメージを表示するiOS obect
+    UIImageView *_animationImageView;
+
+    //キャラクターPowerを表示するiOS obect
+    UIImageView *_powerImageView;
+
+    //キャラクターPowerBgを表示するiOS obect
+    UIImageView *_powerBgImageView;
     
     //キャラクターサイズ
-    int _imageWidth;
-    int _imageHeight;
+    NSInteger _imageWidth;
+    NSInteger _imageHeight;
+
+    NSInteger _imageCutSizeWidth;
+    NSInteger _imageCutSizeHeight;
+
+    NSInteger _countComma;
     
     //１回移動時のサイズ
-    int _stepX;
-    int _stepY;
+    NSInteger _stepX;
+    NSInteger _stepY;
     
     //攻撃範囲
-    int _reach;
+    NSInteger _reach;
     
     //画面サイズ
     int _screenSizeX;
     int _screenSizeY;
     
+    float _defaultPower;
     
-    // 透明度
-    float alphaFloat;
+    NSArray *_multiSceanAnimArray;
+    
+    NSArray *_frontSceanAnimArray;
+    NSArray *_backSceanAnimArray;
+    NSArray *_leftSceanAnimArray;
+    NSArray *_rightSceanAnimArray;
+    
+    
+    
 }
 
 //キャラクター名
@@ -52,10 +78,7 @@
 @property (nonatomic,assign) NSInteger minusPower;
 
 //自分のパワー
-@property (nonatomic,assign) NSInteger power;
-
-//自分のレベル
-@property (nonatomic,assign) NSInteger level;
+@property (nonatomic,assign) float power;
 
 //自分の位置
 @property (nonatomic,assign) CGPoint position;
@@ -63,17 +86,10 @@
 //自分のキャラクターサイズ
 @property (nonatomic,assign) CGRect frameSize;
 
-//キャラクターイメージを表示するiOS obect
-@property (nonatomic, strong) UIImageView *animationImage;
-
-//キャラクターバトルイメージを表示するiOS obect
-@property (nonatomic, strong) UIImageView *fightAnimationImage;
-
+// 透明度
+@property (nonatomic,assign) float alpha;
 
 - (id)init :(CGPoint)initPos;
-/** 透明度を設定したい！！ */
-- (id)init :(CGPoint)initPos
-      alpha:(float)alpha;
 
 - (NSString *)whoAreYou;
 - (NSString *)whereAreYou;
@@ -82,9 +98,13 @@
 -(void)setImage:(UIView *)parentView;
 -(void)removeImage;
 -(void)moveRand;
+-(void)setPowerImage;
 -(void)move:(DirectionType) direction;
 -(void)moveToPoint:(CGPoint)toPoint;
 -(void)stopToWalk;
 -(void)setAnimation:(DirectionType)direction;
+-(void)setMoveAnimImage:(NSString *)originalImageName
+                 countX:(int)countX
+                 countY:(int)countY;
 
 @end
