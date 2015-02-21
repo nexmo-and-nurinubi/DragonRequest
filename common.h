@@ -52,7 +52,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define heroStepX                       5
 #define heroStepY                       5
-#define heroReach                       12
+#define heroReach                       24
 #define heroImageSizeWidth              32
 #define heroImageSizeHeight             32
 #define heroImageCutSizeWidth           32
@@ -90,7 +90,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define bossStepX                       3
 #define bossStepY                       3
-#define bossReach                       12
+#define bossReach                       24
 #define bossImageSizeWidth              48
 #define bossImageSizeHeight             48
 #define bossImageCutSizeWidth           73

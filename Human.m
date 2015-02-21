@@ -22,6 +22,15 @@
 
 - (void)posInitWithPoint:(CGPoint)point
 {
+    if (point.x == 0 &&  point.y == 0) {
+        if (_myHumanType == HumanTypeEnemy ) {
+            point = CGPointMake(screenSizeX / 2, screenSizeY / 2);
+        } else {
+            CGFloat x = arc4random() % screenSizeX;
+            CGFloat y = arc4random() % screenSizeY;
+            point = CGPointMake(x, y);
+        }
+    }
     self.position = CGPointMake(point.x, point.y);
     
     _toPoint = CGPointMake(point.x, point.y);

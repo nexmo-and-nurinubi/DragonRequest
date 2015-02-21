@@ -10,6 +10,8 @@
 
 #define MARGIN 8
 #define BUTTON_WIDTH 20
+#define ENEMY_MARINE_MAX 5
+#define ENEMY_BOSS_MAX 5
 
 @interface ViewController ()
 
@@ -20,9 +22,9 @@
     //heroオブジェクト
     MyHero      *_hero;
     //Bossオブジェクト
-    EnemyBoss   *_enemyBoss;
+    EnemyBoss   *_enemyBoss[ENEMY_BOSS_MAX];
     //Marineオブジェクト
-    EnemyMarine *_enemyMarine;
+    EnemyMarine *_enemyMarine[ENEMY_MARINE_MAX];
     
 }
 
@@ -54,33 +56,49 @@
     [_hero moveToPoint:point];
     
     //タッチしたのが敵なら攻撃する
-    BOOL dead = NO;
     switch (tag) {
-        case HumanTypeEnemy:
-            dead = [_hero fight:_enemyMarine];
-            if (dead) {
-                [_enemyMarine removeImage];
-                _enemyMarine = nil;
+        case HumanTypeEnemy: {
+            BOOL dead[ENEMY_MARINE_MAX];
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = NO;
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)
+                dead[i] = [_hero fight:_enemyMarine[i]];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+            {
+                if (dead[i]) {
+                    [_enemyMarine[i] removeImage];
+                    _enemyMarine[i] = nil;
+                }
             }
             break;
-        case HumanTypeHero:
+        }
+        case HumanTypeHero: {
             // 処理なし
             break;
-        case HumanTypeBoss:
-            dead = [_hero fight:_enemyBoss];
-            if (dead) {
-                [_enemyBoss removeImage];
-                _enemyBoss = nil;
+        }
+        case HumanTypeBoss: {
+            BOOL dead[ENEMY_BOSS_MAX];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = NO;
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+                dead[i] = [_hero fight:_enemyBoss[i]];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+            {
+                if (dead[i]) {
+                    [_enemyBoss[i] removeImage];
+                    _enemyBoss[i] = nil;
+                }
             }
             break;
+        }
         default:
             break;
     }
 }
 
 - (void)bossMove{
-    [_enemyBoss moveRand];
-
+    for(int i=0;i<ENEMY_BOSS_MAX;i++){
+        [_enemyBoss[i]  moveRand];
+        [_enemyBoss[i]  fight:_hero];
+    }
 }
 
 
@@ -94,12 +112,13 @@
     //hero イメージを設定
     [_hero setImage:self.view];
     
-    //Bossのインスタンス作成
-    CGPoint bossPos = CGPointMake(100,screenSizeY/2);
-    _enemyBoss = [[EnemyBoss alloc] init:bossPos];
-    _enemyBoss.alpha = 1.0;
-    //Bossのイメージを設定
-    [_enemyBoss setImage:self.view];
+    for(int i=0;i<ENEMY_BOSS_MAX;i++){
+        //Bossのインスタンス作成
+        _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
+        _enemyBoss[i].alpha = 1.0;
+        //Bossのイメージを設定
+        [_enemyBoss[i] setImage:self.view];
+    }
     
     //heroのx、y座標
     _xPos = _hero.position.x;
