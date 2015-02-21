@@ -51,7 +51,7 @@
     CGPoint point = [touch locationInView:self.view];
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
-    [_enemyBoss moveRand];
+    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
     
     [_hero moveToPoint:point];
     
