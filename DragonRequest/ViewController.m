@@ -11,7 +11,8 @@
 #define MARGIN 8
 #define BUTTON_WIDTH 20
 #define ENEMY_MARINE_MAX 5
-#define ENEMY_BOSS_MAX 5
+#define ENEMY_BOSS_MAX 200
+#define ENEMY_BOSS_FIREST 0
 
 @interface ViewController ()
 
@@ -37,7 +38,10 @@
     
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
     
+    NSTimer * create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    
     [timer fire];
+    [create fire];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -101,6 +105,20 @@
     }
 }
 
+//タイマーで設定した時間ごとにボスを生成
+- (void)createBoss{
+    for(int i=0;i<ENEMY_BOSS_MAX;i++){
+        if(_enemyBoss[i] == nil){
+            //Bossのインスタンス作成
+            _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
+            _enemyBoss[i].alpha = 1.0;
+            //Bossのイメージを設定
+            [_enemyBoss[i] setImage:self.view];
+            break;
+        }
+    }
+}
+
 
 /** リセット */
 - (void)reset {
@@ -112,7 +130,7 @@
     //hero イメージを設定
     [_hero setImage:self.view];
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++){
+    for(int i=0;i<ENEMY_BOSS_FIREST;i++){
         //Bossのインスタンス作成
         _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
         _enemyBoss[i].alpha = 1.0;

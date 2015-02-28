@@ -121,8 +121,8 @@
         fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
                                                       countX:8
                                                       countY:1
-                                              charactarWidth:120
-                                             charactarHeight:120];
+                                              charactarWidth:240
+                                             charactarHeight:240];
         
         [_fightAnimArray addObject:fightSceanArray];
 
@@ -132,8 +132,8 @@
         fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
                                                       countX:8
                                                       countY:1
-                                              charactarWidth:120
-                                             charactarHeight:120];
+                                              charactarWidth:240
+                                             charactarHeight:240];
         
         [_fightAnimArray addObject:fightSceanArray];
         
@@ -141,10 +141,10 @@
         fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
         
         fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:320
-                                             charactarHeight:120];
+                                                      countX:1
+                                                      countY:8
+                                              charactarWidth:640
+                                             charactarHeight:240];
         
         [_fightAnimArray addObject:fightSceanArray];
         
