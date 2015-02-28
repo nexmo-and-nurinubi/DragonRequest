@@ -138,6 +138,7 @@
             break;
         }
     }
+//    NSLog(@"aaaaa");
 }
 
 

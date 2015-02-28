@@ -438,6 +438,7 @@
             
             // 体力を減らす
             target.power -= self.minusPower;
+            NSLog(@"HP:%.0f",target.power);
             if (target.power <= 0) {
                 return YES;
             }
