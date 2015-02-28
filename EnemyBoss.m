@@ -62,6 +62,7 @@
     if(self.animationImageView == nil){
         self.animationImageView = [[UIImageView alloc]initWithImage:img];
         self.animationImageView.tag = HumanTypeBoss;
+        self.animationImageView.userInteractionEnabled = YES;
     }
     
     [parentView addSubview:self.animationImageView];
