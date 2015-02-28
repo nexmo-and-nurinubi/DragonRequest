@@ -50,8 +50,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 // ヒーロー初期情報
 #define heroMoveTimeInterval            0.4f
 
-#define heroStepX                       5
-#define heroStepY                       5
+#define heroStepX                       15
+#define heroStepY                       15
 #define heroReach                       24
 #define heroImageSizeWidth              32
 #define heroImageSizeHeight             32
@@ -61,7 +61,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define heroCountAnimComma              3
 
 #define heroDefaultName                 @"まさと"
-#define heroDefaultPower                50.0f
+#define heroDefaultPower                30.0f
 #define heroMinusPower                  10.0f
 #define heroDefaultPosX                 10
 #define heroDefaultPosY                 10
@@ -100,8 +100,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 
 #define bossDefaultName                 @"Boss"
-#define bossDefaultPower                100.0f
-#define bossMinusPower                  1.0f
+#define bossDefaultPower                30.0f
+#define bossMinusPower                  5.0f
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10
 

@@ -120,6 +120,16 @@
         
         [_fightAnimArray addObject:fightSceanArray];
         
+        //fight アニメーションロード2
+        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:1
+                                                      countY:8
+                                              charactarWidth:640
+                                             charactarHeight:240];
+        
+        [_fightAnimArray addObject:fightSceanArray];
     }
     @catch(NSException *exception){
         

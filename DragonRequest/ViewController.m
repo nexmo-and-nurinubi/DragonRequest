@@ -15,6 +15,7 @@
 #define ENEMY_BOSS_FIREST 0
 
 @interface ViewController ()
+<UIAlertViewDelegate>
 
 @end
 
@@ -27,6 +28,9 @@
     //Marineオブジェクト
     EnemyMarine *_enemyMarine[ENEMY_MARINE_MAX];
     
+    int cnt;    //ボスの攻撃頻度調整カウンタ
+    NSTimer * timer;
+    NSTimer * create;
 }
 
 //ここからアプリスタート
@@ -34,14 +38,13 @@
     
     [super viewDidLoad];
     
+//    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+//    
+//    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+//    
+//    [timer fire];
+//    [create fire];
     [self reset];
-    
-    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
-    
-    NSTimer * create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-    
-    [timer fire];
-    [create fire];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -101,8 +104,26 @@
 - (void)bossMove{
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
         [_enemyBoss[i]  moveRand];
-        [_enemyBoss[i]  fight:_hero];
+        
+        if(cnt % 10 == 0){
+            if([_enemyBoss[i]  fight:_hero]){
+                [_hero removeImage];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                                message:@"コンティニューします"
+                                                               delegate:self
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"はい", nil];
+                [alert show];
+                [timer invalidate];
+                [create invalidate];
+            }
+        }
     }
+    cnt++;
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self reset];
 }
 
 //タイマーで設定した時間ごとにボスを生成
@@ -122,6 +143,13 @@
 
 /** リセット */
 - (void)reset {
+    
+    for (int i=0;i<ENEMY_BOSS_MAX;i++){
+        if(_enemyBoss[i] != nil){
+            [_enemyBoss[i] removeImage];
+            _enemyBoss[i] = nil;
+        }
+    }
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake(screenSizeX/2,screenSizeY/2);
@@ -143,7 +171,14 @@
     _yPos = _hero.position.y;
     
     _resetBtn.hidden = YES;
-
+    
+    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    
+    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    
+    
+    [timer fire];
+    [create fire];
 }
 - (IBAction)resetAction:(id)sender {
     [self reset];
