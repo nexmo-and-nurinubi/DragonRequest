@@ -114,8 +114,8 @@
         fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
                                                       countX:8
                                                       countY:1
-                                              charactarWidth:120
-                                             charactarHeight:120];
+                                              charactarWidth:240
+                                             charactarHeight:240];
         
         [_fightAnimArray addObject:fightSceanArray];
         
