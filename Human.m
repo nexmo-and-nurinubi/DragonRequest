@@ -202,7 +202,9 @@
 {
     _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
     
-    NSInteger powerWidth = (float)(_power/_defaultPower)*(_imageWidth/10.0);
+    float bgImageWidth = _powerBgImageView.frame.size.width;
+    
+    NSInteger powerWidth = (float)(_power/_defaultPower)*bgImageWidth;
     _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,powerWidth,humanPowerImgHeight);
     
 }
@@ -226,10 +228,7 @@
     }
     if (direction == DirectionTypeFromLeftToRight) {
         sceanAnimArray = _rightSceanAnimArray;
-        
-        
-        
-        
+
     }
     if (direction == DirectionTypeFromBottomToTop) {
         sceanAnimArray = _backSceanAnimArray;
@@ -259,6 +258,8 @@
 - (void)removeImage
 {
     [_animationImageView removeFromSuperview];
+    [_powerBgImageView removeFromSuperview];
+    [_powerImageView removeFromSuperview];
 }
 
 -(void)moveRand
