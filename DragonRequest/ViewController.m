@@ -327,10 +327,11 @@
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
-    
-    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-    
+    if(timer == nil){
+        timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+        
+        create = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    }
     
     [timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossMoveTimeInterval]];
     [timer fire];
