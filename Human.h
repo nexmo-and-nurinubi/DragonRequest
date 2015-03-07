@@ -103,7 +103,7 @@
 - (NSString *)whereAreYou;
 - (BOOL)fight:(Human *)target;
 
--(void)setImage:(UIView *)parentView;
+-(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;
 -(void)moveRand;
 -(void)setPowerImage;

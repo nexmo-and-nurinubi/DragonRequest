@@ -48,10 +48,10 @@
     return self;
 }
 
--(void)setImage:(UIView *)parentView
+-(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview
 {
     //イメージ設定
-    [super setImage:parentView];
+    [super setImage:parentView belowSubview:siblingSubview];
     
     //アニメーションイメージ設定
     //[self setMoveAnimImage:@"hero-comma.png"
@@ -71,7 +71,7 @@
         self.animationImageView.userInteractionEnabled = YES;
     }
     
-    [parentView addSubview:self.animationImageView];
+    [parentView insertSubview:self.animationImageView belowSubview:siblingSubview];
 
     self.animationImageView.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     

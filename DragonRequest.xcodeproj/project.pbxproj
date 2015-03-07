@@ -345,6 +345,8 @@
 		FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableHeaderView.m; sourceTree = "<group>"; };
 		FB839EBA1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionReusableFooterView.h; sourceTree = "<group>"; };
 		FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableFooterView.m; sourceTree = "<group>"; };
+		FB839EBD1AAB0DE400CFFCCB /* WeaponCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponCommon.h; sourceTree = "<group>"; };
+		FB839EBF1AAB175400CFFCCB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +405,7 @@
 			children = (
 				18A0B28B1A3C11C300CDCF8A /* Info.plist */,
 				189F86111A32DCCE0016D4EE /* main.m */,
+				FB839EBF1AAB175400CFFCCB /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 		FB572F931AAACBD900D1DA96 /* Weapon */ = {
 			isa = PBXGroup;
 			children = (
+				FB839EBD1AAB0DE400CFFCCB /* WeaponCommon.h */,
 				FB2817A21AAAE54900C3032E /* WeaponCollectionView.h */,
 				FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */,
 				FB839EB11AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.h */,
@@ -1129,6 +1133,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "DragonRequest//Prefix.pch";
 				INFOPLIST_FILE = DragonRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1143,6 +1148,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "DragonRequest//Prefix.pch";
 				INFOPLIST_FILE = DragonRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

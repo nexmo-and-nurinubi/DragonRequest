@@ -134,7 +134,7 @@
             _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
             _enemyBoss[i].alpha = 1.0;
             //Bossのイメージを設定
-            [_enemyBoss[i] setImage:self.view];
+            [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
             break;
         }
     }
@@ -157,14 +157,14 @@
     _hero = [[MyHero alloc]init:heroPos];
 
     //hero イメージを設定
-    [_hero setImage:self.view];
+    [_hero setImage:self.view belowSubview:self.weaponCollectionView];
     
     for(int i=0;i<ENEMY_BOSS_FIREST;i++){
         //Bossのインスタンス作成
         _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
         _enemyBoss[i].alpha = 1.0;
         //Bossのイメージを設定
-        [_enemyBoss[i] setImage:self.view];
+        [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
     }
     
     //heroのx、y座標

@@ -134,7 +134,7 @@
     
 }
 
--(void)setImage:(UIView *)parentView
+-(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview
 {
     UIImage *img = [UIImage imageNamed:@"powerBg.png"];
     
@@ -155,13 +155,12 @@
     _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
     _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
     
-    [parentView addSubview:_powerBgImageView];
-    [parentView addSubview:_powerImageView];
+    [parentView insertSubview:_powerBgImageView belowSubview:siblingSubview];
+    [parentView insertSubview:_powerImageView belowSubview:siblingSubview];
 
     
     self.fightAnimationImageView = [[UIImageView alloc] init];
-    [parentView addSubview:self.fightAnimationImageView];
-    
+    [parentView insertSubview:self.fightAnimationImageView belowSubview:siblingSubview];
 }
 
 -(void)setMoveAnimImage:(NSString *)originalImageName
