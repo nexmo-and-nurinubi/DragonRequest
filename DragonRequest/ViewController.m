@@ -41,9 +41,9 @@
     int stagenumber;
     
     NSInteger score;
-    NSInteger maxScore;
+    NSInteger topScore;
     
-    __weak IBOutlet UILabel *topScore;
+    __weak IBOutlet UILabel *topScoreLabel;
     __weak IBOutlet UILabel *scoreLabel;
     
     NSString *clearmes;
@@ -53,15 +53,19 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    stagenumber = 1;
     
     //変数初期化
-    maxScore = highScore;
-    NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
-    topScore.text = st;
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    topScore = [defaults integerForKey:@"TOPSCORE"];
+    
+    NSString *st = [NSString stringWithFormat:@"%zd",topScore];
+    topScoreLabel.text = st;
     score = initMainScore;
     NSString *ax = [NSString stringWithFormat:@"%zd",score];
     scoreLabel.text=ax;
+    
+    stagenumber = 1;
+    
     //    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
     //
     //    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
@@ -153,12 +157,17 @@
                                                                 message:clearmes delegate:self
                                                       cancelButtonTitle:nil
                                                       otherButtonTitles:@"YES", nil];
-                if(score>=maxScore){
-                    maxScore = score;
+                if(score>=topScore){
+                    topScore = score;
                     NSString *ax = [NSString stringWithFormat:@"%zd",score];
                     scoreLabel.text = ax;
-                    NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
-                    topScore.text = st;
+                    NSString *st = [NSString stringWithFormat:@"%zd",topScore];
+                    topScoreLabel.text = st;
+ 
+                    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+                    
+                    // Integerの保存
+                    [defaults setInteger:topScore forKey:@"TOPSCORE"];
                     
                     
                 }
@@ -196,12 +205,12 @@
                                                                    delegate:self
                                                           cancelButtonTitle:nil
                                                           otherButtonTitles:@"YES", nil];
-                    if(score>=maxScore){
-                        maxScore = score;
+                    if(score>=topScore){
+                        topScore = score;
                         NSString *ax = [NSString stringWithFormat:@"%zd",score];
                         scoreLabel.text = ax;
-                        NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
-                        topScore.text = st;
+                        NSString *st = [NSString stringWithFormat:@"%zd",topScore];
+                        topScoreLabel.text = st;
                         
                         
                     }
@@ -270,7 +279,6 @@
     heroaliveflag = false;
     
     clearmes = @"次のステージに進みます";
-    
     
     int createtime = 0;
     switch (stagenumber) {

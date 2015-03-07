@@ -229,10 +229,7 @@
     }
     if (direction == DirectionTypeFromLeftToRight) {
         sceanAnimArray = _rightSceanAnimArray;
-        
-        
-        
-        
+
     }
     if (direction == DirectionTypeFromBottomToTop) {
         sceanAnimArray = _backSceanAnimArray;
