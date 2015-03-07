@@ -109,5 +109,12 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossCreatetime2                 15
 #define bossCreatetime3                 10
 
+//Score初期情報
+#define bossDeadScore                   100
+#define marineDeadScore                 10
+#define initMainScore                   0
+#define highScore                       0
+
+
 
 

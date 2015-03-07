@@ -36,6 +36,13 @@
     BOOL heroaliveflag;
     
     int stagenumber;
+    
+    NSInteger score;
+    NSInteger maxScore;
+    
+    __weak IBOutlet UILabel *topScore;
+    __weak IBOutlet UILabel *scoreLabel;
+    
 }
 
 //ここからアプリスタート
@@ -44,6 +51,30 @@
     [super viewDidLoad];
     stagenumber = 1;
     
+    //変数初期化
+    maxScore = highScore;
+    NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
+    topScore.text = st;
+    score = initMainScore;
+    NSString *ax = [NSString stringWithFormat:@"%zd",score];
+    scoreLabel.text=ax;
+    //    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    //
+    //    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    //
+    //    [timer fire];
+    //    [create fire];
+    
+    
+    //
+    //    UILabel *label = [[UILabel alloc] init];
+    //    label.frame = CGRectMake(10, 10, 100, 50);
+    //    label.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.0];
+    //    label.font = [UIFont fontWithName:@"AppleGothic" size:20];
+    //    label.text = ax;
+    //    label.textAlignment = NSTextAlignmentCenter;
+    //    [self.view addSubview:label];
+
 //    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
 //    
 //    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
@@ -101,6 +132,10 @@
                 if (dead[i]) {
                     [_enemyBoss[i] removeImage];
                     _enemyBoss[i] = nil;
+                    score +=bossDeadScore;
+                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
+                    scoreLabel.text = ax;
+
                 }
                 
                 if(_enemyBoss[i] != nil)
@@ -114,6 +149,18 @@
                                                                 message:@"次のステージに進みます" delegate:self
                                                       cancelButtonTitle:nil
                                                       otherButtonTitles:@"YES", nil];
+                if(score>=maxScore){
+                    maxScore = score;
+                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
+                    scoreLabel.text = ax;
+                    NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
+                    topScore.text = st;
+                    
+                    
+                }
+                NSString *ax = [NSString stringWithFormat:@"%zd",score];
+                scoreLabel.text=ax;
+
                 [alart show];
                 [_hero removeImage];
                 clearflag = true;
@@ -145,6 +192,19 @@
                                                                    delegate:self
                                                           cancelButtonTitle:nil
                                                           otherButtonTitles:@"はい", nil];
+                    if(score>=maxScore){
+                        maxScore = score;
+                        NSString *ax = [NSString stringWithFormat:@"%zd",score];
+                        scoreLabel.text = ax;
+                        NSString *st = [NSString stringWithFormat:@"%zd",maxScore];
+                        topScore.text = st;
+                        
+                        
+                    }
+                    score = initMainScore;
+                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
+                    scoreLabel.text=ax;
+
                     [alert show];
         //                [timer invalidate];
         //                [create invalidate];
