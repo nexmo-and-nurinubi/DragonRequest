@@ -171,8 +171,6 @@
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    _resetBtn.hidden = YES;
-    
     timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
     
     create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
@@ -181,10 +179,6 @@
     [timer fire];
     [create fire];
 }
-- (IBAction)resetAction:(id)sender {
-    [self reset];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
