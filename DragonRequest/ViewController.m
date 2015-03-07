@@ -4,7 +4,10 @@
 //
 //  Created by 柴田　義也 on 2014/11/24.
 //  Copyright (c) 2014年 y.shibata. All rights reserved.
-//
+
+
+//背景画像取得ページ
+//  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
 
@@ -146,7 +149,7 @@
             if(bossdead == true)
             {
                 UIAlertView *alart = [[UIAlertView alloc] initWithTitle:@"Stage Clear"
-                                                                message:@"次のステージに進みます" delegate:self
+                                                                message:clearmes delegate:self
                                                       cancelButtonTitle:nil
                                                       otherButtonTitles:@"YES", nil];
                 if(score>=maxScore){
@@ -165,9 +168,9 @@
                 [_hero removeImage];
                 clearflag = true;
                 stagenumber++;
-                if(stagenumber >= 3)
+                if(stagenumber >= 4)
                 {
-                    stagenumber = 3;
+                    stagenumber = 1;
                 }
             }
             break;
@@ -183,10 +186,10 @@
         
         if(heroaliveflag == false)
         {
-        
+            
             if(cnt % 10 == 0){
                 if([_enemyBoss[i]  fight:_hero]){
-        //                [_hero removeImage];
+                    //                [_hero removeImage];
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
                                                                     message:@"コンティニューします"
                                                                    delegate:self
@@ -206,8 +209,8 @@
                     scoreLabel.text=ax;
 
                     [alert show];
-        //                [timer invalidate];
-        //                [create invalidate];
+                    //                [timer invalidate];
+                    //                [create invalidate];
                     stagenumber = 1;
                     [_hero removeImage];
                     heroaliveflag = true;
@@ -219,26 +222,32 @@
     
     cnt++;
     
-
+    
 }
 
 //アラートのボタンを押したとき
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//    if(clearflag == true)
-//    {
-//        _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
-//    }
-//    else
-//    {
-//        _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
-//    }
+    //    if(clearflag == true)
+    //    {
+    //        _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
+    //    }
+    //    else
+    //    {
+    //        _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
+    //    }
     [self reset];
     
-
+    
 }
 
 //タイマーで設定した時間ごとにボスを生成
 - (void)createBoss{
+    
+    if (clearflag) {
+        NSLog(@"リターン");
+        return;
+    }
+    
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
         if(_enemyBoss[i] == nil){
             //Bossのインスタンス作成
@@ -249,7 +258,7 @@
             break;
         }
     }
-    NSLog(@"aaaaa");
+    NSLog(@"ボス生成");
 }
 
 
@@ -258,6 +267,8 @@
     
     clearflag = false;
     heroaliveflag = false;
+    
+    clearmes = @"次のステージに進みます";
     
     
     int createtime = 0;
@@ -273,6 +284,7 @@
         case 3:
             _fieldView.image = [UIImage imageNamed:@"mapbg04.png"];
             createtime = bossCreatetime3;
+            clearmes = @"すべてのステージをクリアしました";
             break;
             
         default:
@@ -290,7 +302,7 @@
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake(screenSizeX/2,screenSizeY/2);
     _hero = [[MyHero alloc]init:heroPos];
-
+    
     //hero イメージを設定
     [_hero setImage:self.view];
     
@@ -310,7 +322,7 @@
     
     if(timer == nil){
         timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
-
+        
         create = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
     }
     
@@ -326,7 +338,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
+    
 }
 
 @end
