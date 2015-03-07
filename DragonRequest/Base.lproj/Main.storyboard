@@ -39,8 +39,22 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lI0-rw-UZH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="48"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="lI0-rw-UZH" firstAttribute="leading" secondItem="jJk-UD-fcL" secondAttribute="leading" id="2qU-Hg-frn"/>
+                                            <constraint firstAttribute="bottom" secondItem="lI0-rw-UZH" secondAttribute="bottom" id="7Ou-OI-rDC"/>
+                                            <constraint firstItem="lI0-rw-UZH" firstAttribute="top" secondItem="jJk-UD-fcL" secondAttribute="top" id="d2r-aS-vWu"/>
+                                            <constraint firstAttribute="trailing" secondItem="lI0-rw-UZH" secondAttribute="trailing" id="hHL-dX-RDT"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="weaponImageView" destination="lI0-rw-UZH" id="ojP-rM-1Of"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeaponReusableHeaderView" id="hoY-JK-LYw" customClass="WeaponCollectionReusableHeaderView">

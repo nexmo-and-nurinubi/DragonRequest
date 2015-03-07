@@ -10,4 +10,8 @@
 
 @interface WeaponCollectionView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic, strong) NSMutableArray *weaponAnimations;
+@property (nonatomic, weak) IBOutlet UIImageView *weaponAnimationImageView;
+@property (nonatomic, strong) NSMutableArray *stock;
+
 @end

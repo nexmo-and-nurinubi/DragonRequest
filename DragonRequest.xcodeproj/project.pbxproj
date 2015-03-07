@@ -159,6 +159,16 @@
 		FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6F1AAB07D600CFFCCB /* pipo-btleffect129@2x.png */; };
 		FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */; };
 		FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */; };
+		FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */; };
+		FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */; };
+		FBCEA86B1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */; };
+		FBCEA86D1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA86C1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png */; };
+		FBCEA86F1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA86E1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png */; };
+		FBCEA8751AAB5FE700663C61 /* pipo-btleffect125_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8701AAB5FE700663C61 /* pipo-btleffect125_jacket.png */; };
+		FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8711AAB5FE700663C61 /* pipo-btleffect126_jacket.png */; };
+		FBCEA8771AAB5FE700663C61 /* pipo-btleffect127_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8721AAB5FE700663C61 /* pipo-btleffect127_jacket.png */; };
+		FBCEA8781AAB5FE700663C61 /* pipo-btleffect128_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8731AAB5FE700663C61 /* pipo-btleffect128_jacket.png */; };
+		FBCEA8791AAB5FE700663C61 /* pipo-btleffect129_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8741AAB5FE700663C61 /* pipo-btleffect129_jacket.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,8 +355,18 @@
 		FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableHeaderView.m; sourceTree = "<group>"; };
 		FB839EBA1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionReusableFooterView.h; sourceTree = "<group>"; };
 		FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableFooterView.m; sourceTree = "<group>"; };
-		FB839EBD1AAB0DE400CFFCCB /* WeaponCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponCommon.h; sourceTree = "<group>"; };
 		FB839EBF1AAB175400CFFCCB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		FB839EC51AAB2C5D00CFFCCB /* WeaponCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponCommon.h; sourceTree = "<group>"; };
+		FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect125_jacket@2x.png"; sourceTree = "<group>"; };
+		FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect126_jacket@2x.png"; sourceTree = "<group>"; };
+		FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect127_jacket@2x.png"; sourceTree = "<group>"; };
+		FBCEA86C1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect128_jacket@2x.png"; sourceTree = "<group>"; };
+		FBCEA86E1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect129_jacket@2x.png"; sourceTree = "<group>"; };
+		FBCEA8701AAB5FE700663C61 /* pipo-btleffect125_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect125_jacket.png"; sourceTree = "<group>"; };
+		FBCEA8711AAB5FE700663C61 /* pipo-btleffect126_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect126_jacket.png"; sourceTree = "<group>"; };
+		FBCEA8721AAB5FE700663C61 /* pipo-btleffect127_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect127_jacket.png"; sourceTree = "<group>"; };
+		FBCEA8731AAB5FE700663C61 /* pipo-btleffect128_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect128_jacket.png"; sourceTree = "<group>"; };
+		FBCEA8741AAB5FE700663C61 /* pipo-btleffect129_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect129_jacket.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,7 +649,7 @@
 		FB572F931AAACBD900D1DA96 /* Weapon */ = {
 			isa = PBXGroup;
 			children = (
-				FB839EBD1AAB0DE400CFFCCB /* WeaponCommon.h */,
+				FB839EC51AAB2C5D00CFFCCB /* WeaponCommon.h */,
 				FB2817A21AAAE54900C3032E /* WeaponCollectionView.h */,
 				FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */,
 				FB839EB11AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.h */,
@@ -735,10 +755,15 @@
 		FB839E641AAB07D600CFFCCB /* 320×240 */ = {
 			isa = PBXGroup;
 			children = (
+				FBCEA8701AAB5FE700663C61 /* pipo-btleffect125_jacket.png */,
 				FB839E651AAB07D600CFFCCB /* pipo-btleffect125.png */,
+				FBCEA8711AAB5FE700663C61 /* pipo-btleffect126_jacket.png */,
 				FB839E661AAB07D600CFFCCB /* pipo-btleffect126.png */,
+				FBCEA8721AAB5FE700663C61 /* pipo-btleffect127_jacket.png */,
 				FB839E671AAB07D600CFFCCB /* pipo-btleffect127.png */,
+				FBCEA8731AAB5FE700663C61 /* pipo-btleffect128_jacket.png */,
 				FB839E681AAB07D600CFFCCB /* pipo-btleffect128.png */,
+				FBCEA8741AAB5FE700663C61 /* pipo-btleffect129_jacket.png */,
 				FB839E691AAB07D600CFFCCB /* pipo-btleffect129.png */,
 			);
 			path = "320×240";
@@ -747,10 +772,15 @@
 		FB839E6A1AAB07D600CFFCCB /* 640×480 */ = {
 			isa = PBXGroup;
 			children = (
+				FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */,
 				FB839E6B1AAB07D600CFFCCB /* pipo-btleffect125@2x.png */,
+				FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */,
 				FB839E6C1AAB07D600CFFCCB /* pipo-btleffect126@2x.png */,
+				FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */,
 				FB839E6D1AAB07D600CFFCCB /* pipo-btleffect127@2x.png */,
+				FBCEA86C1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png */,
 				FB839E6E1AAB07D600CFFCCB /* pipo-btleffect128@2x.png */,
+				FBCEA86E1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png */,
 				FB839E6F1AAB07D600CFFCCB /* pipo-btleffect129@2x.png */,
 			);
 			path = "640×480";
@@ -843,11 +873,14 @@
 				1837F4481A4E484E00075299 /* dragon_orange_lr01@2x.png in Resources */,
 				1837F44E1A4E484E00075299 /* dragon_orange_tb01@2x.png in Resources */,
 				612C6F241A85FEA00089573B /* EnemyLeftAttack3.png in Resources */,
+				FBCEA8771AAB5FE700663C61 /* pipo-btleffect127_jacket.png in Resources */,
 				1837F4661A4E48C100075299 /* tb01.png in Resources */,
 				FB839E971AAB07D600CFFCCB /* pipo-btleffect035@2x.png in Resources */,
 				1837F4811A4E48ED00075299 /* left1.png in Resources */,
 				FB839EA81AAB07D600CFFCCB /* pipo-btleffect127@2x.png in Resources */,
+				FBCEA86F1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png in Resources */,
 				612C6F221A85FEA00089573B /* EnemyLeftAttack1.png in Resources */,
+				FBCEA8751AAB5FE700663C61 /* pipo-btleffect125_jacket.png in Resources */,
 				FB839EA91AAB07D600CFFCCB /* pipo-btleffect128@2x.png in Resources */,
 				612C6F201A85FEA00089573B /* BossRightAttack2.png in Resources */,
 				612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */,
@@ -870,6 +903,8 @@
 				FB839EA31AAB07D600CFFCCB /* pipo-btleffect127.png in Resources */,
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
+				FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */,
+				FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */,
 				1837F4831A4E48ED00075299 /* left3.png in Resources */,
 				FB839E9E1AAB07D600CFFCCB /* pipo-btleffect042@2x.png in Resources */,
 				612C6F381A85FEA00089573B /* HeroNomal2.png in Resources */,
@@ -878,6 +913,7 @@
 				612C6F3A1A85FEA00089573B /* HeroRightAttack1.png in Resources */,
 				1837F4621A4E48C100075299 /* lr03.png in Resources */,
 				612C6F391A85FEA00089573B /* HeroNomal3.png in Resources */,
+				FBCEA86B1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png in Resources */,
 				FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */,
 				1837F44F1A4E484E00075299 /* dragon_orange_tb02@2x.png in Resources */,
 				612C6F2E1A85FEA00089573B /* Enemy2Nomal1.png in Resources */,
@@ -888,6 +924,7 @@
 				FB839E941AAB07D600CFFCCB /* pipo-btleffect032@2x.png in Resources */,
 				612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */,
 				0750AE401A6A5FC500DD05A3 /* hero3.png in Resources */,
+				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
 				FB839E7B1AAB07D600CFFCCB /* pipo-btleffect029.png in Resources */,
 				612C6F1C1A85FEA00089573B /* BossNomal1.png in Resources */,
@@ -897,6 +934,7 @@
 				1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */,
 				1837F4861A4E48ED00075299 /* right2.png in Resources */,
 				1837F4801A4E48ED00075299 /* front4.png in Resources */,
+				FBCEA8781AAB5FE700663C61 /* pipo-btleffect128_jacket.png in Resources */,
 				189F861E1A32DCCE0016D4EE /* Main.storyboard in Resources */,
 				FB839E791AAB07D600CFFCCB /* pipo-btleffect027.png in Resources */,
 				FB839EA41AAB07D600CFFCCB /* pipo-btleffect128.png in Resources */,
@@ -905,6 +943,7 @@
 				189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */,
 				FB839E981AAB07D600CFFCCB /* pipo-btleffect036@2x.png in Resources */,
 				612C6F371A85FEA00089573B /* HeroNomal1.png in Resources */,
+				FBCEA8791AAB5FE700663C61 /* pipo-btleffect129_jacket.png in Resources */,
 				FB839E881AAB07D600CFFCCB /* pipo-btleffect042.png in Resources */,
 				612C6F2B1A85FEA00089573B /* Enemy2LeftAttack1.png in Resources */,
 				FB839EA11AAB07D600CFFCCB /* pipo-btleffect125.png in Resources */,
@@ -930,6 +969,7 @@
 				612C6F301A85FEA00089573B /* Enemy2Nomal3.png in Resources */,
 				1837F45E1A4E48C100075299 /* bt02.png in Resources */,
 				FB839E731AAB07D600CFFCCB /* pipo-btleffect021.png in Resources */,
+				FBCEA86D1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png in Resources */,
 				1837F44A1A4E484E00075299 /* dragon_orange_lr03@2x.png in Resources */,
 				1837F4641A4E48C100075299 /* rl02.png in Resources */,
 				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,

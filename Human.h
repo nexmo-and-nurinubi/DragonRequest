@@ -12,9 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "common.h"
-#import "DrUtil.h"
-
 @interface Human : NSObject {
     
     //キャラクタータイプ（human / marine / boss など）

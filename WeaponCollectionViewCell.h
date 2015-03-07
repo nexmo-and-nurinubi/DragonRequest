@@ -10,4 +10,8 @@
 
 @interface WeaponCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UIImageView *weaponImageView;
+
+- (void)setData:(WeaponType)weaponType;
+
 @end
