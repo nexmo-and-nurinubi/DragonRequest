@@ -148,6 +148,8 @@
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
+		B8FE08571AAB02B0005B8750 /* powerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE08561AAB02B0005B8750 /* powerBg.png */; };
+		B8FE085A1AAB0378005B8750 /* powerImg.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE08591AAB0378005B8750 /* powerImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +318,8 @@
 		B802D4241A90B5CB00305B21 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		B8FE08561AAB02B0005B8750 /* powerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerBg.png; sourceTree = "<group>"; };
+		B8FE08591AAB0378005B8750 /* powerImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +596,7 @@
 		612C6EF01A85FEA00089573B /* AnimationImage */ = {
 			isa = PBXGroup;
 			children = (
+				B8FE08581AAB02B9005B8750 /* power */,
 				18F0C2C21A8F1E01008595CB /* effect */,
 				612C6EF11A85FEA00089573B /* boss */,
 				612C6EFB1A85FEA00089573B /* enemy */,
@@ -663,6 +668,15 @@
 				612C6F181A85FEA00089573B /* HeroRightAttack3.png */,
 			);
 			path = hero;
+			sourceTree = "<group>";
+		};
+		B8FE08581AAB02B9005B8750 /* power */ = {
+			isa = PBXGroup;
+			children = (
+				B8FE08591AAB0378005B8750 /* powerImg.png */,
+				B8FE08561AAB02B0005B8750 /* powerBg.png */,
+			);
+			name = power;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,6 +797,7 @@
 				18F0C2FD1A8F1E01008595CB /* pipo-btleffect031.png in Resources */,
 				1837F47F1A4E48ED00075299 /* front3.png in Resources */,
 				612C6F3A1A85FEA00089573B /* HeroRightAttack1.png in Resources */,
+				B8FE085A1AAB0378005B8750 /* powerImg.png in Resources */,
 				1830574A1AAAC637000146DA /* mapbg02.png in Resources */,
 				1837F4621A4E48C100075299 /* lr03.png in Resources */,
 				612C6F391A85FEA00089573B /* HeroNomal3.png in Resources */,
@@ -790,6 +805,7 @@
 				612C6F2E1A85FEA00089573B /* Enemy2Nomal1.png in Resources */,
 				1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */,
 				612C6F321A85FEA00089573B /* Enemy2RightAttack2.png in Resources */,
+				B8FE08571AAB02B0005B8750 /* powerBg.png in Resources */,
 				18F0C3021A8F1E01008595CB /* pipo-btleffect036.png in Resources */,
 				1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */,
 				18F0C3141A8F1E01008595CB /* pipo-btleffect032@2x.png in Resources */,

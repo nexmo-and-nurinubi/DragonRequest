@@ -105,9 +105,9 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10
 
-#define bossCreatetime1                 20
-#define bossCreatetime2                 15
-#define bossCreatetime3                 10
+#define bossCreatetime1                 6
+#define bossCreatetime2                 3
+#define bossCreatetime3                 1
 
 //Score初期情報
 #define bossDeadScore                   100
