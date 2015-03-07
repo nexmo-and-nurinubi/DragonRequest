@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -17,9 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taran.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-p8-MWG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-p8-MWG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge9-L6-dXu">
+                                <rect key="frame" x="0.0" y="20" width="320" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-Yl-sfd">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-3h-tuc">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bIQ-rh-8Av" customClass="WeaponCollectionView">
                                 <rect key="frame" x="0.0" y="500" width="320" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -69,32 +87,24 @@
                                     <outlet property="weaponAnimationImageView" destination="2iM-YR-sAc" id="tXy-U6-NXF"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-YR-sAc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-YR-sAc" userLabel="Weapon Animation Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-Yl-sfd">
-                                <rect key="frame" x="123" y="28" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-3h-tuc">
-                                <rect key="frame" x="240" y="28" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bIQ-rh-8Av" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0Zn-lV-WhM"/>
                             <constraint firstItem="bIQ-rh-8Av" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="250" constant="480" id="6NF-mU-jv8"/>
+                            <constraint firstItem="Ge9-L6-dXu" firstAttribute="leading" secondItem="bIQ-rh-8Av" secondAttribute="leading" id="Avg-ao-Kme"/>
                             <constraint firstAttribute="trailing" secondItem="BB8-p8-MWG" secondAttribute="trailing" id="COa-TS-3yo"/>
                             <constraint firstItem="BB8-p8-MWG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Jwx-pQ-v6N"/>
                             <constraint firstItem="BB8-p8-MWG" firstAttribute="leading" secondItem="bIQ-rh-8Av" secondAttribute="leading" id="Luh-JT-lTs"/>
                             <constraint firstItem="2iM-YR-sAc" firstAttribute="top" secondItem="BB8-p8-MWG" secondAttribute="top" id="MRQ-8W-nAL"/>
                             <constraint firstItem="2iM-YR-sAc" firstAttribute="trailing" secondItem="bIQ-rh-8Av" secondAttribute="trailing" id="ah2-QA-zFv"/>
+                            <constraint firstAttribute="bottom" secondItem="Ge9-L6-dXu" secondAttribute="bottom" priority="250" constant="531" id="dTe-ud-VLR"/>
                             <constraint firstItem="bIQ-rh-8Av" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="duf-mc-Wy1"/>
+                            <constraint firstItem="Ge9-L6-dXu" firstAttribute="trailing" secondItem="bIQ-rh-8Av" secondAttribute="trailing" id="hl1-kV-we9"/>
+                            <constraint firstItem="Ge9-L6-dXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hle-sp-v5u"/>
                             <constraint firstItem="bIQ-rh-8Av" firstAttribute="trailing" secondItem="BB8-p8-MWG" secondAttribute="trailing" id="kkN-fX-R2d"/>
                             <constraint firstItem="2iM-YR-sAc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mdC-5Z-GmD"/>
                             <constraint firstItem="BB8-p8-MWG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="riC-RF-4Ts"/>
@@ -103,6 +113,8 @@
                     </view>
                     <connections>
                         <outlet property="fieldView" destination="BB8-p8-MWG" id="vr7-tV-Zi4"/>
+                        <outlet property="scoreLabel" destination="Lvg-3h-tuc" id="RKq-9V-FGu"/>
+                        <outlet property="topScoreLabel" destination="ejm-Yl-sfd" id="Hhu-M1-BU0"/>
                         <outlet property="weaponCollectionView" destination="bIQ-rh-8Av" id="9xD-bS-KPJ"/>
                     </connections>
                 </viewController>
