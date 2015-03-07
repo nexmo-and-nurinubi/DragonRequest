@@ -46,6 +46,7 @@
     __weak IBOutlet UILabel *topScore;
     __weak IBOutlet UILabel *scoreLabel;
     
+    NSString *clearmes;
 }
 
 //ここからアプリスタート
@@ -194,7 +195,7 @@
                                                                     message:@"コンティニューします"
                                                                    delegate:self
                                                           cancelButtonTitle:nil
-                                                          otherButtonTitles:@"はい", nil];
+                                                          otherButtonTitles:@"YES", nil];
                     if(score>=maxScore){
                         maxScore = score;
                         NSString *ax = [NSString stringWithFormat:@"%zd",score];
