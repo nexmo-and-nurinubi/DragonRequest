@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,16 +29,18 @@
                                     <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="64V-sG-yef"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="taran.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-p8-MWG">
-                                <rect key="frame" x="0.0" y="28" width="320" height="476"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-p8-MWG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BB8-p8-MWG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6gp-O0-rfF"/>
                             <constraint firstItem="aWQ-4p-Ye0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="8hE-1W-72C"/>
-                            <constraint firstItem="BB8-p8-MWG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TOY-J0-kL1"/>
+                            <constraint firstItem="BB8-p8-MWG" firstAttribute="leading" secondItem="wfy-db-euE" secondAttribute="leading" id="EDr-e0-nPa"/>
+                            <constraint firstItem="BB8-p8-MWG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fnh-zI-dML"/>
+                            <constraint firstItem="BB8-p8-MWG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Uof-Dk-DRf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aWQ-4p-Ye0" secondAttribute="trailing" constant="79" id="cmo-gs-9kk"/>
+                            <constraint firstItem="BB8-p8-MWG" firstAttribute="trailing" secondItem="y3c-jy-aDJ" secondAttribute="trailing" id="icF-Nc-jva"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,7 +54,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="taran.jpg" width="768" height="768"/>
+        <image name="mapbg01.png" width="640" height="480"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

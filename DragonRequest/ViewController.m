@@ -31,12 +31,18 @@
     int cnt;    //ボスの攻撃頻度調整カウンタ
     NSTimer * timer;
     NSTimer * create;
+    
+    BOOL clearflag;
+    BOOL heroaliveflag;
+    
+    int stagenumber;
 }
 
 //ここからアプリスタート
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    stagenumber = 1;
     
 //    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
 //    
@@ -87,11 +93,34 @@
             for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = NO;
             for(int i=0;i<ENEMY_BOSS_MAX;i++)
                 dead[i] = [_hero fight:_enemyBoss[i]];
+            
+            BOOL bossdead = true;
+            
             for(int i=0;i<ENEMY_BOSS_MAX;i++)
             {
                 if (dead[i]) {
                     [_enemyBoss[i] removeImage];
                     _enemyBoss[i] = nil;
+                }
+                
+                if(_enemyBoss[i] != nil)
+                {
+                    bossdead = false;
+                }
+            }
+            if(bossdead == true)
+            {
+                UIAlertView *alart = [[UIAlertView alloc] initWithTitle:@"Stage Clear"
+                                                                message:@"次のステージに進みます" delegate:self
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"YES", nil];
+                [alart show];
+                [_hero removeImage];
+                clearflag = true;
+                stagenumber++;
+                if(stagenumber >= 3)
+                {
+                    stagenumber = 3;
                 }
             }
             break;
@@ -105,25 +134,47 @@
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
         [_enemyBoss[i]  moveRand];
         
-        if(cnt % 10 == 0){
-            if([_enemyBoss[i]  fight:_hero]){
-                [_hero removeImage];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                                message:@"コンティニューします"
-                                                               delegate:self
-                                                      cancelButtonTitle:nil
-                                                      otherButtonTitles:@"はい", nil];
-                [alert show];
-                [timer invalidate];
-                [create invalidate];
+        if(heroaliveflag == false)
+        {
+        
+            if(cnt % 10 == 0){
+                if([_enemyBoss[i]  fight:_hero]){
+        //                [_hero removeImage];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                                    message:@"コンティニューします"
+                                                                   delegate:self
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"はい", nil];
+                    [alert show];
+        //                [timer invalidate];
+        //                [create invalidate];
+                    stagenumber = 1;
+                    [_hero removeImage];
+                    heroaliveflag = true;
+                    break;
+                }
             }
         }
     }
+    
     cnt++;
+    
+
 }
 
+//アラートのボタンを押したとき
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    if(clearflag == true)
+//    {
+//        _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
+//    }
+//    else
+//    {
+//        _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
+//    }
     [self reset];
+    
+
 }
 
 //タイマーで設定した時間ごとにボスを生成
@@ -138,12 +189,36 @@
             break;
         }
     }
-//    NSLog(@"aaaaa");
+    NSLog(@"aaaaa");
 }
 
 
 /** リセット */
 - (void)reset {
+    
+    clearflag = false;
+    heroaliveflag = false;
+    
+    
+    int createtime = 0;
+    switch (stagenumber) {
+        case 1:
+            _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
+            createtime = bossCreatetime1;
+            break;
+        case 2:
+            _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
+            createtime = bossCreatetime2;
+            break;
+        case 3:
+            _fieldView.image = [UIImage imageNamed:@"mapbg04.png"];
+            createtime = bossCreatetime3;
+            break;
+            
+        default:
+            break;
+    }
+    
     
     for (int i=0;i<ENEMY_BOSS_MAX;i++){
         if(_enemyBoss[i] != nil){
@@ -173,12 +248,15 @@
     
     _resetBtn.hidden = YES;
     
-    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    if(timer == nil){
+        timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+
+        create = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    }
     
-    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-    
-    
+    [timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossMoveTimeInterval]];
     [timer fire];
+    [create setFireDate:[NSDate dateWithTimeIntervalSinceNow:createtime]];
     [create fire];
 }
 - (IBAction)resetAction:(id)sender {
