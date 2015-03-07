@@ -43,11 +43,11 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hoY-JK-LYw">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeaponReusableHeaderView" id="hoY-JK-LYw" customClass="WeaponCollectionReusableHeaderView">
                                     <rect key="frame" x="0.0" y="0.0" width="5" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5ji-ye-CEt">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeaponReusableFooterView" id="5ji-ye-CEt" customClass="WeaponCollectionReusableFooterView">
                                     <rect key="frame" x="55" y="0.0" width="5" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>

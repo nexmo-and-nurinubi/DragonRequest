@@ -7,13 +7,17 @@
 //
 
 #import "WeaponCollectionView.h"
+#import "WeaponCollectionReusableHeaderView.h"
+#import "WeaponCollectionReusableFooterView.h"
 #import "WeaponCollectionViewCell.h"
 
+static NSString * const weaponReusableHeaderViewReuseIdentifier = @"WeaponReusableHeaderView";
+static NSString * const weaponReusableFooterViewReuseIdentifier = @"WeaponReusableFooterView";
 static NSString * const weaponCellReuseIdentifier = @"WeaponCell";
 
 @implementation WeaponCollectionView
 
-- (void)awaker {    
+- (void)awaker {
     self.delegate = self;
     self.dataSource = self;
 }

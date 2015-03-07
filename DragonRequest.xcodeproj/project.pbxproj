@@ -157,6 +157,8 @@
 		FB839EA81AAB07D600CFFCCB /* pipo-btleffect127@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6D1AAB07D600CFFCCB /* pipo-btleffect127@2x.png */; };
 		FB839EA91AAB07D600CFFCCB /* pipo-btleffect128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6E1AAB07D600CFFCCB /* pipo-btleffect128@2x.png */; };
 		FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6F1AAB07D600CFFCCB /* pipo-btleffect129@2x.png */; };
+		FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */; };
+		FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +341,10 @@
 		FB839E701AAB07D600CFFCCB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		FB839E711AAB07D600CFFCCB /* ウディタ用設定参考_125.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ウディタ用設定参考_125.gif"; sourceTree = "<group>"; };
 		FB839E721AAB07D600CFFCCB /* ウディタ用設定参考_126-129.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ウディタ用設定参考_126-129.gif"; sourceTree = "<group>"; };
+		FB839EB11AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionReusableHeaderView.h; sourceTree = "<group>"; };
+		FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableHeaderView.m; sourceTree = "<group>"; };
+		FB839EBA1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionReusableFooterView.h; sourceTree = "<group>"; };
+		FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableFooterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,6 +628,10 @@
 			children = (
 				FB2817A21AAAE54900C3032E /* WeaponCollectionView.h */,
 				FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */,
+				FB839EB11AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.h */,
+				FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */,
+				FB839EBA1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.h */,
+				FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */,
 				FB572F971AAACF3800D1DA96 /* WeaponCollectionViewCell.h */,
 				FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */,
 			);
@@ -978,6 +988,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */,
@@ -986,6 +997,7 @@
 				B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */,
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
 				FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */,
+				FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
