@@ -58,11 +58,9 @@
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
     
-    NSString *st = [NSString stringWithFormat:@"%zd",topScore];
-    topScoreLabel.text = st;
+    topScoreLabel.text = [@(topScore) stringValue];
     score = initMainScore;
-    NSString *ax = [NSString stringWithFormat:@"%zd",score];
-    scoreLabel.text=ax;
+    scoreLabel.text = [@(score) stringValue];
     
     stagenumber = 1;
     
@@ -112,13 +110,13 @@
         case HumanTypeEnemy: {
             BOOL dead[ENEMY_MARINE_MAX];
             for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_MARINE_MAX;i++)
-                dead[i] = [_hero fight:_enemyMarine[i]];
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)
-            {
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = [_hero fight:_enemyMarine[i]];
+            for(int i=0;i<ENEMY_MARINE_MAX;i++) {
                 if (dead[i]) {
                     [_enemyMarine[i] removeImage];
                     _enemyMarine[i] = nil;
+                    score += marineDeadScore;
+                    scoreLabel.text = [@(score) stringValue];
                 }
             }
             break;
@@ -130,63 +128,68 @@
         case HumanTypeBoss: {
             BOOL dead[ENEMY_BOSS_MAX];
             for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)
-                dead[i] = [_hero fight:_enemyBoss[i]];
-            
-            BOOL bossdead = true;
-            
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)
-            {
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = [_hero fight:_enemyBoss[i]];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++) {
                 if (dead[i]) {
                     [_enemyBoss[i] removeImage];
                     _enemyBoss[i] = nil;
                     score +=bossDeadScore;
-                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
-                    scoreLabel.text = ax;
-
-                }
-                
-                if(_enemyBoss[i] != nil)
-                {
-                    bossdead = false;
-                }
-            }
-            if(bossdead == true)
-            {
-                UIAlertView *alart = [[UIAlertView alloc] initWithTitle:@"Stage Clear"
-                                                                message:clearmes delegate:self
-                                                      cancelButtonTitle:nil
-                                                      otherButtonTitles:@"YES", nil];
-                if(score>=topScore){
-                    topScore = score;
-                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
-                    scoreLabel.text = ax;
-                    NSString *st = [NSString stringWithFormat:@"%zd",topScore];
-                    topScoreLabel.text = st;
- 
-                    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-                    
-                    // Integerの保存
-                    [defaults setInteger:topScore forKey:@"TOPSCORE"];
-                    
-                    
-                }
-                NSString *ax = [NSString stringWithFormat:@"%zd",score];
-                scoreLabel.text=ax;
-
-                [alart show];
-                [_hero removeImage];
-                clearflag = true;
-                stagenumber++;
-                if(stagenumber >= 4)
-                {
-                    stagenumber = 1;
+                    scoreLabel.text = [@(score) stringValue];
                 }
             }
             break;
         }
         default:
             break;
+    }
+    
+    // 敵が殲滅したか確認する
+    BOOL annihilate = YES;
+    if (annihilate) {
+        for (int i = 0; i<ENEMY_MARINE_MAX; i++) {
+            if (_enemyMarine[i]) {
+                annihilate = NO;
+                break;
+            }
+        }
+    }
+    if (annihilate) {
+        for (int i = 0; i<ENEMY_BOSS_MAX; i++) {
+            if (_enemyBoss[i]) {
+                annihilate = NO;
+                break;
+            }
+        }
+    }
+    
+    // ステージクリア
+    if(annihilate) {
+        UIAlertView *alart = [[UIAlertView alloc] initWithTitle:@"Stage Clear"
+                                                        message:clearmes delegate:self
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"YES", nil];
+        if(score>=topScore){
+            topScore = score;
+            scoreLabel.text = [@(score) stringValue];;
+            topScoreLabel.text = [@(topScore) stringValue];;
+            
+            NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+            
+            // Integerの保存
+            [defaults setInteger:topScore forKey:@"TOPSCORE"];
+            
+            
+        }
+        scoreLabel.text = [@(score) stringValue];;
+        
+        [alart show];
+        [_hero removeImage];
+        clearflag = true;
+        stagenumber++;
+        if(stagenumber >= 4)
+        {
+            stagenumber = 1;
+        }
     }
 }
 
@@ -207,17 +210,14 @@
                                                           otherButtonTitles:@"YES", nil];
                     if(score>=topScore){
                         topScore = score;
-                        NSString *ax = [NSString stringWithFormat:@"%zd",score];
-                        scoreLabel.text = ax;
-                        NSString *st = [NSString stringWithFormat:@"%zd",topScore];
-                        topScoreLabel.text = st;
+                        scoreLabel.text = [@(score) stringValue];;
+                        topScoreLabel.text = [@(topScore) stringValue];;
                         
                         
                     }
                     score = initMainScore;
-                    NSString *ax = [NSString stringWithFormat:@"%zd",score];
-                    scoreLabel.text=ax;
-
+                    scoreLabel.text = [@(score) stringValue];;
+                    
                     [alert show];
                     //                [timer invalidate];
                     //                [create invalidate];
