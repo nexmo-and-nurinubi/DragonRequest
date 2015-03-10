@@ -56,10 +56,11 @@
     [self setFightAnimImage];
     
     //表示イメージ
-    UIImage *img = [UIImage imageNamed:@"dragon3.png"];
+    UIImage *img = _frontSceanAnimArray[0];
     
     if(self.animationImageView == nil){
-        self.animationImageView = [[UIImageView alloc]initWithImage:img];
+        self.animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight)];
+        self.animationImageView.image = img;
         self.animationImageView.tag = HumanTypeHero;
         self.animationImageView.userInteractionEnabled = YES;
     }
