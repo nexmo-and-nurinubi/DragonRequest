@@ -10,6 +10,7 @@
 //  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
+#import <AudioToolbox/AudioServices.h>
 
 #import "DrUtil.h"
 
@@ -19,7 +20,7 @@
 #define ENEMY_BOSS_MAX 200
 #define ENEMY_BOSS_FIREST 0
 
-@interface ViewController ()<UIAlertViewDelegate>
+@interface ViewController ()
 
 @end
 
@@ -78,6 +79,17 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    SystemSoundID audioEffect;
+    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
+        NSURL *pathURL = [NSURL fileURLWithPath: path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+    }
+    else {
+        NSLog(@"error, file not found: %@", path);
+    }
+    
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
@@ -121,6 +133,7 @@
                     _enemyBoss[i] = nil;
                     score +=bossDeadScore;
                     scoreLabel.text = [@(score) stringValue];
+                    
                 }
             }
             break;
@@ -257,19 +270,21 @@
     heroaliveflag = false;
     
     clearmes = @"次のステージに進みます";
+
+    DrUtil *utilManager = [DrUtil sharedInstance];
     
     int createtime = 0;
     switch (stagenumber) {
         case 1:
-            _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
+            _fieldView.image = utilManager.backgroundImage01;
             createtime = bossCreatetime1;
             break;
         case 2:
-            _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
+            _fieldView.image = utilManager.backgroundImage02;
             createtime = bossCreatetime2;
             break;
         case 3:
-            _fieldView.image = [UIImage imageNamed:@"mapbg04.png"];
+            _fieldView.image = utilManager.backgroundImage03;
             createtime = bossCreatetime3;
             clearmes = @"すべてのステージをクリアしました";
             break;
@@ -287,7 +302,7 @@
     }
     
     //hero インスタンス作成
-    CGPoint heroPos = CGPointMake(screenSizeX/2,screenSizeY/2);
+    CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
     _hero = [[MyHero alloc]init:heroPos];
     
     //hero イメージを設定

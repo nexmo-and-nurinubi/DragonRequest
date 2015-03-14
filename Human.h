@@ -48,10 +48,6 @@
     //攻撃範囲
     NSInteger _reach;
     
-    //画面サイズ
-    int _screenSizeX;
-    int _screenSizeY;
-    
     float _defaultPower;
     
     NSInteger _level;
