@@ -49,6 +49,8 @@
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
+
+
 - (IBAction)pickupBackgroundImage01:(id)sender {
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -63,6 +65,8 @@
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
 }
+
+
 - (IBAction)pickupBackgroundImage02:(id)sender {
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -77,6 +81,8 @@
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
 }
+
+
 - (IBAction)pickupBackgroundImage03:(id)sender {
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -91,6 +97,8 @@
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
 }
+
+
 
 //画像が選択された時に呼ばれるデリゲートメソッド
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

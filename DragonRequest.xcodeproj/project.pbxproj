@@ -460,8 +460,6 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
-				B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */,
-				B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */,
 				612C6EF01A85FEA00089573B /* AnimationImage */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
@@ -498,6 +496,7 @@
 		189F860F1A32DCCE0016D4EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61A47E471AB4AF5B00F57C86 /* framework */,
 				0434F8FF1AB4174B00219AC6 /* Settings.bundle */,
 				18A0B28B1A3C11C300CDCF8A /* Info.plist */,
 				189F86111A32DCCE0016D4EE /* main.m */,
@@ -711,6 +710,15 @@
 				612C6F181A85FEA00089573B /* HeroRightAttack3.png */,
 			);
 			path = hero;
+			sourceTree = "<group>";
+		};
+		61A47E471AB4AF5B00F57C86 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */,
+				B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */,
+			);
+			name = framework;
 			sourceTree = "<group>";
 		};
 		B8EDB4921AB4161200E36CF3 /* sound */ = {

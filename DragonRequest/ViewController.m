@@ -51,6 +51,9 @@
     __weak IBOutlet UILabel *scoreLabel;
     
     NSString *clearmes;
+    
+    
+    DrUtil *drUtil;
 }
 
 //ここからアプリスタート
@@ -74,6 +77,7 @@
     
     //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
     //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
+    
     
     [_hero moveToPoint:point];
     
@@ -331,6 +335,9 @@
     int createtime = 0;
     switch (stagenumber) {
         case 1:
+            if (!utilManager.backgroundImage01) {
+                NSLog(@"空");
+            }
             _fieldView.image = utilManager.backgroundImage01;
             createtime = bossCreatetime1;
             break;

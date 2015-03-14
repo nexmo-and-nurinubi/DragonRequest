@@ -14,9 +14,9 @@
 /** データマネージャ取得 */
 + (DrUtil *)sharedInstance;
 
-@property(weak,nonatomic)UIImage *backgroundImage01;
-@property(weak,nonatomic)UIImage *backgroundImage02;
-@property(weak,nonatomic)UIImage *backgroundImage03;
+@property(strong,nonatomic)UIImage *backgroundImage01;
+@property(strong,nonatomic)UIImage *backgroundImage02;
+@property(strong,nonatomic)UIImage *backgroundImage03;
 
 - (id)init;
 
