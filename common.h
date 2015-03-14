@@ -117,6 +117,10 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define initMainScore                   0
 #define highScore                       0
 
+#define bgFileName01                    @"bgimage01.png"
+#define bgFileName02                    @"bgimage02.png"
+#define bgFileName03                    @"bgimage03.png"
+
 @interface common : NSObject
 
 //画面サイズ

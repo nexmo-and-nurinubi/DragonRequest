@@ -7,6 +7,7 @@
 //
 
 #import "SetupViewController.h"
+#import "DrUtil.h"
 
 @interface SetupViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
@@ -32,10 +33,18 @@
     // Do any additional setup after loading the view.
     backgroundType = 0;
     
-    [self.pickupButton1 setBackgroundImage:[UIImage imageNamed:@"mapbg01.png"] forState:UIControlStateNormal];
-    [self.pickupButton2 setBackgroundImage:[UIImage imageNamed:@"mapbg02.png"] forState:UIControlStateNormal];
-    [self.pickupButton3 setBackgroundImage:[UIImage imageNamed:@"mapbg04.png"] forState:UIControlStateNormal];
+    UIImage *bgImage = nil;
+    DrUtil *utilManager = [DrUtil sharedInstance];
     
+    bgImage = utilManager.backgroundImage01;
+    [self.pickupButton1 setBackgroundImage:bgImage forState:UIControlStateNormal];
+    
+    bgImage = utilManager.backgroundImage02;
+    [self.pickupButton2 setBackgroundImage:bgImage forState:UIControlStateNormal];
+    
+    bgImage = utilManager.backgroundImage03;
+    [self.pickupButton3 setBackgroundImage:bgImage forState:UIControlStateNormal];
+
     self.imgPicker = [[UIImagePickerController alloc] init];
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -88,15 +97,46 @@
 {
     //画像が選択されたとき。オリジナル画像をUIImageViewに突っ込む
     UIImage *origImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
+
+    DrUtil *utilManager = [DrUtil sharedInstance];
     
     if (origImage) {
         
-        if(backgroundType==1)
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        
+        if(backgroundType==1){
+            
+            utilManager.backgroundImage01 = origImage;
             [self.pickupButton1 setBackgroundImage:origImage forState:UIControlStateNormal];
-        else if(backgroundType==2)
+            
+            NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName01];
+            BOOL ret = [UIImagePNGRepresentation(origImage) writeToFile:filePath atomically:YES];
+            
+            NSLog(@"bgFileName01:%@",(ret?@"success":@"fail"));
+            
+        }
+        else if(backgroundType==2){
+            
+            utilManager.backgroundImage02 = origImage;
             [self.pickupButton2 setBackgroundImage:origImage forState:UIControlStateNormal];
-        else if(backgroundType==3)
+
+            NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName02];
+            BOOL ret = [UIImagePNGRepresentation(origImage) writeToFile:filePath atomically:YES];
+            
+            NSLog(@"bgFileName02:%@",(ret?@"success":@"fail"));
+
+        }
+        else if(backgroundType==3){
+            
+            utilManager.backgroundImage03 = origImage;
             [self.pickupButton3 setBackgroundImage:origImage forState:UIControlStateNormal];
+
+            NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName03];
+            BOOL ret = [UIImagePNGRepresentation(origImage) writeToFile:filePath atomically:YES];
+            
+            NSLog(@"bgFileName03:%@",(ret?@"success":@"fail"));
+
+        }
         
     }
     
