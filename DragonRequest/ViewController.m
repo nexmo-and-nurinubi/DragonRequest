@@ -10,6 +10,7 @@
 //  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
+#import <AudioToolbox/AudioServices.h>
 
 #import "DrUtil.h"
 
@@ -19,7 +20,7 @@
 #define ENEMY_BOSS_MAX 200
 #define ENEMY_BOSS_FIREST 0
 
-@interface ViewController ()<UIAlertViewDelegate>
+@interface ViewController ()
 
 @end
 
@@ -78,6 +79,17 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    SystemSoundID audioEffect;
+    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
+        NSURL *pathURL = [NSURL fileURLWithPath: path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+    }
+    else {
+        NSLog(@"error, file not found: %@", path);
+    }
+    
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
@@ -121,6 +133,7 @@
                     _enemyBoss[i] = nil;
                     score +=bossDeadScore;
                     scoreLabel.text = [@(score) stringValue];
+                    
                 }
             }
             break;
