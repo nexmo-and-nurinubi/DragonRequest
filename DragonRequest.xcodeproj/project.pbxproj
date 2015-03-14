@@ -164,6 +164,7 @@
 		FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6F1AAB07D600CFFCCB /* pipo-btleffect129@2x.png */; };
 		FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */; };
 		FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */; };
+		FBC760E01AB40F4000AEB38A /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC760DF1AB40F4000AEB38A /* common.m */; };
 		FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */; };
 		FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */; };
 		FBCEA86B1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */; };
@@ -367,6 +368,7 @@
 		FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableFooterView.m; sourceTree = "<group>"; };
 		FB839EBF1AAB175400CFFCCB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		FB839EC51AAB2C5D00CFFCCB /* WeaponCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponCommon.h; sourceTree = "<group>"; };
+		FBC760DF1AB40F4000AEB38A /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect125_jacket@2x.png"; sourceTree = "<group>"; };
 		FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect126_jacket@2x.png"; sourceTree = "<group>"; };
 		FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect127_jacket@2x.png"; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				B802D4271A90B61900305B21 /* common.h */,
+				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
 				B802D4161A90B50E00305B21 /* DrUtil.m */,
 			);
@@ -1079,6 +1082,7 @@
 				FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */,
 				FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
+				FBC760E01AB40F4000AEB38A /* common.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 			);

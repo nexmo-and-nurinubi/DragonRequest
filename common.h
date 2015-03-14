@@ -9,6 +9,8 @@
 // enum : HumanType
 //-----------------------------------------------------------
 
+#import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSUInteger, HumanType) {
     HumanTypeEnemy = 100,
     HumanTypeHero,
@@ -26,10 +28,6 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define KeyTAGRight                 2
 #define KeyTAGUp                    1
 #define KeyTAGDown                  3
-
-//画面サイズ
-#define screenSizeX                 320
-#define screenSizeY                 568
 
 // ヒュマン初期情報
 #define humanPowerImgGapY               8
@@ -117,6 +115,13 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define initMainScore                   0
 #define highScore                       0
 
+@interface common : NSObject
+
+//画面サイズ
++ (NSInteger)screenSizeWidth;
++ (NSInteger)screenSizeHeight;
+
+@end
 
 
 
