@@ -119,7 +119,13 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bgFileName02                    @"bgimage02.png"
 #define bgFileName03                    @"bgimage03.png"
 
+@interface common : NSObject
 
+//画面サイズ
++ (NSInteger)screenSizeWidth;
++ (NSInteger)screenSizeHeight;
+
+@end
 
 
 
