@@ -154,8 +154,8 @@
                                               otherButtonTitles:@"YES", nil];
         if(score>=topScore){
             topScore = score;
-            scoreLabel.text = [@(score) stringValue];;
-            topScoreLabel.text = [@(topScore) stringValue];;
+            scoreLabel.text = [@(score) stringValue];
+            topScoreLabel.text = [@(topScore) stringValue];
             
             NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
             
@@ -164,7 +164,7 @@
             
             
         }
-        scoreLabel.text = [@(score) stringValue];;
+        scoreLabel.text = [@(score) stringValue];
         
         [alart show];
         [_hero removeImage];
@@ -195,13 +195,13 @@
                                                           otherButtonTitles:@"YES", nil];
                     if(score>=topScore){
                         topScore = score;
-                        scoreLabel.text = [@(score) stringValue];;
-                        topScoreLabel.text = [@(topScore) stringValue];;
+                        scoreLabel.text = [@(score) stringValue];
+                        topScoreLabel.text = [@(topScore) stringValue];
                         
                         
                     }
                     score = initMainScore;
-                    scoreLabel.text = [@(score) stringValue];;
+                    scoreLabel.text = [@(score) stringValue];
                     
                     [alert show];
 
