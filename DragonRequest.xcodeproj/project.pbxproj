@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0434F9001AB4174B00219AC6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0434F8FF1AB4174B00219AC6 /* Settings.bundle */; };
 		0750AE361A6A44D000DD05A3 /* dragon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE351A6A44D000DD05A3 /* dragon1.png */; };
 		0750AE381A6A546B00DD05A3 /* hero1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE371A6A546B00DD05A3 /* hero1.png */; };
 		0750AE3C1A6A5DE000DD05A3 /* dragon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE3B1A6A5DE000DD05A3 /* dragon3.png */; };
@@ -195,6 +196,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0434F8FF1AB4174B00219AC6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0750AE351A6A44D000DD05A3 /* dragon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon1.png; sourceTree = "<group>"; };
 		0750AE371A6A546B00DD05A3 /* hero1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero1.png; sourceTree = "<group>"; };
 		0750AE3B1A6A5DE000DD05A3 /* dragon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon3.png; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 		189F860F1A32DCCE0016D4EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0434F8FF1AB4174B00219AC6 /* Settings.bundle */,
 				18A0B28B1A3C11C300CDCF8A /* Info.plist */,
 				189F86111A32DCCE0016D4EE /* main.m */,
 				FB839EBF1AAB175400CFFCCB /* Prefix.pch */,
@@ -1050,6 +1053,7 @@
 				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,
 				612C6F1D1A85FEA00089573B /* BossNomal2.png in Resources */,
 				FB839E9D1AAB07D600CFFCCB /* pipo-btleffect041@2x.png in Resources */,
+				0434F9001AB4174B00219AC6 /* Settings.bundle in Resources */,
 				612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */,
 				1837F44C1A4E484E00075299 /* dragon_orange_rl02@2x.png in Resources */,
 				FB839E8D1AAB07D600CFFCCB /* pipo-btleffect025@2x.png in Resources */,
