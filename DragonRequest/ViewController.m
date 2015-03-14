@@ -17,8 +17,7 @@
 #define ENEMY_BOSS_MAX 200
 #define ENEMY_BOSS_FIREST 0
 
-@interface ViewController ()
-<UIAlertViewDelegate>
+@interface ViewController ()<UIAlertViewDelegate>
 
 @end
 
@@ -66,29 +65,14 @@
     
     stagenumber = 1;
     
-    //    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
-    //
-    //    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-    //
-    //    [timer fire];
-    //    [create fire];
+    //タッチイベントから座標を取得
+    CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
+    //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
+    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
     
-    //
-    //    UILabel *label = [[UILabel alloc] init];
-    //    label.frame = CGRectMake(10, 10, 100, 50);
-    //    label.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.0];
-    //    label.font = [UIFont fontWithName:@"AppleGothic" size:20];
-    //    label.text = ax;
-    //    label.textAlignment = NSTextAlignmentCenter;
-    //    [self.view addSubview:label];
-
-//    timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
-//    
-//    create = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-//    
-//    [timer fire];
-//    [create fire];
+    [_hero moveToPoint:point];
+    
     [self reset];
 }
 
@@ -192,6 +176,7 @@
 
 - (void)bossMove{
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
+        
         [_enemyBoss[i]  moveRand];
         
         if(heroaliveflag == false)
@@ -219,8 +204,7 @@
                     scoreLabel.text=ax;
 
                     [alert show];
-                    //                [timer invalidate];
-                    //                [create invalidate];
+
                     stagenumber = 1;
                     [_hero removeImage];
                     heroaliveflag = true;
@@ -237,16 +221,8 @@
 
 //アラートのボタンを押したとき
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    //    if(clearflag == true)
-    //    {
-    //        _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
-    //    }
-    //    else
-    //    {
-    //        _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
-    //    }
+
     [self reset];
-    
     
 }
 
@@ -327,8 +303,6 @@
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    _resetBtn.hidden = YES;
-    
     if(timer == nil){
         timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
         
@@ -340,10 +314,6 @@
     [create setFireDate:[NSDate dateWithTimeIntervalSinceNow:createtime]];
     [create fire];
 }
-- (IBAction)resetAction:(id)sender {
-    [self reset];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

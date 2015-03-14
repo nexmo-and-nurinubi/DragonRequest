@@ -152,8 +152,8 @@
         _powerImageView.userInteractionEnabled = YES;
     }
     
-    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
-    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
+    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth/2.0,humanPowerImgHeight);
+    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth/2.0,humanPowerImgHeight);
     
     [parentView addSubview:_powerBgImageView];
     [parentView addSubview:_powerImageView];
@@ -430,7 +430,7 @@
         
         if (ABS(self.animationImageView.center.x - target.animationImageView.center.x) <= _reach && ABS(self.animationImageView.center.y - target.animationImageView.center.y) <= _reach) {
             // バトルアニメーション
-            self.fightAnimationImageView.frame = CGRectMake(0, 0, 64, 64);
+            self.fightAnimationImageView.frame = CGRectMake(0, 0, humanFightImageSizeWidth, humanFightImageSizeHeight);
             self.fightAnimationImageView.center = target.animationImageView.center;
             self.fightAnimationImageView.animationImages = _fightAnimArray[_level];
             self.fightAnimationImageView.animationDuration = 1.0;

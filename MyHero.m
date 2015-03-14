@@ -71,9 +71,10 @@
         self.animationImageView.userInteractionEnabled = YES;
     }
     
+    self.animationImageView.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
+    
     [parentView addSubview:self.animationImageView];
 
-    self.animationImageView.frame = CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight);
     
 }
 
@@ -116,7 +117,7 @@
         NSArray *fightSceanArray = nil;
         
         //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
+        fightImage = [UIImage imageNamed:@"pipo-btleffect025.png"];
         
         fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
                                                       countX:8

@@ -148,6 +148,7 @@
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
+		B8FB69131AAB2B0F00F59B8C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FB69121AAB2B0F00F59B8C /* SetupViewController.m */; };
 		B8FE08571AAB02B0005B8750 /* powerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE08561AAB02B0005B8750 /* powerBg.png */; };
 		B8FE085A1AAB0378005B8750 /* powerImg.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE08591AAB0378005B8750 /* powerImg.png */; };
 /* End PBXBuildFile section */
@@ -318,6 +319,8 @@
 		B802D4241A90B5CB00305B21 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		B8FB69111AAB2B0F00F59B8C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		B8FB69121AAB2B0F00F59B8C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		B8FE08561AAB02B0005B8750 /* powerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerBg.png; sourceTree = "<group>"; };
 		B8FE08591AAB0378005B8750 /* powerImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -378,6 +381,8 @@
 			children = (
 				B802D4241A90B5CB00305B21 /* ViewController.h */,
 				B802D4251A90B5CB00305B21 /* ViewController.m */,
+				B8FB69111AAB2B0F00F59B8C /* SetupViewController.h */,
+				B8FB69121AAB2B0F00F59B8C /* SetupViewController.m */,
 				18A0B2751A3C05DB00CDCF8A /* App */,
 				189F860F1A32DCCE0016D4EE /* Supporting Files */,
 			);
@@ -918,6 +923,7 @@
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
+				B8FB69131AAB2B0F00F59B8C /* SetupViewController.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

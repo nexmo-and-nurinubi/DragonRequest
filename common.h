@@ -40,6 +40,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define humanReach                      8
 #define humanImageSizeWidth             16
 #define humanImageSizeHeight            16
+#define humanFightImageSizeWidth        128
+#define humanFightImageSizeHeight       128
 #define humanImageCutSizeWidth          16
 #define humanImageCutSizeHeight         16
 
@@ -105,8 +107,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10
 
-#define bossCreatetime1                 6
-#define bossCreatetime2                 3
+#define bossCreatetime1                 3
+#define bossCreatetime2                 2
 #define bossCreatetime3                 1
 
 //Score初期情報
