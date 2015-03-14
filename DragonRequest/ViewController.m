@@ -302,7 +302,7 @@
     }
     
     //hero インスタンス作成
-    CGPoint heroPos = CGPointMake(screenSizeX/2,screenSizeY/2);
+    CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
     _hero = [[MyHero alloc]init:heroPos];
     
     //hero イメージを設定
