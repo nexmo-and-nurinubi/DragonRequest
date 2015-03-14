@@ -17,6 +17,7 @@
     NSTimer *_humanTimer;
     
 
+    NSArray *_effectFileNameArray;
 }
 
 
@@ -140,7 +141,7 @@
     
     if(_powerBgImageView == nil){
         _powerBgImageView = [[UIImageView alloc]initWithImage:img];
-        _powerBgImageView.tag = HumanTypeBoss;
+        _powerBgImageView.tag = HumanTypeEnemy;
         _powerBgImageView.userInteractionEnabled = YES;
     }
     
@@ -148,7 +149,7 @@
     
     if(_powerImageView == nil){
         _powerImageView = [[UIImageView alloc]initWithImage:img];
-        _powerImageView.tag = HumanTypeBoss;
+        _powerImageView.tag = HumanTypeEnemy;
         _powerImageView.userInteractionEnabled = YES;
     }
     
@@ -211,7 +212,102 @@
 
 -(void)setFightAnimImage
 {
-    
+    @try{
+        
+//        if(_fightAnimArray==nil) {
+            _fightAnimArray = [NSMutableArray array];
+//        } else {
+//            [_fightAnimArray removeAllObjects];
+//        }
+        
+        //fight アニメーションロード
+        UIImage *fightImage = nil;
+        
+        NSMutableArray *a_array = [NSMutableArray array];
+        NSMutableArray *b_array = [NSMutableArray array];
+        NSArray *fightSceanArray = nil;
+        
+        //fight アニメーションロード1
+        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:240
+                                             charactarHeight:240];
+        
+        [a_array addObject:fightSceanArray];
+        
+        //fight アニメーションロード2
+        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:240
+                                             charactarHeight:240];
+        
+        [a_array addObject:fightSceanArray];
+        
+        //fight アニメーションロード3
+        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:1
+                                                      countY:8
+                                              charactarWidth:640
+                                             charactarHeight:240];
+        
+        [a_array addObject:fightSceanArray];
+        
+        [_fightAnimArray addObject:a_array];
+        
+        
+        //fight アニメーションロード1
+        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:240
+                                             charactarHeight:240];
+        
+        [b_array addObject:fightSceanArray];
+        
+        //fight アニメーションロード2
+        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:240
+                                             charactarHeight:240];
+        
+        [b_array addObject:fightSceanArray];
+        
+        //fight アニメーションロード3
+        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:1
+                                                      countY:8
+                                              charactarWidth:640
+                                             charactarHeight:240];
+        
+        [b_array addObject:fightSceanArray];
+        
+        [_fightAnimArray addObject:b_array];
+
+        DLog();
+        
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
 }
 
 -(void)setAnimation:(DirectionType)direction

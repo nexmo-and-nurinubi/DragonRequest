@@ -13,7 +13,8 @@
 
 #define MARGIN 8
 #define BUTTON_WIDTH 20
-#define ENEMY_MARINE_MAX 5
+#define ENEMY_MARINE_MAX 200
+#define ENEMY_MARINE_FIREST 0
 #define ENEMY_BOSS_MAX 200
 #define ENEMY_BOSS_FIREST 0
 
@@ -31,6 +32,7 @@
     EnemyMarine *_enemyMarine[ENEMY_MARINE_MAX];
     
     int cnt;    //ボスの攻撃頻度調整カウンタ
+    int createCnt;
     NSTimer * timer;
     NSTimer * create;
     
@@ -67,7 +69,8 @@
     CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
     
     [_hero moveToPoint:point];
     
@@ -85,7 +88,8 @@
     CGPoint point = [touch locationInView:self.view];
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
     
     [_hero moveToPoint:point];
     
@@ -178,6 +182,41 @@
 }
 
 - (void)bossMove{
+    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+        
+        [_enemyMarine[i]  moveRand];
+        
+        if(heroaliveflag == false)
+        {
+            
+            if(cnt % 10 == 0){
+                if([_enemyMarine[i]  fight:_hero]){
+                    //                [_hero removeImage];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                                    message:@"コンティニューします"
+                                                                   delegate:self
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"YES", nil];
+                    if(score>=topScore){
+                        topScore = score;
+                        scoreLabel.text = [@(score) stringValue];;
+                        topScoreLabel.text = [@(topScore) stringValue];;
+                        
+                        
+                    }
+                    score = initMainScore;
+                    scoreLabel.text = [@(score) stringValue];;
+                    
+                    [alert show];
+
+                    stagenumber = 1;
+                    [_hero removeImage];
+                    heroaliveflag = true;
+                    break;
+                }
+            }
+        }
+    }
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
         
         [_enemyBoss[i]  moveRand];
@@ -204,7 +243,7 @@
                     scoreLabel.text = [@(score) stringValue];;
                     
                     [alert show];
-
+                    
                     stagenumber = 1;
                     [_hero removeImage];
                     heroaliveflag = true;
@@ -234,17 +273,33 @@
         return;
     }
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++){
-        if(_enemyBoss[i] == nil){
+    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+        if(_enemyMarine[i] == nil){
             //Bossのインスタンス作成
-            _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
-            _enemyBoss[i].alpha = 1.0;
+            _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
+            _enemyMarine[i].alpha = 1.0;
             //Bossのイメージを設定
-            [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+            [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
+            createCnt++;
             break;
+            
         }
     }
-    NSLog(@"ボス生成");
+    NSLog(@"雑魚生成");
+    
+    if(createCnt % 10 == 0){
+        for(int i=0;i<ENEMY_BOSS_MAX;i++){
+            if(_enemyBoss[i] == nil){
+                //Bossのインスタンス作成
+                _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
+                _enemyBoss[i].alpha = 1.0;
+                //Bossのイメージを設定
+                [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+                break;
+            }
+        }
+        NSLog(@"ボス生成");
+    }
 }
 
 
@@ -283,6 +338,12 @@
             _enemyBoss[i] = nil;
         }
     }
+    for (int i=0;i<ENEMY_MARINE_MAX;i++){
+        if(_enemyMarine[i] != nil){
+            [_enemyMarine[i] removeImage];
+            _enemyMarine[i] = nil;
+        }
+    }
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake(screenSizeX/2,screenSizeY/2);
@@ -297,6 +358,14 @@
         _enemyBoss[i].alpha = 1.0;
         //Bossのイメージを設定
         [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+    }
+    
+    for(int i=0;i<ENEMY_MARINE_FIREST;i++){
+        //Marineのインスタンス作成
+        _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
+        _enemyMarine[i].alpha = 1.0;
+        //Marineのイメージを設定
+        [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
     }
     
     //heroのx、y座標

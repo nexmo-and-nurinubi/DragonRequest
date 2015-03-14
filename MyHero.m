@@ -60,7 +60,7 @@
                      countY:4];
     
     //戦闘シーンアニメーションイメージ設定
-    [self setFightAnimImage];
+    [super setFightAnimImage];
     
     //表示イメージ
     UIImage *img = _frontSceanAnimArray[0];
@@ -103,64 +103,5 @@
     }
     
 }
-
--(void)setFightAnimImage
-{
-    @try{
-        
-        if(_fightAnimArray==nil)_fightAnimArray = [NSMutableArray array];
-        
-        else [_fightAnimArray removeAllObjects];
-        
-        //fight アニメーションロード
-        UIImage *fightImage = nil;
-        
-        NSArray *fightSceanArray = nil;
-        
-        //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect025.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [_fightAnimArray addObject:fightSceanArray];
-
-        //fight アニメーションロード2
-        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [_fightAnimArray addObject:fightSceanArray];
-        
-        //fight アニメーションロード3
-        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:1
-                                                      countY:8
-                                              charactarWidth:640
-                                             charactarHeight:240];
-        
-        [_fightAnimArray addObject:fightSceanArray];
-        
-        
-    }
-    @catch(NSException *exception){
-        
-        NSLog(@"%@",exception);
-    }
-    @finally{
-        
-    }
-    
-}
-
 
 @end

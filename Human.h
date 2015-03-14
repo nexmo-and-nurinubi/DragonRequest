@@ -104,6 +104,7 @@
 -(void)removeImage;
 -(void)moveRand;
 -(void)setPowerImage;
+-(void)setFightAnimImage;
 -(void)move:(DirectionType) direction;
 -(void)moveToPoint:(CGPoint)toPoint;
 -(void)stopToWalk;
