@@ -1060,6 +1060,7 @@
 				181615161AB406D600E486AE /* shadow01.png in Resources */,
 				FB839E8B1AAB07D600CFFCCB /* pipo-btleffect023@2x.png in Resources */,
 				181615291AB425C400E486AE /* dora10.png in Resources */,
+				B8EDB49E1AB4162B00E36CF3 /* 02.wav in Resources */,
 				1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */,
 				1837F4861A4E48ED00075299 /* right2.png in Resources */,
 				1837F4801A4E48ED00075299 /* front4.png in Resources */,

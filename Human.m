@@ -138,7 +138,7 @@
     
     if(_powerBgImageView == nil){
         _powerBgImageView = [[UIImageView alloc]initWithImage:img];
-        _powerBgImageView.tag = HumanTypeEnemy;
+        _powerBgImageView.tag = HumanTypeHuman;
         _powerBgImageView.userInteractionEnabled = YES;
     }
     
@@ -146,7 +146,7 @@
     
     if(_powerImageView == nil){
         _powerImageView = [[UIImageView alloc]initWithImage:img];
-        _powerImageView.tag = HumanTypeEnemy;
+        _powerImageView.tag = HumanTypeHuman;
         _powerImageView.userInteractionEnabled = YES;
     }
     
@@ -211,11 +211,11 @@
 {
     @try{
         
-//        if(_fightAnimArray==nil) {
+        if(_fightAnimArray==nil) {
             _fightAnimArray = [NSMutableArray array];
-//        } else {
-//            [_fightAnimArray removeAllObjects];
-//        }
+        } else {
+            [_fightAnimArray removeAllObjects];
+        }
         
         //fight アニメーションロード
         UIImage *fightImage = nil;
@@ -524,7 +524,7 @@
             // バトルアニメーション
             self.fightAnimationImageView.frame = CGRectMake(0, 0, humanFightImageSizeWidth, humanFightImageSizeHeight);
             self.fightAnimationImageView.center = target.animationImageView.center;
-            self.fightAnimationImageView.animationImages = _fightAnimArray[_level];
+            self.fightAnimationImageView.animationImages = _fightAnimArray[0][_level];
             self.fightAnimationImageView.animationDuration = 1.0;
             self.fightAnimationImageView.animationRepeatCount = 1.0;
             [self.fightAnimationImageView startAnimating];

@@ -12,8 +12,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, HumanType) {
-    HumanTypeEnemy = 100,
+    HumanTypeHuman = 100,
     HumanTypeHero,
+    HumanTypeEnemy,
     HumanTypeBoss
 };
 
@@ -93,8 +94,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossStepX                       3
 #define bossStepY                       3
 #define bossReach                       24
-#define bossImageSizeWidth              48
-#define bossImageSizeHeight             48
+#define bossImageSizeWidth              100
+#define bossImageSizeHeight             100
 #define bossImageCutSizeWidth           80
 #define bossImageCutSizeHeight          64
 

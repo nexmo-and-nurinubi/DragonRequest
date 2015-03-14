@@ -61,7 +61,7 @@
     if(self.animationImageView == nil){
         self.animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight)];
         self.animationImageView.image = img;
-        self.animationImageView.tag = HumanTypeHero;
+        self.animationImageView.tag = HumanTypeEnemy;
         self.animationImageView.userInteractionEnabled = YES;
     }
     
