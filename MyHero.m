@@ -48,10 +48,10 @@
     return self;
 }
 
--(void)setImage:(UIView *)parentView
+-(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview
 {
     //イメージ設定
-    [super setImage:parentView];
+    [super setImage:parentView belowSubview:siblingSubview];
     
     //アニメーションイメージ設定
     //[self setMoveAnimImage:@"hero-comma.png"
@@ -63,10 +63,11 @@
     [self setFightAnimImage];
     
     //表示イメージ
-    UIImage *img = [UIImage imageNamed:@"hero3.png"];
+    UIImage *img = _frontSceanAnimArray[0];
     
     if(self.animationImageView == nil){
-        self.animationImageView = [[UIImageView alloc]initWithImage:img];
+        self.animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight)];
+        self.animationImageView.image = img;
         self.animationImageView.tag = HumanTypeHero;
         self.animationImageView.userInteractionEnabled = YES;
     }

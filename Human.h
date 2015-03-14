@@ -12,9 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "common.h"
-#import "DrUtil.h"
-
 @interface Human : NSObject {
     
     //キャラクタータイプ（human / marine / boss など）
@@ -103,7 +100,7 @@
 - (NSString *)whereAreYou;
 - (BOOL)fight:(Human *)target;
 
--(void)setImage:(UIView *)parentView;
+-(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;
 -(void)moveRand;
 -(void)setPowerImage;

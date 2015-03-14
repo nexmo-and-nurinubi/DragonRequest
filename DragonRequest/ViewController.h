@@ -11,11 +11,13 @@
 #import "EnemyBoss.h"
 #import "EnemyMarine.h"
 #import "MyHero.h"
+#import "WeaponCollectionView.h"
 
 @interface ViewController : UIViewController
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *fieldView;
+@property (weak, nonatomic) IBOutlet WeaponCollectionView *weaponCollectionView;
 
 @property (nonatomic) int xPos;
 @property (nonatomic) int yPos;

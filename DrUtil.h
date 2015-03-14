@@ -22,6 +22,13 @@
         charactarWidth:(NSInteger)charactarWidth
        charactarHeight:(NSInteger)charactarHeiht;
 
+- (NSArray *)animArray:(UIImage *)originalAnimationImage
+                countX:(NSInteger)countX
+                countY:(NSInteger)countY
+        charactarWidth:(NSInteger)charactarWidth
+       charactarHeight:(NSInteger)charactarHeiht
+            imageScale:(BOOL)imageScale;
+
 - (NSMutableArray *)animArrayList:(UIImage *)originalAnimationImage
                            countX:(NSInteger)countX
                            countY:(NSInteger)countY

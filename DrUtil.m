@@ -76,6 +76,40 @@ static DrUtil* sharedInstance;
     
 }
 
+- (NSArray *)animArray:(UIImage *)originalAnimationImage
+                countX:(NSInteger)countX
+                countY:(NSInteger)countY
+        charactarWidth:(NSInteger)charactarWidth
+       charactarHeight:(NSInteger)charactarHeiht
+            imageScale:(BOOL)imageScale {
+    
+    NSMutableArray *oneSceanAnimArray = [NSMutableArray array];
+    CGFloat scale = imageScale ? originalAnimationImage.scale : 1;
+    
+    for(int indexY=0;indexY<countY;indexY++){
+        
+        for(int indexX=0;indexX<countX;indexX++){
+            
+            CGRect trimArea = CGRectMake(charactarWidth*scale*indexX,
+                                         charactarHeiht*scale*indexY,
+                                         charactarWidth*scale,
+                                         charactarHeiht*scale);
+            
+            CGImageRef imageRef = [originalAnimationImage CGImage];
+            CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
+            UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
+            
+            //エラーの場合リターン
+            if(oneImage==nil)return nil;
+            
+            [oneSceanAnimArray addObject:oneImage];
+            
+        }
+        
+    }
+    return [oneSceanAnimArray mutableCopy];
+}
+
 - (NSMutableArray *)animArrayList:(UIImage *)originalAnimationImage
                     countX:(NSInteger)countX
                     countY:(NSInteger)countY
