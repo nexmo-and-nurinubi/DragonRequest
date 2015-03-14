@@ -21,6 +21,7 @@
         self.name = bossDefaultName;
         
         self.power = bossDefaultPower;
+        self.defaultPower = bossDefaultPower;
         self.minusPower = bossMinusPower;
         
         _stepX = bossStepX;
@@ -36,7 +37,6 @@
 
         _countComma = bossCountAnimComma;
         
-        _defaultPower = bossDefaultPower;
 
         
     }
