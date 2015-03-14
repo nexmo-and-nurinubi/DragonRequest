@@ -11,6 +11,8 @@
 
 #import "ViewController.h"
 
+#import "DrUtil.h"
+
 #define MARGIN 8
 #define BUTTON_WIDTH 20
 #define ENEMY_MARINE_MAX 5
