@@ -25,10 +25,10 @@
 {
     if (point.x == 0 &&  point.y == 0) {
         if (_myHumanType == HumanTypeEnemy ) {
-            point = CGPointMake(screenSizeX / 2, screenSizeY / 2);
+            point = CGPointMake([common screenSizeWidth] / 2, [common screenSizeHeight] / 2);
         } else {
-            CGFloat x = arc4random() % screenSizeX;
-            CGFloat y = arc4random() % screenSizeY;
+            CGFloat x = arc4random() % [common screenSizeWidth];
+            CGFloat y = arc4random() % [common screenSizeHeight];
             point = CGPointMake(x, y);
         }
     }
@@ -45,9 +45,6 @@
     _stepY = humanStepY;
     
     _reach = humanReach;
-    
-    _screenSizeX = screenSizeX;
-    _screenSizeY = screenSizeY;
     
     _imageWidth = humanImageSizeWidth;
     _imageHeight = humanImageSizeHeight;
@@ -510,8 +507,8 @@
             break;
     }
     
-    position.x = MIN(MAX(0,position.x),_screenSizeX-_imageWidth);   //限界地点判別
-    position.y = MIN(MAX(0,position.y),_screenSizeY-_imageHeight);  //限界地点判別
+    position.x = MIN(MAX(0,position.x),[common screenSizeWidth]-_imageWidth);   //限界地点判別
+    position.y = MIN(MAX(0,position.y),[common screenSizeHeight]-_imageHeight);  //限界地点判別
     
     self.position = position;
     

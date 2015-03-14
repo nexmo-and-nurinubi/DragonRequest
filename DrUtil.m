@@ -36,6 +36,36 @@ static DrUtil* sharedInstance;
     
     if (self = [super init]) {
         
+
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *filePath = nil;
+        
+        filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName01];
+        _backgroundImage01 = [UIImage imageWithContentsOfFile:filePath];
+        
+        if(_backgroundImage01==nil){
+            
+            _backgroundImage01 =[UIImage imageNamed:@"mapbg01.png"];
+            
+        }
+        
+        filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName02];
+        _backgroundImage02 = [UIImage imageWithContentsOfFile:filePath];
+        
+        if(_backgroundImage02==nil){
+            
+            _backgroundImage02 =[UIImage imageNamed:@"mapbg02.png"];
+            
+        }
+        
+        filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:bgFileName03];
+        _backgroundImage03 = [UIImage imageWithContentsOfFile:filePath];
+        
+        if(_backgroundImage03==nil){
+            
+            _backgroundImage03 =[UIImage imageNamed:@"mapbg04.png"];
+            
+        }
         
     }
     

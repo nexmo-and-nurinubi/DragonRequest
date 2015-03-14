@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0434F9001AB4174B00219AC6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0434F8FF1AB4174B00219AC6 /* Settings.bundle */; };
 		0750AE361A6A44D000DD05A3 /* dragon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE351A6A44D000DD05A3 /* dragon1.png */; };
 		0750AE381A6A546B00DD05A3 /* hero1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE371A6A546B00DD05A3 /* hero1.png */; };
 		0750AE3C1A6A5DE000DD05A3 /* dragon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0750AE3B1A6A5DE000DD05A3 /* dragon3.png */; };
@@ -111,6 +112,15 @@
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
+		B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */; };
+		B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4931AB4162B00E36CF3 /* 04.wav */; };
+		B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4941AB4162B00E36CF3 /* 03.wav */; };
+		B8EDB49C1AB4162B00E36CF3 /* 07.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4951AB4162B00E36CF3 /* 07.wav */; };
+		B8EDB49D1AB4162B00E36CF3 /* 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4961AB4162B00E36CF3 /* 01.wav */; };
+		B8EDB49E1AB4162B00E36CF3 /* 02.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4971AB4162B00E36CF3 /* 02.wav */; };
+		B8EDB49F1AB4162B00E36CF3 /* 05.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4981AB4162B00E36CF3 /* 05.wav */; };
+		B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4991AB4162B00E36CF3 /* 06.wav */; };
+		B8EDB4A41AB429CA00E36CF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */; };
 		FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */; };
 		FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */; };
 		FB60843C1AAB7804005A71E4 /* powerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB60843A1AAB7804005A71E4 /* powerBg.png */; };
@@ -174,6 +184,7 @@
 		FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB839E6F1AAB07D600CFFCCB /* pipo-btleffect129@2x.png */; };
 		FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EB21AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m */; };
 		FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */; };
+		FBC760E01AB40F4000AEB38A /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC760DF1AB40F4000AEB38A /* common.m */; };
 		FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */; };
 		FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */; };
 		FBCEA86B1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */; };
@@ -197,6 +208,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0434F8FF1AB4174B00219AC6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0750AE351A6A44D000DD05A3 /* dragon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon1.png; sourceTree = "<group>"; };
 		0750AE371A6A546B00DD05A3 /* hero1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero1.png; sourceTree = "<group>"; };
 		0750AE3B1A6A5DE000DD05A3 /* dragon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon3.png; sourceTree = "<group>"; };
@@ -313,6 +325,17 @@
 		B802D4241A90B5CB00305B21 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		B8EDB4931AB4162B00E36CF3 /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
+		B8EDB4941AB4162B00E36CF3 /* 03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03.wav; sourceTree = "<group>"; };
+		B8EDB4951AB4162B00E36CF3 /* 07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07.wav; sourceTree = "<group>"; };
+		B8EDB4961AB4162B00E36CF3 /* 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01.wav; sourceTree = "<group>"; };
+		B8EDB4971AB4162B00E36CF3 /* 02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02.wav; sourceTree = "<group>"; };
+		B8EDB4981AB4162B00E36CF3 /* 05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05.wav; sourceTree = "<group>"; };
+		B8EDB4991AB4162B00E36CF3 /* 06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06.wav; sourceTree = "<group>"; };
+		B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FB2817A21AAAE54900C3032E /* WeaponCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionView.h; sourceTree = "<group>"; };
 		FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionView.m; sourceTree = "<group>"; };
 		FB572F971AAACF3800D1DA96 /* WeaponCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionViewCell.h; sourceTree = "<group>"; };
@@ -387,6 +410,7 @@
 		FB839EBB1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionReusableFooterView.m; sourceTree = "<group>"; };
 		FB839EBF1AAB175400CFFCCB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		FB839EC51AAB2C5D00CFFCCB /* WeaponCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponCommon.h; sourceTree = "<group>"; };
+		FBC760DF1AB40F4000AEB38A /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		FBCEA8661AAB5FBA00663C61 /* pipo-btleffect125_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect125_jacket@2x.png"; sourceTree = "<group>"; };
 		FBCEA8681AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect126_jacket@2x.png"; sourceTree = "<group>"; };
 		FBCEA86A1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect127_jacket@2x.png"; sourceTree = "<group>"; };
@@ -404,6 +428,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EDB4A41AB429CA00E36CF3 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +460,8 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
+				B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */,
+				B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */,
 				612C6EF01A85FEA00089573B /* AnimationImage */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
@@ -457,6 +484,9 @@
 		189F860E1A32DCCE0016D4EE /* DragonRequest */ = {
 			isa = PBXGroup;
 			children = (
+				B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */,
+				B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */,
+				189F861C1A32DCCE0016D4EE /* Main.storyboard */,
 				B802D4241A90B5CB00305B21 /* ViewController.h */,
 				B802D4251A90B5CB00305B21 /* ViewController.m */,
 				18A0B2751A3C05DB00CDCF8A /* App */,
@@ -468,6 +498,7 @@
 		189F860F1A32DCCE0016D4EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0434F8FF1AB4174B00219AC6 /* Settings.bundle */,
 				18A0B28B1A3C11C300CDCF8A /* Info.plist */,
 				189F86111A32DCCE0016D4EE /* main.m */,
 				FB839EBF1AAB175400CFFCCB /* Prefix.pch */,
@@ -497,7 +528,6 @@
 			children = (
 				189F86131A32DCCE0016D4EE /* AppDelegate.h */,
 				189F86141A32DCCE0016D4EE /* AppDelegate.m */,
-				189F861C1A32DCCE0016D4EE /* Main.storyboard */,
 				189F861F1A32DCCE0016D4EE /* Images.xcassets */,
 				189F86211A32DCCE0016D4EE /* LaunchScreen.xib */,
 				189F86161A32DCCE0016D4EE /* DragonRequest.xcdatamodeld */,
@@ -517,6 +547,7 @@
 		18A0B2771A3C0CC400CDCF8A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B8EDB4921AB4161200E36CF3 /* sound */,
 				FB60843E1AAB7890005A71E4 /* Field */,
 				18A0B2E41A3C182500CDCF8A /* EnemyMarine */,
 				18A0B2E51A3C185E00CDCF8A /* human */,
@@ -530,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				B802D4271A90B61900305B21 /* common.h */,
+				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
 				B802D4161A90B50E00305B21 /* DrUtil.m */,
 			);
@@ -679,6 +711,20 @@
 				612C6F181A85FEA00089573B /* HeroRightAttack3.png */,
 			);
 			path = hero;
+			sourceTree = "<group>";
+		};
+		B8EDB4921AB4161200E36CF3 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				B8EDB4931AB4162B00E36CF3 /* 04.wav */,
+				B8EDB4941AB4162B00E36CF3 /* 03.wav */,
+				B8EDB4951AB4162B00E36CF3 /* 07.wav */,
+				B8EDB4961AB4162B00E36CF3 /* 01.wav */,
+				B8EDB4971AB4162B00E36CF3 /* 02.wav */,
+				B8EDB4981AB4162B00E36CF3 /* 05.wav */,
+				B8EDB4991AB4162B00E36CF3 /* 06.wav */,
+			);
+			name = sound;
 			sourceTree = "<group>";
 		};
 		FB572F921AAACB8300D1DA96 /* Humans */ = {
@@ -950,9 +996,11 @@
 				FBCEA86F1AAB5FD800663C61 /* pipo-btleffect129_jacket@2x.png in Resources */,
 				181615181AB4070900E486AE /* shadow02.png in Resources */,
 				612C6F221A85FEA00089573B /* EnemyLeftAttack1.png in Resources */,
+				B8EDB49C1AB4162B00E36CF3 /* 07.wav in Resources */,
 				FBCEA8751AAB5FE700663C61 /* pipo-btleffect125_jacket.png in Resources */,
 				FB839EA91AAB07D600CFFCCB /* pipo-btleffect128@2x.png in Resources */,
 				612C6F201A85FEA00089573B /* BossRightAttack2.png in Resources */,
+				B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */,
 				612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */,
 				FB60843D1AAB7804005A71E4 /* powerImg.png in Resources */,
 				1837F4631A4E48C100075299 /* rl01.png in Resources */,
@@ -976,7 +1024,9 @@
 				FB839EA31AAB07D600CFFCCB /* pipo-btleffect127.png in Resources */,
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
+				B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */,
 				FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */,
+				B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */,
 				FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */,
 				1837F4831A4E48ED00075299 /* left3.png in Resources */,
 				FB839E9E1AAB07D600CFFCCB /* pipo-btleffect042@2x.png in Resources */,
@@ -1003,6 +1053,7 @@
 				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
 				FB839E7B1AAB07D600CFFCCB /* pipo-btleffect029.png in Resources */,
+				B8EDB49F1AB4162B00E36CF3 /* 05.wav in Resources */,
 				612C6F1C1A85FEA00089573B /* BossNomal1.png in Resources */,
 				FB839E951AAB07D600CFFCCB /* pipo-btleffect033@2x.png in Resources */,
 				612C6F351A85FEA00089573B /* HeroLeftAttack2.png in Resources */,
@@ -1057,6 +1108,7 @@
 				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,
 				612C6F1D1A85FEA00089573B /* BossNomal2.png in Resources */,
 				FB839E9D1AAB07D600CFFCCB /* pipo-btleffect041@2x.png in Resources */,
+				0434F9001AB4174B00219AC6 /* Settings.bundle in Resources */,
 				612C6F1A1A85FEA00089573B /* BossLeftAttack2.png in Resources */,
 				1837F44C1A4E484E00075299 /* dragon_orange_rl02@2x.png in Resources */,
 				FB839E8D1AAB07D600CFFCCB /* pipo-btleffect025@2x.png in Resources */,
@@ -1087,6 +1139,7 @@
 				1837F4671A4E48C100075299 /* tb02.png in Resources */,
 				FB839E751AAB07D600CFFCCB /* pipo-btleffect023.png in Resources */,
 				FB839E9C1AAB07D600CFFCCB /* pipo-btleffect040@2x.png in Resources */,
+				B8EDB49D1AB4162B00E36CF3 /* 01.wav in Resources */,
 				FB839E991AAB07D600CFFCCB /* pipo-btleffect037@2x.png in Resources */,
 				181615231AB41FAC00E486AE /* dora13.png in Resources */,
 				1837F4651A4E48C100075299 /* rl03.png in Resources */,
@@ -1118,6 +1171,7 @@
 			files = (
 				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
+				B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */,
 				B802D4221A90B53300305B21 /* Human.m in Sources */,
@@ -1127,6 +1181,7 @@
 				FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */,
 				FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
+				FBC760E01AB40F4000AEB38A /* common.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 			);
