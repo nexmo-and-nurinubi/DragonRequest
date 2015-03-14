@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="95"/>
+            <point key="canvasLocation" x="816" y="171"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KNA-hP-aIA">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXk-aa-G6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="95"/>
+            <point key="canvasLocation" x="-115" y="459"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="eoS-uj-Xi8">
@@ -202,6 +202,15 @@
                                     <action selector="pickupBackgroundImage03:" destination="bsN-bu-zXq" eventType="touchUpInside" id="HCp-U1-ooL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-BT-kr9">
+                                <rect key="frame" x="137" y="475" width="31" height="30"/>
+                                <state key="normal" title="start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="AkL-Ls-caz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -213,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5i-Kc-E0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="862"/>
+            <point key="canvasLocation" x="385" y="979"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYs-0U-JMD">
@@ -245,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcr-XP-1iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="95"/>
+            <point key="canvasLocation" x="816" y="-481"/>
         </scene>
     </scenes>
     <resources>
@@ -256,4 +265,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="2bE-nO-n2B"/>
+    </inferredMetricsTieBreakers>
 </document>

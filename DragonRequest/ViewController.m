@@ -257,19 +257,21 @@
     heroaliveflag = false;
     
     clearmes = @"次のステージに進みます";
+
+    DrUtil *utilManager = [DrUtil sharedInstance];
     
     int createtime = 0;
     switch (stagenumber) {
         case 1:
-            _fieldView.image = [UIImage imageNamed:@"mapbg01.png"];
+            _fieldView.image = utilManager.backgroundImage01;
             createtime = bossCreatetime1;
             break;
         case 2:
-            _fieldView.image = [UIImage imageNamed:@"mapbg02.png"];
+            _fieldView.image = utilManager.backgroundImage02;
             createtime = bossCreatetime2;
             break;
         case 3:
-            _fieldView.image = [UIImage imageNamed:@"mapbg04.png"];
+            _fieldView.image = utilManager.backgroundImage03;
             createtime = bossCreatetime3;
             clearmes = @"すべてのステージをクリアしました";
             break;
