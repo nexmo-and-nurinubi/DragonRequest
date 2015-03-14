@@ -411,8 +411,9 @@
             break;
     }
     
-    position.x = MIN(MAX(0,position.x),[common screenSizeWidth]-_imageWidth);   //限界地点判別
-    position.y = MIN(MAX(0,position.y),[common screenSizeHeight]-_imageHeight);  //限界地点判別
+    // 限界地点判別
+    position.x = MIN(MAX(0,position.x),[common screenSizeWidth]-_imageWidth);
+    position.y = MIN(MAX(0,position.y),[common screenSizeHeight]-_imageHeight-weaponCollectionViewSizeHeight);
     
     self.position = position;
     
