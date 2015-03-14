@@ -42,7 +42,8 @@
     return self;
 }
 
--(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview
+-(void)setImage:(UIView *)parentView
+   belowSubview:(UIView *)siblingSubview
 {
     //イメージ設定
     [super setImage:parentView belowSubview:siblingSubview];

@@ -207,7 +207,6 @@
         
         if(heroaliveflag == false)
         {
-            
             if(cnt % 10 == 0){
                 if([_enemyMarine[i]  fight:_hero]){
                     //                [_hero removeImage];
@@ -278,7 +277,7 @@
 }
 
 //アラートのボタンを押したとき
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 
     [self reset];
     
@@ -335,9 +334,6 @@
     int createtime = 0;
     switch (stagenumber) {
         case 1:
-            if (!utilManager.backgroundImage01) {
-                NSLog(@"空");
-            }
             _fieldView.image = utilManager.backgroundImage01;
             createtime = bossCreatetime1;
             break;
