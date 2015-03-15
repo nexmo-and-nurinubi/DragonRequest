@@ -106,6 +106,7 @@
 		612C6F3A1A85FEA00089573B /* HeroRightAttack1.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F161A85FEA00089573B /* HeroRightAttack1.png */; };
 		612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F171A85FEA00089573B /* HeroRightAttack2.png */; };
 		612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F181A85FEA00089573B /* HeroRightAttack3.png */; };
+		6156CD981AB5CA06008B7479 /* MySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156CD971AB5CA06008B7479 /* MySegue.m */; };
 		B802D4171A90B50E00305B21 /* DrUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4161A90B50E00305B21 /* DrUtil.m */; };
 		B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4191A90B53300305B21 /* EnemyBoss.m */; };
 		B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41B1A90B53300305B21 /* EnemyMarine.m */; };
@@ -312,6 +313,8 @@
 		612C6F161A85FEA00089573B /* HeroRightAttack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack1.png; sourceTree = "<group>"; };
 		612C6F171A85FEA00089573B /* HeroRightAttack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack2.png; sourceTree = "<group>"; };
 		612C6F181A85FEA00089573B /* HeroRightAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack3.png; sourceTree = "<group>"; };
+		6156CD961AB5CA06008B7479 /* MySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegue.h; sourceTree = "<group>"; };
+		6156CD971AB5CA06008B7479 /* MySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegue.m; sourceTree = "<group>"; };
 		B802D4151A90B50E00305B21 /* DrUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrUtil.h; sourceTree = "<group>"; };
 		B802D4161A90B50E00305B21 /* DrUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrUtil.m; sourceTree = "<group>"; };
 		B802D4181A90B53300305B21 /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBoss.h; sourceTree = "<group>"; };
@@ -563,6 +566,8 @@
 				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
 				B802D4161A90B50E00305B21 /* DrUtil.m */,
+				6156CD961AB5CA06008B7479 /* MySegue.h */,
+				6156CD971AB5CA06008B7479 /* MySegue.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -1181,6 +1186,7 @@
 				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */,
+				6156CD981AB5CA06008B7479 /* MySegue.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */,
 				B802D4221A90B53300305B21 /* Human.m in Sources */,

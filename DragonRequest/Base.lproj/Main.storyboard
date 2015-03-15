@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="171"/>
+            <point key="canvasLocation" x="416" y="235"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KNA-hP-aIA">
@@ -178,7 +178,7 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="2bE-nO-n2B"/>
+                                            <segue destination="BYZ-38-t0r" kind="custom" customClass="MySegue" id="2bE-nO-n2B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -258,12 +258,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-BT-kr9">
-                                <rect key="frame" x="137" y="475" width="31" height="30"/>
-                                <state key="normal" title="start">
+                                <rect key="frame" x="112" y="488" width="96" height="30"/>
+                                <state key="normal" title="back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="AkL-Ls-caz"/>
+                                    <action selector="backAction:" destination="bsN-bu-zXq" eventType="touchUpInside" id="mmN-N6-Pc8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,12 +277,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5i-Kc-E0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="979"/>
+            <point key="canvasLocation" x="416" y="962"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYs-0U-JMD">
             <objects>
-                <viewController id="zee-HD-EZA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="a" id="zee-HD-EZA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="75Y-ba-R5x"/>
                         <viewControllerLayoutGuide type="bottom" id="ptL-98-tGx"/>
@@ -320,7 +320,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="2bE-nO-n2B"/>
-    </inferredMetricsTieBreakers>
 </document>

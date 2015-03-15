@@ -10,4 +10,7 @@
 
 @interface SetupViewController : UIViewController
 
+
+- (IBAction)backAction:(id)sender;
+
 @end
