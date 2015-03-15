@@ -90,6 +90,7 @@
     // AudioPlayerの生成
     NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
     deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [deadSound prepareToPlay];
 }
 
 
@@ -110,6 +111,8 @@
     
     
     // 敵を倒した時の音を再生
+    [deadSound stop];
+    deadSound.currentTime = 0;
     [deadSound play];
 }
 
