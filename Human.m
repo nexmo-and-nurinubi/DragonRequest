@@ -520,7 +520,8 @@
     
     @try{
         
-        if (ABS(self.animationImageView.center.x - target.animationImageView.center.x) <= _reach && ABS(self.animationImageView.center.y - target.animationImageView.center.y) <= _reach) {
+        // ターゲットを倒した後も通っていたので修正
+        if (ABS(self.animationImageView.center.x - target.animationImageView.center.x) <= _reach && ABS(self.animationImageView.center.y - target.animationImageView.center.y) <= _reach && target.power > 0) {
             // バトルアニメーション
             self.fightAnimationImageView.frame = CGRectMake(0, 0, humanFightImageSizeWidth, humanFightImageSizeHeight);
             self.fightAnimationImageView.center = target.animationImageView.center;
@@ -532,6 +533,7 @@
             // 体力を減らす
             target.power -= self.minusPower;
             NSLog(@"HP:%.0f",target.power);
+            NSLog(@"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             if (target.power <= 0) {
                 return YES;
             }
