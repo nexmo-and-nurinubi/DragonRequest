@@ -84,8 +84,24 @@
     [self reset];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+
+// 敵を倒した時の処理
+- (void)deadWithCharactor:(Human *)enemy type:(int)type
 {
+    int point = 0;
+    if (type == HumanTypeBoss) {
+        point = bossDeadScore;
+    } else if (type == HumanTypeEnemy) {
+        point = marineDeadScore;
+    }
+    
+    [enemy removeImage];
+    enemy = nil;
+    score += point;
+    scoreLabel.text = [@(score) stringValue];
+    
+    
+    // 敵を倒した時の音を再生
     SystemSoundID audioEffect;
     NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
     if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
@@ -96,7 +112,11 @@
     else {
         NSLog(@"error, file not found: %@", path);
     }
-    
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
@@ -115,14 +135,13 @@
     switch (tag) {
         case HumanTypeEnemy: {
             BOOL dead[ENEMY_MARINE_MAX];
-            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = [_hero fight:_enemyMarine[i]];
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)
+                dead[i] = NO;
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)
+                dead[i] = [_hero fight:_enemyMarine[i]];
             for(int i=0;i<ENEMY_MARINE_MAX;i++) {
                 if (dead[i]) {
-                    [_enemyMarine[i] removeImage];
-                    _enemyMarine[i] = nil;
-                    score += marineDeadScore;
-                    scoreLabel.text = [@(score) stringValue];
+                    [self deadWithCharactor:_enemyMarine[i] type:HumanTypeEnemy];
                 }
             }
             break;
@@ -133,15 +152,13 @@
         }
         case HumanTypeBoss: {
             BOOL dead[ENEMY_BOSS_MAX];
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = [_hero fight:_enemyBoss[i]];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+                dead[i] = NO;
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+                dead[i] = [_hero fight:_enemyBoss[i]];
             for(int i=0;i<ENEMY_BOSS_MAX;i++) {
                 if (dead[i]) {
-                    [_enemyBoss[i] removeImage];
-                    _enemyBoss[i] = nil;
-                    score +=bossDeadScore;
-                    scoreLabel.text = [@(score) stringValue];
-                    
+                    [self deadWithCharactor:_enemyBoss[i] type:HumanTypeBoss];
                 }
             }
             break;

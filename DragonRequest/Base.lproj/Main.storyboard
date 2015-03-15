@@ -28,21 +28,21 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-Yl-sfd">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="aW7-Mc-4aI"/>
-                                            <constraint firstAttribute="width" constant="160" id="wRo-hp-ycP"/>
+                                            <constraint firstAttribute="width" constant="140" id="wRo-hp-ycP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-3h-tuc">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="17"/>
+                                        <rect key="frame" x="180" y="0.0" width="140" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="BEz-dV-whN"/>
+                                            <constraint firstAttribute="width" constant="140" id="BEz-dV-whN"/>
                                             <constraint firstAttribute="height" constant="17" id="igo-WF-sIK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
