@@ -10,7 +10,8 @@
 //  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
-#import <AudioToolbox/AudioServices.h>
+
+#import <AVFoundation/AVFoundation.h>
 
 #import "DrUtil.h"
 
@@ -54,6 +55,9 @@
     
     
     DrUtil *drUtil;
+    
+    
+    AVAudioPlayer *deadSound;
 }
 
 //ここからアプリスタート
@@ -82,6 +86,10 @@
     [_hero moveToPoint:point];
     
     [self reset];
+    
+    // AudioPlayerの生成
+    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
 }
 
 
@@ -102,16 +110,7 @@
     
     
     // 敵を倒した時の音を再生
-    SystemSoundID audioEffect;
-    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
-        NSURL *pathURL = [NSURL fileURLWithPath: path];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
-        AudioServicesPlaySystemSound(audioEffect);
-    }
-    else {
-        NSLog(@"error, file not found: %@", path);
-    }
+    [deadSound play];
 }
 
 
