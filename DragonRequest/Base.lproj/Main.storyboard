@@ -245,7 +245,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-tr-G4B">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mce-aH-7XG">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mce-aH-7XG">
                                 <rect key="frame" x="48" y="119" width="224" height="330"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HighScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqL-JS-7WZ">
@@ -285,12 +285,18 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="j3g-99-eQY"/>
+                                    <constraint firstAttribute="width" constant="224" id="pYz-xg-QtG"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ryn-tr-G4B" firstAttribute="leading" secondItem="bVr-1R-Jko" secondAttribute="leadingMargin" constant="-16" id="1Ca-3c-jSR"/>
+                            <constraint firstAttribute="centerY" secondItem="mce-aH-7XG" secondAttribute="centerY" id="3RK-4h-dmj"/>
                             <constraint firstItem="ryn-tr-G4B" firstAttribute="top" secondItem="bVr-1R-Jko" secondAttribute="topMargin" id="BHP-zv-gd7"/>
+                            <constraint firstAttribute="centerX" secondItem="mce-aH-7XG" secondAttribute="centerX" id="Uej-0H-qEo"/>
                             <constraint firstItem="Y2Q-Zf-IO6" firstAttribute="top" secondItem="ryn-tr-G4B" secondAttribute="bottom" id="WzN-lh-8ME"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ryn-tr-G4B" secondAttribute="trailing" constant="-16" id="uNC-KD-yjE"/>
                         </constraints>
