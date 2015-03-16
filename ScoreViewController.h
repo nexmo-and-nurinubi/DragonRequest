@@ -10,4 +10,6 @@
 
 @interface ScoreViewController : UIViewController
 
+- (IBAction)backAction:(id)sender;
+
 @end

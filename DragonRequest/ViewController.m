@@ -58,6 +58,10 @@
     
     
     AVAudioPlayer *deadSound;
+    
+    
+    NSUserDefaults* defaults;
+    NSMutableArray *scoreArray;
 }
 
 //ここからアプリスタート
@@ -66,8 +70,16 @@
     [super viewDidLoad];
     
     //変数初期化
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
+    // スコア保存用配列生成
+    if (![defaults objectForKey:@"SCORE_ARRAY"]) {
+        scoreArray = [NSMutableArray array];
+    } else {
+        NSData *data = [defaults objectForKey:@"SCORE_ARRAY"];
+        scoreArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    
     
     topScoreLabel.text = [@(topScore) stringValue];
     score = initMainScore;
@@ -194,17 +206,21 @@
                                                         message:clearmes delegate:self
                                               cancelButtonTitle:nil
                                               otherButtonTitles:@"YES", nil];
+        
+        // スコアをNSUserDefaultsに配列で保存
+        [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+        [defaults setObject:data forKey:@"SCORE_ARRAY"];
+        [defaults synchronize];
+        
         if(score>=topScore){
             topScore = score;
             scoreLabel.text = [@(score) stringValue];
             topScoreLabel.text = [@(topScore) stringValue];
             
-            NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
             
             // Integerの保存
             [defaults setInteger:topScore forKey:@"TOPSCORE"];
-            
-            
         }
         scoreLabel.text = [@(score) stringValue];
         
@@ -234,6 +250,16 @@
                                                                    delegate:self
                                                           cancelButtonTitle:nil
                                                           otherButtonTitles:@"YES", nil];
+                    
+                    // スコアをNSUserDefaultsに配列で保存
+                    NSLog(@"無事死亡");
+                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+                    NSLog(@"うんこ : %@", [NSString stringWithFormat:@"%ld", (long)score]);
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
+                    [defaults synchronize];
+                    
+                    
                     if(score>=topScore){
                         topScore = score;
                         scoreLabel.text = [@(score) stringValue];;
@@ -269,6 +295,14 @@
                                                                    delegate:self
                                                           cancelButtonTitle:nil
                                                           otherButtonTitles:@"YES", nil];
+                    
+                    // スコアをNSUserDefaultsに配列で保存
+                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
+                    // 上書きされないのでsynchronize追加
+                    [defaults synchronize];
+                    
                     if(score>=topScore){
                         topScore = score;
                         scoreLabel.text = [@(score) stringValue];
@@ -306,7 +340,7 @@
 - (void)createBoss{
     
     if (clearflag) {
-        NSLog(@"リターン");
+//        NSLog(@"リターン");
         return;
     }
     
@@ -322,7 +356,7 @@
             
         }
     }
-    NSLog(@"雑魚生成");
+//    NSLog(@"雑魚生成");
     
     if(createCnt % 10 == 0){
         for(int i=0;i<ENEMY_BOSS_MAX;i++){
@@ -335,7 +369,7 @@
                 break;
             }
         }
-        NSLog(@"ボス生成");
+//        NSLog(@"ボス生成");
     }
 }
 

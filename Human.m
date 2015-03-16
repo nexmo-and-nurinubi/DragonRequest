@@ -407,8 +407,8 @@
 {
     CGPoint fromPoint = self.position;
     
-    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
-    NSLog(@"toPoint: %@",NSStringFromCGPoint(_toPoint));
+//    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
+//    NSLog(@"toPoint: %@",NSStringFromCGPoint(_toPoint));
     
     if((abs(fromPoint.x - _toPoint.x)<=_stepX)&&
        (abs(fromPoint.y - _toPoint.y)<=_stepX)){
@@ -532,8 +532,6 @@
             
             // 体力を減らす
             target.power -= self.minusPower;
-            NSLog(@"HP:%.0f",target.power);
-            NSLog(@"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             if (target.power <= 0) {
                 return YES;
             }
