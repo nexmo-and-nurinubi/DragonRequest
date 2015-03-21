@@ -25,14 +25,14 @@ static DrUtil* sharedInstance;
         if (!sharedInstance){
             sharedInstance = [[DrUtil alloc] init];
         }
-        
     }
     
     return sharedInstance;
-    
 }
 
-- (id)init{
+
+
+- (id)init {
     
     if (self = [super init]) {
         

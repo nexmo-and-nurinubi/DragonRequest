@@ -42,18 +42,19 @@
     return self;
 }
 
--(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview
+-(void)setImage:(UIView *)parentView
+   belowSubview:(UIView *)siblingSubview
 {
     //イメージ設定
     [super setImage:parentView belowSubview:siblingSubview];
     
     //ワーキングアニメーションイメージ設定
-    [self setMoveAnimImage:@"dragon1.png"
+    [self setMoveAnimImage:@"shadow01.png"
                      countX:3
-                     countY:3];
+                     countY:4];
     
     //戦闘シーンアニメーションイメージ設定
-    [self setFightAnimImage];
+    [super setFightAnimImage];
     
     //表示イメージ
     UIImage *img = _frontSceanAnimArray[0];
@@ -61,7 +62,7 @@
     if(self.animationImageView == nil){
         self.animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.position.x,self.position.y,_imageWidth,_imageHeight)];
         self.animationImageView.image = img;
-        self.animationImageView.tag = HumanTypeHero;
+        self.animationImageView.tag = HumanTypeEnemy;
         self.animationImageView.userInteractionEnabled = YES;
     }
     
@@ -85,41 +86,6 @@
         _backSceanAnimArray  = [_walkingSceanAnimArray objectAtIndex:1];
         _leftSceanAnimArray  = [_walkingSceanAnimArray objectAtIndex:2];
         _rightSceanAnimArray = [_walkingSceanAnimArray objectAtIndex:3];
-        
-    }
-    @catch(NSException *exception){
-        
-        NSLog(@"%@",exception);
-    }
-    @finally{
-        
-    }
-    
-}
-
--(void)setFightAnimImage
-{
-    @try{
-        
-        if(_fightAnimArray==nil)_fightAnimArray = [NSMutableArray array];
-        
-        else [_fightAnimArray removeAllObjects];
-        
-        //fight アニメーションロード
-        UIImage *fightImage = nil;
-        
-        NSArray *fightSceanArray = nil;
-        
-        //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:120
-                                             charactarHeight:120];
-        
-        [_fightAnimArray addObject:fightSceanArray];
         
     }
     @catch(NSException *exception){

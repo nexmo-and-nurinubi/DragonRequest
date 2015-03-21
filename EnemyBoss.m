@@ -9,6 +9,9 @@
 #import "EnemyBoss.h"
 
 @implementation EnemyBoss
+{
+    NSArray *dragonImageFileNameArray;
+}
 
 - (id)init :(CGPoint)initPos {
     
@@ -18,6 +21,13 @@
         
         _myHumanType = HumanTypeBoss;
         
+        dragonImageFileNameArray = [NSArray arrayWithObjects: bossColoreBrack,
+                                                              bossColoreBlue,
+                                                              bossColoreGold,
+                                                              bossColoreGreen,
+                                                              bossColoreRed,
+                                                              bossColoreWhite,
+                                                              nil];
         self.name = bossDefaultName;
         
         self.power = bossDefaultPower;
@@ -48,13 +58,16 @@
     //イメージ設定
     [super setImage:parentView belowSubview:siblingSubview];
     
+    srand((unsigned)time(nil));
+    int rand = arc4random() % 6;
+    
     //アニメーションイメージ設定
-    [self setMoveAnimImage:@"dragon1.png"
+    [self setMoveAnimImage:dragonImageFileNameArray[rand]
                      countX:3
                      countY:4];
     
     //戦闘シーンアニメーションイメージ設定
-    [self setFightAnimImage];
+    [super setFightAnimImage];
     
     //表示イメージ
     UIImage *img = _frontSceanAnimArray[0];
@@ -86,51 +99,6 @@
         _rightSceanAnimArray = [_walkingSceanAnimArray objectAtIndex:2];
         _backSceanAnimArray  = [_walkingSceanAnimArray objectAtIndex:3];
         
-    }
-    @catch(NSException *exception){
-        
-        NSLog(@"%@",exception);
-    }
-    @finally{
-        
-    }
-    
-}
-
--(void)setFightAnimImage
-{
-    @try{
-        
-        if(_fightAnimArray==nil)_fightAnimArray = [NSMutableArray array];
-        
-        else [_fightAnimArray removeAllObjects];
-        
-        //fight アニメーションロード
-        UIImage *fightImage = nil;
-        
-        NSArray *fightSceanArray = nil;
-        
-        //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [_fightAnimArray addObject:fightSceanArray];
-        
-        //fight アニメーションロード2
-        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:1
-                                                      countY:8
-                                              charactarWidth:640
-                                             charactarHeight:240];
-        
-        [_fightAnimArray addObject:fightSceanArray];
     }
     @catch(NSException *exception){
         

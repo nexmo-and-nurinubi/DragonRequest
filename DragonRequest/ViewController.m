@@ -10,13 +10,15 @@
 //  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
-#import <AudioToolbox/AudioServices.h>
+
+#import <AVFoundation/AVFoundation.h>
 
 #import "DrUtil.h"
 
 #define MARGIN 8
 #define BUTTON_WIDTH 20
-#define ENEMY_MARINE_MAX 5
+#define ENEMY_MARINE_MAX 200
+#define ENEMY_MARINE_FIREST 0
 #define ENEMY_BOSS_MAX 200
 #define ENEMY_BOSS_FIREST 0
 
@@ -34,6 +36,7 @@
     EnemyMarine *_enemyMarine[ENEMY_MARINE_MAX];
     
     int cnt;    //ボスの攻撃頻度調整カウンタ
+    int createCnt;
     NSTimer * timer;
     NSTimer * create;
     
@@ -49,6 +52,16 @@
     __weak IBOutlet UILabel *scoreLabel;
     
     NSString *clearmes;
+    
+    
+    DrUtil *drUtil;
+    
+    
+    AVAudioPlayer *deadSound;
+    
+    
+    NSUserDefaults* defaults;
+    NSMutableArray *scoreArray;
 }
 
 //ここからアプリスタート
@@ -57,8 +70,16 @@
     [super viewDidLoad];
     
     //変数初期化
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
+    // スコア保存用配列生成
+    if (![defaults objectForKey:@"SCORE_ARRAY"]) {
+        scoreArray = [NSMutableArray array];
+    } else {
+        NSData *data = [defaults objectForKey:@"SCORE_ARRAY"];
+        scoreArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    
     
     topScoreLabel.text = [@(topScore) stringValue];
     score = initMainScore;
@@ -70,26 +91,46 @@
     CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
+    
     
     [_hero moveToPoint:point];
     
     [self reset];
+    
+    // AudioPlayerの生成
+    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [deadSound prepareToPlay];
 }
+
+
+// 敵を倒した時の処理
+- (void)deadWithCharactor:(Human *)enemy type:(int)type
+{
+    int point = 0;
+    if (type == HumanTypeBoss) {
+        point = bossDeadScore;
+    } else if (type == HumanTypeEnemy) {
+        point = marineDeadScore;
+    }
+    
+    [enemy removeImage];
+    enemy = nil;
+    score += point;
+    scoreLabel.text = [@(score) stringValue];
+    
+    
+    // 敵を倒した時の音を再生
+    [deadSound stop];
+    deadSound.currentTime = 0;
+    [deadSound play];
+}
+
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    SystemSoundID audioEffect;
-    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
-        NSURL *pathURL = [NSURL fileURLWithPath: path];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
-        AudioServicesPlaySystemSound(audioEffect);
-    }
-    else {
-        NSLog(@"error, file not found: %@", path);
-    }
-    
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
@@ -99,7 +140,8 @@
     CGPoint point = [touch locationInView:self.view];
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
+    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
     
     [_hero moveToPoint:point];
     
@@ -107,14 +149,13 @@
     switch (tag) {
         case HumanTypeEnemy: {
             BOOL dead[ENEMY_MARINE_MAX];
-            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_MARINE_MAX;i++)dead[i] = [_hero fight:_enemyMarine[i]];
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)
+                dead[i] = NO;
+            for(int i=0;i<ENEMY_MARINE_MAX;i++)
+                dead[i] = [_hero fight:_enemyMarine[i]];
             for(int i=0;i<ENEMY_MARINE_MAX;i++) {
                 if (dead[i]) {
-                    [_enemyMarine[i] removeImage];
-                    _enemyMarine[i] = nil;
-                    score += marineDeadScore;
-                    scoreLabel.text = [@(score) stringValue];
+                    [self deadWithCharactor:_enemyMarine[i] type:HumanTypeEnemy];
                 }
             }
             break;
@@ -125,15 +166,13 @@
         }
         case HumanTypeBoss: {
             BOOL dead[ENEMY_BOSS_MAX];
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = NO;
-            for(int i=0;i<ENEMY_BOSS_MAX;i++)dead[i] = [_hero fight:_enemyBoss[i]];
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+                dead[i] = NO;
+            for(int i=0;i<ENEMY_BOSS_MAX;i++)
+                dead[i] = [_hero fight:_enemyBoss[i]];
             for(int i=0;i<ENEMY_BOSS_MAX;i++) {
                 if (dead[i]) {
-                    [_enemyBoss[i] removeImage];
-                    _enemyBoss[i] = nil;
-                    score +=bossDeadScore;
-                    scoreLabel.text = [@(score) stringValue];
-                    
+                    [self deadWithCharactor:_enemyBoss[i] type:HumanTypeBoss];
                 }
             }
             break;
@@ -167,17 +206,21 @@
                                                         message:clearmes delegate:self
                                               cancelButtonTitle:nil
                                               otherButtonTitles:@"YES", nil];
+        
+        // スコアをNSUserDefaultsに配列で保存
+        [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+        [defaults setObject:data forKey:@"SCORE_ARRAY"];
+        [defaults synchronize];
+        
         if(score>=topScore){
             topScore = score;
             scoreLabel.text = [@(score) stringValue];
             topScoreLabel.text = [@(topScore) stringValue];
             
-            NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
             
             // Integerの保存
             [defaults setInteger:topScore forKey:@"TOPSCORE"];
-            
-            
         }
         scoreLabel.text = [@(score) stringValue];
         
@@ -193,6 +236,50 @@
 }
 
 - (void)bossMove{
+    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+        
+        [_enemyMarine[i]  moveRand];
+        
+        if(heroaliveflag == false)
+        {
+            if(cnt % 10 == 0){
+                if([_enemyMarine[i]  fight:_hero]){
+                    //                [_hero removeImage];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                                    message:@"コンティニューします"
+                                                                   delegate:self
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"YES", nil];
+                    
+                    // スコアをNSUserDefaultsに配列で保存
+                    NSLog(@"無事死亡");
+                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+                    NSLog(@"うんこ : %@", [NSString stringWithFormat:@"%ld", (long)score]);
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
+                    [defaults synchronize];
+                    
+                    
+                    if(score>=topScore){
+                        topScore = score;
+                        scoreLabel.text = [@(score) stringValue];;
+                        topScoreLabel.text = [@(topScore) stringValue];;
+                        
+                        
+                    }
+                    score = initMainScore;
+                    scoreLabel.text = [@(score) stringValue];;
+                    
+                    [alert show];
+
+                    stagenumber = 1;
+                    [_hero removeImage];
+                    heroaliveflag = true;
+                    break;
+                }
+            }
+        }
+    }
     for(int i=0;i<ENEMY_BOSS_MAX;i++){
         
         [_enemyBoss[i]  moveRand];
@@ -208,6 +295,14 @@
                                                                    delegate:self
                                                           cancelButtonTitle:nil
                                                           otherButtonTitles:@"YES", nil];
+                    
+                    // スコアをNSUserDefaultsに配列で保存
+                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
+                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
+                    // 上書きされないのでsynchronize追加
+                    [defaults synchronize];
+                    
                     if(score>=topScore){
                         topScore = score;
                         scoreLabel.text = [@(score) stringValue];
@@ -219,7 +314,7 @@
                     scoreLabel.text = [@(score) stringValue];
                     
                     [alert show];
-
+                    
                     stagenumber = 1;
                     [_hero removeImage];
                     heroaliveflag = true;
@@ -235,7 +330,7 @@
 }
 
 //アラートのボタンを押したとき
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 
     [self reset];
     
@@ -245,21 +340,37 @@
 - (void)createBoss{
     
     if (clearflag) {
-        NSLog(@"リターン");
+//        NSLog(@"リターン");
         return;
     }
     
-    for(int i=0;i<ENEMY_BOSS_MAX;i++){
-        if(_enemyBoss[i] == nil){
+    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+        if(_enemyMarine[i] == nil){
             //Bossのインスタンス作成
-            _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
-            _enemyBoss[i].alpha = 1.0;
+            _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
+            _enemyMarine[i].alpha = 1.0;
             //Bossのイメージを設定
-            [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+            [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
+            createCnt++;
             break;
+            
         }
     }
-    NSLog(@"ボス生成");
+//    NSLog(@"雑魚生成");
+    
+    if(createCnt % 10 == 0){
+        for(int i=0;i<ENEMY_BOSS_MAX;i++){
+            if(_enemyBoss[i] == nil){
+                //Bossのインスタンス作成
+                _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
+                _enemyBoss[i].alpha = 1.0;
+                //Bossのイメージを設定
+                [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+                break;
+            }
+        }
+//        NSLog(@"ボス生成");
+    }
 }
 
 
@@ -300,6 +411,12 @@
             _enemyBoss[i] = nil;
         }
     }
+    for (int i=0;i<ENEMY_MARINE_MAX;i++){
+        if(_enemyMarine[i] != nil){
+            [_enemyMarine[i] removeImage];
+            _enemyMarine[i] = nil;
+        }
+    }
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
@@ -314,6 +431,14 @@
         _enemyBoss[i].alpha = 1.0;
         //Bossのイメージを設定
         [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+    }
+    
+    for(int i=0;i<ENEMY_MARINE_FIREST;i++){
+        //Marineのインスタンス作成
+        _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
+        _enemyMarine[i].alpha = 1.0;
+        //Marineのイメージを設定
+        [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
     }
     
     //heroのx、y座標
@@ -334,7 +459,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 @end

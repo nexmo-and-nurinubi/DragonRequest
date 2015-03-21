@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,23 +21,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-p8-MWG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-YR-sAc" userLabel="Weapon Animation Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge9-L6-dXu">
                                 <rect key="frame" x="0.0" y="20" width="320" height="17"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-Yl-sfd">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-Yl-sfd">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="aW7-Mc-4aI"/>
+                                            <constraint firstAttribute="width" constant="140" id="wRo-hp-ycP"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-3h-tuc">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-3h-tuc">
+                                        <rect key="frame" x="180" y="0.0" width="140" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="BEz-dV-whN"/>
+                                            <constraint firstAttribute="height" constant="17" id="igo-WF-sIK"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Lvg-3h-tuc" secondAttribute="trailing" id="J2F-r6-zSc"/>
+                                    <constraint firstItem="Lvg-3h-tuc" firstAttribute="top" secondItem="Ge9-L6-dXu" secondAttribute="top" id="OHi-zE-cRL"/>
+                                    <constraint firstItem="ejm-Yl-sfd" firstAttribute="top" secondItem="Ge9-L6-dXu" secondAttribute="top" id="RMs-dC-JIu"/>
+                                    <constraint firstItem="ejm-Yl-sfd" firstAttribute="leading" secondItem="Ge9-L6-dXu" secondAttribute="leading" id="ig6-rv-lIt"/>
+                                </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bIQ-rh-8Av" customClass="WeaponCollectionView">
                                 <rect key="frame" x="0.0" y="500" width="320" height="68"/>
@@ -87,9 +107,6 @@
                                     <outlet property="weaponAnimationImageView" destination="2iM-YR-sAc" id="tXy-U6-NXF"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-YR-sAc" userLabel="Weapon Animation Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -120,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="171"/>
+            <point key="canvasLocation" x="355" y="-235"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KNA-hP-aIA">
@@ -134,34 +151,160 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-fc-CkC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-fc-CkC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-as-4ze">
-                                <rect key="frame" x="105" y="239" width="110" height="79"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="2bE-nO-n2B"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-i1-YbA">
-                                <rect key="frame" x="140" y="450" width="41" height="30"/>
-                                <state key="normal" title="Setup">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bsN-bu-zXq" kind="modal" id="eQY-GF-YZ5"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doragon Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO">
+                                <rect key="frame" x="16" y="70" width="288" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="Hee-Su-5al"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiV-GS-2B0">
+                                <rect key="frame" x="48" y="196" width="224" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-as-4ze">
+                                        <rect key="frame" x="57" y="8" width="110" height="50"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="2" height="-2"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="custom" customClass="MySegue" id="2bE-nO-n2B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SW-Om-hWa">
+                                        <rect key="frame" x="57" y="63" width="110" height="50"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="2" height="-2"/>
+                                        <state key="normal" title="Score">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="skQ-sk-U01" kind="custom" customClass="MySegue" id="AW1-jB-q7r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-i1-YbA">
+                                        <rect key="frame" x="57" y="118" width="110" height="50"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="2" height="-2"/>
+                                        <state key="normal" title="Setup">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bsN-bu-zXq" kind="custom" customClass="MySegue" id="eQY-GF-YZ5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="3ju-Iy-icI"/>
+                                    <constraint firstAttribute="height" constant="176" id="xzo-Cz-Vrd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Uc-A6-hrM" firstAttribute="top" secondItem="iPl-fc-CkC" secondAttribute="bottom" id="7f9-eb-dmL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iPl-fc-CkC" secondAttribute="trailing" constant="-16" id="ELV-Ce-POY"/>
+                            <constraint firstItem="WiV-GS-2B0" firstAttribute="top" secondItem="9wa-sJ-pPO" secondAttribute="bottom" constant="29" id="G1h-o7-lB3"/>
+                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" id="UOc-Ws-ydm"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="-16" id="UWT-ja-rmw"/>
+                            <constraint firstAttribute="centerY" secondItem="WiV-GS-2B0" secondAttribute="centerY" id="Xfq-r9-ouQ"/>
+                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="trailing" secondItem="BEv-wq-2D5" secondAttribute="trailingMargin" id="Z02-gq-OzJ"/>
+                            <constraint firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="h5a-eE-qfD"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="top" secondItem="BEv-wq-2D5" secondAttribute="topMargin" id="lpG-dU-22b"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXk-aa-G6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="459"/>
+            <point key="canvasLocation" x="-431" y="481"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="KiK-pG-nTc">
+            <objects>
+                <viewController id="skQ-sk-U01" customClass="ScoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sRc-QU-YB2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y2Q-Zf-IO6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bVr-1R-Jko">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-tr-G4B">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mce-aH-7XG">
+                                <rect key="frame" x="48" y="119" width="224" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HighScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqL-JS-7WZ">
+                                        <rect key="frame" x="26" y="8" width="172" height="39"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN0-sb-R9R">
+                                        <rect key="frame" x="73" y="292" width="79" height="30"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="25"/>
+                                        <state key="normal" title="back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backAction:" destination="skQ-sk-U01" eventType="touchUpInside" id="Y8s-le-Tlj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3by-td-wPI">
+                                        <rect key="frame" x="26" y="87" width="172" height="39"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-1t-GTn">
+                                        <rect key="frame" x="26" y="220" width="172" height="39"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYv-hK-KxM">
+                                        <rect key="frame" x="26" y="154" width="172" height="39"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="j3g-99-eQY"/>
+                                    <constraint firstAttribute="width" constant="224" id="pYz-xg-QtG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ryn-tr-G4B" firstAttribute="leading" secondItem="bVr-1R-Jko" secondAttribute="leadingMargin" constant="-16" id="1Ca-3c-jSR"/>
+                            <constraint firstAttribute="centerY" secondItem="mce-aH-7XG" secondAttribute="centerY" id="3RK-4h-dmj"/>
+                            <constraint firstItem="ryn-tr-G4B" firstAttribute="top" secondItem="bVr-1R-Jko" secondAttribute="topMargin" id="BHP-zv-gd7"/>
+                            <constraint firstAttribute="centerX" secondItem="mce-aH-7XG" secondAttribute="centerX" id="Uej-0H-qEo"/>
+                            <constraint firstItem="Y2Q-Zf-IO6" firstAttribute="top" secondItem="ryn-tr-G4B" secondAttribute="bottom" id="WzN-lh-8ME"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ryn-tr-G4B" secondAttribute="trailing" constant="-16" id="uNC-KD-yjE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3f-0o-kEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="459"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="eoS-uj-Xi8">
@@ -175,44 +318,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY3-bA-x68">
-                                <rect key="frame" x="96" y="15" width="129" height="142"/>
-                                <state key="normal" title="背景イメージ1選択">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickupBackgroundImage01:" destination="bsN-bu-zXq" eventType="touchUpInside" id="DiX-rO-Vfw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-od-EKQ">
-                                <rect key="frame" x="96" y="165" width="129" height="139"/>
-                                <state key="normal" title="背景イメージ2選択">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickupBackgroundImage02:" destination="bsN-bu-zXq" eventType="touchUpInside" id="R9b-wJ-hVv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-Fr-lVt">
-                                <rect key="frame" x="96" y="312" width="129" height="168"/>
-                                <state key="normal" title="背景イメージ3選択">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickupBackgroundImage03:" destination="bsN-bu-zXq" eventType="touchUpInside" id="HCp-U1-ooL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-BT-kr9">
-                                <rect key="frame" x="137" y="475" width="31" height="30"/>
-                                <state key="normal" title="start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="AkL-Ls-caz"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="n5O-jQ-BXp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.5499999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIs-Hu-TLa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-BT-kr9">
+                                        <rect key="frame" x="112" y="530" width="96" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="Ccv-J6-80d"/>
+                                            <constraint firstAttribute="height" constant="30" id="sCX-Bc-qLn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backAction:" destination="bsN-bu-zXq" eventType="touchUpInside" id="mmN-N6-Pc8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="KE8-BT-kr9" secondAttribute="centerX" id="2Vr-lb-Suw"/>
+                                    <constraint firstAttribute="bottom" secondItem="KE8-BT-kr9" secondAttribute="bottom" constant="8" id="wgf-sd-qj5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jP-L5-Usd">
+                                <rect key="frame" x="97" y="222" width="125" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-od-EKQ">
+                                        <rect key="frame" x="2" y="3" width="120" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="背景イメージ2選択">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickupBackgroundImage02:" destination="bsN-bu-zXq" eventType="touchUpInside" id="R9b-wJ-hVv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="GBL-xC-ssB"/>
+                                    <constraint firstAttribute="width" constant="125" id="Ktj-qo-OGX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdN-2h-c75">
+                                <rect key="frame" x="97" y="89" width="125" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY3-bA-x68">
+                                        <rect key="frame" x="2" y="3" width="120" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="背景イメージ1選択">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickupBackgroundImage01:" destination="bsN-bu-zXq" eventType="touchUpInside" id="DiX-rO-Vfw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-1u-1Jd">
+                                <rect key="frame" x="97" y="355" width="125" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-Fr-lVt">
+                                        <rect key="frame" x="2" y="3" width="120" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="背景イメージ3選択">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickupBackgroundImage03:" destination="bsN-bu-zXq" eventType="touchUpInside" id="HCp-U1-ooL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IoG-mr-Ctb" firstAttribute="top" secondItem="UIs-Hu-TLa" secondAttribute="bottom" id="2zk-Cl-ZR4"/>
+                            <constraint firstItem="n5O-jQ-BXp" firstAttribute="leading" secondItem="79u-Nh-Mkm" secondAttribute="leadingMargin" constant="-16" id="AfB-Uf-9e2"/>
+                            <constraint firstItem="IoG-mr-Ctb" firstAttribute="top" secondItem="n5O-jQ-BXp" secondAttribute="bottom" id="GVC-vJ-ZNs"/>
+                            <constraint firstItem="UIs-Hu-TLa" firstAttribute="top" secondItem="79u-Nh-Mkm" secondAttribute="topMargin" id="NOf-F6-V1T"/>
+                            <constraint firstItem="n5O-jQ-BXp" firstAttribute="top" secondItem="79u-Nh-Mkm" secondAttribute="topMargin" id="Nef-tO-Vxp"/>
+                            <constraint firstItem="UIs-Hu-TLa" firstAttribute="leading" secondItem="79u-Nh-Mkm" secondAttribute="leadingMargin" constant="-16" id="TIe-AQ-BAY"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="top" secondItem="4jP-L5-Usd" secondAttribute="bottom" constant="8" id="U7B-oD-tAT"/>
+                            <constraint firstItem="4jP-L5-Usd" firstAttribute="top" secondItem="ZdN-2h-c75" secondAttribute="bottom" constant="8" id="VCm-e4-ImE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n5O-jQ-BXp" secondAttribute="trailing" constant="-16" id="XmN-6G-ykt"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="height" secondItem="ZdN-2h-c75" secondAttribute="height" id="blW-sN-VSB"/>
+                            <constraint firstAttribute="centerY" secondItem="4jP-L5-Usd" secondAttribute="centerY" id="cBL-kh-RXq"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="width" secondItem="ZdN-2h-c75" secondAttribute="width" id="ek6-Wh-vZk"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="leading" secondItem="4jP-L5-Usd" secondAttribute="leading" id="fbQ-Ve-wpz"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="height" secondItem="4jP-L5-Usd" secondAttribute="height" id="o1W-si-eud"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UIs-Hu-TLa" secondAttribute="trailing" constant="-16" id="rfS-C5-8LO"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="width" secondItem="4jP-L5-Usd" secondAttribute="width" id="sM3-Vb-LoX"/>
+                            <constraint firstAttribute="centerX" secondItem="4jP-L5-Usd" secondAttribute="centerX" id="swc-aB-F0f"/>
+                            <constraint firstItem="vgf-1u-1Jd" firstAttribute="leading" secondItem="ZdN-2h-c75" secondAttribute="leading" id="zoq-4I-5Kb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pickupButton1" destination="MY3-bA-x68" id="MpF-Bp-u9R"/>
@@ -222,12 +429,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5i-Kc-E0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="979"/>
+            <point key="canvasLocation" x="327" y="1391"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYs-0U-JMD">
             <objects>
-                <viewController id="zee-HD-EZA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="a" id="zee-HD-EZA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="75Y-ba-R5x"/>
                         <viewControllerLayoutGuide type="bottom" id="ptL-98-tGx"/>
@@ -265,7 +472,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="2bE-nO-n2B"/>
-    </inferredMetricsTieBreakers>
 </document>

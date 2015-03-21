@@ -12,8 +12,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, HumanType) {
-    HumanTypeEnemy = 100,
+    HumanTypeHuman = 100,
     HumanTypeHero,
+    HumanTypeEnemy,
     HumanTypeBoss
 };
 
@@ -49,12 +50,14 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define maxMoveCount                    5
 
+
+
 // ヒーロー初期情報
 #define heroMoveTimeInterval            0.4f
 
 #define heroStepX                       15
 #define heroStepY                       15
-#define heroReach                       24
+#define heroReach                       50
 #define heroImageSizeWidth              32
 #define heroImageSizeHeight             32
 #define heroImageCutSizeWidth           32
@@ -69,19 +72,19 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define heroDefaultPosY                 10
 
 //marine初期情報
-#define marineMoveTimeInterval          1.0f
-#define marineStepX                     8
-#define marineStepY                     8
+#define marineMoveTimeInterval          0.1f
+#define marineStepX                     5
+#define marineStepY                     5
 #define marineReach                     8
-#define marineImageSizeWidth            16
-#define marineImageSizeHeight           16
-#define marineImageCutSizeWidth         16
-#define marineImageCutSizeHeight        16
+#define marineImageSizeWidth            60
+#define marineImageSizeHeight           60
+#define marineImageCutSizeWidth         60
+#define marineImageCutSizeHeight        60
 
 #define marineCountAnimComma             3
 
 #define marineDefaultName               @"Marine"
-#define marineDefaultPower              50.0f
+#define marineDefaultPower              300.0f
 #define marineMinusPower                1.0f
 #define marineDefaultPosX               10
 #define marineDefaultPosY               10
@@ -93,16 +96,16 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossStepX                       3
 #define bossStepY                       3
 #define bossReach                       24
-#define bossImageSizeWidth              48
-#define bossImageSizeHeight             48
-#define bossImageCutSizeWidth           73
-#define bossImageCutSizeHeight          58
+#define bossImageSizeWidth              100
+#define bossImageSizeHeight             100
+#define bossImageCutSizeWidth           80
+#define bossImageCutSizeHeight          64
 
 #define bossCountAnimComma              3
 
 
 #define bossDefaultName                 @"Boss"
-#define bossDefaultPower                30.0f
+#define bossDefaultPower                300.0f
 #define bossMinusPower                  5.0f
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10
@@ -110,6 +113,13 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossCreatetime1                 3
 #define bossCreatetime2                 2
 #define bossCreatetime3                 1
+
+#define bossColoreBrack                 @"dora10.png"
+#define bossColoreWhite                 @"dora09.png"
+#define bossColoreBlue                  @"dora12.png"
+#define bossColoreRed                   @"dora17.png"
+#define bossColoreGreen                 @"dora14.png"
+#define bossColoreGold                  @"dora18.png"
 
 //Score初期情報
 #define bossDeadScore                   100
