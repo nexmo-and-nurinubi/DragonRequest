@@ -530,6 +530,15 @@
             self.fightAnimationImageView.animationRepeatCount = 1.0;
             [self.fightAnimationImageView startAnimating];
             
+            [UIView animateWithDuration:fightDuration
+                                  delay:0.0
+                                options:UIViewAnimationOptionAutoreverse
+                             animations:^{
+                                 target.animationImageView.alpha = 0;
+                             } completion:^(BOOL finished) {
+                                 target.animationImageView.alpha = 1;
+                             }];
+            
             // 体力を減らす
             target.power -= self.minusPower;
             if (target.power <= 0) {

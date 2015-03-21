@@ -30,6 +30,9 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define KeyTAGUp                    1
 #define KeyTAGDown                  3
 
+// Fightのアニメーション
+#define fightDuration                   0.1
+
 // ヒュマン初期情報
 #define humanPowerImgGapY               8
 #define humanPowerImgHeight             3
@@ -82,7 +85,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define marineCountAnimComma             3
 
 #define marineDefaultName               @"Marine"
-#define marineDefaultPower              15.0f
+#define marineDefaultPower              300.0f
 #define marineMinusPower                1.0f
 #define marineDefaultPosX               10
 #define marineDefaultPosY               10
