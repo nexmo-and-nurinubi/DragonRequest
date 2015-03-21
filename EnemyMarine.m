@@ -21,6 +21,7 @@
         self.name = marineDefaultName;
         
         self.power = marineDefaultPower;
+        self.defaultPower = marineDefaultPower;
         self.minusPower = marineMinusPower;
         
         _stepX = marineStepX;
@@ -36,7 +37,6 @@
         
         _countComma = marineCountAnimComma;
         
-        _defaultPower = marineDefaultPower;
         
     }
     return self;

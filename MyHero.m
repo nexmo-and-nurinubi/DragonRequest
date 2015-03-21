@@ -24,6 +24,7 @@
         self.minusPower = heroMinusPower;
         
         self.power = heroDefaultPower;
+        self.defaultPower = heroDefaultPower;
         self.minusPower = heroMinusPower;
         
         _level = 0;
@@ -41,7 +42,6 @@
         
         _countComma = heroCountAnimComma;
         
-        _defaultPower = heroDefaultPower;
         
     }
     

@@ -48,8 +48,6 @@
     //攻撃範囲
     NSInteger _reach;
     
-    float _defaultPower;
-    
     NSInteger _level;
     
     //向きアニメーション配列
@@ -74,6 +72,9 @@
 
 //自分のパワー
 @property (nonatomic,assign) float power;
+
+//自分の最大パワー
+@property (nonatomic,assign) float defaultPower;
 
 //自分の位置
 @property (nonatomic,assign) CGPoint position;
