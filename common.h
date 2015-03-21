@@ -30,7 +30,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define KeyTAGUp                    1
 #define KeyTAGDown                  3
 
-#define weaponCollectionViewSizeHeight  68
+// Fightのアニメーション
+#define fightDuration                   0.1
 
 // ヒュマン初期情報
 #define humanPowerImgGapY               8
