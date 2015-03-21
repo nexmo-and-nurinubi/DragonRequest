@@ -50,6 +50,8 @@
     
     __weak IBOutlet UILabel *topScoreLabel;
     __weak IBOutlet UILabel *scoreLabel;
+    __weak IBOutlet UILabel *playerNameLabel;
+    __weak IBOutlet UIImageView *gcPlayerPictureImage;
     
     NSString *clearmes;
     
@@ -68,23 +70,17 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    //変数初期化
+
     defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
-    // スコア保存用配列生成
-    if (![defaults objectForKey:@"SCORE_ARRAY"]) {
-        scoreArray = [NSMutableArray array];
-    } else {
-        NSData *data = [defaults objectForKey:@"SCORE_ARRAY"];
-        scoreArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    }
-    
     
     topScoreLabel.text = [@(topScore) stringValue];
     score = initMainScore;
     scoreLabel.text = [@(score) stringValue];
     
+    // Set GameCenter Manager Delegate
+    [[GameCenterManager sharedManager] setDelegate:self];
+
     stagenumber = 1;
     
     //タッチイベントから座標を取得
@@ -103,6 +99,35 @@
     NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
     deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [deadSound prepareToPlay];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    BOOL available = [[GameCenterManager sharedManager] checkGameCenterAvailability];
+    if (available) {
+        gcPlayerPictureImage.image = [UIImage imageNamed:@"gamecenter"];
+    } else {
+        gcPlayerPictureImage.image = nil;
+    }
+    
+    GKLocalPlayer *player = [[GameCenterManager sharedManager] localPlayerData];
+    if (player) {
+        if ([player isUnderage] == NO) {
+//            actionBarLabel.title = [NSString stringWithFormat:@"%@ signed in.", player.displayName];
+//            playerStatus.text = @"Player is not underage";
+            playerNameLabel.text = player.displayName;
+            [[GameCenterManager sharedManager] localPlayerPhoto:^(UIImage *playerPhoto) {
+                gcPlayerPictureImage.image = playerPhoto;
+            }];
+        } else {
+//            playerStatus.text = @"Player is underage";
+//            actionBarLabel.title = [NSString stringWithFormat:@"Underage player, %@, signed in.", player.displayName];
+            playerNameLabel.text = player.displayName;
+        }
+    } else {
+        playerNameLabel.text = [NSString stringWithFormat:@"Please login"];
+    }
 }
 
 

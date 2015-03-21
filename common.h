@@ -33,6 +33,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 // ヒュマン初期情報
 #define humanPowerImgGapY               8
 #define humanPowerImgHeight             3
+#define humanPowerImgWidth              32
 
 #define humanStepX                      8
 #define humanStepY                      8
@@ -47,8 +48,6 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define humanCountAnimComma             3
 
 #define maxMoveCount                    5
-
-
 
 // ヒーロー初期情報
 #define heroMoveTimeInterval            0.4f

@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GameCenterManager.h"
+
 #import "EnemyBoss.h"
 #import "EnemyMarine.h"
 #import "MyHero.h"
 #import "WeaponCollectionView.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<GameCenterManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *fieldView;
 @property (weak, nonatomic) IBOutlet WeaponCollectionView *weaponCollectionView;
