@@ -64,12 +64,21 @@
     
     NSUserDefaults* defaults;
     NSMutableArray *scoreArray;
+    
+    
+//    NSMutableArray *bossArray;
+//    NSMutableArray *enemyArray;
 }
 
 //ここからアプリスタート
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    
+//    bossArray = [NSMutableArray array];
+//    enemyArray = [NSMutableArray array];
+    
 
     defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
@@ -100,6 +109,35 @@
     deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [deadSound prepareToPlay];
 }
+
+
+// オブジェクトの並べ替え
+- (void)bringObject
+{
+    for (int y = 0; y < self.view.bounds.size.height; y++) {
+        for (int i = 0; i < ENEMY_MARINE_MAX; i++) {
+            if (_enemyMarine[i].animationImageView.frame.origin.y == y && _enemyMarine[i])
+                [self.view bringSubviewToFront:_enemyMarine[i].animationImageView];
+        }
+        if (_hero.animationImageView.frame.origin.y == y && _hero)
+            [self.view bringSubviewToFront:_hero.animationImageView];
+    }
+    
+    for (int y = 0; y < self.view.bounds.size.height; y++) {
+        for (int i = 0; i < ENEMY_BOSS_MAX; i++) {
+            if (_enemyBoss[i].animationImageView.frame.origin.y == y && _enemyBoss[i])
+                [self.view bringSubviewToFront:_enemyBoss[i].animationImageView];
+        }
+    }
+    
+    [self.view bringSubviewToFront:_weaponCollectionView];
+    [self.view bringSubviewToFront:topScoreLabel];
+    [self.view bringSubviewToFront:scoreLabel];
+    [self.view bringSubviewToFront:playerNameLabel];
+    [self.view bringSubviewToFront:gcPlayerPictureImage];
+}
+
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -261,6 +299,9 @@
 }
 
 - (void)bossMove{
+    
+    [self bringObject];
+    
     for(int i=0;i<ENEMY_MARINE_MAX;i++){
         
         [_enemyMarine[i]  moveRand];
@@ -363,6 +404,9 @@
 
 //タイマーで設定した時間ごとにボスを生成
 - (void)createBoss{
+    
+    
+    //[self bringObject];
     
     if (clearflag) {
 //        NSLog(@"リターン");

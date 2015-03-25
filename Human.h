@@ -86,7 +86,7 @@
 @property (nonatomic,assign) float alpha;
 
 //キャラクターイメージを表示するiOS obect
-@property (nonatomic, strong)UIImageView *animationImageView;
+@property (nonatomic, strong) UIImageView *animationImageView;
 
 //キャラクターバトルイメージを表示するiOS obect
 @property (nonatomic, strong) UIImageView *fightAnimationImageView;
