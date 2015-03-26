@@ -140,12 +140,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="355" y="-235"/>
+            <point key="canvasLocation" x="259" y="157"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="KNA-hP-aIA">
             <objects>
-                <viewController id="Rrm-Js-jUq" sceneMemberID="viewController">
+                <viewController id="Rrm-Js-jUq" customClass="menuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Spq-jA-6B7"/>
                         <viewControllerLayoutGuide type="bottom" id="4Uc-A6-hrM"/>
@@ -192,7 +192,7 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="skQ-sk-U01" kind="custom" customClass="MySegue" id="AW1-jB-q7r"/>
+                                            <action selector="showGameCenterLeaderBoard:" destination="Rrm-Js-jUq" eventType="touchUpInside" id="GRa-Aj-QuZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-i1-YbA">
@@ -232,82 +232,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXk-aa-G6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-431" y="481"/>
-        </scene>
-        <!--Score View Controller-->
-        <scene sceneID="KiK-pG-nTc">
-            <objects>
-                <viewController id="skQ-sk-U01" customClass="ScoreViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sRc-QU-YB2"/>
-                        <viewControllerLayoutGuide type="bottom" id="Y2Q-Zf-IO6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bVr-1R-Jko">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-tr-G4B">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mce-aH-7XG">
-                                <rect key="frame" x="48" y="119" width="224" height="330"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HighScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqL-JS-7WZ">
-                                        <rect key="frame" x="26" y="8" width="172" height="39"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN0-sb-R9R">
-                                        <rect key="frame" x="73" y="292" width="79" height="30"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="25"/>
-                                        <state key="normal" title="back">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backAction:" destination="skQ-sk-U01" eventType="touchUpInside" id="Y8s-le-Tlj"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3by-td-wPI">
-                                        <rect key="frame" x="26" y="87" width="172" height="39"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-1t-GTn">
-                                        <rect key="frame" x="26" y="220" width="172" height="39"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYv-hK-KxM">
-                                        <rect key="frame" x="26" y="154" width="172" height="39"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="j3g-99-eQY"/>
-                                    <constraint firstAttribute="width" constant="224" id="pYz-xg-QtG"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ryn-tr-G4B" firstAttribute="leading" secondItem="bVr-1R-Jko" secondAttribute="leadingMargin" constant="-16" id="1Ca-3c-jSR"/>
-                            <constraint firstAttribute="centerY" secondItem="mce-aH-7XG" secondAttribute="centerY" id="3RK-4h-dmj"/>
-                            <constraint firstItem="ryn-tr-G4B" firstAttribute="top" secondItem="bVr-1R-Jko" secondAttribute="topMargin" id="BHP-zv-gd7"/>
-                            <constraint firstAttribute="centerX" secondItem="mce-aH-7XG" secondAttribute="centerX" id="Uej-0H-qEo"/>
-                            <constraint firstItem="Y2Q-Zf-IO6" firstAttribute="top" secondItem="ryn-tr-G4B" secondAttribute="bottom" id="WzN-lh-8ME"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ryn-tr-G4B" secondAttribute="trailing" constant="-16" id="uNC-KD-yjE"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3f-0o-kEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="355" y="481"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="eoS-uj-Xi8">
@@ -432,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5i-Kc-E0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327" y="1391"/>
+            <point key="canvasLocation" x="259" y="873"/>
         </scene>
     </scenes>
     <resources>

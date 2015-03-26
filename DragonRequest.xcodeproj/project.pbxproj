@@ -107,7 +107,6 @@
 		612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F171A85FEA00089573B /* HeroRightAttack2.png */; };
 		612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F181A85FEA00089573B /* HeroRightAttack3.png */; };
 		6156CD981AB5CA06008B7479 /* MySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156CD971AB5CA06008B7479 /* MySegue.m */; };
-		61971EDC1AB7230300308ADF /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61971EDB1AB7230300308ADF /* ScoreViewController.m */; };
 		B802D4171A90B50E00305B21 /* DrUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4161A90B50E00305B21 /* DrUtil.m */; };
 		B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4191A90B53300305B21 /* EnemyBoss.m */; };
 		B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41B1A90B53300305B21 /* EnemyMarine.m */; };
@@ -119,6 +118,9 @@
 		B822D9701ABD4D660000584A /* NSDataAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D96C1ABD4D660000584A /* NSDataAES256.m */; };
 		B822D9711ABD4D660000584A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D96E1ABD4D660000584A /* Reachability.m */; };
 		B822D9741ABD4F910000584A /* gamecenter.png in Resources */ = {isa = PBXBuildFile; fileRef = B822D9731ABD4F910000584A /* gamecenter.png */; };
+		B822D9761ABD61900000584A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9751ABD61900000584A /* SystemConfiguration.framework */; };
+		B822D9781ABD61990000584A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9771ABD61990000584A /* Security.framework */; };
+		B822D97B1ABD687A0000584A /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D97A1ABD687A0000584A /* menuViewController.m */; };
 		B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */; };
 		B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4931AB4162B00E36CF3 /* 04.wav */; };
 		B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4941AB4162B00E36CF3 /* 03.wav */; };
@@ -321,8 +323,6 @@
 		612C6F181A85FEA00089573B /* HeroRightAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack3.png; sourceTree = "<group>"; };
 		6156CD961AB5CA06008B7479 /* MySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegue.h; sourceTree = "<group>"; };
 		6156CD971AB5CA06008B7479 /* MySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegue.m; sourceTree = "<group>"; };
-		61971EDA1AB7230300308ADF /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
-		61971EDB1AB7230300308ADF /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
 		B802D4151A90B50E00305B21 /* DrUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrUtil.h; sourceTree = "<group>"; };
 		B802D4161A90B50E00305B21 /* DrUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrUtil.m; sourceTree = "<group>"; };
 		B802D4181A90B53300305B21 /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBoss.h; sourceTree = "<group>"; };
@@ -344,6 +344,10 @@
 		B822D96D1ABD4D660000584A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B822D96E1ABD4D660000584A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B822D9731ABD4F910000584A /* gamecenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamecenter.png; sourceTree = "<group>"; };
+		B822D9751ABD61900000584A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B822D9771ABD61990000584A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B822D9791ABD687A0000584A /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuViewController.h; sourceTree = "<group>"; };
+		B822D97A1ABD687A0000584A /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuViewController.m; sourceTree = "<group>"; };
 		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		B8EDB4931AB4162B00E36CF3 /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
@@ -447,6 +451,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B822D9781ABD61990000584A /* Security.framework in Frameworks */,
+				B822D9761ABD61900000584A /* SystemConfiguration.framework in Frameworks */,
 				B822D9671ABD41EF0000584A /* GameKit.framework in Frameworks */,
 				B8EDB4A41AB429CA00E36CF3 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -480,6 +486,8 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
+				B822D9771ABD61990000584A /* Security.framework */,
+				B822D9751ABD61900000584A /* SystemConfiguration.framework */,
 				B822D9661ABD41EF0000584A /* GameKit.framework */,
 				612C6EF01A85FEA00089573B /* AnimationImage */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
@@ -504,15 +512,15 @@
 		189F860E1A32DCCE0016D4EE /* DragonRequest */ = {
 			isa = PBXGroup;
 			children = (
-				61971EDA1AB7230300308ADF /* ScoreViewController.h */,
-				61971EDB1AB7230300308ADF /* ScoreViewController.m */,
 				B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */,
 				B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */,
-				189F861C1A32DCCE0016D4EE /* Main.storyboard */,
+				B822D9791ABD687A0000584A /* menuViewController.h */,
+				B822D97A1ABD687A0000584A /* menuViewController.m */,
 				B802D4241A90B5CB00305B21 /* ViewController.h */,
 				B802D4251A90B5CB00305B21 /* ViewController.m */,
 				18A0B2751A3C05DB00CDCF8A /* App */,
 				189F860F1A32DCCE0016D4EE /* Supporting Files */,
+				189F861C1A32DCCE0016D4EE /* Main.storyboard */,
 			);
 			path = DragonRequest;
 			sourceTree = "<group>";
@@ -1234,7 +1242,6 @@
 				6156CD981AB5CA06008B7479 /* MySegue.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
 				FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */,
-				61971EDC1AB7230300308ADF /* ScoreViewController.m in Sources */,
 				B802D4221A90B53300305B21 /* Human.m in Sources */,
 				B802D4261A90B5CB00305B21 /* ViewController.m in Sources */,
 				B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */,
@@ -1247,6 +1254,7 @@
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 				B822D9701ABD4D660000584A /* NSDataAES256.m in Sources */,
+				B822D97B1ABD687A0000584A /* menuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

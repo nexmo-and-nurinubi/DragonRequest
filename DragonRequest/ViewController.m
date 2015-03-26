@@ -243,9 +243,12 @@
             scoreLabel.text = [@(score) stringValue];
             topScoreLabel.text = [@(topScore) stringValue];
             
+            [[GameCenterManager sharedManager] saveAndReportScore:topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
             
+
             // Integerの保存
             [defaults setInteger:topScore forKey:@"TOPSCORE"];
+            
         }
         scoreLabel.text = [@(score) stringValue];
         
@@ -285,11 +288,12 @@
                     [defaults synchronize];
                     
                     
-                    if(score>=topScore){
+                    if(score>=10){
                         topScore = score;
                         scoreLabel.text = [@(score) stringValue];;
                         topScoreLabel.text = [@(topScore) stringValue];;
                         
+                        [[GameCenterManager sharedManager] saveAndReportScore:topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
                         
                     }
                     score = initMainScore;
@@ -484,6 +488,95 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+//------------------------------------------------------------------------------------------------------------//
+//------- GameKit Delegate -----------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
+#pragma mark - GameKit Delegate
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (gameCenterViewController.viewState == GKGameCenterViewControllerStateAchievements) {
+//        actionBarLabel.title = [NSString stringWithFormat:@"Displayed GameCenter achievements."];
+    } else if (gameCenterViewController.viewState == GKGameCenterViewControllerStateLeaderboards) {
+//        actionBarLabel.title = [NSString stringWithFormat:@"Displayed GameCenter leaderboard."];
+    } else {
+//        actionBarLabel.title = [NSString stringWithFormat:@"Displayed GameCenter controller."];
+    }
+}
+
+//------------------------------------------------------------------------------------------------------------//
+//------- GameCenter Manager Delegate ------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
+#pragma mark - GameCenter Manager Delegate
+
+- (void)gameCenterManager:(GameCenterManager *)manager authenticateUser:(UIViewController *)gameCenterLoginController {
+    [self presentViewController:gameCenterLoginController animated:YES completion:^{
+        NSLog(@"Finished Presenting Authentication Controller");
+    }];
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager availabilityChanged:(NSDictionary *)availabilityInformation {
+    NSLog(@"GC Availabilty: %@", availabilityInformation);
+    if ([[availabilityInformation objectForKey:@"status"] isEqualToString:@"GameCenter Available"]) {
+        [self.navigationController.navigationBar setValue:@"GameCenter Available" forKeyPath:@"prompt"];
+//        statusDetailLabel.text = @"Game Center is online, the current player is logged in, and this app is setup.";
+    } else {
+        [self.navigationController.navigationBar setValue:@"GameCenter Unavailable" forKeyPath:@"prompt"];
+//        statusDetailLabel.text = [availabilityInformation objectForKey:@"error"];
+    }
+    
+    GKLocalPlayer *player = [[GameCenterManager sharedManager] localPlayerData];
+    if (player) {
+        if ([player isUnderage] == NO) {
+//            actionBarLabel.title = [NSString stringWithFormat:@"%@ signed in.", player.displayName];
+            playerNameLabel.text = player.displayName;
+//            playerStatus.text = @"Player is not underage and is signed-in";
+            [[GameCenterManager sharedManager] localPlayerPhoto:^(UIImage *playerPhoto) {
+                gcPlayerPictureImage.image = playerPhoto;
+            }];
+        } else {
+            playerNameLabel.text = player.displayName;
+//            playerStatus.text = @"Player is underage";
+//            actionBarLabel.title = [NSString stringWithFormat:@"Underage player, %@, signed in.", player.displayName];
+        }
+    } else {
+//        actionBarLabel.title = [NSString stringWithFormat:@"No GameCenter player found."];
+    }
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager error:(NSError *)error {
+    NSLog(@"GCM Error: %@", error);
+    //topScoreLabel.text = error.domain;
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager reportedAchievement:(GKAchievement *)achievement withError:(NSError *)error {
+    if (!error) {
+        NSLog(@"GCM Reported Achievement: %@", achievement);
+//        actionBarLabel.title = [NSString stringWithFormat:@"Reported achievement with %.1f percent completed", achievement.percentComplete];
+    } else {
+        NSLog(@"GCM Error while reporting achievement: %@", error);
+    }
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager reportedScore:(GKScore *)score withError:(NSError *)error {
+    if (!error) {
+        NSLog(@"GCM Reported Score: %@", score);
+//        actionBarLabel.title = [NSString stringWithFormat:@"Reported leaderboard score: %lld", score.value];
+    } else {
+        NSLog(@"GCM Error while reporting score: %@", error);
+    }
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager didSaveScore:(GKScore *)score {
+    NSLog(@"Saved GCM Score with value: %lld", score.value);
+//    actionBarLabel.title = [NSString stringWithFormat:@"Score saved for upload to GameCenter."];
+}
+
+- (void)gameCenterManager:(GameCenterManager *)manager didSaveAchievement:(GKAchievement *)achievement {
+    NSLog(@"Saved GCM Achievement: %@", achievement);
+//    actionBarLabel.title = [NSString stringWithFormat:@"Achievement saved for upload to GameCenter."];
 }
 
 @end
