@@ -7,7 +7,6 @@
 //
 
 #import "SetupViewController.h"
-#import "DrUtil.h"
 
 @interface SetupViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
