@@ -1,39 +1,39 @@
-�퓬�p�G�t�F�N�g�A�j���[�V�����摜�ɂȂ�܂��B
+戦闘用エフェクトアニメーション画像になります。
 
-���^���e�͈ȉ��̂Ƃ���ł��B
-�@pipo-btleffect116a.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116b.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116c.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116d.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116e.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116f.png�@�n�[�g(���F)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116g.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116h.png�@�n�[�g(�s���N)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116i.png�@�n�[�g(�I�����W)�@�p�^�[�����F20�@�\�����@�F�ʏ�
-�@pipo-btleffect116j.png�@�n�[�g(��)�@�p�^�[�����F20�@�\�����@�F�ʏ�
+収録内容は以下のとおりです。
+　pipo-btleffect116a.png　ハート(白)　パターン数：20　表示方法：通常
+　pipo-btleffect116b.png　ハート(黒)　パターン数：20　表示方法：通常
+　pipo-btleffect116c.png　ハート(紫)　パターン数：20　表示方法：通常
+　pipo-btleffect116d.png　ハート(緑)　パターン数：20　表示方法：通常
+　pipo-btleffect116e.png　ハート(青)　パターン数：20　表示方法：通常
+　pipo-btleffect116f.png　ハート(水色)　パターン数：20　表示方法：通常
+　pipo-btleffect116g.png　ハート(赤)　パターン数：20　表示方法：通常
+　pipo-btleffect116h.png　ハート(ピンク)　パターン数：20　表示方法：通常
+　pipo-btleffect116i.png　ハート(オレンジ)　パターン数：20　表示方法：通常
+　pipo-btleffect116j.png　ハート(黄)　パターン数：20　表示方法：通常
 
-��1�Z�b�g�ɂȂ�܂��B
-�P�R�}120�~120�T�C�Y�E192�~192�T�C�Y(RPG�c�N�[���K�i)�E240�~240�T�C�Y������܂��B
+の1セットになります。
+１コマ120×120サイズ・192×192サイズ(RPGツクール規格)・240×240サイズがあります。
 
-���w�i�̉摜�͓��ߏ����������̂��ʃt�H���_�ɂ���܂��B
+黒背景の画像は透過処理したものも別フォルダにあります。
 
 
-�t�@�C���T�C�Y���傫�߂Ȃ̂ŁA640�~480��ʂŎg�p����
-�ꍇ�ł�320�~240��ʗp�̂��̂�200���Ɋg�債�Ďg�p���Ă�
-������������܂���B
+ファイルサイズが大きめなので、640×480画面で使用する
+場合でも320×240画面用のものを200％に拡大して使用しても
+いいかもしれません。
 
-�t�@�C���T�C�Y���������������ꍇ�ɂ͂�����̋L�����Q�l�ɂǂ����B
-�t���[�\�t�g���g���ĊȒP�ȑ���Ńt�@�C���T�C�Y�����������邱�Ƃ��ł��܂��B
-���`�����l���t��PNG�摜�̃t�@�C���T�C�Y������������ : �҂ۂ�
+ファイルサイズを小さくしたい場合にはこちらの記事を参考にどうぞ。
+フリーソフトを使って簡単な操作でファイルサイズを小さくすることができます。
+αチャンネル付きPNG画像のファイルサイズを小さくする : ぴぽや
 http://piposozai.blog76.fc2.com/blog-entry-388.html
 
 
-�����p����
-�u�c���E��c����킸�̗��pOK�v
-�u���HOK�v
-�u�񎟔z�zOK�i�������f�ނ��̂��̂̏��p�̔��͋֎~�j�v
-�u�X�^�b�t���[���Ȃǂւ̖��O�̋L�q�E�g�p�A���s�v�v
-�u�E�f�B�^�ȊO�̃c�[���ł̎g�p���\�v
+●利用条件
+「営利・非営利問わずの利用OK」
+「加工OK」
+「二次配布OK（ただし素材そのものの商用販売は禁止）」
+「スタッフロールなどへの名前の記述・使用連絡不要」
+「ウディタ以外のツールでの使用も可能」
 
-�҂ۂ�
+ぴぽや
 http://piposozai.blog76.fc2.com
