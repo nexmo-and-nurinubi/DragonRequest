@@ -37,8 +37,8 @@
     
     int cnt;    //ボスの攻撃頻度調整カウンタ
     int createCnt;
-    NSTimer * timer;
-    NSTimer * create;
+    NSTimer * _storyTimer;
+    NSTimer * _createTimer;
     
     BOOL clearflag;
     BOOL heroaliveflag;
@@ -55,19 +55,13 @@
     
     NSString *clearmes;
     
-    
-    DrUtil *drUtil;
-    
+    DrUtil *_utilManager;
     
     AVAudioPlayer *deadSound;
-    
     
     NSUserDefaults* defaults;
     NSMutableArray *scoreArray;
     
-    
-//    NSMutableArray *bossArray;
-//    NSMutableArray *enemyArray;
 }
 
 //ここからアプリスタート
@@ -75,11 +69,8 @@
     
     [super viewDidLoad];
     
+    _utilManager = [DrUtil sharedInstance];
     
-//    bossArray = [NSMutableArray array];
-//    enemyArray = [NSMutableArray array];
-    
-
     defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
     
@@ -92,22 +83,18 @@
 
     stagenumber = 1;
     
+    [self reset];
+    
     //タッチイベントから座標を取得
     CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
-    
-    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
-    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
-    
-    
-    [_hero moveToPoint:point];
-    
-    [self reset];
-    
+    [_hero gotoToPoint:point];
+
     // AudioPlayerの生成
     NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
     deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [deadSound prepareToPlay];
+    
 }
 
 
@@ -216,7 +203,7 @@
     //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
     //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
     
-    [_hero moveToPoint:point];
+    [_hero gotoToPoint:point];
     
     //タッチしたのがDropItemなら拾う
     if ([view isKindOfClass:[DropItemImageView class]]) {
@@ -273,6 +260,61 @@
             break;
     }
     
+
+}
+
+- (void)checkGameStory{
+    
+    [self bringObject];
+    
+    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+        
+        [_enemyMarine[i]  moveRand];
+        
+    }
+    for(int i=0;i<ENEMY_BOSS_MAX;i++){
+        
+        [_enemyBoss[i]  moveRand];
+
+    }
+    
+    if(_hero.power<=0.0){
+
+        [_storyTimer invalidate];
+        [_createTimer invalidate];
+        
+        // Here we need to pass a full frame
+        CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+        
+        // Add some custom content to the alert view
+        [alertView setContainerView:[self createDemoView]];
+        
+        // Modify the parameters
+        [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Continue", @"Menu", nil]];
+        [alertView setDelegate:self];
+        
+        // You may use a Block, rather than a delegate.
+        [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
+            NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, (int)[alertView tag]);
+            [alertView close];
+        }];
+        
+        [alertView setUseMotionEffects:true];
+        
+        // And launch the dialog
+        [alertView show];
+        
+        if(score>=topScore){
+            topScore = score;
+            scoreLabel.text = [@(score) stringValue];
+            topScoreLabel.text = [@(topScore) stringValue];
+            
+            
+        }
+        
+    }
+
+/*
     // 敵が殲滅したか確認する
     BOOL annihilate = YES;
     if (annihilate) {
@@ -312,7 +354,7 @@
             
             [[GameCenterManager sharedManager] saveAndReportScore:topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
             
-
+            
             // Integerの保存
             [defaults setInteger:topScore forKey:@"TOPSCORE"];
             
@@ -328,110 +370,57 @@
             stagenumber = 1;
         }
     }
-}
-
-- (void)bossMove{
     
-    [self bringObject];
-    
-    for(int i=0;i<ENEMY_MARINE_MAX;i++){
-        
-        [_enemyMarine[i]  moveRand];
-        
-        if(heroaliveflag == false)
-        {
-            if(cnt % 10 == 0){
-                if([_enemyMarine[i]  fight:_hero]){
-                    //                [_hero removeImage];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                                    message:@"コンティニューします"
-                                                                   delegate:self
-                                                          cancelButtonTitle:nil
-                                                          otherButtonTitles:@"YES", nil];
-                    
-                    // スコアをNSUserDefaultsに配列で保存
-                    NSLog(@"無事死亡");
-                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
-                    NSLog(@"うんこ : %@", [NSString stringWithFormat:@"%ld", (long)score]);
-                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
-                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
-                    [defaults synchronize];
-                    
-                    
-                    if(score>=10){
-                        topScore = score;
-                        scoreLabel.text = [@(score) stringValue];;
-                        topScoreLabel.text = [@(topScore) stringValue];;
-                        
-                        [[GameCenterManager sharedManager] saveAndReportScore:topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
-                        
-                    }
-                    score = initMainScore;
-                    scoreLabel.text = [@(score) stringValue];;
-                    
-                    [alert show];
 
-                    stagenumber = 1;
-                    [_hero removeImage];
-                    heroaliveflag = true;
-                    break;
-                }
-            }
-        }
-    }
-    for(int i=0;i<ENEMY_BOSS_MAX;i++){
-        
-        [_enemyBoss[i]  moveRand];
-        
-        if(heroaliveflag == false)
-        {
-            
-            if(cnt % 10 == 0){
-                if([_enemyBoss[i]  fight:_hero]){
-                    //                [_hero removeImage];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                                    message:@"コンティニューします"
-                                                                   delegate:self
-                                                          cancelButtonTitle:nil
-                                                          otherButtonTitles:@"YES", nil];
-                    
-                    // スコアをNSUserDefaultsに配列で保存
-                    [scoreArray addObject:[NSString stringWithFormat:@"%ld", (long)score]];
-                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:scoreArray];
-                    [defaults setObject:data forKey:@"SCORE_ARRAY"];
-                    // 上書きされないのでsynchronize追加
-                    [defaults synchronize];
-                    
-                    if(score>=topScore){
-                        topScore = score;
-                        scoreLabel.text = [@(score) stringValue];
-                        topScoreLabel.text = [@(topScore) stringValue];
-                        
-                        
-                    }
-                    score = initMainScore;
+    if(heroaliveflag == false)
+    {
+ 
+        if(cnt % 10 == 0){
+ 
+            if([_enemyBoss[i]  fight:_hero]){
+ 
+                // Here we need to pass a full frame
+                CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
+                
+                // Add some custom content to the alert view
+                [alertView setContainerView:[self createDemoView]];
+                
+                // Modify the parameters
+                [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Continue", @"Menu", nil]];
+                [alertView setDelegate:self];
+                
+                // You may use a Block, rather than a delegate.
+                [alertView setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
+                    NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, (int)[alertView tag]);
+                    [alertView close];
+                }];
+                
+                [alertView setUseMotionEffects:true];
+                
+                // And launch the dialog
+                [alertView show];
+                
+                if(score>=topScore){
+                    topScore = score;
                     scoreLabel.text = [@(score) stringValue];
+                    topScoreLabel.text = [@(topScore) stringValue];
                     
-                    [alert show];
                     
-                    stagenumber = 1;
-                    [_hero removeImage];
-                    heroaliveflag = true;
-                    break;
                 }
+                score = initMainScore;
+                scoreLabel.text = [@(score) stringValue];
+                
+                stagenumber = 1;
+                [_hero removeImage];
+                heroaliveflag = true;
+                break;
             }
         }
     }
     
     cnt++;
     
-    
-}
-
-//アラートのボタンを押したとき
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-
-    [self reset];
+*/
     
 }
 
@@ -453,6 +442,8 @@
             _enemyMarine[i].alpha = 1.0;
             //Bossのイメージを設定
             [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
+            [_enemyMarine[i] setEnemy:_hero];
+
             createCnt++;
             break;
             
@@ -468,6 +459,8 @@
                 _enemyBoss[i].alpha = 1.0;
                 //Bossのイメージを設定
                 [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
+                [_enemyBoss[i] setEnemy:_hero];
+
                 break;
             }
         }
@@ -484,20 +477,18 @@
     
     clearmes = @"次のステージに進みます";
 
-    DrUtil *utilManager = [DrUtil sharedInstance];
-    
     int createtime = 0;
     switch (stagenumber) {
         case 1:
-            _fieldView.image = utilManager.backgroundImage01;
+            _fieldView.image = _utilManager.backgroundImage01;
             createtime = bossCreatetime1;
             break;
         case 2:
-            _fieldView.image = utilManager.backgroundImage02;
+            _fieldView.image = _utilManager.backgroundImage02;
             createtime = bossCreatetime2;
             break;
         case 3:
-            _fieldView.image = utilManager.backgroundImage03;
+            _fieldView.image = _utilManager.backgroundImage03;
             createtime = bossCreatetime3;
             clearmes = @"すべてのステージをクリアしました";
             break;
@@ -526,37 +517,24 @@
     
     //hero イメージを設定
     [_hero setImage:self.view belowSubview:self.weaponCollectionView];
-    
-    for(int i=0;i<ENEMY_BOSS_FIREST;i++){
-        //Bossのインスタンス作成
-        _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
-        _enemyBoss[i].alpha = 1.0;
-        //Bossのイメージを設定
-        [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
-    }
-    
-    for(int i=0;i<ENEMY_MARINE_FIREST;i++){
-        //Marineのインスタンス作成
-        _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
-        _enemyMarine[i].alpha = 1.0;
-        //Marineのイメージを設定
-        [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
-    }
-    
+
     //heroのx、y座標
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
     
-    if(timer == nil){
-        timer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(bossMove) userInfo:nil repeats:YES];
+    if(_storyTimer == nil){
+        _storyTimer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(checkGameStory) userInfo:nil repeats:YES];
+        [_storyTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossMoveTimeInterval]];
         
-        create = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+    }
+    if(_createTimer == nil){
+        _createTimer = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
+        [_createTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:createtime]];
+    
     }
     
-    [timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossMoveTimeInterval]];
-    [timer fire];
-    [create setFireDate:[NSDate dateWithTimeIntervalSinceNow:createtime]];
-    [create fire];
+    [_storyTimer fire];
+    [_createTimer fire];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -650,6 +628,39 @@
 - (void)gameCenterManager:(GameCenterManager *)manager didSaveAchievement:(GKAchievement *)achievement {
     NSLog(@"Saved GCM Achievement: %@", achievement);
 //    actionBarLabel.title = [NSString stringWithFormat:@"Achievement saved for upload to GameCenter."];
+}
+
+//------------------------------------------------------------------------------------------------------------//
+//------- CustomIOS7AlertView Delegate ------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
+- (void)customIOS7dialogButtonTouchUpInside: (CustomIOS7AlertView *)alertView clickedButtonAtIndex: (NSInteger)buttonIndex
+{
+    NSLog(@"Delegate: Button at position %d is clicked on alertView %d.", (int)buttonIndex, (int)[alertView tag]);
+    
+    if(buttonIndex==0){
+
+        [self reset];
+        
+        [alertView close];
+
+    }
+    else{
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }
+    
+}
+
+- (UIView *)createDemoView
+{
+    UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
+    [imageView setImage:[UIImage imageNamed:@"gamecenter.png"]];
+    [demoView addSubview:imageView];
+    
+    return demoView;
 }
 
 @end

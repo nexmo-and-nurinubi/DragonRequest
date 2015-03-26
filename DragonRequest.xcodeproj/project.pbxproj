@@ -113,6 +113,10 @@
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
+		B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753271AC426F800D18161 /* DropItemCommon.m */; };
+		B807532D1AC426F800D18161 /* DropItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753291AC426F800D18161 /* DropItemController.m */; };
+		B807532E1AC426F800D18161 /* DropItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B807532B1AC426F800D18161 /* DropItemImageView.m */; };
+		B80753321AC432C300D18161 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753311AC432C300D18161 /* CustomIOS7AlertView.m */; };
 		B822D9671ABD41EF0000584A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9661ABD41EF0000584A /* GameKit.framework */; };
 		B822D96F1ABD4D660000584A /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D96A1ABD4D660000584A /* GameCenterManager.m */; };
 		B822D9701ABD4D660000584A /* NSDataAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D96C1ABD4D660000584A /* NSDataAES256.m */; };
@@ -336,6 +340,14 @@
 		B802D4241A90B5CB00305B21 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		B80753261AC426F800D18161 /* DropItemCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemCommon.h; sourceTree = "<group>"; };
+		B80753271AC426F800D18161 /* DropItemCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemCommon.m; sourceTree = "<group>"; };
+		B80753281AC426F800D18161 /* DropItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemController.h; sourceTree = "<group>"; };
+		B80753291AC426F800D18161 /* DropItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemController.m; sourceTree = "<group>"; };
+		B807532A1AC426F800D18161 /* DropItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemImageView.h; sourceTree = "<group>"; };
+		B807532B1AC426F800D18161 /* DropItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemImageView.m; sourceTree = "<group>"; };
+		B80753301AC432C300D18161 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		B80753311AC432C300D18161 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		B822D9661ABD41EF0000584A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		B822D9691ABD4D660000584A /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
 		B822D96A1ABD4D660000584A /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
@@ -486,9 +498,7 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
-				B822D9771ABD61990000584A /* Security.framework */,
-				B822D9751ABD61900000584A /* SystemConfiguration.framework */,
-				B822D9661ABD41EF0000584A /* GameKit.framework */,
+				B807532F1AC432AD00D18161 /* Library */,
 				612C6EF01A85FEA00089573B /* AnimationImage */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
@@ -496,7 +506,6 @@
 				189F860E1A32DCCE0016D4EE /* DragonRequest */,
 				189F862B1A32DCCE0016D4EE /* DragonRequestTests */,
 				189F860D1A32DCCE0016D4EE /* Products */,
-				B822D9681ABD4D660000584A /* GC Manager */,
 			);
 			sourceTree = "<group>";
 		};
@@ -593,6 +602,12 @@
 		18A0B2781A3C0DFF00CDCF8A /* common */ = {
 			isa = PBXGroup;
 			children = (
+				B80753261AC426F800D18161 /* DropItemCommon.h */,
+				B80753271AC426F800D18161 /* DropItemCommon.m */,
+				B80753281AC426F800D18161 /* DropItemController.h */,
+				B80753291AC426F800D18161 /* DropItemController.m */,
+				B807532A1AC426F800D18161 /* DropItemImageView.h */,
+				B807532B1AC426F800D18161 /* DropItemImageView.m */,
 				B802D4271A90B61900305B21 /* common.h */,
 				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
@@ -760,11 +775,6 @@
 		911239301AC3CE3600B4A3ED /* DropItem */ = {
 			isa = PBXGroup;
 			children = (
-				911239541AC3E5F600B4A3ED /* DropItemCommon.h */,
-				911239341AC3D1E000B4A3ED /* DropItemController.h */,
-				911239351AC3D1E000B4A3ED /* DropItemController.m */,
-				911239311AC3CEB400B4A3ED /* DropItemImageView.h */,
-				911239321AC3CEB400B4A3ED /* DropItemImageView.m */,
 			);
 			name = DropItem;
 			sourceTree = "<group>";
@@ -773,8 +783,6 @@
 			isa = PBXGroup;
 			children = (
 				911239381AC3E01200B4A3ED /* 120x120 */,
-				9112394D1AC3E02900B4A3ED /* readme.txt */,
-				9112394E1AC3E02900B4A3ED /* ウディタ用設定参考_116.jpg */,
 			);
 			name = heart;
 			sourceTree = "<group>";
@@ -782,16 +790,35 @@
 		911239381AC3E01200B4A3ED /* 120x120 */ = {
 			isa = PBXGroup;
 			children = (
-				911239511AC3E15B00B4A3ED /* pipo-btleffect116h.png */,
-				911239571AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png */,
 			);
 			name = 120x120;
 			path = heart/120x120;
 			sourceTree = "<group>";
 		};
+		B807532F1AC432AD00D18161 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B80753331AC432C700D18161 /* CustomAlertView */,
+				B822D9681ABD4D660000584A /* GC Manager */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		B80753331AC432C700D18161 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B80753301AC432C300D18161 /* CustomIOS7AlertView.h */,
+				B80753311AC432C300D18161 /* CustomIOS7AlertView.m */,
+			);
+			name = CustomAlertView;
+			sourceTree = "<group>";
+		};
 		B822D9681ABD4D660000584A /* GC Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B822D9771ABD61990000584A /* Security.framework */,
+				B822D9751ABD61900000584A /* SystemConfiguration.framework */,
+				B822D9661ABD41EF0000584A /* GameKit.framework */,
 				B822D9691ABD4D660000584A /* GameCenterManager.h */,
 				B822D96A1ABD4D660000584A /* GameCenterManager.m */,
 				B822D96B1ABD4D660000584A /* NSDataAES256.h */,
@@ -1122,7 +1149,6 @@
 				FB839EA31AAB07D600CFFCCB /* pipo-btleffect127.png in Resources */,
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
-				911239521AC3E15B00B4A3ED /* pipo-btleffect116h.png in Resources */,
 				B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */,
 				FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */,
 				B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */,
@@ -1148,7 +1174,6 @@
 				FB839E941AAB07D600CFFCCB /* pipo-btleffect032@2x.png in Resources */,
 				612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */,
 				0750AE401A6A5FC500DD05A3 /* hero3.png in Resources */,
-				911239581AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png in Resources */,
 				181615221AB41FAC00E486AE /* dora12.png in Resources */,
 				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
@@ -1271,9 +1296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80753321AC432C300D18161 /* CustomIOS7AlertView.m in Sources */,
 				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				B822D96F1ABD4D660000584A /* GameCenterManager.m in Sources */,
+				B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */,
 				B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */,
 				6156CD981AB5CA06008B7479 /* MySegue.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
@@ -1281,14 +1308,14 @@
 				B802D4221A90B53300305B21 /* Human.m in Sources */,
 				B802D4261A90B5CB00305B21 /* ViewController.m in Sources */,
 				B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */,
+				B807532E1AC426F800D18161 /* DropItemImageView.m in Sources */,
 				189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */,
 				FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */,
 				FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */,
 				B822D9711ABD4D660000584A /* Reachability.m in Sources */,
-				911239331AC3CEB400B4A3ED /* DropItemImageView.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
-				911239361AC3D1E000B4A3ED /* DropItemController.m in Sources */,
 				FBC760E01AB40F4000AEB38A /* common.m in Sources */,
+				B807532D1AC426F800D18161 /* DropItemController.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
 				B822D9701ABD4D660000584A /* NSDataAES256.m in Sources */,

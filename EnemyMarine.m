@@ -27,7 +27,8 @@
         _stepX = marineStepX;
         _stepY = marineStepY;
         
-        _reach = marineReach;
+        _reach = marineImageSizeWidth;
+        _radarRange = marineRadarRange;
         
         _imageWidth = marineImageSizeWidth;
         _imageHeight = marineImageSizeHeight;

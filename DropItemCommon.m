@@ -8,6 +8,6 @@
 
 #import "DropItemCommon.h"
 
-@implementation DropItemCommon
+@implementation DropItemCommon : NSObject 
 
 @end

@@ -149,9 +149,8 @@
         _powerImageView.tag = HumanTypeHuman;
         _powerImageView.userInteractionEnabled = YES;
     }
-    
-    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth/2.0,humanPowerImgHeight);
-    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth/2.0,humanPowerImgHeight);
+
+    [self setPowerImage];
     
     [parentView insertSubview:_powerBgImageView belowSubview:siblingSubview];
     [parentView insertSubview:_powerImageView belowSubview:siblingSubview];
@@ -198,12 +197,14 @@
 
 -(void)setPowerImage
 {
-    _powerBgImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,_imageWidth,humanPowerImgHeight);
+    NSInteger xx = self.position.x + _imageWidth/4.0;
+    
+    _powerBgImageView.frame = CGRectMake(xx,self.position.y-humanPowerImgGapY,_imageWidth/2.0,humanPowerImgHeight);
     
     float bgImageWidth = _powerBgImageView.frame.size.width;
     
     NSInteger powerWidth = (float)(_power/_defaultPower)*bgImageWidth;
-    _powerImageView.frame = CGRectMake(self.position.x,self.position.y-humanPowerImgGapY,powerWidth,humanPowerImgHeight);
+    _powerImageView.frame = CGRectMake(xx,self.position.y-humanPowerImgGapY,powerWidth,humanPowerImgHeight);
     
 }
 
@@ -357,13 +358,33 @@
 
 -(void)moveRand
 {
-    if (_moveRestCount == 0) {
+    //敵が近くにいるか
+    NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
+    NSInteger yGap = ABS(self.animationImageView.center.y - _target.animationImageView.center.y);
+    
+    //視野外ならランダムで移動
+    if (_moveRestCount % 3) {
+        
         _direction = (DirectionType)arc4random() % 4;
         _moveRestCount = arc4random() % maxMoveCount + 1;
+        
     }
+    else{
+        
+        if (xGap <= _radarRange && yGap <= _radarRange ) {
+            
+            [self moveToPoint:_target.position];
+            
+        }
+        
+    }
+    
     _moveRestCount--;
     
     [self move:_direction];
+    
+    [self fight:_target];
+        
     
 }
 -(void)stopToWalk
@@ -371,10 +392,8 @@
    
 }
 
-
-
 /** アニメーションの設定、開始 */
-- (void)moveToPoint:(CGPoint)toPoint
+- (void)gotoToPoint:(CGPoint)toPoint
 {
     @try {
 
@@ -407,9 +426,6 @@
 {
     CGPoint fromPoint = self.position;
     
-//    NSLog(@"fromPoint: %@",NSStringFromCGPoint(fromPoint));
-//    NSLog(@"toPoint: %@",NSStringFromCGPoint(_toPoint));
-    
     if((abs(fromPoint.x - _toPoint.x)<=_stepX)&&
        (abs(fromPoint.y - _toPoint.y)<=_stepX)){
         
@@ -421,6 +437,63 @@
     
     float deltaX = _toPoint.x - fromPoint.x;
     float deltaY = _toPoint.y - fromPoint.y;
+    
+    DirectionType direction = DirectionTypeFromLeftToRight;
+    
+    if(deltaX>0){
+        
+        fromPoint.x+=_stepX;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+        
+    }
+    else if(deltaX<0){
+        
+        fromPoint.x-=_stepX;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+    }
+    
+    if(deltaY>0){
+        
+        fromPoint.y+=_stepY;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+        
+    }
+    else if(deltaY<0){
+        
+        fromPoint.y-=_stepY;
+        self.position = fromPoint;
+        [self setAnimation:direction];
+    }
+    
+    if(abs(deltaX)>=abs(deltaY)){
+        
+        if(deltaX> 0)
+            direction = DirectionTypeFromLeftToRight;
+        else
+            direction = DirectionTypeFromRightToLeft;
+        
+    }else{
+        
+        if(deltaY > 0)
+            direction = DirectionTypeFromTopToBottom;
+        else
+            direction = DirectionTypeFromBottomToTop;
+        
+    }
+    
+    [self setAnimation:direction];
+}
+
+/** アニメーションの設定、開始 */
+- (void)moveToPoint:(CGPoint)toPoint
+{
+    CGPoint fromPoint = self.position;
+    
+    float deltaX = toPoint.x - fromPoint.x;
+    float deltaY = toPoint.y - fromPoint.y;
     
     DirectionType direction = DirectionTypeFromLeftToRight;
     
@@ -515,6 +588,23 @@
     [self setAnimation:direction];
     
 }
+
+- (BOOL)setEnemy:(Human *)target {
+    
+    @try{
+        _target = target;
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
+    
+    return NO;
+}
+
 
 - (BOOL)fight:(Human *)target {
     

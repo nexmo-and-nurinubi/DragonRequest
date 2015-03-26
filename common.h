@@ -67,7 +67,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define heroDefaultName                 @"まさと"
 #define heroDefaultPower                30.0f
-#define heroMinusPower                  100.0f
+#define heroMinusPower                  10.0f
 #define heroDefaultPosX                 10
 #define heroDefaultPosY                 10
 
@@ -76,6 +76,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define marineStepX                     5
 #define marineStepY                     5
 #define marineReach                     8
+#define marineRadarRange                120
 #define marineImageSizeWidth            60
 #define marineImageSizeHeight           60
 #define marineImageCutSizeWidth         60
@@ -84,8 +85,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define marineCountAnimComma             3
 
 #define marineDefaultName               @"Marine"
-#define marineDefaultPower              300.0f
-#define marineMinusPower                10.0f
+#define marineDefaultPower              15.0f
+#define marineMinusPower                1.0f
 #define marineDefaultPosX               10
 #define marineDefaultPosY               10
 
@@ -96,6 +97,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossStepX                       3
 #define bossStepY                       3
 #define bossReach                       24
+#define bossRadarRange                  200
 #define bossImageSizeWidth              100
 #define bossImageSizeHeight             100
 #define bossImageCutSizeWidth           80
@@ -106,7 +108,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define bossDefaultName                 @"Boss"
 #define bossDefaultPower                300.0f
-#define bossMinusPower                  50.0f
+#define bossMinusPower                  5.0f
 #define bossDefaultPosX                 10
 #define bossDefaultPosY                 10
 

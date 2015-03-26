@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "MyHero.h"
+
 @interface DrUtil: NSObject
 
 /** データマネージャ取得 */

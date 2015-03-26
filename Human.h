@@ -47,6 +47,9 @@
     
     //攻撃範囲
     NSInteger _reach;
+
+    //視野
+    NSInteger _radarRange;
     
     NSInteger _level;
     
@@ -61,6 +64,8 @@
     
     //戦闘シーンアニメーション
     NSMutableArray *_fightAnimArray;
+    
+    Human *_target;
     
 }
 
@@ -96,6 +101,7 @@
 - (NSString *)whoAreYou;
 - (NSString *)whereAreYou;
 - (BOOL)fight:(Human *)target;
+- (BOOL)setEnemy:(Human *)target;
 
 -(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;
@@ -103,7 +109,7 @@
 -(void)setPowerImage;
 -(void)setFightAnimImage;
 -(void)move:(DirectionType) direction;
--(void)moveToPoint:(CGPoint)toPoint;
+-(void)gotoToPoint:(CGPoint)toPoint;
 -(void)stopToWalk;
 -(void)setAnimation:(DirectionType)direction;
 -(void)setMoveAnimImage:(NSString *)originalImageName
