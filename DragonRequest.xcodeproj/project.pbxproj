@@ -108,6 +108,10 @@
 		612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F181A85FEA00089573B /* HeroRightAttack3.png */; };
 		6156CD981AB5CA06008B7479 /* MySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156CD971AB5CA06008B7479 /* MySegue.m */; };
 		61971EDC1AB7230300308ADF /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61971EDB1AB7230300308ADF /* ScoreViewController.m */; };
+		911239331AC3CEB400B4A3ED /* DropItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 911239321AC3CEB400B4A3ED /* DropItemImageView.m */; };
+		911239361AC3D1E000B4A3ED /* DropItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911239351AC3D1E000B4A3ED /* DropItemController.m */; };
+		911239521AC3E15B00B4A3ED /* pipo-btleffect116h.png in Resources */ = {isa = PBXBuildFile; fileRef = 911239511AC3E15B00B4A3ED /* pipo-btleffect116h.png */; };
+		911239581AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = 911239571AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png */; };
 		B802D4171A90B50E00305B21 /* DrUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4161A90B50E00305B21 /* DrUtil.m */; };
 		B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4191A90B53300305B21 /* EnemyBoss.m */; };
 		B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41B1A90B53300305B21 /* EnemyMarine.m */; };
@@ -323,6 +327,15 @@
 		6156CD971AB5CA06008B7479 /* MySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegue.m; sourceTree = "<group>"; };
 		61971EDA1AB7230300308ADF /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreViewController.h; path = ../ScoreViewController.h; sourceTree = "<group>"; };
 		61971EDB1AB7230300308ADF /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreViewController.m; path = ../ScoreViewController.m; sourceTree = "<group>"; };
+		911239311AC3CEB400B4A3ED /* DropItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemImageView.h; sourceTree = "<group>"; };
+		911239321AC3CEB400B4A3ED /* DropItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemImageView.m; sourceTree = "<group>"; };
+		911239341AC3D1E000B4A3ED /* DropItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemController.h; sourceTree = "<group>"; };
+		911239351AC3D1E000B4A3ED /* DropItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemController.m; sourceTree = "<group>"; };
+		9112394D1AC3E02900B4A3ED /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = readme.txt; path = heart/readme.txt; sourceTree = "<group>"; };
+		9112394E1AC3E02900B4A3ED /* ウディタ用設定参考_116.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ウディタ用設定参考_116.jpg"; path = "heart/ウディタ用設定参考_116.jpg"; sourceTree = "<group>"; };
+		911239511AC3E15B00B4A3ED /* pipo-btleffect116h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect116h.png"; sourceTree = "<group>"; };
+		911239541AC3E5F600B4A3ED /* DropItemCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemCommon.h; sourceTree = "<group>"; };
+		911239571AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect116h_jacket.png"; sourceTree = "<group>"; };
 		B802D4151A90B50E00305B21 /* DrUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrUtil.h; sourceTree = "<group>"; };
 		B802D4161A90B50E00305B21 /* DrUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrUtil.m; sourceTree = "<group>"; };
 		B802D4181A90B53300305B21 /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBoss.h; sourceTree = "<group>"; };
@@ -562,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				FB572F921AAACB8300D1DA96 /* Humans */,
+				911239301AC3CE3600B4A3ED /* DropItem */,
 				FB572F931AAACBD900D1DA96 /* Weapon */,
 			);
 			name = Objects;
@@ -748,6 +762,38 @@
 			name = framework;
 			sourceTree = "<group>";
 		};
+		911239301AC3CE3600B4A3ED /* DropItem */ = {
+			isa = PBXGroup;
+			children = (
+				911239541AC3E5F600B4A3ED /* DropItemCommon.h */,
+				911239341AC3D1E000B4A3ED /* DropItemController.h */,
+				911239351AC3D1E000B4A3ED /* DropItemController.m */,
+				911239311AC3CEB400B4A3ED /* DropItemImageView.h */,
+				911239321AC3CEB400B4A3ED /* DropItemImageView.m */,
+			);
+			name = DropItem;
+			sourceTree = "<group>";
+		};
+		911239371AC3DFE000B4A3ED /* heart */ = {
+			isa = PBXGroup;
+			children = (
+				911239381AC3E01200B4A3ED /* 120x120 */,
+				9112394D1AC3E02900B4A3ED /* readme.txt */,
+				9112394E1AC3E02900B4A3ED /* ウディタ用設定参考_116.jpg */,
+			);
+			name = heart;
+			sourceTree = "<group>";
+		};
+		911239381AC3E01200B4A3ED /* 120x120 */ = {
+			isa = PBXGroup;
+			children = (
+				911239511AC3E15B00B4A3ED /* pipo-btleffect116h.png */,
+				911239571AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png */,
+			);
+			name = 120x120;
+			path = heart/120x120;
+			sourceTree = "<group>";
+		};
 		B822D9681ABD4D660000584A /* GC Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +882,7 @@
 		FB839E311AAB07D600CFFCCB /* effect */ = {
 			isa = PBXGroup;
 			children = (
+				911239371AC3DFE000B4A3ED /* heart */,
 				FB839E321AAB07D600CFFCCB /* magic */,
 				FB839E631AAB07D600CFFCCB /* weapon */,
 			);
@@ -1080,6 +1127,7 @@
 				FB839EA31AAB07D600CFFCCB /* pipo-btleffect127.png in Resources */,
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
+				911239521AC3E15B00B4A3ED /* pipo-btleffect116h.png in Resources */,
 				B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */,
 				FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */,
 				B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */,
@@ -1105,6 +1153,7 @@
 				FB839E941AAB07D600CFFCCB /* pipo-btleffect032@2x.png in Resources */,
 				612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */,
 				0750AE401A6A5FC500DD05A3 /* hero3.png in Resources */,
+				911239581AC3E78F00B4A3ED /* pipo-btleffect116h_jacket.png in Resources */,
 				181615221AB41FAC00E486AE /* dora12.png in Resources */,
 				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
@@ -1242,7 +1291,9 @@
 				FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */,
 				FB839EB31AAB0B7200CFFCCB /* WeaponCollectionReusableHeaderView.m in Sources */,
 				B822D9711ABD4D660000584A /* Reachability.m in Sources */,
+				911239331AC3CEB400B4A3ED /* DropItemImageView.m in Sources */,
 				189F86121A32DCCE0016D4EE /* main.m in Sources */,
+				911239361AC3D1E000B4A3ED /* DropItemController.m in Sources */,
 				FBC760E01AB40F4000AEB38A /* common.m in Sources */,
 				B802D4171A90B50E00305B21 /* DrUtil.m in Sources */,
 				B802D4231A90B53300305B21 /* MyHero.m in Sources */,
