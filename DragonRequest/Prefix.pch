@@ -12,6 +12,7 @@
 
     #import "common.h"
     #import "DrUtil.h"
+    #import "DropItemCommon.h"
     #import "WeaponCommon.h"
 #endif
 

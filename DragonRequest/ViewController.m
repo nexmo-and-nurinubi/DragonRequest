@@ -10,10 +10,10 @@
 //  http://piposozai.wiki.fc2.com
 
 #import "ViewController.h"
+#import "DropItemController.h"
+#import "DropItemImageView.h"
 
 #import <AVFoundation/AVFoundation.h>
-
-#import "DrUtil.h"
 
 #define MARGIN 8
 #define BUTTON_WIDTH 20
@@ -130,6 +130,8 @@
         }
     }
     
+    // ToDo. 必要に応じて、DropItemImageViewも追加
+    
     [self.view bringSubviewToFront:_weaponCollectionView];
     [self.view bringSubviewToFront:topScoreLabel];
     [self.view bringSubviewToFront:scoreLabel];
@@ -179,6 +181,13 @@
         point = marineDeadScore;
     }
     
+    // DropItemの生成
+    DropItemType dropItemType = [DropItemController randDropItemType];
+    if ([DropItemController isCreateDropItem:dropItemType]) {
+        DropItemImageView *dropItemImageView = [[DropItemImageView alloc] initWithPoint:enemy.animationImageView.center dropItemType:dropItemType];
+        [self.view addSubview:dropItemImageView];
+    }
+    
     [enemy removeImage];
     enemy = nil;
     score += point;
@@ -197,7 +206,8 @@
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
-    NSInteger tag = touch.view.tag;
+    UIView *view = touch.view;
+    NSInteger tag = view.tag;
     
     //タッチイベントから座標を取得
     CGPoint point = [touch locationInView:self.view];
@@ -207,6 +217,25 @@
     //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
     
     [_hero moveToPoint:point];
+    
+    //タッチしたのがDropItemなら拾う
+    if ([view isKindOfClass:[DropItemImageView class]]) {
+        DropItemType dropItemType = (DropItemType)tag;
+        switch (dropItemType) {
+            case DropItemTypeNone:
+                DLog(@"Error: DropItemType is DropItemTypeNone.");
+                break;
+            case DropItemTypeStatusUp:
+                // ToDo
+                break;
+            case DropItemTypeMagic:
+                // ToDo
+                break;
+            case DropItemTypeWeapon:
+                // ToDo
+                break;
+        }
+    }
     
     //タッチしたのが敵なら攻撃する
     switch (tag) {

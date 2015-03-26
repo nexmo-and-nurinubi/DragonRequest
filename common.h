@@ -121,6 +121,9 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define bossColoreGreen                 @"dora14.png"
 #define bossColoreGold                  @"dora18.png"
 
+//DropItem情報
+#define DropItemImageSize               24
+
 //Score初期情報
 #define bossDeadScore                   100
 #define marineDeadScore                 10
