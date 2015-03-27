@@ -10,9 +10,12 @@
 
 @implementation EnemyMarine
 
-- (id)init :(CGPoint)initPos{
+- (id)init :(CGPoint)initPos
+        tag:(NSInteger)tag
+{
     
-    self = [super init:initPos];
+    self = [super init:initPos
+                   tag:tag];
     
     if (self) {
         
@@ -55,7 +58,7 @@
                      countY:4];
     
     //戦闘シーンアニメーションイメージ設定
-    [super setFightAnimImage];
+    [self setFightAnimImage];
     
     //表示イメージ
     UIImage *img = _frontSceanAnimArray[0];
@@ -97,6 +100,69 @@
         
     }
     
+}
+
+-(void)setFightAnimImage
+{
+    @try{
+        
+        if(_fightAnimArray==nil) {
+            _fightAnimArray = [NSMutableArray array];
+        } else {
+            [_fightAnimArray removeAllObjects];
+        }
+        
+        //fight アニメーションロード
+        UIImage *fightImage = nil;
+        
+        NSMutableArray *effectArray = [NSMutableArray array];
+        NSArray *fightSceanArray = nil;
+        
+        //fight アニメーションロード1
+        fightImage = [UIImage imageNamed:@"pipo-btleffect026.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:0
+                                             charactarHeight:0];
+        
+        [effectArray addObject:fightSceanArray];
+        
+        //fight アニメーションロード2
+        fightImage = [UIImage imageNamed:@"pipo-btleffect027.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:8
+                                                      countY:1
+                                              charactarWidth:0
+                                             charactarHeight:0];
+        
+        [effectArray addObject:fightSceanArray];
+        
+        //fight アニメーションロード3
+        fightImage = [UIImage imageNamed:@"pipo-btleffect028.png"];
+        
+        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
+                                                      countX:1
+                                                      countY:8
+                                              charactarWidth:640
+                                             charactarHeight:240];
+        
+        [effectArray addObject:fightSceanArray];
+        
+        [_fightAnimArray addObject:effectArray];
+        
+        DLog();
+        
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
 }
 
 @end

@@ -20,53 +20,6 @@
     NSArray *_effectFileNameArray;
 }
 
-
-- (void)posInitWithPoint:(CGPoint)point
-{
-    if (point.x == 0 &&  point.y == 0) {
-        if (_myHumanType == HumanTypeEnemy ) {
-            point = CGPointMake([common screenSizeWidth] / 2, [common screenSizeHeight] / 2);
-        } else {
-            CGFloat x = arc4random() % [common screenSizeWidth];
-            CGFloat y = arc4random() % [common screenSizeHeight];
-            point = CGPointMake(x, y);
-        }
-    }
-    self.position = CGPointMake(point.x, point.y);
-    
-    _toPoint = CGPointMake(point.x, point.y);
-    
-    self.name = @"human";
-    
-    _power = 0;
-    _level = 0;
-    
-    _stepX = humanStepX;
-    _stepY = humanStepY;
-    
-    _reach = humanReach;
-    
-    _imageWidth = humanImageSizeWidth;
-    _imageHeight = humanImageSizeHeight;
-    
-    _imageCutSizeWidth = humanImageCutSizeWidth;
-    _imageCutSizeHeight= humanImageCutSizeHeight;
-    
-    _countComma = humanCountAnimComma;
-    
-    _animationImageView = nil;
-    
-    _humanTimer = nil;
-    
-    _currentComma = 0;
-    
-    // デフォルトでは透明度を１にしておく
-    _alpha = 1;
-    
-    srand((unsigned)time(NULL));
-}
-
-
 - (id)init {
     
     self = [super init];
@@ -87,17 +40,67 @@
     return self;
 }
 
-- (id)init :(CGPoint)initPos{
+- (id)init :(CGPoint)initPos
+        tag:(NSInteger)tag
+{
 
     self = [super init];
     
     if (self) {
         
+        self.name = @"human";
+        
+        _power = 0;
+        _level = 0;
+        
+        _tag = tag;
+        
+        _stepX = humanStepX;
+        _stepY = humanStepY;
+        
+        _reach = humanReach;
+        
+        _imageWidth = humanImageSizeWidth;
+        _imageHeight = humanImageSizeHeight;
+        
+        _imageCutSizeWidth = humanImageCutSizeWidth;
+        _imageCutSizeHeight= humanImageCutSizeHeight;
+        
+        _countComma = humanCountAnimComma;
+        
+        _animationImageView = nil;
+        
+        _humanTimer = nil;
+        
+        _currentComma = 0;
+        
+        // デフォルトでは透明度を１にしておく
+        _alpha = 1;
+        
+        srand((unsigned)time(NULL));
+
         [self posInitWithPoint:initPos];
     }
     
     return self;
    
+}
+
+- (void)posInitWithPoint:(CGPoint)point
+{
+    if (point.x == 0 &&  point.y == 0) {
+        if (_myHumanType == HumanTypeEnemy ) {
+            point = CGPointMake([common screenSizeWidth] / 2, [common screenSizeHeight] / 2);
+        } else {
+            CGFloat x = arc4random() % [common screenSizeWidth];
+            CGFloat y = arc4random() % [common screenSizeHeight];
+            point = CGPointMake(x, y);
+        }
+    }
+    self.position = CGPointMake(point.x, point.y);
+    
+    _toPoint = CGPointMake(point.x, point.y);
+    
 }
 
 - (NSString *)whoAreYou {
@@ -138,7 +141,6 @@
     
     if(_powerBgImageView == nil){
         _powerBgImageView = [[UIImageView alloc]initWithImage:img];
-        _powerBgImageView.tag = HumanTypeHuman;
         _powerBgImageView.userInteractionEnabled = YES;
     }
     
@@ -146,7 +148,6 @@
     
     if(_powerImageView == nil){
         _powerImageView = [[UIImageView alloc]initWithImage:img];
-        _powerImageView.tag = HumanTypeHuman;
         _powerImageView.userInteractionEnabled = YES;
     }
 
@@ -157,6 +158,8 @@
 
     
     self.fightAnimationImageView = [[UIImageView alloc] init];
+    self.fightAnimationImageView.tag = _tag;
+
     [parentView insertSubview:self.fightAnimationImageView belowSubview:siblingSubview];
 }
 
@@ -210,102 +213,7 @@
 
 -(void)setFightAnimImage
 {
-    @try{
-        
-        if(_fightAnimArray==nil) {
-            _fightAnimArray = [NSMutableArray array];
-        } else {
-            [_fightAnimArray removeAllObjects];
-        }
-        
-        //fight アニメーションロード
-        UIImage *fightImage = nil;
-        
-        NSMutableArray *a_array = [NSMutableArray array];
-        NSMutableArray *b_array = [NSMutableArray array];
-        NSArray *fightSceanArray = nil;
-        
-        //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [a_array addObject:fightSceanArray];
-        
-        //fight アニメーションロード2
-        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [a_array addObject:fightSceanArray];
-        
-        //fight アニメーションロード3
-        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:1
-                                                      countY:8
-                                              charactarWidth:640
-                                             charactarHeight:240];
-        
-        [a_array addObject:fightSceanArray];
-        
-        [_fightAnimArray addObject:a_array];
-        
-        
-        //fight アニメーションロード1
-        fightImage = [UIImage imageNamed:@"pipo-btleffect024.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [b_array addObject:fightSceanArray];
-        
-        //fight アニメーションロード2
-        fightImage = [UIImage imageNamed:@"pipo-btleffect037.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:8
-                                                      countY:1
-                                              charactarWidth:240
-                                             charactarHeight:240];
-        
-        [b_array addObject:fightSceanArray];
-        
-        //fight アニメーションロード3
-        fightImage = [UIImage imageNamed:@"pipo-btleffect030.png"];
-        
-        fightSceanArray = [[DrUtil sharedInstance] animArray:fightImage
-                                                      countX:1
-                                                      countY:8
-                                              charactarWidth:640
-                                             charactarHeight:240];
-        
-        [b_array addObject:fightSceanArray];
-        
-        [_fightAnimArray addObject:b_array];
 
-        DLog();
-        
-    }
-    @catch(NSException *exception){
-        
-        NSLog(@"%@",exception);
-    }
-    @finally{
-        
-    }
 }
 
 -(void)setAnimation:(DirectionType)direction
@@ -589,6 +497,14 @@
     
 }
 
+- (void)moveToFront:(UIView *)superview
+{
+    [superview bringSubviewToFront:self.animationImageView];
+    [superview bringSubviewToFront:_powerBgImageView];
+    [superview bringSubviewToFront:_powerImageView];
+    
+}
+
 - (BOOL)setEnemy:(Human *)target {
     
     @try{
@@ -610,30 +526,36 @@
     
     @try{
         
-        // ターゲットを倒した後も通っていたので修正
-        if (ABS(self.animationImageView.center.x - target.animationImageView.center.x) <= _reach && ABS(self.animationImageView.center.y - target.animationImageView.center.y) <= _reach && target.power > 0) {
-            // バトルアニメーション
-            self.fightAnimationImageView.frame = CGRectMake(0, 0, humanFightImageSizeWidth, humanFightImageSizeHeight);
-            self.fightAnimationImageView.center = target.animationImageView.center;
-            self.fightAnimationImageView.animationImages = _fightAnimArray[0][_level];
-            self.fightAnimationImageView.animationDuration = 1.0;
-            self.fightAnimationImageView.animationRepeatCount = 1.0;
-            [self.fightAnimationImageView startAnimating];
+        if([self enemyIsNear:target]==YES){
             
-            [UIView animateWithDuration:fightDuration
-                                  delay:0.0
-                                options:UIViewAnimationOptionAutoreverse
-                             animations:^{
-                                 target.animationImageView.alpha = 0;
-                             } completion:^(BOOL finished) {
-                                 target.animationImageView.alpha = 1;
-                             }];
-            
-            // 体力を減らす
-            target.power -= self.minusPower;
-            if (target.power <= 0) {
-                return YES;
+            if(target.power > 0){
+                
+                // バトルアニメーション
+                self.fightAnimationImageView.frame = CGRectMake(0, 0, humanFightImageSizeWidth, humanFightImageSizeHeight);
+                self.fightAnimationImageView.center = target.animationImageView.center;
+                self.fightAnimationImageView.animationImages = _fightAnimArray[0][_level];
+                self.fightAnimationImageView.animationDuration = 1.0;
+                self.fightAnimationImageView.animationRepeatCount = 1.0;
+                [self.fightAnimationImageView startAnimating];
+                
+                [UIView animateWithDuration:fightDuration
+                                      delay:0.0
+                                    options:UIViewAnimationOptionAutoreverse
+                                 animations:^{
+                                     target.animationImageView.alpha = 0;
+                                 } completion:^(BOOL finished) {
+                                     target.animationImageView.alpha = 1;
+                                 }];
+                
+                // 体力を減らす
+                target.power -= self.minusPower;
+                if (target.power <= 0) {
+                    return YES;
+                }
+                
             }
+            
+            
         }
         
     }
@@ -642,6 +564,27 @@
         NSLog(@"%@",exception);
     }
     @finally{
+        
+    }
+    
+    return NO;
+}
+
+- (BOOL)enemyIsNear:(Human *)target
+{
+    //敵が近くにいるか
+//    NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
+//    NSInteger yGap = ABS(self.animationImageView.center.y - _target.animationImageView.center.y);
+
+    NSLog(@"(%zd,%zd)(%zd,%zd)",self.animationImageView.center.x,self.animationImageView.center.y,
+          _target.animationImageView.center.x,_target.animationImageView.center.y);
+    
+    NSInteger xGap = ABS(self.position.x - _target.position.x);
+    NSInteger yGap = ABS(self.position.y - _target.position.y);
+    
+    if (xGap <= _reach && yGap <= _reach ) {
+        
+        return YES;
         
     }
     

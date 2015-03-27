@@ -499,7 +499,6 @@
 			isa = PBXGroup;
 			children = (
 				B807532F1AC432AD00D18161 /* Library */,
-				612C6EF01A85FEA00089573B /* AnimationImage */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
 				18A0B2771A3C0CC400CDCF8A /* Resource */,
@@ -588,6 +587,7 @@
 		18A0B2771A3C0CC400CDCF8A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				612C6EF01A85FEA00089573B /* AnimationImage */,
 				B8EDB4921AB4161200E36CF3 /* sound */,
 				FB60843E1AAB7890005A71E4 /* Field */,
 				18A0B2E41A3C182500CDCF8A /* EnemyMarine */,

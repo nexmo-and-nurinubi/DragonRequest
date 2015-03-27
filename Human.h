@@ -23,9 +23,6 @@
     //移動残り数
     u_int32_t _moveRestCount;
 
-    //キャラクターイメージを表示するiOS obect
-    UIImage *_originalAnimationImage;
-    
     //キャラクターPowerを表示するiOS obect
     UIImageView *_powerImageView;
 
@@ -65,6 +62,7 @@
     //戦闘シーンアニメーション
     NSMutableArray *_fightAnimArray;
     
+    //敵保存用
     Human *_target;
     
 }
@@ -84,6 +82,9 @@
 //自分の位置
 @property (nonatomic,assign) CGPoint position;
 
+//識別用タグ
+@property (nonatomic,assign) NSInteger tag;
+
 //自分のキャラクターサイズ
 @property (nonatomic,assign) CGRect frameSize;
 
@@ -96,12 +97,16 @@
 //キャラクターバトルイメージを表示するiOS obect
 @property (nonatomic, strong) UIImageView *fightAnimationImageView;
 
-- (id)init :(CGPoint)initPos;
+- (id)init :(CGPoint)initPos
+        tag:(NSInteger)tag;
 
 - (NSString *)whoAreYou;
 - (NSString *)whereAreYou;
 - (BOOL)fight:(Human *)target;
 - (BOOL)setEnemy:(Human *)target;
+- (BOOL)enemyIsNear:(Human *)target;
+
+- (void)moveToFront:(UIView *)superview;
 
 -(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;

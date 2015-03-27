@@ -79,65 +79,47 @@ static DrUtil* sharedInstance;
            charactarHeight:(NSInteger)charactarHeiht{
     
     NSMutableArray *oneSceanAnimArray = [NSMutableArray array];
-    
-    for(int indexY=0;indexY<countY;indexY++){
-        
-        for(int indexX=0;indexX<countX;indexX++){
-            
-            CGRect trimArea = CGRectMake(charactarWidth*indexX,
-                                         charactarHeiht*indexY,
-                                         charactarWidth,
-                                         charactarHeiht);
-            
-            CGImageRef imageRef = [originalAnimationImage CGImage];
-            CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
-            UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
-            
-            //エラーの場合リターン
-            if(oneImage==nil)return nil;
-            
-            [oneSceanAnimArray addObject:oneImage];
-            
-        }
-        
-    }
-    return [oneSceanAnimArray mutableCopy];
-    
-    
-}
 
-- (NSArray *)animArray:(UIImage *)originalAnimationImage
-                countX:(NSInteger)countX
-                countY:(NSInteger)countY
-        charactarWidth:(NSInteger)charactarWidth
-       charactarHeight:(NSInteger)charactarHeiht
-            imageScale:(BOOL)imageScale {
-    
-    NSMutableArray *oneSceanAnimArray = [NSMutableArray array];
-    CGFloat scale = imageScale ? originalAnimationImage.scale : 1;
-    
-    for(int indexY=0;indexY<countY;indexY++){
+    @try{
         
-        for(int indexX=0;indexX<countX;indexX++){
+        
+        charactarWidth = (NSInteger)originalAnimationImage.size.width/countX*originalAnimationImage.scale;
+        charactarHeiht = (NSInteger)originalAnimationImage.size.height/countY*originalAnimationImage.scale;
+        
+        for(int indexY=0;indexY<countY;indexY++){
             
-            CGRect trimArea = CGRectMake(charactarWidth*scale*indexX,
-                                         charactarHeiht*scale*indexY,
-                                         charactarWidth*scale,
-                                         charactarHeiht*scale);
-            
-            CGImageRef imageRef = [originalAnimationImage CGImage];
-            CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
-            UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
-            
-            //エラーの場合リターン
-            if(oneImage==nil)return nil;
-            
-            [oneSceanAnimArray addObject:oneImage];
+            for(int indexX=0;indexX<countX;indexX++){
+                
+                CGRect trimArea = CGRectMake(charactarWidth*indexX,
+                                             charactarHeiht*indexY,
+                                             charactarWidth,
+                                             charactarHeiht);
+                
+                CGImageRef imageRef = [originalAnimationImage CGImage];
+                CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
+                UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
+                
+                //エラーの場合リターン
+                if(oneImage==nil)return nil;
+                
+                [oneSceanAnimArray addObject:oneImage];
+                
+            }
             
         }
         
     }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
+        
+    }
+    
     return [oneSceanAnimArray mutableCopy];
+    
+    
 }
 
 - (NSMutableArray *)animArrayList:(UIImage *)originalAnimationImage
@@ -148,31 +130,46 @@ static DrUtil* sharedInstance;
     
     NSMutableArray *multiSceanAnimArray = [NSMutableArray array];
     
-    for(int indexY=0;indexY<countY;indexY++){
+    @try{
         
-        NSMutableArray *oneSceanAnimArray = [NSMutableArray array];
+        charactarWidth = (NSInteger)originalAnimationImage.size.width/countX*originalAnimationImage.scale;
+        charactarHeiht = (NSInteger)originalAnimationImage.size.height/countY*originalAnimationImage.scale;
         
-        for(int indexX=0;indexX<countX;indexX++){
+        for(int indexY=0;indexY<countY;indexY++){
             
-            CGRect trimArea = CGRectMake(charactarWidth*indexX,
-                                         charactarHeiht*indexY,
-                                         charactarWidth,
-                                         charactarHeiht);
+            NSMutableArray *oneSceanAnimArray = [NSMutableArray array];
             
-            CGImageRef imageRef = [originalAnimationImage CGImage];
-            CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
-            UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
+            for(int indexX=0;indexX<countX;indexX++){
+                
+                CGRect trimArea = CGRectMake(charactarWidth*indexX,
+                                             charactarHeiht*indexY,
+                                             charactarWidth,
+                                             charactarHeiht);
+                
+                CGImageRef imageRef = [originalAnimationImage CGImage];
+                CGImageRef trimeImageRef = CGImageCreateWithImageInRect(imageRef, trimArea);
+                UIImage *oneImage = [UIImage imageWithCGImage:trimeImageRef];
+                
+                //エラーの場合リターン
+                if(oneImage==nil)return nil;
+                
+                [oneSceanAnimArray addObject:oneImage];
+                
+            }
             
-            //エラーの場合リターン
-            if(oneImage==nil)return nil;
-            
-            [oneSceanAnimArray addObject:oneImage];
+            [multiSceanAnimArray addObject:oneSceanAnimArray];
             
         }
         
-        [multiSceanAnimArray addObject:oneSceanAnimArray];
+    }
+    @catch(NSException *exception){
+        
+        NSLog(@"%@",exception);
+    }
+    @finally{
         
     }
+    
     
     return [multiSceanAnimArray mutableCopy];
     

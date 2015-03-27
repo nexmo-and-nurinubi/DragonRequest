@@ -24,15 +24,15 @@ static NSString * const weaponCellReuseIdentifier = @"WeaponCell";
     // weaponAnimations
     NSArray *weapon;
     self.weaponAnimations = [NSMutableArray array];
-    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_flood] countX:2 countY:5 charactarWidth:320 charactarHeight:240 imageScale:YES];
+    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_flood] countX:2 countY:5 charactarWidth:320 charactarHeight:240];
     [self.weaponAnimations addObject:weapon];
-    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_freeze] countX:2 countY:7 charactarWidth:320 charactarHeight:240 imageScale:YES];
+    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_freeze] countX:2 countY:7 charactarWidth:320 charactarHeight:240];
     [self.weaponAnimations addObject:weapon];
-    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_flare] countX:2 countY:7 charactarWidth:320 charactarHeight:240 imageScale:YES];
+    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_flare] countX:2 countY:7 charactarWidth:320 charactarHeight:240];
     [self.weaponAnimations addObject:weapon];
-    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_holy] countX:2 countY:7 charactarWidth:320 charactarHeight:240 imageScale:YES];
+    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_holy] countX:2 countY:7 charactarWidth:320 charactarHeight:240];
     [self.weaponAnimations addObject:weapon];
-    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_ultima] countX:2 countY:7 charactarWidth:320 charactarHeight:240 imageScale:YES];
+    weapon = [[DrUtil sharedInstance] animArray:[UIImage imageNamed:imageName_ultima] countX:2 countY:7 charactarWidth:320 charactarHeight:240];
     [self.weaponAnimations addObject:weapon];
     
     // weaponAnimationImageView

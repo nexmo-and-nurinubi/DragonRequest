@@ -30,22 +30,26 @@
 {
     //heroオブジェクト
     MyHero      *_hero;
-    //Bossオブジェクト
-    EnemyBoss   *_enemyBoss[ENEMY_BOSS_MAX];
-    //Marineオブジェクト
-    EnemyMarine *_enemyMarine[ENEMY_MARINE_MAX];
+    
+    //マリン保存配列
+    NSMutableArray *_enemyBossArray;
+    //ボス保存配列
+    NSMutableArray *_enemyMarineArray;
     
     int cnt;    //ボスの攻撃頻度調整カウンタ
     int createCnt;
+    
+    //メインストーリ呼び出しタイマー
     NSTimer * _storyTimer;
-    NSTimer * _createTimer;
+    //敵生成タイマー
+    NSTimer * _createEnemyTimer;
     
-    BOOL clearflag;
-    BOOL heroaliveflag;
-    
+    //ステージ
     int stagenumber;
-    
+
+    //スコア
     NSInteger score;
+    //トップスコア
     NSInteger topScore;
     
     __weak IBOutlet UILabel *topScoreLabel;
@@ -70,7 +74,8 @@
     [super viewDidLoad];
     
     _utilManager = [DrUtil sharedInstance];
-    
+
+    //トップスコア初期化＆ロード
     defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
     
@@ -78,55 +83,32 @@
     score = initMainScore;
     scoreLabel.text = [@(score) stringValue];
     
-    // Set GameCenter Manager Delegate
+    // GameCenter初期化
     [[GameCenterManager sharedManager] setDelegate:self];
 
-    stagenumber = 1;
+    //マリン保存配列初期化
+    _enemyMarineArray = [NSMutableArray array];
+
+    //ボス保存配列初期化
+    _enemyBossArray = [NSMutableArray array];
     
-    [self reset];
+    //スタートステージ
+    stagenumber = 1;
+
+    // AudioPlayer初期化
+    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [deadSound prepareToPlay];
+    
+    //画面・キャラクター初期化
+    [self startGame];
     
     //タッチイベントから座標を取得
     CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
     //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
     [_hero gotoToPoint:point];
 
-    // AudioPlayerの生成
-    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
-    deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    [deadSound prepareToPlay];
-    
 }
-
-
-// オブジェクトの並べ替え
-- (void)bringObject
-{
-    for (int y = 0; y < self.view.bounds.size.height; y++) {
-        for (int i = 0; i < ENEMY_MARINE_MAX; i++) {
-            if (_enemyMarine[i].animationImageView.frame.origin.y == y && _enemyMarine[i])
-                [self.view bringSubviewToFront:_enemyMarine[i].animationImageView];
-        }
-        if (_hero.animationImageView.frame.origin.y == y && _hero)
-            [self.view bringSubviewToFront:_hero.animationImageView];
-    }
-    
-    for (int y = 0; y < self.view.bounds.size.height; y++) {
-        for (int i = 0; i < ENEMY_BOSS_MAX; i++) {
-            if (_enemyBoss[i].animationImageView.frame.origin.y == y && _enemyBoss[i])
-                [self.view bringSubviewToFront:_enemyBoss[i].animationImageView];
-        }
-    }
-    
-    // ToDo. 必要に応じて、DropItemImageViewも追加
-    
-    [self.view bringSubviewToFront:_weaponCollectionView];
-    [self.view bringSubviewToFront:topScoreLabel];
-    [self.view bringSubviewToFront:scoreLabel];
-    [self.view bringSubviewToFront:playerNameLabel];
-    [self.view bringSubviewToFront:gcPlayerPictureImage];
-}
-
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -139,21 +121,16 @@
     }
     
     GKLocalPlayer *player = [[GameCenterManager sharedManager] localPlayerData];
+    
     if (player) {
-        if ([player isUnderage] == NO) {
-//            actionBarLabel.title = [NSString stringWithFormat:@"%@ signed in.", player.displayName];
-//            playerStatus.text = @"Player is not underage";
-            playerNameLabel.text = player.displayName;
-            [[GameCenterManager sharedManager] localPlayerPhoto:^(UIImage *playerPhoto) {
-                gcPlayerPictureImage.image = playerPhoto;
-            }];
-        } else {
-//            playerStatus.text = @"Player is underage";
-//            actionBarLabel.title = [NSString stringWithFormat:@"Underage player, %@, signed in.", player.displayName];
-            playerNameLabel.text = player.displayName;
-        }
+        
+        //GameCentereユーザ名設定
+        playerNameLabel.text = player.displayName;
+        
     } else {
-        playerNameLabel.text = [NSString stringWithFormat:@"Please login"];
+        
+        playerNameLabel.text = [NSString stringWithFormat:@"不明ユーザ"];
+        
     }
 }
 
@@ -193,20 +170,16 @@
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
+    
+    NSInteger tag = 0;
+    
     UIView *view = touch.view;
-    NSInteger tag = view.tag;
     
-    //タッチイベントから座標を取得
-    CGPoint point = [touch locationInView:self.view];
-    //画像(UIImageView)の中心座標とタッチイベントから取得した座標を同期
-    
-    //for(int i=0;i<ENEMY_BOSS_MAX;i++)[_enemyBoss[i] moveRand];
-    //for(int i=0;i<ENEMY_MARINE_MAX;i++)[_enemyMarine[i] moveRand];
-    
-    [_hero gotoToPoint:point];
+    tag = view.tag;
     
     //タッチしたのがDropItemなら拾う
     if ([view isKindOfClass:[DropItemImageView class]]) {
+        
         DropItemType dropItemType = (DropItemType)tag;
         switch (dropItemType) {
             case DropItemTypeNone:
@@ -223,10 +196,49 @@
                 break;
         }
     }
+    //DropItem以外
+    //背景をタッチ
+    else if(tag==0){
+        
+        //タッチイベントから座標を取得移動
+        CGPoint point = [touch locationInView:self.view];
+        
+        [_hero gotoToPoint:point];
+        
+    }
+    //マリンもしくはボスをタッチ
+    else if(tag<heroTagNumber){
+        
+        Human *enemy = [self getView2Human:view];
+        
+        if(enemy != nil){
+            
+            BOOL ret = [_hero enemyIsNear:enemy];
+            
+            //敵が近くにいる？
+            if(ret == YES){
+                
+                //戦え〜
+                [_hero fight:enemy];
+            }
+            else{
+                
+                //タッチイベントから座標を取得移動
+                CGPoint point = [touch locationInView:self.view];
+                
+                [_hero gotoToPoint:point];
+                
+            }
+        }
+        
+    }
     
-    //タッチしたのが敵なら攻撃する
+    
+/*
     switch (tag) {
+            
         case HumanTypeEnemy: {
+            
             BOOL dead[ENEMY_MARINE_MAX];
             for(int i=0;i<ENEMY_MARINE_MAX;i++)
                 dead[i] = NO;
@@ -259,35 +271,110 @@
         default:
             break;
     }
-    
+*/    
 
 }
+-(Human *)getView2Human:(UIView *)view
+{
+    if(![view isKindOfClass:[UIImageView class]])return nil;
+    
+    UIImageView *thisView = (UIImageView *)view;
+    
+    Human *thisHuman = nil;
+    
+    for(Human *human in _enemyMarineArray){
+        
+        if(human.animationImageView == thisView){
+         
+            thisHuman = human;
+            break;
+        }
+    }
+
+    for(Human *human in _enemyBossArray){
+        
+        if(human.animationImageView == thisView){
+            
+            thisHuman = human;
+            break;
+        }
+    }
+    
+    return thisHuman;
+}
+
+// オブジェクトの並べ替え
+- (void)checkCharacterLayer
+{
+    for(EnemyMarine *enemyMarine in _enemyMarineArray){
+        
+        NSInteger marinePosY = enemyMarine.animationImageView.frame.origin.y + enemyMarine.animationImageView.frame.size.height;
+        NSInteger heroPosY = _hero.animationImageView.frame.origin.y + _hero.animationImageView.frame.size.height;
+        
+        if ( marinePosY > heroPosY){
+            [enemyMarine moveToFront:self.view];
+        }
+        else{
+            [_hero moveToFront:self.view];
+        }
+        
+    }
+    
+    for(EnemyBoss *enemyBoss in _enemyBossArray){
+        
+        NSInteger bossPosY = enemyBoss.animationImageView.frame.origin.y + enemyBoss.animationImageView.frame.size.height;
+        NSInteger heroPosY = _hero.animationImageView.frame.origin.y + _hero.animationImageView.frame.size.height;
+        
+        if ( bossPosY > heroPosY)
+            [enemyBoss moveToFront:self.view];
+        else
+            [_hero moveToFront:self.view];
+        
+    }
+    
+    // ToDo. 必要に応じて、DropItemImageViewも追加
+//    [self.view bringSubviewToFront:_weaponCollectionView];
+//    [self.view bringSubviewToFront:topScoreLabel];
+//    [self.view bringSubviewToFront:scoreLabel];
+//    [self.view bringSubviewToFront:playerNameLabel];
+//    [self.view bringSubviewToFront:gcPlayerPictureImage];
+}
+
 
 - (void)checkGameStory{
     
-    [self bringObject];
-    
-    for(int i=0;i<ENEMY_MARINE_MAX;i++){
+    //マリン移動
+    for(EnemyMarine *_enemyMarine in _enemyMarineArray){
         
-        [_enemyMarine[i]  moveRand];
+        [_enemyMarine  moveRand];
         
     }
-    for(int i=0;i<ENEMY_BOSS_MAX;i++){
-        
-        [_enemyBoss[i]  moveRand];
 
+    //ボス移動
+    for(EnemyBoss *_enemyBoss in _enemyBossArray){
+        
+        [_enemyBoss  moveRand];
+        
     }
     
+    //キャラクタレイアをチェック
+    [self checkCharacterLayer];
+
+    //ゲームオーバーチェック（Hero命パワーが０？）
     if(_hero.power<=0.0){
 
+        //_storyTimerストップ
         [_storyTimer invalidate];
-        [_createTimer invalidate];
+        _storyTimer = nil;
         
-        // Here we need to pass a full frame
+        //敵生成Timerストップ
+        [_createEnemyTimer invalidate];
+        _createEnemyTimer = nil;
+        
+        //アラート表示
         CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
         
-        // Add some custom content to the alert view
-        [alertView setContainerView:[self createDemoView]];
+        [alertView setContainerView:[self showAlertView]];
         
         // Modify the parameters
         [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Continue", @"Menu", nil]];
@@ -305,10 +392,16 @@
         [alertView show];
         
         if(score>=topScore){
+            
             topScore = score;
             scoreLabel.text = [@(score) stringValue];
             topScoreLabel.text = [@(topScore) stringValue];
             
+            [[GameCenterManager sharedManager] saveAndReportScore:(int)topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
+            
+            
+            // Integerの保存
+            [defaults setInteger:topScore forKey:@"TOPSCORE"];
             
         }
         
@@ -383,7 +476,7 @@
                 CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] init];
                 
                 // Add some custom content to the alert view
-                [alertView setContainerView:[self createDemoView]];
+                [alertView setContainerView:[self showAlertView]];
                 
                 // Modify the parameters
                 [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Continue", @"Menu", nil]];
@@ -425,59 +518,51 @@
 }
 
 //タイマーで設定した時間ごとにボスを生成
-- (void)createBoss{
+- (void)createEnemy{
     
+    createCnt++;
     
-    //[self bringObject];
+    //temp
+    if(createCnt>1)return;
     
-    if (clearflag) {
-//        NSLog(@"リターン");
-        return;
+    if(_enemyBossArray.count<ENEMY_MARINE_MAX && (createCnt % 10 == 0)){
+    
+        NSInteger tag = _enemyBossArray.count+1;
+        EnemyBoss *enemyBoss = [[EnemyBoss alloc] init:CGPointZero
+                                                   tag:tag];
+        
+        //EnemyBoss設定
+        enemyBoss.alpha = 1.0;
+        [enemyBoss setImage:self.view belowSubview:self.weaponCollectionView];
+        [enemyBoss setEnemy:_hero];
+        
+        [_enemyBossArray addObject:enemyBoss];
+        
+        createCnt = 0;
+    
     }
-    
-    for(int i=0;i<ENEMY_MARINE_MAX;i++){
-        if(_enemyMarine[i] == nil){
-            //Bossのインスタンス作成
-            _enemyMarine[i] = [[EnemyMarine alloc] init:CGPointZero];
-            _enemyMarine[i].alpha = 1.0;
-            //Bossのイメージを設定
-            [_enemyMarine[i] setImage:self.view belowSubview:self.weaponCollectionView];
-            [_enemyMarine[i] setEnemy:_hero];
-
-            createCnt++;
-            break;
-            
-        }
-    }
-//    NSLog(@"雑魚生成");
-    
-    if(createCnt % 10 == 0){
-        for(int i=0;i<ENEMY_BOSS_MAX;i++){
-            if(_enemyBoss[i] == nil){
-                //Bossのインスタンス作成
-                _enemyBoss[i] = [[EnemyBoss alloc] init:CGPointZero];
-                _enemyBoss[i].alpha = 1.0;
-                //Bossのイメージを設定
-                [_enemyBoss[i] setImage:self.view belowSubview:self.weaponCollectionView];
-                [_enemyBoss[i] setEnemy:_hero];
-
-                break;
-            }
-        }
-//        NSLog(@"ボス生成");
+    else if(_enemyMarineArray.count<ENEMY_MARINE_MAX){
+        
+        NSInteger tag = _enemyMarineArray.count+ENEMY_MARINE_MAX+1;
+        EnemyMarine *enemyMarine = [[EnemyMarine alloc] init:CGPointZero
+                                                         tag:tag];
+        
+        //EnemyMarine設定
+        enemyMarine.alpha = 1.0;
+        [enemyMarine setImage:self.view belowSubview:self.weaponCollectionView];
+        [enemyMarine setEnemy:_hero];
+        
+        [_enemyMarineArray addObject:enemyMarine];
+        
     }
 }
 
-
 /** リセット */
-- (void)reset {
-    
-    clearflag = false;
-    heroaliveflag = false;
+- (void)startGame {
     
     clearmes = @"次のステージに進みます";
-
     int createtime = 0;
+    
     switch (stagenumber) {
         case 1:
             _fieldView.image = _utilManager.backgroundImage01;
@@ -496,24 +581,18 @@
         default:
             break;
     }
+
+    //マリン初期化
+    [_enemyMarineArray removeAllObjects];
     
+    //ボス初期化
+    [_enemyBossArray removeAllObjects];
     
-    for (int i=0;i<ENEMY_BOSS_MAX;i++){
-        if(_enemyBoss[i] != nil){
-            [_enemyBoss[i] removeImage];
-            _enemyBoss[i] = nil;
-        }
-    }
-    for (int i=0;i<ENEMY_MARINE_MAX;i++){
-        if(_enemyMarine[i] != nil){
-            [_enemyMarine[i] removeImage];
-            _enemyMarine[i] = nil;
-        }
-    }
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
-    _hero = [[MyHero alloc]init:heroPos];
+    _hero = [[MyHero alloc]init:heroPos
+                            tag:heroTagNumber];
     
     //hero イメージを設定
     [_hero setImage:self.view belowSubview:self.weaponCollectionView];
@@ -527,14 +606,23 @@
         [_storyTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossMoveTimeInterval]];
         
     }
-    if(_createTimer == nil){
-        _createTimer = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createBoss) userInfo:nil repeats:YES];
-        [_createTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:createtime]];
-    
+    if(_createEnemyTimer == nil){
+        _createEnemyTimer = [NSTimer scheduledTimerWithTimeInterval:bossCreatetime1 target:self selector:@selector(createEnemy) userInfo:nil repeats:YES];
+        [_createEnemyTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:bossCreatetime1]];
+        
     }
-    
-    [_storyTimer fire];
-    [_createTimer fire];
+
+    if(![_storyTimer isValid]){
+     
+        [_storyTimer fire];
+        
+    }
+
+    if(![_createEnemyTimer isValid]){
+     
+        [_createEnemyTimer fire];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -639,7 +727,22 @@
     
     if(buttonIndex==0){
 
-        [self reset];
+        //敵イメージクリア
+        for(EnemyMarine *enemyMarine in _enemyMarineArray){
+            
+            [enemyMarine removeImage];
+        }
+        
+        for(EnemyBoss *enemyBoss in _enemyBossArray){
+            
+            [enemyBoss removeImage];
+            
+        }
+
+        //_heroイメージクリア
+        [_hero removeImage];
+        
+        [self startGame];
         
         [alertView close];
 
@@ -652,7 +755,7 @@
     
 }
 
-- (UIView *)createDemoView
+- (UIView *)showAlertView
 {
     UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
     
