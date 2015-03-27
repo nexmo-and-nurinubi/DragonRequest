@@ -111,7 +111,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:YES];
+    
+    _weaponCollectionView.hidden = YES;
     
     BOOL available = [[GameCenterManager sharedManager] checkGameCenterAvailability];
     if (available) {
@@ -220,15 +223,28 @@
                 
                 //戦え〜
                 [_hero fight:enemy];
+                
+                if(enemy.power<=0.0){
+                    
+                    [enemy removeImage];
+                    
+                    if([enemy isKindOfClass:[EnemyBoss class]]){
+                        
+                        [_enemyBossArray removeObject:enemy];
+                        
+                    }
+                    else if([enemy isKindOfClass:[EnemyMarine class]]){
+                        
+                        [_enemyMarineArray removeObject:enemy];
+                        
+                    }
+                }
             }
-            else{
+            
+            //タッチイベントから座標を取得移動
+            CGPoint point = [touch locationInView:self.view];
+            [_hero gotoToPoint:point];
                 
-                //タッチイベントから座標を取得移動
-                CGPoint point = [touch locationInView:self.view];
-                
-                [_hero gotoToPoint:point];
-                
-            }
         }
         
     }
@@ -522,9 +538,6 @@
     
     createCnt++;
     
-    //temp
-    if(createCnt>1)return;
-    
     if(_enemyBossArray.count<ENEMY_MARINE_MAX && (createCnt % 10 == 0)){
     
         NSInteger tag = _enemyBossArray.count+1;
@@ -600,6 +613,14 @@
     //heroのx、y座標
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
+    
+    [self createEnemy];
+    [self createEnemy];
+    [self createEnemy];
+    [self createEnemy];
+    [self createEnemy];
+    [self createEnemy];
+    [self createEnemy];
     
     if(_storyTimer == nil){
         _storyTimer  = [NSTimer scheduledTimerWithTimeInterval:bossMoveTimeInterval target:self selector:@selector(checkGameStory) userInfo:nil repeats:YES];

@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 #define heroStepX                       15
 #define heroStepY                       15
-#define heroReach                       100
+#define heroReach                       200
 #define heroImageSizeWidth              32
 #define heroImageSizeHeight             32
 #define heroImageCutSizeWidth           32

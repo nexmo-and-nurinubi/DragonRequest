@@ -576,11 +576,11 @@
 //    NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
 //    NSInteger yGap = ABS(self.animationImageView.center.y - _target.animationImageView.center.y);
 
-    NSLog(@"(%zd,%zd)(%zd,%zd)",self.animationImageView.center.x,self.animationImageView.center.y,
-          _target.animationImageView.center.x,_target.animationImageView.center.y);
+    NSLog(@"(%zd,%zd)(%zd,%zd)",self.position.x,self.position.y,
+          _target.position.x,_target.position.y);
     
-    NSInteger xGap = ABS(self.position.x - _target.position.x);
-    NSInteger yGap = ABS(self.position.y - _target.position.y);
+    NSInteger xGap = ABS(self.animationImageView.bounds.origin.x - _target.animationImageView.bounds.origin.x);
+    NSInteger yGap = ABS(self.animationImageView.bounds.origin.y - _target.animationImageView.bounds.origin.y);
     
     if (xGap <= _reach && yGap <= _reach ) {
         
