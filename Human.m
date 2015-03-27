@@ -264,11 +264,13 @@
     [_powerImageView removeFromSuperview];
 }
 
--(void)moveRand
+-(void)moveRand:(Human *)target
 {
     //敵が近くにいるか
     NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
     NSInteger yGap = ABS(self.animationImageView.center.y - _target.animationImageView.center.y);
+    
+    
     
     //視野外ならランダムで移動
     if (_moveRestCount % 3) {
@@ -282,17 +284,16 @@
         if (xGap <= _radarRange && yGap <= _radarRange ) {
             
             [self moveToPoint:_target.position];
+            [self fight:target];
             
         }
+        
         
     }
     
     _moveRestCount--;
     
     [self move:_direction];
-    
-    [self fight:_target];
-        
     
 }
 -(void)stopToWalk

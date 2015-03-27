@@ -52,7 +52,7 @@
     //トップスコア
     NSInteger topScore;
     
-    __weak IBOutlet UILabel *topScoreLabel;
+    __weak IBOutlet UILabel *heroPowerLabel;
     __weak IBOutlet UILabel *scoreLabel;
     __weak IBOutlet UILabel *playerNameLabel;
     __weak IBOutlet UIImageView *gcPlayerPictureImage;
@@ -79,7 +79,6 @@
     defaults = [NSUserDefaults standardUserDefaults];
     topScore = [defaults integerForKey:@"TOPSCORE"];
     
-    topScoreLabel.text = [@(topScore) stringValue];
     score = initMainScore;
     scoreLabel.text = [@(score) stringValue];
     
@@ -102,6 +101,8 @@
     
     //画面・キャラクター初期化
     [self startGame];
+    
+    heroPowerLabel.text = [@((int)_hero.power) stringValue];
     
     //タッチイベントから座標を取得
     CGPoint point = CGPointMake(_hero.position.x, _hero.position.y);
@@ -359,17 +360,19 @@
 
 - (void)checkGameStory{
     
+    score++;
+    
     //マリン移動
     for(EnemyMarine *_enemyMarine in _enemyMarineArray){
         
-        [_enemyMarine  moveRand];
+        [_enemyMarine  moveRand:_hero];
         
     }
 
     //ボス移動
     for(EnemyBoss *_enemyBoss in _enemyBossArray){
         
-        [_enemyBoss  moveRand];
+        [_enemyBoss  moveRand:_hero];
         
     }
     
@@ -410,8 +413,6 @@
         if(score>=topScore){
             
             topScore = score;
-            scoreLabel.text = [@(score) stringValue];
-            topScoreLabel.text = [@(topScore) stringValue];
             
             [[GameCenterManager sharedManager] saveAndReportScore:(int)topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
             
@@ -423,6 +424,12 @@
         
     }
 
+    if(topScore<=score)topScore=score;
+    scoreLabel.text = [NSString stringWithFormat:@"%zd/%zd",score,topScore];
+    
+    heroPowerLabel.text = [@((int)_hero.power) stringValue];
+
+    
 /*
     // 敵が殲滅したか確認する
     BOOL annihilate = YES;
@@ -575,6 +582,7 @@
     
     clearmes = @"次のステージに進みます";
     int createtime = 0;
+    score = 0;
     
     switch (stagenumber) {
         case 1:

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -129,9 +129,9 @@
                     <connections>
                         <outlet property="fieldView" destination="BB8-p8-MWG" id="vr7-tV-Zi4"/>
                         <outlet property="gcPlayerPictureImage" destination="2iM-YR-sAc" id="rc0-OA-D5v"/>
+                        <outlet property="heroPowerLabel" destination="ejm-Yl-sfd" id="lco-WZ-BBB"/>
                         <outlet property="playerNameLabel" destination="aWD-Ip-alC" id="FaC-ZR-cMo"/>
                         <outlet property="scoreLabel" destination="Lvg-3h-tuc" id="RKq-9V-FGu"/>
-                        <outlet property="topScoreLabel" destination="ejm-Yl-sfd" id="Hhu-M1-BU0"/>
                         <outlet property="weaponCollectionView" destination="bIQ-rh-8Av" id="9xD-bS-KPJ"/>
                     </connections>
                 </viewController>
@@ -169,7 +169,7 @@
                                 <rect key="frame" x="48" y="196" width="224" height="176"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-as-4ze">
-                                        <rect key="frame" x="57" y="8" width="110" height="50"/>
+                                        <rect key="frame" x="57" y="41" width="110" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                         <size key="titleShadowOffset" width="2" height="-2"/>
                                         <state key="normal" title="Start">
@@ -181,7 +181,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SW-Om-hWa">
-                                        <rect key="frame" x="57" y="63" width="110" height="50"/>
+                                        <rect key="frame" x="57" y="101" width="110" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                         <size key="titleShadowOffset" width="2" height="-2"/>
                                         <state key="normal" title="Score">
@@ -192,7 +192,7 @@
                                             <action selector="showGameCenterLeaderBoard:" destination="Rrm-Js-jUq" eventType="touchUpInside" id="GRa-Aj-QuZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-i1-YbA">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-i1-YbA">
                                         <rect key="frame" x="57" y="118" width="110" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                         <size key="titleShadowOffset" width="2" height="-2"/>
