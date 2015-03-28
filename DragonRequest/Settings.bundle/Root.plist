@@ -22,6 +22,14 @@
 			<key>File</key>
 			<string>Acknowledgements</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Developers</string>
+			<key>File</key>
+			<string>Developers</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

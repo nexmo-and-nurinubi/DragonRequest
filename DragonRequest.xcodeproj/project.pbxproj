@@ -409,6 +409,8 @@
 		B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504513.png; sourceTree = "<group>"; };
 		B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504515.png; sourceTree = "<group>"; };
 		B87D3A101AC682690057D1E7 /* o0096012813251504516.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504516.png; sourceTree = "<group>"; };
+		B88A29361AC6C780002E6843 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B88A29371AC6C780002E6843 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -573,19 +575,10 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
-				1883D3131AC6A6C300B80123 /* Splasha640x960.png */,
-				1883D30F1AC6A5EF00B80123 /* Splasha640x1136.png */,
-				1883D30D1AC6A40400B80123 /* title2.png */,
-				1883D2F61AC6A33000B80123 /* icon */,
-				186A41E51AC69DA700E9DFE5 /* Logo2.png */,
-				186A41E31AC69BC100E9DFE5 /* Logo.png */,
-				186A41DF1AC6979300E9DFE5 /* title.png */,
-				186A41DD1AC6963B00E9DFE5 /* aaa.png */,
-				186A41071AC68B5F00E9DFE5 /* GameOver.png */,
-				B807532F1AC432AD00D18161 /* Library */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
 				18A0B2771A3C0CC400CDCF8A /* Resource */,
+				B807532F1AC432AD00D18161 /* Library */,
 				189F860E1A32DCCE0016D4EE /* DragonRequest */,
 				189F862B1A32DCCE0016D4EE /* DragonRequestTests */,
 				189F860D1A32DCCE0016D4EE /* Products */,
@@ -671,6 +664,8 @@
 		18A0B2771A3C0CC400CDCF8A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1883D2F61AC6A33000B80123 /* icon */,
+				B87D3AB01AC6ACA90057D1E7 /* Logo */,
 				612C6EF01A85FEA00089573B /* AnimationImage */,
 				FB396A3B1AC69053000CD06C /* Sound */,
 				FB60843E1AAB7890005A71E4 /* Field */,
@@ -922,6 +917,21 @@
 				B822D9731ABD4F910000584A /* gamecenter.png */,
 			);
 			name = etc;
+			sourceTree = "<group>";
+		};
+		B87D3AB01AC6ACA90057D1E7 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				186A41E51AC69DA700E9DFE5 /* Logo2.png */,
+				186A41E31AC69BC100E9DFE5 /* Logo.png */,
+				186A41DF1AC6979300E9DFE5 /* title.png */,
+				186A41DD1AC6963B00E9DFE5 /* aaa.png */,
+				186A41071AC68B5F00E9DFE5 /* GameOver.png */,
+				1883D3131AC6A6C300B80123 /* Splasha640x960.png */,
+				1883D30F1AC6A5EF00B80123 /* Splasha640x1136.png */,
+				1883D30D1AC6A40400B80123 /* title2.png */,
+			);
+			name = Logo;
 			sourceTree = "<group>";
 		};
 		FB396A3B1AC69053000CD06C /* Sound */ = {
@@ -1466,6 +1476,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F861D1A32DCCE0016D4EE /* Base */,
+				B88A29371AC6C780002E6843 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1474,6 +1485,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F86221A32DCCE0016D4EE /* Base */,
+				B88A29361AC6C780002E6843 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
