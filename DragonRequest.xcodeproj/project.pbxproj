@@ -217,22 +217,25 @@
 		B822D9761ABD61900000584A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9751ABD61900000584A /* SystemConfiguration.framework */; };
 		B822D9781ABD61990000584A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9771ABD61990000584A /* Security.framework */; };
 		B822D97B1ABD687A0000584A /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D97A1ABD687A0000584A /* menuViewController.m */; };
-		B87D3A0B1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */; };
 		B87D3A0D1AC6819A0057D1E7 /* o0096012813251504513.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */; };
 		B87D3A121AC682690057D1E7 /* o0096012813251504515.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */; };
 		B87D3A131AC682690057D1E7 /* o0096012813251504516.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A101AC682690057D1E7 /* o0096012813251504516.png */; };
-		B87D3A151AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */; };
-		B87D3A171AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */; };
 		B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */; };
-		B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4931AB4162B00E36CF3 /* 04.wav */; };
-		B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4941AB4162B00E36CF3 /* 03.wav */; };
-		B8EDB49C1AB4162B00E36CF3 /* 07.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4951AB4162B00E36CF3 /* 07.wav */; };
-		B8EDB49D1AB4162B00E36CF3 /* 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4961AB4162B00E36CF3 /* 01.wav */; };
-		B8EDB49E1AB4162B00E36CF3 /* 02.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4971AB4162B00E36CF3 /* 02.wav */; };
-		B8EDB49F1AB4162B00E36CF3 /* 05.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4981AB4162B00E36CF3 /* 05.wav */; };
-		B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4991AB4162B00E36CF3 /* 06.wav */; };
 		B8EDB4A41AB429CA00E36CF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */; };
 		FB2817A41AAAE54900C3032E /* WeaponCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */; };
+		FB396A481AC69053000CD06C /* 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A3C1AC69053000CD06C /* 01.wav */; };
+		FB396A491AC69053000CD06C /* 02.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A3D1AC69053000CD06C /* 02.wav */; };
+		FB396A4A1AC69053000CD06C /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A3E1AC69053000CD06C /* 03.wav */; };
+		FB396A4B1AC69053000CD06C /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A3F1AC69053000CD06C /* 04.wav */; };
+		FB396A4C1AC69053000CD06C /* 05.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A401AC69053000CD06C /* 05.wav */; };
+		FB396A4D1AC69053000CD06C /* 06.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A411AC69053000CD06C /* 06.wav */; };
+		FB396A4E1AC69053000CD06C /* 07.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A421AC69053000CD06C /* 07.wav */; };
+		FB396A4F1AC69053000CD06C /* 118513__thefsoundman__punch-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A431AC69053000CD06C /* 118513__thefsoundman__punch-02.wav */; };
+		FB396A501AC69053000CD06C /* 216782__castironcarousel__punch-6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FB396A441AC69053000CD06C /* 216782__castironcarousel__punch-6.aiff */; };
+		FB396A511AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB396A451AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav */; };
+		FB396A521AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */; };
+		FB396A531AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */; };
+		FB396A551AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */; };
 		FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */; };
 		FB60843C1AAB7804005A71E4 /* powerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB60843A1AAB7804005A71E4 /* powerBg.png */; };
 		FB60843D1AAB7804005A71E4 /* powerImg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB60843B1AAB7804005A71E4 /* powerImg.png */; };
@@ -550,25 +553,28 @@
 		B822D9771ABD61990000584A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B822D9791ABD687A0000584A /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuViewController.h; sourceTree = "<group>"; };
 		B822D97A1ABD687A0000584A /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuViewController.m; sourceTree = "<group>"; };
-		B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "264981__renatalmar__sfx-magic.wav"; sourceTree = "<group>"; };
 		B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504513.png; sourceTree = "<group>"; };
 		B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504515.png; sourceTree = "<group>"; };
 		B87D3A101AC682690057D1E7 /* o0096012813251504516.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504516.png; sourceTree = "<group>"; };
-		B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "216782__castironcarousel__punch-6.aiff"; sourceTree = "<group>"; };
-		B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118513__thefsoundman__punch-02.wav"; sourceTree = "<group>"; };
 		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
-		B8EDB4931AB4162B00E36CF3 /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
-		B8EDB4941AB4162B00E36CF3 /* 03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03.wav; sourceTree = "<group>"; };
-		B8EDB4951AB4162B00E36CF3 /* 07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07.wav; sourceTree = "<group>"; };
-		B8EDB4961AB4162B00E36CF3 /* 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01.wav; sourceTree = "<group>"; };
-		B8EDB4971AB4162B00E36CF3 /* 02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02.wav; sourceTree = "<group>"; };
-		B8EDB4981AB4162B00E36CF3 /* 05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05.wav; sourceTree = "<group>"; };
-		B8EDB4991AB4162B00E36CF3 /* 06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06.wav; sourceTree = "<group>"; };
 		B8EDB4A11AB426D000E36CF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B8EDB4A31AB429CA00E36CF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FB2817A21AAAE54900C3032E /* WeaponCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionView.h; sourceTree = "<group>"; };
 		FB2817A31AAAE54900C3032E /* WeaponCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionView.m; sourceTree = "<group>"; };
+		FB396A3C1AC69053000CD06C /* 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01.wav; sourceTree = "<group>"; };
+		FB396A3D1AC69053000CD06C /* 02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02.wav; sourceTree = "<group>"; };
+		FB396A3E1AC69053000CD06C /* 03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03.wav; sourceTree = "<group>"; };
+		FB396A3F1AC69053000CD06C /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
+		FB396A401AC69053000CD06C /* 05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05.wav; sourceTree = "<group>"; };
+		FB396A411AC69053000CD06C /* 06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06.wav; sourceTree = "<group>"; };
+		FB396A421AC69053000CD06C /* 07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07.wav; sourceTree = "<group>"; };
+		FB396A431AC69053000CD06C /* 118513__thefsoundman__punch-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118513__thefsoundman__punch-02.wav"; sourceTree = "<group>"; };
+		FB396A441AC69053000CD06C /* 216782__castironcarousel__punch-6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "216782__castironcarousel__punch-6.aiff"; sourceTree = "<group>"; };
+		FB396A451AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "264981__renatalmar__sfx-magic.wav"; sourceTree = "<group>"; };
+		FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_element_fire10.mp3; sourceTree = "<group>"; };
+		FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_voice_human05.mp3; sourceTree = "<group>"; };
+		FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_voice_monster01.mp3; sourceTree = "<group>"; };
 		FB572F971AAACF3800D1DA96 /* WeaponCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionViewCell.h; sourceTree = "<group>"; };
 		FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionViewCell.m; sourceTree = "<group>"; };
 		FB60843A1AAB7804005A71E4 /* powerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerBg.png; sourceTree = "<group>"; };
@@ -1180,7 +1186,7 @@
 			isa = PBXGroup;
 			children = (
 				612C6EF01A85FEA00089573B /* AnimationImage */,
-				B8EDB4921AB4161200E36CF3 /* sound */,
+				FB396A3B1AC69053000CD06C /* Sound */,
 				FB60843E1AAB7890005A71E4 /* Field */,
 				18A0B2E41A3C182500CDCF8A /* EnemyMarine */,
 				18A0B2E51A3C185E00CDCF8A /* human */,
@@ -1432,21 +1438,24 @@
 			name = etc;
 			sourceTree = "<group>";
 		};
-		B8EDB4921AB4161200E36CF3 /* sound */ = {
+		FB396A3B1AC69053000CD06C /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */,
-				B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */,
-				B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */,
-				B8EDB4931AB4162B00E36CF3 /* 04.wav */,
-				B8EDB4941AB4162B00E36CF3 /* 03.wav */,
-				B8EDB4951AB4162B00E36CF3 /* 07.wav */,
-				B8EDB4961AB4162B00E36CF3 /* 01.wav */,
-				B8EDB4971AB4162B00E36CF3 /* 02.wav */,
-				B8EDB4981AB4162B00E36CF3 /* 05.wav */,
-				B8EDB4991AB4162B00E36CF3 /* 06.wav */,
+				FB396A3C1AC69053000CD06C /* 01.wav */,
+				FB396A3D1AC69053000CD06C /* 02.wav */,
+				FB396A3E1AC69053000CD06C /* 03.wav */,
+				FB396A3F1AC69053000CD06C /* 04.wav */,
+				FB396A401AC69053000CD06C /* 05.wav */,
+				FB396A411AC69053000CD06C /* 06.wav */,
+				FB396A421AC69053000CD06C /* 07.wav */,
+				FB396A431AC69053000CD06C /* 118513__thefsoundman__punch-02.wav */,
+				FB396A441AC69053000CD06C /* 216782__castironcarousel__punch-6.aiff */,
+				FB396A451AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav */,
+				FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */,
+				FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */,
+				FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */,
 			);
-			name = sound;
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		FB572F921AAACB8300D1DA96 /* Humans */ = {
@@ -1784,7 +1793,6 @@
 				186A41C81AC68C9000E9DFE5 /* appicon-Small-40.png in Resources */,
 				186A41B51AC68C9000E9DFE5 /* iTunesArtwork in Resources */,
 				FBCEA8671AAB5FBB00663C61 /* pipo-btleffect125_jacket@2x.png in Resources */,
-				B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */,
 				FBCEA8691AAB5FC200663C61 /* pipo-btleffect126_jacket@2x.png in Resources */,
 				1837F4831A4E48ED00075299 /* left3.png in Resources */,
 				FB839E9E1AAB07D600CFFCCB /* pipo-btleffect042@2x.png in Resources */,
@@ -1815,7 +1823,6 @@
 				1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */,
 				612C6F321A85FEA00089573B /* Enemy2RightAttack2.png in Resources */,
 				FB839E821AAB07D600CFFCCB /* pipo-btleffect036.png in Resources */,
-				B87D3A151AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff in Resources */,
 				FB6084431AAB7890005A71E4 /* mapbg02.png in Resources */,
 				1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */,
 				186A41D11AC68C9000E9DFE5 /* iTunesArtwork in Resources */,
@@ -1829,7 +1836,6 @@
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
 				B87D3A131AC682690057D1E7 /* o0096012813251504516.png in Resources */,
 				FB839E7B1AAB07D600CFFCCB /* pipo-btleffect029.png in Resources */,
-				B8EDB49F1AB4162B00E36CF3 /* 05.wav in Resources */,
 				612C6F1C1A85FEA00089573B /* BossNomal1.png in Resources */,
 				FB839E951AAB07D600CFFCCB /* pipo-btleffect033@2x.png in Resources */,
 				186A41DC1AC68DA100E9DFE5 /* View.xib in Resources */,
@@ -1840,7 +1846,6 @@
 				186A419E1AC68C9000E9DFE5 /* ic_launcher.png in Resources */,
 				FB839E8B1AAB07D600CFFCCB /* pipo-btleffect023@2x.png in Resources */,
 				181615291AB425C400E486AE /* dora10.png in Resources */,
-				B8EDB49E1AB4162B00E36CF3 /* 02.wav in Resources */,
 				1837F44D1A4E484E00075299 /* dragon_orange_rl03@2x.png in Resources */,
 				186A419B1AC68C9000E9DFE5 /* appicon@2x.png in Resources */,
 				1837F4861A4E48ED00075299 /* right2.png in Resources */,
@@ -1853,11 +1858,13 @@
 				FB839E791AAB07D600CFFCCB /* pipo-btleffect027.png in Resources */,
 				FB839EA41AAB07D600CFFCCB /* pipo-btleffect128.png in Resources */,
 				612C6F1E1A85FEA00089573B /* BossNomal3.png in Resources */,
+				FB396A4A1AC69053000CD06C /* 03.wav in Resources */,
 				FB839E841AAB07D600CFFCCB /* pipo-btleffect038.png in Resources */,
 				186A41E41AC69BC100E9DFE5 /* Logo.png in Resources */,
 				186A419D1AC68C9000E9DFE5 /* iTunesArtwork@2x in Resources */,
 				189F86231A32DCCE0016D4EE /* LaunchScreen.xib in Resources */,
 				FB839E981AAB07D600CFFCCB /* pipo-btleffect036@2x.png in Resources */,
+				FB396A4B1AC69053000CD06C /* 04.wav in Resources */,
 				612C6F371A85FEA00089573B /* HeroNomal1.png in Resources */,
 				186A419A1AC68C9000E9DFE5 /* appicon.png in Resources */,
 				FBCEA8791AAB5FE700663C61 /* pipo-btleffect129_jacket.png in Resources */,
@@ -1874,6 +1881,7 @@
 				FB839E871AAB07D600CFFCCB /* pipo-btleffect041.png in Resources */,
 				612C6F311A85FEA00089573B /* Enemy2RightAttack1.png in Resources */,
 				FB839E8C1AAB07D600CFFCCB /* pipo-btleffect024@2x.png in Resources */,
+				FB396A4E1AC69053000CD06C /* 07.wav in Resources */,
 				1837F4821A4E48ED00075299 /* left2.png in Resources */,
 				FB839E8E1AAB07D600CFFCCB /* pipo-btleffect026@2x.png in Resources */,
 				FB6084441AAB7890005A71E4 /* mapbg04.png in Resources */,
@@ -1899,7 +1907,10 @@
 				186A41951AC68C9000E9DFE5 /* appicon-Small-50.png in Resources */,
 				181615271AB41FAC00E486AE /* dora18.png in Resources */,
 				1837F44A1A4E484E00075299 /* dragon_orange_lr03@2x.png in Resources */,
+				FB396A521AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 in Resources */,
+				FB396A4F1AC69053000CD06C /* 118513__thefsoundman__punch-02.wav in Resources */,
 				1837F4641A4E48C100075299 /* rl02.png in Resources */,
+				FB396A511AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav in Resources */,
 				18A0B2901A3C15C500CDCF8A /* taran.jpg in Resources */,
 				186A41C71AC68C9000E9DFE5 /* appicon-76@2x.png in Resources */,
 				612C6F1D1A85FEA00089573B /* BossNomal2.png in Resources */,
@@ -1914,7 +1925,6 @@
 				1837F4841A4E48ED00075299 /* left4.png in Resources */,
 				FB839E911AAB07D600CFFCCB /* pipo-btleffect029@2x.png in Resources */,
 				FB839EA71AAB07D600CFFCCB /* pipo-btleffect126@2x.png in Resources */,
-				B87D3A0B1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav in Resources */,
 				FB839E761AAB07D600CFFCCB /* pipo-btleffect024.png in Resources */,
 				612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */,
 				1837F45F1A4E48C100075299 /* bt03.png in Resources */,
@@ -1923,7 +1933,9 @@
 				FB839E851AAB07D600CFFCCB /* pipo-btleffect039.png in Resources */,
 				1837F47A1A4E48ED00075299 /* back2.png in Resources */,
 				FB839E781AAB07D600CFFCCB /* pipo-btleffect026.png in Resources */,
+				FB396A551AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 in Resources */,
 				1837F44B1A4E484E00075299 /* dragon_orange_rl01@2x.png in Resources */,
+				FB396A491AC69053000CD06C /* 02.wav in Resources */,
 				612C6F1F1A85FEA00089573B /* BossRightAttack1.png in Resources */,
 				FB839E9B1AAB07D600CFFCCB /* pipo-btleffect039@2x.png in Resources */,
 				186A41AB1AC68C9000E9DFE5 /* appicon-76@2x.png in Resources */,
@@ -2042,6 +2054,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F861D1A32DCCE0016D4EE /* Base */,
+				B87D3A4B1AC69A540057D1E7 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2050,6 +2063,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F86221A32DCCE0016D4EE /* Base */,
+				B87D3A4A1AC69A540057D1E7 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

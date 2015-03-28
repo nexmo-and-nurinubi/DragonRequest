@@ -1,0 +1,33 @@
+
+/* Class = "IBUIButton"; normalTitle = "Score"; ObjectID = "4SW-Om-hWa"; */
+"4SW-Om-hWa.normalTitle" = "Score";
+
+/* Class = "IBUILabel"; text = "Doragon Request"; ObjectID = "9wa-sJ-pPO"; */
+"9wa-sJ-pPO.text" = "Doragon Request";
+
+/* Class = "IBUIButton"; normalTitle = "back"; ObjectID = "KE8-BT-kr9"; */
+"KE8-BT-kr9.normalTitle" = "back";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Lvg-3h-tuc"; */
+"Lvg-3h-tuc.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "背景イメージ1選択"; ObjectID = "MY3-bA-x68"; */
+"MY3-bA-x68.normalTitle" = "背景イメージ1選択";
+
+/* Class = "IBUIButton"; normalTitle = "Setup"; ObjectID = "WI4-i1-YbA"; */
+"WI4-i1-YbA.normalTitle" = "Setup";
+
+/* Class = "IBUILabel"; text = "GameCenter ID"; ObjectID = "aWD-Ip-alC"; */
+"aWD-Ip-alC.text" = "GameCenter ID";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ejm-Yl-sfd"; */
+"ejm-Yl-sfd.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "背景イメージ3選択"; ObjectID = "kOz-Fr-lVt"; */
+"kOz-Fr-lVt.normalTitle" = "背景イメージ3選択";
+
+/* Class = "IBUIButton"; normalTitle = "Start"; ObjectID = "mSS-as-4ze"; */
+"mSS-as-4ze.normalTitle" = "Start";
+
+/* Class = "IBUIButton"; normalTitle = "背景イメージ2選択"; ObjectID = "yYB-od-EKQ"; */
+"yYB-od-EKQ.normalTitle" = "背景イメージ2選択";

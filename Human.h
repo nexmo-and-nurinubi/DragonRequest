@@ -110,7 +110,7 @@
 
 -(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;
--(void)moveRand:(Human *)target;
+-(BOOL)moveRand:(Human *)target;
 -(void)setPowerImage;
 -(void)setFightAnimImage;
 -(void)move:(DirectionType) direction;
