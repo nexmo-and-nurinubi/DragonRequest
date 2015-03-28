@@ -503,7 +503,10 @@
     if(_topScore<=_score)_topScore=_score;
     scoreLabel.text = [NSString stringWithFormat:@"%zd/%zd",_score,_topScore];
     
-    heroPowerLabel.text = [@((int)_hero.power) stringValue];
+    NSInteger power = _hero.power;
+    
+    if(power<0)power=0;
+    heroPowerLabel.text = [@((int)power) stringValue];
 
     
 /*

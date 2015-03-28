@@ -286,6 +286,10 @@
         if (xGap <= _radarRange && yGap <= _radarRange ) {
             
             [self moveToPoint:_target.position];
+            
+        }
+        else if (xGap <= _imageWidth*2 && yGap*2 <= _imageHeight ){
+            
             [self fight:target];
             
             ret = YES;
