@@ -413,14 +413,33 @@
     //マリン移動
     for(EnemyMarine *_enemyMarine in _enemyMarineArray){
         
-        [_enemyMarine  moveRand:_hero];
+        BOOL ret = [_enemyMarine  moveRand:_hero];
+        
+        if(ret == YES){
+
+            // 敵を倒した時の音を再生
+            //[_heroScreamSound stop];
+            //_heroScreamSound.currentTime = 0;
+            //[_heroScreamSound play];
+            
+        }
+        
         
     }
 
     //ボス移動
     for(EnemyBoss *_enemyBoss in _enemyBossArray){
         
-        [_enemyBoss  moveRand:_hero];
+        BOOL ret = [_enemyBoss  moveRand:_hero];
+        
+        if(ret == YES){
+            
+            // 敵を倒した時の音を再生
+            //[_heroScreamSound stop];
+            //_heroScreamSound.currentTime = 0;
+            //[_heroScreamSound play];
+            
+        }
         
     }
     
