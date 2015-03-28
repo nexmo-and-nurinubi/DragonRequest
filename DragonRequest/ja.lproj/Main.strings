@@ -2,8 +2,8 @@
 /* Class = "IBUIButton"; normalTitle = "Score"; ObjectID = "4SW-Om-hWa"; */
 "4SW-Om-hWa.normalTitle" = "Score";
 
-/* Class = "IBUILabel"; text = "Doragon Request"; ObjectID = "9wa-sJ-pPO"; */
-"9wa-sJ-pPO.text" = "Doragon Request";
+/* Class = "IBUILabel"; text = "新入社員が作った\n大作(?)ゲーム"; ObjectID = "9wa-sJ-pPO"; */
+"9wa-sJ-pPO.text" = "新入社員が作った\n大作(?)ゲーム";
 
 /* Class = "IBUIButton"; normalTitle = "back"; ObjectID = "KE8-BT-kr9"; */
 "KE8-BT-kr9.normalTitle" = "back";
