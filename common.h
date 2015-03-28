@@ -66,7 +66,7 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 #define heroCountAnimComma              3
 
 #define heroDefaultName                 @"まさと"
-#define heroDefaultPower                3000.0f
+#define heroDefaultPower                500.0f
 #define heroMinusPower                  10.0f
 #define heroDefaultPosX                 10
 #define heroDefaultPosY                 10

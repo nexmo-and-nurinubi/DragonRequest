@@ -57,8 +57,8 @@
     [super setImage:parentView belowSubview:siblingSubview];
     
     //アニメーションイメージ設定
-    //[self setMoveAnimImage:@"hero-comma.png"
-    [self setMoveAnimImage:@"hero1"
+    //[self setMoveAnimImage:@"hero1"
+    [self setMoveAnimImage:@"o0096012813251504516"
                      countX:3
                      countY:4];
     

@@ -125,6 +125,12 @@
 		B822D9761ABD61900000584A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9751ABD61900000584A /* SystemConfiguration.framework */; };
 		B822D9781ABD61990000584A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822D9771ABD61990000584A /* Security.framework */; };
 		B822D97B1ABD687A0000584A /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B822D97A1ABD687A0000584A /* menuViewController.m */; };
+		B87D3A0B1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */; };
+		B87D3A0D1AC6819A0057D1E7 /* o0096012813251504513.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */; };
+		B87D3A121AC682690057D1E7 /* o0096012813251504515.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */; };
+		B87D3A131AC682690057D1E7 /* o0096012813251504516.png in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A101AC682690057D1E7 /* o0096012813251504516.png */; };
+		B87D3A151AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */; };
+		B87D3A171AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */; };
 		B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */; };
 		B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4931AB4162B00E36CF3 /* 04.wav */; };
 		B8EDB49B1AB4162B00E36CF3 /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8EDB4941AB4162B00E36CF3 /* 03.wav */; };
@@ -360,6 +366,12 @@
 		B822D9771ABD61990000584A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B822D9791ABD687A0000584A /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuViewController.h; sourceTree = "<group>"; };
 		B822D97A1ABD687A0000584A /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuViewController.m; sourceTree = "<group>"; };
+		B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "264981__renatalmar__sfx-magic.wav"; sourceTree = "<group>"; };
+		B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504513.png; sourceTree = "<group>"; };
+		B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504515.png; sourceTree = "<group>"; };
+		B87D3A101AC682690057D1E7 /* o0096012813251504516.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504516.png; sourceTree = "<group>"; };
+		B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "216782__castironcarousel__punch-6.aiff"; sourceTree = "<group>"; };
+		B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118513__thefsoundman__punch-02.wav"; sourceTree = "<group>"; };
 		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		B8EDB4931AB4162B00E36CF3 /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
@@ -668,6 +680,9 @@
 		18A0B2E51A3C185E00CDCF8A /* human */ = {
 			isa = PBXGroup;
 			children = (
+				B87D3A0F1AC682690057D1E7 /* o0096012813251504515.png */,
+				B87D3A101AC682690057D1E7 /* o0096012813251504516.png */,
+				B87D3A0C1AC6819A0057D1E7 /* o0096012813251504513.png */,
 				0750AE371A6A546B00DD05A3 /* hero1.png */,
 				1837F4511A4E48C100075299 /* bt01.png */,
 				1837F4521A4E48C100075299 /* bt02.png */,
@@ -840,6 +855,9 @@
 		B8EDB4921AB4161200E36CF3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				B87D3A0A1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav */,
+				B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */,
+				B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */,
 				B8EDB4931AB4162B00E36CF3 /* 04.wav */,
 				B8EDB4941AB4162B00E36CF3 /* 03.wav */,
 				B8EDB4951AB4162B00E36CF3 /* 07.wav */,
@@ -1127,6 +1145,7 @@
 				612C6F201A85FEA00089573B /* BossRightAttack2.png in Resources */,
 				B8EDB49A1AB4162B00E36CF3 /* 04.wav in Resources */,
 				612C6F1B1A85FEA00089573B /* BossLeftAttack3.png in Resources */,
+				B87D3A121AC682690057D1E7 /* o0096012813251504515.png in Resources */,
 				FB60843D1AAB7804005A71E4 /* powerImg.png in Resources */,
 				1837F4631A4E48C100075299 /* rl01.png in Resources */,
 				0750AE3C1A6A5DE000DD05A3 /* dragon3.png in Resources */,
@@ -1147,6 +1166,7 @@
 				FB6084421AAB7890005A71E4 /* mapbg01.png in Resources */,
 				612C6F361A85FEA00089573B /* HeroLeftAttack3.png in Resources */,
 				FB839EA31AAB07D600CFFCCB /* pipo-btleffect127.png in Resources */,
+				B87D3A0D1AC6819A0057D1E7 /* o0096012813251504513.png in Resources */,
 				612C6F341A85FEA00089573B /* HeroLeftAttack1.png in Resources */,
 				1837F4791A4E48ED00075299 /* back1.png in Resources */,
 				B8EDB4A01AB4162B00E36CF3 /* 06.wav in Resources */,
@@ -1165,10 +1185,12 @@
 				FBCEA86B1AAB5FC900663C61 /* pipo-btleffect127_jacket@2x.png in Resources */,
 				FB839EAA1AAB07D600CFFCCB /* pipo-btleffect129@2x.png in Resources */,
 				1837F44F1A4E484E00075299 /* dragon_orange_tb02@2x.png in Resources */,
+				B87D3A171AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav in Resources */,
 				612C6F2E1A85FEA00089573B /* Enemy2Nomal1.png in Resources */,
 				1837F4461A4E484E00075299 /* dragon_orange_bt02@2x.png in Resources */,
 				612C6F321A85FEA00089573B /* Enemy2RightAttack2.png in Resources */,
 				FB839E821AAB07D600CFFCCB /* pipo-btleffect036.png in Resources */,
+				B87D3A151AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff in Resources */,
 				FB6084431AAB7890005A71E4 /* mapbg02.png in Resources */,
 				1837F4491A4E484E00075299 /* dragon_orange_lr02@2x.png in Resources */,
 				FB839E941AAB07D600CFFCCB /* pipo-btleffect032@2x.png in Resources */,
@@ -1177,6 +1199,7 @@
 				181615221AB41FAC00E486AE /* dora12.png in Resources */,
 				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
+				B87D3A131AC682690057D1E7 /* o0096012813251504516.png in Resources */,
 				FB839E7B1AAB07D600CFFCCB /* pipo-btleffect029.png in Resources */,
 				B8EDB49F1AB4162B00E36CF3 /* 05.wav in Resources */,
 				612C6F1C1A85FEA00089573B /* BossNomal1.png in Resources */,
@@ -1241,6 +1264,7 @@
 				1837F4841A4E48ED00075299 /* left4.png in Resources */,
 				FB839E911AAB07D600CFFCCB /* pipo-btleffect029@2x.png in Resources */,
 				FB839EA71AAB07D600CFFCCB /* pipo-btleffect126@2x.png in Resources */,
+				B87D3A0B1AC678FD0057D1E7 /* 264981__renatalmar__sfx-magic.wav in Resources */,
 				FB839E761AAB07D600CFFCCB /* pipo-btleffect024.png in Resources */,
 				612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */,
 				1837F45F1A4E48C100075299 /* bt03.png in Resources */,
