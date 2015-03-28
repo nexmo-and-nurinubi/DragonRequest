@@ -15,10 +15,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gJk-rD-5rN">
-                    <rect key="frame" x="-8" y="54" width="240" height="112"/>
+                    <rect key="frame" x="-49" y="-70" width="310" height="310"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="353" y="113"/>
         </view>
