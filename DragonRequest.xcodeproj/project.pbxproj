@@ -160,6 +160,7 @@
 		FB396A521AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */; };
 		FB396A531AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */; };
 		FB396A551AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */; };
+		FB396A571AC6A014000CD06C /* game_maoudamashii_9_medley02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB396A561AC6A014000CD06C /* game_maoudamashii_9_medley02.mp3 */; };
 		FB572F991AAACF3800D1DA96 /* WeaponCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */; };
 		FB60843C1AAB7804005A71E4 /* powerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB60843A1AAB7804005A71E4 /* powerBg.png */; };
 		FB60843D1AAB7804005A71E4 /* powerImg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB60843B1AAB7804005A71E4 /* powerImg.png */; };
@@ -427,6 +428,7 @@
 		FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_element_fire10.mp3; sourceTree = "<group>"; };
 		FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_voice_human05.mp3; sourceTree = "<group>"; };
 		FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_voice_monster01.mp3; sourceTree = "<group>"; };
+		FB396A561AC6A014000CD06C /* game_maoudamashii_9_medley02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_maoudamashii_9_medley02.mp3; sourceTree = "<group>"; };
 		FB572F971AAACF3800D1DA96 /* WeaponCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponCollectionViewCell.h; sourceTree = "<group>"; };
 		FB572F981AAACF3800D1DA96 /* WeaponCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponCollectionViewCell.m; sourceTree = "<group>"; };
 		FB60843A1AAB7804005A71E4 /* powerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerBg.png; sourceTree = "<group>"; };
@@ -935,6 +937,7 @@
 				FB396A431AC69053000CD06C /* 118513__thefsoundman__punch-02.wav */,
 				FB396A441AC69053000CD06C /* 216782__castironcarousel__punch-6.aiff */,
 				FB396A451AC69053000CD06C /* 264981__renatalmar__sfx-magic.wav */,
+				FB396A561AC6A014000CD06C /* game_maoudamashii_9_medley02.mp3 */,
 				FB396A461AC69053000CD06C /* se_maoudamashii_element_fire10.mp3 */,
 				FB396A471AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 */,
 				FB396A541AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 */,
@@ -1358,6 +1361,7 @@
 				612C6F2D1A85FEA00089573B /* Enemy2LeftAttack3.png in Resources */,
 				FB839E851AAB07D600CFFCCB /* pipo-btleffect039.png in Resources */,
 				1837F47A1A4E48ED00075299 /* back2.png in Resources */,
+				FB396A571AC6A014000CD06C /* game_maoudamashii_9_medley02.mp3 in Resources */,
 				FB839E781AAB07D600CFFCCB /* pipo-btleffect026.png in Resources */,
 				FB396A551AC69160000CD06C /* se_maoudamashii_voice_monster01.mp3 in Resources */,
 				1837F44B1A4E484E00075299 /* dragon_orange_rl01@2x.png in Resources */,
