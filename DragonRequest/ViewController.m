@@ -868,7 +868,7 @@
     UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
-    [imageView setImage:[UIImage imageNamed:@"gamecenter.png"]];
+    [imageView setImage:[UIImage imageNamed:@"GameOver.png"]];
     [demoView addSubview:imageView];
     
     return demoView;
