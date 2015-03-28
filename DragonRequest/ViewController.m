@@ -61,7 +61,13 @@
     
     DrUtil *_utilManager;
     
-    AVAudioPlayer *deadSound;
+    AVAudioPlayer *_startSound;
+    
+    AVAudioPlayer *_deadMarineSound;
+    AVAudioPlayer *_deadBossSound;
+    AVAudioPlayer *_heroAttackSound;
+    AVAudioPlayer *_heroScreamSound;
+    AVAudioPlayer *_heroDeadSound;
     
     NSUserDefaults* defaults;
     NSMutableArray *scoreArray;
@@ -95,9 +101,32 @@
     stagenumber = 1;
 
     // AudioPlayer初期化
-    NSString *path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
-    deadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    [deadSound prepareToPlay];
+    NSString *path = nil;
+    
+    path = [[NSBundle mainBundle] pathForResource : @"264981__renatalmar__sfx-magic" ofType :@"wav"];
+    _startSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_startSound prepareToPlay];
+
+    path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    _deadMarineSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_deadMarineSound prepareToPlay];
+
+    path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    _deadBossSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_deadBossSound prepareToPlay];
+
+    path = [[NSBundle mainBundle] pathForResource : @"118513__thefsoundman__punch-02" ofType :@"wav"];
+    _heroAttackSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_heroAttackSound prepareToPlay];
+    
+    path = [[NSBundle mainBundle] pathForResource : @"264981__renatalmar__sfx-magic" ofType :@"wav"];
+    _heroScreamSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_heroScreamSound prepareToPlay];
+
+    path = [[NSBundle mainBundle] pathForResource : @"264981__renatalmar__sfx-magic" ofType :@"wav"];
+    _heroDeadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [_heroDeadSound prepareToPlay];
+    
     
     //画面・キャラクター初期化
     [self startGame];
@@ -133,7 +162,7 @@
         
     } else {
         
-        playerNameLabel.text = [NSString stringWithFormat:@"不明ユーザ"];
+        playerNameLabel.text = [NSString stringWithFormat:@"俺様"];
         
     }
 }
@@ -163,14 +192,19 @@
     
     
     // 敵を倒した時の音を再生
-    [deadSound stop];
-    deadSound.currentTime = 0;
-    [deadSound play];
+    [_deadMarineSound stop];
+    _deadMarineSound.currentTime = 0;
+    [_deadMarineSound play];
 }
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // 敵を倒した時の音を再生
+    [_heroAttackSound stop];
+    _heroAttackSound.currentTime = 0;
+    [_heroAttackSound play];
+    
     NSLog(@"touches count : %lu (touchesBegan:withEvent:)", (unsigned long)[touches count]);
     //タッチイベントとタグを取り出す
     UITouch *touch = [touches anyObject];
@@ -231,12 +265,26 @@
                     
                     if([enemy isKindOfClass:[EnemyBoss class]]){
                         
+                        // 敵を倒した時の音を再生
+                        [_deadBossSound stop];
+                        _deadBossSound.currentTime = 0;
+                        [_deadBossSound play];
+                        
                         [_enemyBossArray removeObject:enemy];
+                        
+                        _hero.power += 100;
                         
                     }
                     else if([enemy isKindOfClass:[EnemyMarine class]]){
                         
+                        // 敵を倒した時の音を再生
+                        [_deadMarineSound stop];
+                        _deadMarineSound.currentTime = 0;
+                        [_deadMarineSound play];
+                        
                         [_enemyMarineArray removeObject:enemy];
+
+                        _hero.power += 10;
                         
                     }
                 }
@@ -382,6 +430,11 @@
     //ゲームオーバーチェック（Hero命パワーが０？）
     if(_hero.power<=0.0){
 
+        // 敵を倒した時の音を再生
+        [_heroDeadSound stop];
+        _heroDeadSound.currentTime = 0;
+        [_heroDeadSound play];
+        
         //_storyTimerストップ
         [_storyTimer invalidate];
         _storyTimer = nil;
@@ -621,6 +674,13 @@
     //heroのx、y座標
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
+    
+    // 敵を倒した時の音を再生264981__renatalmar__sfx-magic
+    // AudioPlayer初期化
+    [_startSound stop];
+    _startSound.currentTime = 0;
+    [_startSound play];
+    
     
     [self createEnemy];
     [self createEnemy];
