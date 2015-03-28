@@ -1739,6 +1739,7 @@
 				186A41A61AC68C9000E9DFE5 /* appicon-60@2x.png in Resources */,
 				186A41B41AC68C9000E9DFE5 /* appicon@2x.png in Resources */,
 				612C6F221A85FEA00089573B /* EnemyLeftAttack1.png in Resources */,
+				FB396A531AC69053000CD06C /* se_maoudamashii_voice_human05.mp3 in Resources */,
 				186A41A31AC68C9000E9DFE5 /* ic_launcher.png in Resources */,
 				186A41981AC68C9000E9DFE5 /* appicon-Small@2x.png in Resources */,
 				186A418E1AC68C9000E9DFE5 /* appicon-60@3x.png in Resources */,
