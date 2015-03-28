@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -147,11 +148,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4Uc-A6-hrM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BEv-wq-2D5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-fc-CkC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiV-GS-2B0">
                                 <rect key="frame" x="48" y="196" width="224" height="176"/>
@@ -199,33 +200,44 @@
                                     <constraint firstAttribute="height" constant="176" id="xzo-Cz-Vrd"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wakewakan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO">
-                                <rect key="frame" x="16" y="70" width="288" height="97"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新入社員が作った大作ゲーム" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO">
+                                <rect key="frame" x="16" y="20" width="288" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="Hee-Su-5al"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="uxq-lt-fd4">
+                                <rect key="frame" x="40" y="60" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="jaJ-1M-MEI"/>
+                                    <constraint firstAttribute="height" constant="128" id="xAb-RS-C3S"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Uc-A6-hrM" firstAttribute="top" secondItem="iPl-fc-CkC" secondAttribute="bottom" id="7f9-eb-dmL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iPl-fc-CkC" secondAttribute="trailing" constant="-16" id="ELV-Ce-POY"/>
-                            <constraint firstItem="WiV-GS-2B0" firstAttribute="top" secondItem="9wa-sJ-pPO" secondAttribute="bottom" constant="29" id="G1h-o7-lB3"/>
+                            <constraint firstItem="WiV-GS-2B0" firstAttribute="top" secondItem="9wa-sJ-pPO" secondAttribute="bottom" constant="79" id="G1h-o7-lB3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxq-lt-fd4" secondAttribute="trailing" constant="24" id="Ilp-wr-NGx"/>
+                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="20" id="KnU-9f-nbu"/>
+                            <constraint firstItem="4Uc-A6-hrM" firstAttribute="top" secondItem="iPl-fc-CkC" secondAttribute="bottom" id="Tpg-DS-yGa"/>
                             <constraint firstItem="9wa-sJ-pPO" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" id="UOc-Ws-ydm"/>
                             <constraint firstItem="iPl-fc-CkC" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="-16" id="UWT-ja-rmw"/>
                             <constraint firstAttribute="centerY" secondItem="WiV-GS-2B0" secondAttribute="centerY" id="Xfq-r9-ouQ"/>
                             <constraint firstItem="9wa-sJ-pPO" firstAttribute="trailing" secondItem="BEv-wq-2D5" secondAttribute="trailingMargin" id="Z02-gq-OzJ"/>
+                            <constraint firstItem="uxq-lt-fd4" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="60" id="bdx-43-Nfj"/>
                             <constraint firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="h5a-eE-qfD"/>
                             <constraint firstItem="iPl-fc-CkC" firstAttribute="top" secondItem="BEv-wq-2D5" secondAttribute="topMargin" id="lpG-dU-22b"/>
+                            <constraint firstItem="uxq-lt-fd4" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="24" id="s83-1l-OKA"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXk-aa-G6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,6 +370,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo2.png" width="640" height="400"/>
         <image name="mapbg01.png" width="640" height="480"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
