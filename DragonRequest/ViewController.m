@@ -111,11 +111,11 @@
     _deadMarineSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [_deadMarineSound prepareToPlay];
 
-    path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
+    path = [[NSBundle mainBundle] pathForResource : @"se_maoudamashii_voice_monster01" ofType :@"mp3"];
     _deadBossSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [_deadBossSound prepareToPlay];
 
-    path = [[NSBundle mainBundle] pathForResource : @"118513__thefsoundman__punch-02" ofType :@"wav"];
+    path = [[NSBundle mainBundle] pathForResource : @"se_maoudamashii_element_fire10" ofType :@"mp3"];
     _heroAttackSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [_heroAttackSound prepareToPlay];
     
@@ -123,7 +123,7 @@
     _heroScreamSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [_heroScreamSound prepareToPlay];
 
-    path = [[NSBundle mainBundle] pathForResource : @"264981__renatalmar__sfx-magic" ofType :@"wav"];
+    path = [[NSBundle mainBundle] pathForResource : @"se_maoudamashii_voice_human05" ofType :@"mp3"];
     _heroDeadSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     [_heroDeadSound prepareToPlay];
     
