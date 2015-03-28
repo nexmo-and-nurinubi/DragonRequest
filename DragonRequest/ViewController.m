@@ -61,7 +61,7 @@
     
     DrUtil *_utilManager;
     
-    AVAudioPlayer *_startSound;
+    AVAudioPlayer *_BGM;
     
     AVAudioPlayer *_deadMarineSound;
     AVAudioPlayer *_deadBossSound;
@@ -103,9 +103,10 @@
     // AudioPlayer初期化
     NSString *path = nil;
     
-    path = [[NSBundle mainBundle] pathForResource : @"264981__renatalmar__sfx-magic" ofType :@"wav"];
-    _startSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    [_startSound prepareToPlay];
+    path = [[NSBundle mainBundle] pathForResource : @"game_maoudamashii_9_medley02" ofType :@"mp3"];
+    _BGM = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    _BGM.numberOfLoops = -1;
+    [_BGM prepareToPlay];
 
     path = [[NSBundle mainBundle] pathForResource : @"07" ofType :@"wav"];
     _deadMarineSound = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
@@ -448,6 +449,9 @@
 
     //ゲームオーバーチェック（Hero命パワーが０？）
     if(_hero.power<=0.0){
+        // BGMを停止
+        [_BGM stop];
+        _BGM.currentTime = 0;
 
         // 敵を倒した時の音を再生
         [_heroDeadSound stop];
@@ -652,6 +656,11 @@
 /** リセット */
 - (void)startGame {
     
+    // BGMを再生
+    [_BGM stop];
+    _BGM.currentTime = 0;
+    [_BGM play];
+    
     clearmes = @"次のステージに進みます";
     int createtime = 0;
     _score = 0;
@@ -693,13 +702,6 @@
     //heroのx、y座標
     _xPos = _hero.position.x;
     _yPos = _hero.position.y;
-    
-    // 敵を倒した時の音を再生264981__renatalmar__sfx-magic
-    // AudioPlayer初期化
-    [_startSound stop];
-    _startSound.currentTime = 0;
-    [_startSound play];
-    
     
     [self createEnemy];
     [self createEnemy];
