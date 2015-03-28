@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rrm-Js-jUq">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -148,17 +149,39 @@
                         <viewControllerLayoutGuide type="bottom" id="4Uc-A6-hrM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BEv-wq-2D5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-fc-CkC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO" userLabel="新入社員が作った 大作ゲーム">
+                                <rect key="frame" x="16" y="26" width="288" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="ksY-wk-3lO"/>
+                                </constraints>
+                                <string key="text">新入社員が作った
+大作ゲーム</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="uxq-lt-fd4">
+                                <rect key="frame" x="20" y="53" width="280" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="NwI-gI-JU9"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiV-GS-2B0">
-                                <rect key="frame" x="48" y="196" width="224" height="176"/>
+                                <rect key="frame" x="48" y="236" width="224" height="192"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-as-4ze">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-as-4ze">
                                         <rect key="frame" x="57" y="41" width="110" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZyX-0b-t8A"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                         <size key="titleShadowOffset" width="2" height="-2"/>
                                         <state key="normal" title="Start">
@@ -169,7 +192,7 @@
                                             <segue destination="BYZ-38-t0r" kind="custom" customClass="MySegue" id="2bE-nO-n2B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SW-Om-hWa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SW-Om-hWa">
                                         <rect key="frame" x="57" y="101" width="110" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                         <size key="titleShadowOffset" width="2" height="-2"/>
@@ -184,8 +207,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="224" id="3ju-Iy-icI"/>
-                                    <constraint firstAttribute="height" constant="176" id="xzo-Cz-Vrd"/>
+                                    <constraint firstItem="mSS-as-4ze" firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="F9B-ZU-dvE"/>
+                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="leading" secondItem="mSS-as-4ze" secondAttribute="leading" id="PZC-fY-zyV"/>
+                                    <constraint firstAttribute="bottom" secondItem="WI4-i1-YbA" secondAttribute="bottom" constant="41" id="YSS-am-dQv"/>
+                                    <constraint firstItem="WI4-i1-YbA" firstAttribute="trailing" secondItem="mSS-as-4ze" secondAttribute="trailing" id="dPm-Y6-O58"/>
+                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="top" secondItem="mSS-as-4ze" secondAttribute="bottom" constant="10" id="dfe-0f-dFh"/>
+                                    <constraint firstItem="WI4-i1-YbA" firstAttribute="trailing" secondItem="4SW-Om-hWa" secondAttribute="trailing" id="hHc-2p-aQK"/>
+                                    <constraint firstItem="mSS-as-4ze" firstAttribute="leading" secondItem="WiV-GS-2B0" secondAttribute="leading" constant="57" id="j7j-QQ-4Hp"/>
+                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="firstBaseline" secondItem="WI4-i1-YbA" secondAttribute="firstBaseline" id="jCm-1d-QWw"/>
+                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="baseline" secondItem="WI4-i1-YbA" secondAttribute="baseline" id="nx1-jx-aBb"/>
+                                    <constraint firstItem="WI4-i1-YbA" firstAttribute="leading" secondItem="4SW-Om-hWa" secondAttribute="leading" id="ogy-pk-cbu"/>
+                                    <constraint firstItem="mSS-as-4ze" firstAttribute="top" secondItem="WiV-GS-2B0" secondAttribute="top" constant="41" id="qJg-Ra-OvU"/>
+                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="top" secondItem="WI4-i1-YbA" secondAttribute="top" id="ud2-cn-DvS"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新入社員が作った大作ゲーム" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO">
@@ -221,23 +254,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="iPl-fc-CkC" secondAttribute="trailing" constant="-16" id="ELV-Ce-POY"/>
-                            <constraint firstItem="WiV-GS-2B0" firstAttribute="top" secondItem="9wa-sJ-pPO" secondAttribute="bottom" constant="79" id="G1h-o7-lB3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uxq-lt-fd4" secondAttribute="trailing" constant="24" id="Ilp-wr-NGx"/>
-                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="20" id="KnU-9f-nbu"/>
-                            <constraint firstItem="4Uc-A6-hrM" firstAttribute="top" secondItem="iPl-fc-CkC" secondAttribute="bottom" id="Tpg-DS-yGa"/>
-                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" id="UOc-Ws-ydm"/>
-                            <constraint firstItem="iPl-fc-CkC" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="-16" id="UWT-ja-rmw"/>
-                            <constraint firstAttribute="centerY" secondItem="WiV-GS-2B0" secondAttribute="centerY" id="Xfq-r9-ouQ"/>
-                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="trailing" secondItem="BEv-wq-2D5" secondAttribute="trailingMargin" id="Z02-gq-OzJ"/>
-                            <constraint firstItem="uxq-lt-fd4" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="60" id="bdx-43-Nfj"/>
-                            <constraint firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="h5a-eE-qfD"/>
-                            <constraint firstItem="iPl-fc-CkC" firstAttribute="top" secondItem="BEv-wq-2D5" secondAttribute="topMargin" id="lpG-dU-22b"/>
-                            <constraint firstItem="uxq-lt-fd4" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="24" id="s83-1l-OKA"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="90H-SK-9kA"/>
+                            <constraint firstItem="4Uc-A6-hrM" firstAttribute="top" secondItem="WiV-GS-2B0" secondAttribute="bottom" constant="140" id="Hpc-7e-Sc2"/>
+                            <constraint firstItem="WiV-GS-2B0" firstAttribute="top" secondItem="uxq-lt-fd4" secondAttribute="bottom" constant="8" symbolic="YES" id="KMT-wJ-ru4"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="top" secondItem="BEv-wq-2D5" secondAttribute="top" id="P9P-A3-ICv"/>
+                            <constraint firstItem="WiV-GS-2B0" firstAttribute="centerX" secondItem="uxq-lt-fd4" secondAttribute="centerX" id="PD6-bS-bRg"/>
+                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" id="QcI-VQ-g28"/>
+                            <constraint firstItem="WiV-GS-2B0" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="32" id="Udh-gL-5kn"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leading" id="WRO-Aw-sZk"/>
+                            <constraint firstItem="uxq-lt-fd4" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="33" id="YqH-7l-JTP"/>
+                            <constraint firstItem="uxq-lt-fd4" firstAttribute="leading" secondItem="BEv-wq-2D5" secondAttribute="leadingMargin" constant="4" id="aKA-Ah-VUp"/>
+                            <constraint firstItem="uxq-lt-fd4" firstAttribute="centerX" secondItem="9wa-sJ-pPO" secondAttribute="centerX" id="enI-jr-TDJ"/>
+                            <constraint firstItem="iPl-fc-CkC" firstAttribute="bottom" secondItem="4Uc-A6-hrM" secondAttribute="top" id="phs-sv-4GY"/>
+                            <constraint firstItem="9wa-sJ-pPO" firstAttribute="top" secondItem="Spq-jA-6B7" secondAttribute="bottom" constant="6" id="pyk-KR-jAe"/>
+                            <constraint firstAttribute="trailing" secondItem="iPl-fc-CkC" secondAttribute="trailing" id="weo-fj-aTz"/>
                         </constraints>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXk-aa-G6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
