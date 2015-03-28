@@ -6,8 +6,3 @@
 //  Copyright (c) 2015年 Apple. All rights reserved.
 //
 
-#import "DropItemCommon.h"
-
-@implementation DropItemCommon : NSObject 
-
-@end

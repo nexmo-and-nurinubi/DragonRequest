@@ -48,9 +48,9 @@
     int stagenumber;
 
     //スコア
-    NSInteger score;
+    NSInteger _score;
     //トップスコア
-    NSInteger topScore;
+    NSInteger _topScore;
     
     __weak IBOutlet UILabel *heroPowerLabel;
     __weak IBOutlet UILabel *scoreLabel;
@@ -83,10 +83,10 @@
 
     //トップスコア初期化＆ロード
     defaults = [NSUserDefaults standardUserDefaults];
-    topScore = [defaults integerForKey:@"TOPSCORE"];
+    _topScore = [defaults integerForKey:@"TOPSCORE"];
     
-    score = initMainScore;
-    scoreLabel.text = [@(score) stringValue];
+    _score = initMainScore;
+    scoreLabel.text = [@(_score) stringValue];
     
     // GameCenter初期化
     [[GameCenterManager sharedManager] setDelegate:self];
@@ -187,8 +187,8 @@
     
     [enemy removeImage];
     enemy = nil;
-    score += point;
-    scoreLabel.text = [@(score) stringValue];
+    _score += point;
+    scoreLabel.text = [@(_score) stringValue];
     
     
     // 敵を倒した時の音を再生
@@ -408,19 +408,38 @@
 
 - (void)checkGameStory{
     
-    score++;
+    _score++;
     
     //マリン移動
     for(EnemyMarine *_enemyMarine in _enemyMarineArray){
         
-        [_enemyMarine  moveRand:_hero];
+        BOOL ret = [_enemyMarine  moveRand:_hero];
+        
+        if(ret == YES){
+
+            // 敵を倒した時の音を再生
+            //[_heroScreamSound stop];
+            //_heroScreamSound.currentTime = 0;
+            //[_heroScreamSound play];
+            
+        }
+        
         
     }
 
     //ボス移動
     for(EnemyBoss *_enemyBoss in _enemyBossArray){
         
-        [_enemyBoss  moveRand:_hero];
+        BOOL ret = [_enemyBoss  moveRand:_hero];
+        
+        if(ret == YES){
+            
+            // 敵を倒した時の音を再生
+            //[_heroScreamSound stop];
+            //_heroScreamSound.currentTime = 0;
+            //[_heroScreamSound play];
+            
+        }
         
     }
     
@@ -463,22 +482,22 @@
         // And launch the dialog
         [alertView show];
         
-        if(score>=topScore){
+        if(_score>=_topScore){
             
-            topScore = score;
+            _topScore = _score;
             
-            [[GameCenterManager sharedManager] saveAndReportScore:(int)topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
+            [[GameCenterManager sharedManager] saveAndReportScore:(int)_topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
             
             
             // Integerの保存
-            [defaults setInteger:topScore forKey:@"TOPSCORE"];
+            [defaults setInteger:_topScore forKey:@"TOPSCORE"];
             
         }
         
     }
 
-    if(topScore<=score)topScore=score;
-    scoreLabel.text = [NSString stringWithFormat:@"%zd/%zd",score,topScore];
+    if(_topScore<=_score)_topScore=_score;
+    scoreLabel.text = [NSString stringWithFormat:@"%zd/%zd",_score,_topScore];
     
     heroPowerLabel.text = [@((int)_hero.power) stringValue];
 
@@ -635,7 +654,7 @@
     
     clearmes = @"次のステージに進みます";
     int createtime = 0;
-    score = 0;
+    _score = 0;
     
     switch (stagenumber) {
         case 1:
@@ -849,7 +868,7 @@
     UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
-    [imageView setImage:[UIImage imageNamed:@"gamecenter.png"]];
+    [imageView setImage:[UIImage imageNamed:@"GameOver.png"]];
     [demoView addSubview:imageView];
     
     return demoView;

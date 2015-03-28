@@ -62,6 +62,7 @@
 		1837F4861A4E48ED00075299 /* right2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4761A4E48ED00075299 /* right2.png */; };
 		1837F4871A4E48ED00075299 /* right3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4771A4E48ED00075299 /* right3.png */; };
 		1837F4881A4E48ED00075299 /* right4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837F4781A4E48ED00075299 /* right4.png */; };
+		186A41081AC68B5F00E9DFE5 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 186A41071AC68B5F00E9DFE5 /* GameOver.png */; };
 		189F86121A32DCCE0016D4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F86111A32DCCE0016D4EE /* main.m */; };
 		189F86151A32DCCE0016D4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F86141A32DCCE0016D4EE /* AppDelegate.m */; };
 		189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189F86161A32DCCE0016D4EE /* DragonRequest.xcdatamodeld */; };
@@ -285,6 +286,7 @@
 		1837F4761A4E48ED00075299 /* right2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right2.png; sourceTree = "<group>"; };
 		1837F4771A4E48ED00075299 /* right3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right3.png; sourceTree = "<group>"; };
 		1837F4781A4E48ED00075299 /* right4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right4.png; sourceTree = "<group>"; };
+		186A41071AC68B5F00E9DFE5 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOver.png; sourceTree = "<group>"; };
 		189F860C1A32DCCE0016D4EE /* DragonRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189F86111A32DCCE0016D4EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		189F86131A32DCCE0016D4EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		189F86031A32DCCE0016D4EE = {
 			isa = PBXGroup;
 			children = (
+				186A41071AC68B5F00E9DFE5 /* GameOver.png */,
 				B807532F1AC432AD00D18161 /* Library */,
 				18A0B2781A3C0DFF00CDCF8A /* common */,
 				18A0B2761A3C067C00CDCF8A /* Objects */,
@@ -1204,6 +1207,7 @@
 				612C6F191A85FEA00089573B /* BossLeftAttack1.png in Resources */,
 				0750AE401A6A5FC500DD05A3 /* hero3.png in Resources */,
 				181615221AB41FAC00E486AE /* dora12.png in Resources */,
+				186A41081AC68B5F00E9DFE5 /* GameOver.png in Resources */,
 				FBCEA8761AAB5FE700663C61 /* pipo-btleffect126_jacket.png in Resources */,
 				FB839E7A1AAB07D600CFFCCB /* pipo-btleffect028.png in Resources */,
 				B87D3A131AC682690057D1E7 /* o0096012813251504516.png in Resources */,
@@ -1382,6 +1386,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F861D1A32DCCE0016D4EE /* Base */,
+				B87D3A4B1AC69A540057D1E7 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1390,6 +1395,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F86221A32DCCE0016D4EE /* Base */,
+				B87D3A4A1AC69A540057D1E7 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1489,6 +1495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1504,6 +1511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

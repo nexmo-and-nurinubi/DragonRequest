@@ -264,7 +264,7 @@
     [_powerImageView removeFromSuperview];
 }
 
--(void)moveRand:(Human *)target
+-(BOOL)moveRand:(Human *)target
 {
     //敵が近くにいるか
     NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
@@ -286,6 +286,8 @@
             [self moveToPoint:_target.position];
             [self fight:target];
             
+            return YES;
+            
         }
         
         
@@ -294,8 +296,11 @@
     _moveRestCount--;
     
     [self move:_direction];
+
+    return NO;
     
 }
+
 -(void)stopToWalk
 {
    
