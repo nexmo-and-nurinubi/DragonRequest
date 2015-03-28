@@ -286,13 +286,7 @@
         if (xGap <= _radarRange && yGap <= _radarRange ) {
             
             [self moveToPoint:_target.position];
-            
-        }
-        else if (xGap <= _imageWidth*2 && yGap*2 <= _imageHeight ){
-            
             [self fight:target];
-            
-            ret = YES;
             
         }
         
@@ -591,8 +585,8 @@
     NSLog(@"(%zd,%zd)(%zd,%zd)",self.position.x,self.position.y,
           _target.position.x,_target.position.y);
     
-    NSInteger xGap = ABS(self.animationImageView.bounds.origin.x - _target.animationImageView.bounds.origin.x);
-    NSInteger yGap = ABS(self.animationImageView.bounds.origin.y - _target.animationImageView.bounds.origin.y);
+    NSInteger xGap = ABS(self.position.x - _target.position.x);
+    NSInteger yGap = ABS(self.position.y - _target.position.y);
     
     if (xGap <= _reach && yGap <= _reach ) {
         
