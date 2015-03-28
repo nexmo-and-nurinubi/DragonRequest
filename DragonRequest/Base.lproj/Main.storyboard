@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -155,7 +154,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapbg01.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPl-fc-CkC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO" userLabel="新入社員が作った 大作ゲーム">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-sJ-pPO" userLabel="新入社員が作った 大作ゲーム">
                                 <rect key="frame" x="16" y="26" width="288" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="ksY-wk-3lO"/>
@@ -219,6 +218,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="WI4-i1-YbA" firstAttribute="bottom" secondItem="4SW-Om-hWa" secondAttribute="bottom" id="7Zv-mT-vh3"/>
                                     <constraint firstItem="mSS-as-4ze" firstAttribute="centerX" secondItem="WiV-GS-2B0" secondAttribute="centerX" id="F9B-ZU-dvE"/>
                                     <constraint firstItem="4SW-Om-hWa" firstAttribute="leading" secondItem="mSS-as-4ze" secondAttribute="leading" id="PZC-fY-zyV"/>
                                     <constraint firstAttribute="bottom" secondItem="WI4-i1-YbA" secondAttribute="bottom" constant="41" id="YSS-am-dQv"/>
@@ -226,7 +226,6 @@
                                     <constraint firstItem="4SW-Om-hWa" firstAttribute="top" secondItem="mSS-as-4ze" secondAttribute="bottom" constant="10" id="dfe-0f-dFh"/>
                                     <constraint firstItem="WI4-i1-YbA" firstAttribute="trailing" secondItem="4SW-Om-hWa" secondAttribute="trailing" id="hHc-2p-aQK"/>
                                     <constraint firstItem="mSS-as-4ze" firstAttribute="leading" secondItem="WiV-GS-2B0" secondAttribute="leading" constant="57" id="j7j-QQ-4Hp"/>
-                                    <constraint firstItem="4SW-Om-hWa" firstAttribute="firstBaseline" secondItem="WI4-i1-YbA" secondAttribute="firstBaseline" id="jCm-1d-QWw"/>
                                     <constraint firstItem="4SW-Om-hWa" firstAttribute="baseline" secondItem="WI4-i1-YbA" secondAttribute="baseline" id="nx1-jx-aBb"/>
                                     <constraint firstItem="WI4-i1-YbA" firstAttribute="leading" secondItem="4SW-Om-hWa" secondAttribute="leading" id="ogy-pk-cbu"/>
                                     <constraint firstItem="mSS-as-4ze" firstAttribute="top" secondItem="WiV-GS-2B0" secondAttribute="top" constant="41" id="qJg-Ra-OvU"/>
