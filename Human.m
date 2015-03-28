@@ -72,6 +72,8 @@
         
         _humanTimer = nil;
         
+        _moveRestCount = 0;
+        
         _currentComma = 0;
         
         // デフォルトでは透明度を１にしておく
@@ -266,11 +268,11 @@
 
 -(BOOL)moveRand:(Human *)target
 {
+    BOOL ret = NO;
+    
     //敵が近くにいるか
     NSInteger xGap = ABS(self.animationImageView.center.x - _target.animationImageView.center.x);
     NSInteger yGap = ABS(self.animationImageView.center.y - _target.animationImageView.center.y);
-    
-    
     
     //視野外ならランダムで移動
     if (_moveRestCount % 3) {
@@ -286,7 +288,7 @@
             [self moveToPoint:_target.position];
             [self fight:target];
             
-            return YES;
+            ret = YES;
             
         }
         
@@ -297,7 +299,7 @@
     
     [self move:_direction];
 
-    return NO;
+    return ret;
     
 }
 
