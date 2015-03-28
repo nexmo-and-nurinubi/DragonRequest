@@ -372,6 +372,8 @@
 		B87D3A101AC682690057D1E7 /* o0096012813251504516.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o0096012813251504516.png; sourceTree = "<group>"; };
 		B87D3A141AC6838E0057D1E7 /* 216782__castironcarousel__punch-6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "216782__castironcarousel__punch-6.aiff"; sourceTree = "<group>"; };
 		B87D3A161AC6841D0057D1E7 /* 118513__thefsoundman__punch-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118513__thefsoundman__punch-02.wav"; sourceTree = "<group>"; };
+		B87D3A4A1AC69A540057D1E7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B87D3A4B1AC69A540057D1E7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		B8EDB48F1AB4071D00E36CF3 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		B8EDB4901AB4071D00E36CF3 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		B8EDB4931AB4162B00E36CF3 /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
@@ -1370,6 +1372,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F861D1A32DCCE0016D4EE /* Base */,
+				B87D3A4B1AC69A540057D1E7 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1378,6 +1381,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				189F86221A32DCCE0016D4EE /* Base */,
+				B87D3A4A1AC69A540057D1E7 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
