@@ -5,12 +5,6 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>Title</key>
-			<string>Info</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
@@ -18,27 +12,15 @@
 			<key>Key</key>
 			<string>UINewsstandBindingType</string>
 			<key>DefaultValue</key>
-			<string>-</string>
+			<string>1.0</string>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
+			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
-			<string>Copyright</string>
-			<key>identifier</key>
-			<string></string>
-			<key>Default Value</key>
-			<string>-</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Git</string>
-			<key>Key</key>
-			<string>CFBundleURLTypes</string>
-			<key>DefaultValue</key>
-			<string>https://github.com/nexmo-and-nurinubi/DragonRequest</string>
+			<string>Acknowledgements</string>
+			<key>File</key>
+			<string>Acknowledgements</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
