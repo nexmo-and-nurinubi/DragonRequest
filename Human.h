@@ -14,9 +14,6 @@
 
 @interface Human : NSObject {
     
-    //キャラクタータイプ（human / marine / boss など）
-    HumanType _myHumanType;
-    
     //移動方向
     DirectionType _direction;
     
@@ -67,6 +64,9 @@
     
 }
 
+//キャラクタータイプ（human / marine / boss など）
+@property (nonatomic,assign) HumanType myHumanType;
+
 //キャラクター名
 @property (nonatomic,copy) NSString *name;
 
@@ -111,6 +111,8 @@
 -(void)setImage:(UIView *)parentView belowSubview:(UIView *)siblingSubview;
 -(void)removeImage;
 -(BOOL)moveRand:(Human *)target;
+-(void)setPower:(float)power defaultPower:(float)defaultPower;
+-(void)addPower:(float)power defaultPower:(float)defaultPower;
 -(void)setPowerImage;
 -(void)setFightAnimImage;
 -(void)move:(DirectionType) direction;

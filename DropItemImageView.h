@@ -10,11 +10,15 @@
 
 @interface DropItemImageView : UIImageView
 
-- (instancetype)initWithPoint:(CGPoint)center dropItemType:(DropItemType)type;
+- (instancetype)initWithPoint:(CGPoint)center human:(Human *)enemy dropItemType:(DropItemType)type;
 
 @property (nonatomic, assign) DropItemType dropItemType;
 @property (nonatomic, assign) StatusUpType statusUpType;
 @property (nonatomic, assign) MagicType magicType;
 @property (nonatomic, assign) WeaponType weaponType;
+
+// StatusUpTypePowerUp's Parameter
+@property (nonatomic, assign) float powerHealingValue;
+@property (nonatomic, assign) float powerUpValue;
 
 @end

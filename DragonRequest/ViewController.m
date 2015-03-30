@@ -197,14 +197,14 @@
     [_deadMarineSound play];
     
     // DropItemの生成と追加
-    [self addDropItemWithPoint:enemy.animationImageView.center];
+    [self addDropItemWithPoint:enemy.animationImageView.center human:enemy];
 }
 
 // DropItemの生成と追加
-- (void)addDropItemWithPoint:(CGPoint)center {
+- (void)addDropItemWithPoint:(CGPoint)center human:(Human *)enemy {
     DropItemType dropItemType = [DropItemController randDropItemType];
     if ([DropItemController isCreateDropItem:dropItemType]) {
-        DropItemImageView *dropItemImageView = [[DropItemImageView alloc] initWithPoint:center dropItemType:dropItemType];
+        DropItemImageView *dropItemImageView = [[DropItemImageView alloc] initWithPoint:center human:enemy dropItemType:dropItemType];
         [_dropItemImageViewArray addObject:dropItemImageView];
         [self.view addSubview:dropItemImageView];
     }
@@ -220,8 +220,7 @@
         case DropItemTypeStatusUp: {
             switch (dropItemImageView.statusUpType) {
                 case StatusUpTypePowerUp: {
-                    _hero.power += powerHealingValue;
-                    _hero.defaultPower += powerUpValue;
+                    [_hero addPower:dropItemImageView.powerHealingValue defaultPower:dropItemImageView.powerUpValue];
                     break;
                 }
             }
@@ -300,8 +299,6 @@
                         
                         [_enemyBossArray removeObject:enemy];
                         
-                        // DropItemの生成と追加
-                        [self addDropItemWithPoint:enemy.animationImageView.center];
                     }
                     else if([enemy isKindOfClass:[EnemyMarine class]]){
                         
@@ -312,10 +309,11 @@
                         
                         [_enemyMarineArray removeObject:enemy];
                         
-                        // DropItemの生成と追加
-                        [self addDropItemWithPoint:enemy.animationImageView.center];
-                        
                     }
+                    
+                    // DropItemの生成と追加
+                    [self addDropItemWithPoint:enemy.animationImageView.center human:enemy];
+                    
                 }
             }
             

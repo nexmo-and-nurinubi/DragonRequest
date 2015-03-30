@@ -22,7 +22,7 @@
     
     if (self) {
         
-        _myHumanType = HumanTypeBoss;
+        self.myHumanType = HumanTypeBoss;
         
         dragonImageFileNameArray = [NSArray arrayWithObjects: bossColoreBrack,
                                                               bossColoreBlue,
@@ -33,8 +33,7 @@
                                                               nil];
         self.name = bossDefaultName;
         
-        self.power = bossDefaultPower;
-        self.defaultPower = bossDefaultPower;
+        [self setPower:bossDefaultPower defaultPower:bossDefaultPower];
         self.minusPower = bossMinusPower;
         
         _stepX = bossStepX;

@@ -11,11 +11,12 @@
 
 @implementation DropItemImageView
 
-- (instancetype)initWithPoint:(CGPoint)center dropItemType:(DropItemType)type {
+- (instancetype)initWithPoint:(CGPoint)center human:(Human *)enemy dropItemType:(DropItemType)type {
     self = [super initWithFrame:CGRectMake(0.0, 0.0, DropItemImageSize, DropItemImageSize)];
     if (self) {
         self.center = center;
         self.userInteractionEnabled = YES;
+        HumanType humanType = enemy.myHumanType;
         self.dropItemType = type;
         switch (type) {
             case DropItemTypeNone:
@@ -26,6 +27,26 @@
                 switch (self.statusUpType) {
                     case StatusUpTypePowerUp: {
                         self.image = [UIImage imageNamed:imageName_heartPinkJacket];
+                        switch (humanType) {
+                            case HumanTypeHuman: {
+                                DLog(@"Error: HumanType is HumanTypeHuman.");
+                                break;
+                            }
+                            case HumanTypeHero: {
+                                DLog(@"Error: HumanType is HumanTypeHero.");
+                                break;
+                            }
+                            case HumanTypeEnemy: {
+                                self.powerHealingValue = powerHealingValueByMarine;
+                                self.powerUpValue = powerUpValueByMarine;
+                                break;
+                            }
+                            case HumanTypeBoss: {
+                                self.powerHealingValue = powerHealingValueByBoss;
+                                self.powerUpValue = powerUpValueByBoss;
+                                break;
+                            }
+                        }
                         break;
                     }
                 }
