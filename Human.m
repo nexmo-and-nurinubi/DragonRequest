@@ -50,7 +50,9 @@
         
         self.name = @"human";
         
-        _power = 0;
+        [self setPower:0 defaultPower:0];
+        self.minusPower = 0;
+        
         _level = 0;
         
         _tag = tag;
@@ -91,7 +93,7 @@
 - (void)posInitWithPoint:(CGPoint)point
 {
     if (point.x == 0 &&  point.y == 0) {
-        if (_myHumanType == HumanTypeEnemy ) {
+        if (self.myHumanType == HumanTypeEnemy ) {
             point = CGPointMake([common screenSizeWidth] / 2, [common screenSizeHeight] / 2);
         } else {
             CGFloat x = arc4random() % [common screenSizeWidth];
@@ -108,7 +110,7 @@
 - (NSString *)whoAreYou {
     
     NSString *str = [NSString stringWithFormat:@"%@[ p:%zd : %zd ]",
-                     self.name, self.power, _myHumanType];
+                     self.name, self.power, self.myHumanType];
     
     return str;
     
@@ -190,6 +192,23 @@
     
 }
 
+-(void)setPower:(float)power defaultPower:(float)defaultPower {
+    _defaultPower = defaultPower;
+    
+    // powerがdefaultPowerを上回るのを防ぐため
+    if (power > defaultPower) {
+        _power = defaultPower;
+    } else {
+        _power = power;
+    }
+}
+
+-(void)addPower:(float)power defaultPower:(float)defaultPower {
+    _power += power;
+    _defaultPower += defaultPower;
+    [self setPower:_power defaultPower:_defaultPower];
+}
+
 -(void)setPowerImage:(NSInteger)power
 {
     
@@ -208,7 +227,7 @@
     
     float bgImageWidth = _powerBgImageView.frame.size.width;
     
-    NSInteger powerWidth = (float)(_power/_defaultPower)*bgImageWidth;
+    NSInteger powerWidth = (float)(self.power/self.defaultPower)*bgImageWidth;
     _powerImageView.frame = CGRectMake(xx,self.position.y-humanPowerImgGapY,powerWidth,humanPowerImgHeight);
     
 }

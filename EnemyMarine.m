@@ -19,12 +19,11 @@
     
     if (self) {
         
-        _myHumanType = HumanTypeEnemy;
+        self.myHumanType = HumanTypeEnemy;
         
         self.name = marineDefaultName;
         
-        self.power = marineDefaultPower;
-        self.defaultPower = marineDefaultPower;
+        [self setPower:marineDefaultPower defaultPower:marineDefaultPower];
         self.minusPower = marineMinusPower;
         
         _stepX = marineStepX;

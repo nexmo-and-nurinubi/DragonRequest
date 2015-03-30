@@ -36,6 +36,9 @@
     //ボス保存配列
     NSMutableArray *_enemyMarineArray;
     
+    //DropItem保存配列
+    NSMutableArray *_dropItemImageViewArray;
+    
     int cnt;    //ボスの攻撃頻度調整カウンタ
     int createCnt;
     
@@ -96,6 +99,9 @@
 
     //ボス保存配列初期化
     _enemyBossArray = [NSMutableArray array];
+    
+    //DropItem保存配列初期化
+    _dropItemImageViewArray = [NSMutableArray array];
     
     //スタートステージ
     stagenumber = 1;
@@ -179,13 +185,6 @@
         point = marineDeadScore;
     }
     
-    // DropItemの生成
-    DropItemType dropItemType = [DropItemController randDropItemType];
-    if ([DropItemController isCreateDropItem:dropItemType]) {
-        DropItemImageView *dropItemImageView = [[DropItemImageView alloc] initWithPoint:enemy.animationImageView.center dropItemType:dropItemType];
-        [self.view addSubview:dropItemImageView];
-    }
-    
     [enemy removeImage];
     enemy = nil;
     _score += point;
@@ -196,8 +195,50 @@
     [_deadMarineSound stop];
     _deadMarineSound.currentTime = 0;
     [_deadMarineSound play];
+    
+    // DropItemの生成と追加
+    [self addDropItemWithPoint:enemy.animationImageView.center human:enemy];
 }
 
+// DropItemの生成と追加
+- (void)addDropItemWithPoint:(CGPoint)center human:(Human *)enemy {
+    DropItemType dropItemType = [DropItemController randDropItemType];
+    if ([DropItemController isCreateDropItem:dropItemType]) {
+        DropItemImageView *dropItemImageView = [[DropItemImageView alloc] initWithPoint:center human:enemy dropItemType:dropItemType];
+        [_dropItemImageViewArray addObject:dropItemImageView];
+        [self.view addSubview:dropItemImageView];
+    }
+}
+
+// DropItemを拾い、削除する
+- (void)foundAndRemoveDropItem:(DropItemImageView *)dropItemImageView {
+    switch (dropItemImageView.dropItemType) {
+        case DropItemTypeNone: {
+            DLog(@"Error: DropItemType is DropItemTypeNone.");
+            break;
+        }
+        case DropItemTypeStatusUp: {
+            switch (dropItemImageView.statusUpType) {
+                case StatusUpTypePowerUp: {
+                    [_hero addPower:dropItemImageView.powerHealingValue defaultPower:dropItemImageView.powerUpValue];
+                    break;
+                }
+            }
+            break;
+        }
+        case DropItemTypeMagic: {
+            // ToDo
+            break;
+        }
+        case DropItemTypeWeapon: {
+            // ToDo
+            break;
+        }
+    }
+    
+    [dropItemImageView removeFromSuperview];
+    [_dropItemImageViewArray removeObject:dropItemImageView];
+}
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -218,22 +259,7 @@
     
     //タッチしたのがDropItemなら拾う
     if ([view isKindOfClass:[DropItemImageView class]]) {
-        
-        DropItemType dropItemType = (DropItemType)tag;
-        switch (dropItemType) {
-            case DropItemTypeNone:
-                DLog(@"Error: DropItemType is DropItemTypeNone.");
-                break;
-            case DropItemTypeStatusUp:
-                // ToDo
-                break;
-            case DropItemTypeMagic:
-                // ToDo
-                break;
-            case DropItemTypeWeapon:
-                // ToDo
-                break;
-        }
+        [self foundAndRemoveDropItem:(DropItemImageView *)view];
     }
     //DropItem以外
     //背景をタッチ
@@ -273,8 +299,6 @@
                         
                         [_enemyBossArray removeObject:enemy];
                         
-                        _hero.power += 100;
-                        
                     }
                     else if([enemy isKindOfClass:[EnemyMarine class]]){
                         
@@ -284,10 +308,12 @@
                         [_deadMarineSound play];
                         
                         [_enemyMarineArray removeObject:enemy];
-
-                        _hero.power += 10;
                         
                     }
+                    
+                    // DropItemの生成と追加
+                    [self addDropItemWithPoint:enemy.animationImageView.center human:enemy];
+                    
                 }
             }
             
@@ -398,7 +424,16 @@
         
     }
     
-    // ToDo. 必要に応じて、DropItemImageViewも追加
+    for (DropItemImageView *dropItemImageView in _dropItemImageViewArray) {
+        NSInteger dropItemPosY = dropItemImageView.frame.origin.y + dropItemImageView.frame.size.height;
+        NSInteger heroPosY = _hero.animationImageView.frame.origin.y + _hero.animationImageView.frame.size.height;
+        
+        if (dropItemPosY > heroPosY)
+            [self.view bringSubviewToFront:dropItemImageView];
+        else
+            [_hero moveToFront:self.view];
+    }
+    
 //    [self.view bringSubviewToFront:_weaponCollectionView];
 //    [self.view bringSubviewToFront:topScoreLabel];
 //    [self.view bringSubviewToFront:scoreLabel];
@@ -693,6 +728,8 @@
     //ボス初期化
     [_enemyBossArray removeAllObjects];
     
+    //DropItem初期化
+    [_dropItemImageViewArray removeAllObjects];
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
@@ -854,6 +891,13 @@
 
         //_heroイメージクリア
         [_hero removeImage];
+        
+        //dropItemイメージクリア
+        for(DropItemImageView *dropItemImageView in _dropItemImageViewArray){
+            
+            [dropItemImageView removeFromSuperview];
+            
+        }
         
         [self startGame];
         

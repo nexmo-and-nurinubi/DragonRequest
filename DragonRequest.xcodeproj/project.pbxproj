@@ -127,13 +127,14 @@
 		612C6F3B1A85FEA00089573B /* HeroRightAttack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F171A85FEA00089573B /* HeroRightAttack2.png */; };
 		612C6F3C1A85FEA00089573B /* HeroRightAttack3.png in Resources */ = {isa = PBXBuildFile; fileRef = 612C6F181A85FEA00089573B /* HeroRightAttack3.png */; };
 		6156CD981AB5CA06008B7479 /* MySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156CD971AB5CA06008B7479 /* MySegue.m */; };
+		91FAD28D1AC8FC0D008F55D1 /* pipo-btleffect116h_jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FAD28B1AC8FC0D008F55D1 /* pipo-btleffect116h_jacket.png */; };
+		91FAD28E1AC8FC0D008F55D1 /* pipo-btleffect116h.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FAD28C1AC8FC0D008F55D1 /* pipo-btleffect116h.png */; };
 		B802D4171A90B50E00305B21 /* DrUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4161A90B50E00305B21 /* DrUtil.m */; };
 		B802D4201A90B53300305B21 /* EnemyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4191A90B53300305B21 /* EnemyBoss.m */; };
 		B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41B1A90B53300305B21 /* EnemyMarine.m */; };
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
-		B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753271AC426F800D18161 /* DropItemCommon.m */; };
 		B807532D1AC426F800D18161 /* DropItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753291AC426F800D18161 /* DropItemController.m */; };
 		B807532E1AC426F800D18161 /* DropItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B807532B1AC426F800D18161 /* DropItemImageView.m */; };
 		B80753321AC432C300D18161 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753311AC432C300D18161 /* CustomIOS7AlertView.m */; };
@@ -373,6 +374,10 @@
 		612C6F181A85FEA00089573B /* HeroRightAttack3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeroRightAttack3.png; sourceTree = "<group>"; };
 		6156CD961AB5CA06008B7479 /* MySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegue.h; sourceTree = "<group>"; };
 		6156CD971AB5CA06008B7479 /* MySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegue.m; sourceTree = "<group>"; };
+		91FAD28B1AC8FC0D008F55D1 /* pipo-btleffect116h_jacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect116h_jacket.png"; sourceTree = "<group>"; };
+		91FAD28C1AC8FC0D008F55D1 /* pipo-btleffect116h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipo-btleffect116h.png"; sourceTree = "<group>"; };
+		91FAD28F1AC8FC2A008F55D1 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = heart/readme.txt; sourceTree = "<group>"; };
+		91FAD2901AC8FC2A008F55D1 /* ウディタ用設定参考_116.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ウディタ用設定参考_116.jpg"; path = "heart/ウディタ用設定参考_116.jpg"; sourceTree = "<group>"; };
 		B802D4151A90B50E00305B21 /* DrUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrUtil.h; sourceTree = "<group>"; };
 		B802D4161A90B50E00305B21 /* DrUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrUtil.m; sourceTree = "<group>"; };
 		B802D4181A90B53300305B21 /* EnemyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBoss.h; sourceTree = "<group>"; };
@@ -387,7 +392,6 @@
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		B80753261AC426F800D18161 /* DropItemCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemCommon.h; sourceTree = "<group>"; };
-		B80753271AC426F800D18161 /* DropItemCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemCommon.m; sourceTree = "<group>"; };
 		B80753281AC426F800D18161 /* DropItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemController.h; sourceTree = "<group>"; };
 		B80753291AC426F800D18161 /* DropItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemController.m; sourceTree = "<group>"; };
 		B807532A1AC426F800D18161 /* DropItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemImageView.h; sourceTree = "<group>"; };
@@ -681,12 +685,6 @@
 		18A0B2781A3C0DFF00CDCF8A /* common */ = {
 			isa = PBXGroup;
 			children = (
-				B80753261AC426F800D18161 /* DropItemCommon.h */,
-				B80753271AC426F800D18161 /* DropItemCommon.m */,
-				B80753281AC426F800D18161 /* DropItemController.h */,
-				B80753291AC426F800D18161 /* DropItemController.m */,
-				B807532A1AC426F800D18161 /* DropItemImageView.h */,
-				B807532B1AC426F800D18161 /* DropItemImageView.m */,
 				B802D4271A90B61900305B21 /* common.h */,
 				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
@@ -857,6 +855,11 @@
 		911239301AC3CE3600B4A3ED /* DropItem */ = {
 			isa = PBXGroup;
 			children = (
+				B80753261AC426F800D18161 /* DropItemCommon.h */,
+				B80753281AC426F800D18161 /* DropItemController.h */,
+				B80753291AC426F800D18161 /* DropItemController.m */,
+				B807532A1AC426F800D18161 /* DropItemImageView.h */,
+				B807532B1AC426F800D18161 /* DropItemImageView.m */,
 			);
 			name = DropItem;
 			sourceTree = "<group>";
@@ -865,6 +868,8 @@
 			isa = PBXGroup;
 			children = (
 				911239381AC3E01200B4A3ED /* 120x120 */,
+				91FAD28F1AC8FC2A008F55D1 /* readme.txt */,
+				91FAD2901AC8FC2A008F55D1 /* ウディタ用設定参考_116.jpg */,
 			);
 			name = heart;
 			sourceTree = "<group>";
@@ -872,6 +877,8 @@
 		911239381AC3E01200B4A3ED /* 120x120 */ = {
 			isa = PBXGroup;
 			children = (
+				91FAD28B1AC8FC0D008F55D1 /* pipo-btleffect116h_jacket.png */,
+				91FAD28C1AC8FC0D008F55D1 /* pipo-btleffect116h.png */,
 			);
 			name = 120x120;
 			path = heart/120x120;
@@ -1304,6 +1311,7 @@
 				181615251AB41FAC00E486AE /* dora16.png in Resources */,
 				FBCEA8781AAB5FE700663C61 /* pipo-btleffect128_jacket.png in Resources */,
 				189F861E1A32DCCE0016D4EE /* Main.storyboard in Resources */,
+				91FAD28E1AC8FC0D008F55D1 /* pipo-btleffect116h.png in Resources */,
 				FB839E791AAB07D600CFFCCB /* pipo-btleffect027.png in Resources */,
 				FB839EA41AAB07D600CFFCCB /* pipo-btleffect128.png in Resources */,
 				612C6F1E1A85FEA00089573B /* BossNomal3.png in Resources */,
@@ -1346,6 +1354,7 @@
 				FB839E811AAB07D600CFFCCB /* pipo-btleffect035.png in Resources */,
 				612C6F301A85FEA00089573B /* Enemy2Nomal3.png in Resources */,
 				1837F45E1A4E48C100075299 /* bt02.png in Resources */,
+				91FAD28D1AC8FC0D008F55D1 /* pipo-btleffect116h_jacket.png in Resources */,
 				FB839E731AAB07D600CFFCCB /* pipo-btleffect021.png in Resources */,
 				FBCEA86D1AAB5FCF00663C61 /* pipo-btleffect128_jacket@2x.png in Resources */,
 				181615271AB41FAC00E486AE /* dora18.png in Resources */,
@@ -1430,7 +1439,6 @@
 				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				B822D96F1ABD4D660000584A /* GameCenterManager.m in Sources */,
-				B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */,
 				B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */,
 				6156CD981AB5CA06008B7479 /* MySegue.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,

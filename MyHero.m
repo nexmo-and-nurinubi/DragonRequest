@@ -19,15 +19,11 @@
     
     if (self) {
         
-        _myHumanType = HumanTypeHero;
+        self.myHumanType = HumanTypeHero;
         
         self.name = heroDefaultName;
         
-        self.power = heroDefaultPower;
-        self.minusPower = heroMinusPower;
-        
-        self.power = heroDefaultPower;
-        self.defaultPower = heroDefaultPower;
+        [self setPower:heroDefaultPower defaultPower:heroDefaultPower];
         self.minusPower = heroMinusPower;
         
         _level = 0;
