@@ -490,7 +490,7 @@
             
             _topScore = _score;
             
-            [[GameCenterManager sharedManager] saveAndReportScore:(int)_topScore leaderboard:@"dragonRequest"  sortOrder:GameCenterSortOrderHighToLow];
+            [[GameCenterManager sharedManager] saveAndReportScore:(int)_topScore leaderboard:@"shinsotsu"  sortOrder:GameCenterSortOrderHighToLow];
             
             
             // Integerの保存
