@@ -135,7 +135,6 @@
 		B802D4221A90B53300305B21 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41D1A90B53300305B21 /* Human.m */; };
 		B802D4231A90B53300305B21 /* MyHero.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D41F1A90B53300305B21 /* MyHero.m */; };
 		B802D4261A90B5CB00305B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D4251A90B5CB00305B21 /* ViewController.m */; };
-		B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753271AC426F800D18161 /* DropItemCommon.m */; };
 		B807532D1AC426F800D18161 /* DropItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753291AC426F800D18161 /* DropItemController.m */; };
 		B807532E1AC426F800D18161 /* DropItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B807532B1AC426F800D18161 /* DropItemImageView.m */; };
 		B80753321AC432C300D18161 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80753311AC432C300D18161 /* CustomIOS7AlertView.m */; };
@@ -393,7 +392,6 @@
 		B802D4251A90B5CB00305B21 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B802D4271A90B61900305B21 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		B80753261AC426F800D18161 /* DropItemCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemCommon.h; sourceTree = "<group>"; };
-		B80753271AC426F800D18161 /* DropItemCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemCommon.m; sourceTree = "<group>"; };
 		B80753281AC426F800D18161 /* DropItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemController.h; sourceTree = "<group>"; };
 		B80753291AC426F800D18161 /* DropItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItemController.m; sourceTree = "<group>"; };
 		B807532A1AC426F800D18161 /* DropItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItemImageView.h; sourceTree = "<group>"; };
@@ -687,12 +685,6 @@
 		18A0B2781A3C0DFF00CDCF8A /* common */ = {
 			isa = PBXGroup;
 			children = (
-				B80753261AC426F800D18161 /* DropItemCommon.h */,
-				B80753271AC426F800D18161 /* DropItemCommon.m */,
-				B80753281AC426F800D18161 /* DropItemController.h */,
-				B80753291AC426F800D18161 /* DropItemController.m */,
-				B807532A1AC426F800D18161 /* DropItemImageView.h */,
-				B807532B1AC426F800D18161 /* DropItemImageView.m */,
 				B802D4271A90B61900305B21 /* common.h */,
 				FBC760DF1AB40F4000AEB38A /* common.m */,
 				B802D4151A90B50E00305B21 /* DrUtil.h */,
@@ -863,6 +855,11 @@
 		911239301AC3CE3600B4A3ED /* DropItem */ = {
 			isa = PBXGroup;
 			children = (
+				B80753261AC426F800D18161 /* DropItemCommon.h */,
+				B80753281AC426F800D18161 /* DropItemController.h */,
+				B80753291AC426F800D18161 /* DropItemController.m */,
+				B807532A1AC426F800D18161 /* DropItemImageView.h */,
+				B807532B1AC426F800D18161 /* DropItemImageView.m */,
 			);
 			name = DropItem;
 			sourceTree = "<group>";
@@ -1442,7 +1439,6 @@
 				FB839EBC1AAB0BB900CFFCCB /* WeaponCollectionReusableFooterView.m in Sources */,
 				B802D4211A90B53300305B21 /* EnemyMarine.m in Sources */,
 				B822D96F1ABD4D660000584A /* GameCenterManager.m in Sources */,
-				B807532C1AC426F800D18161 /* DropItemCommon.m in Sources */,
 				B8EDB4911AB4071D00E36CF3 /* SetupViewController.m in Sources */,
 				6156CD981AB5CA06008B7479 /* MySegue.m in Sources */,
 				189F86181A32DCCE0016D4EE /* DragonRequest.xcdatamodeld in Sources */,
