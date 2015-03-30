@@ -728,6 +728,8 @@
     //ボス初期化
     [_enemyBossArray removeAllObjects];
     
+    //DropItem初期化
+    [_dropItemImageViewArray removeAllObjects];
     
     //hero インスタンス作成
     CGPoint heroPos = CGPointMake([common screenSizeWidth]/2, [common screenSizeHeight]/2);
@@ -889,6 +891,13 @@
 
         //_heroイメージクリア
         [_hero removeImage];
+        
+        //dropItemイメージクリア
+        for(DropItemImageView *dropItemImageView in _dropItemImageViewArray){
+            
+            [dropItemImageView removeFromSuperview];
+            
+        }
         
         [self startGame];
         
