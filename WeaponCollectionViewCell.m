@@ -40,8 +40,6 @@
             self.weaponImageView.image = [UIImage imageNamed:imageName_ultimaJacket];
             break;
         }
-        default:
-            break;
     }
 }
 

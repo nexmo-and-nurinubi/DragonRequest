@@ -6,14 +6,6 @@
 //  Copyright (c) 2015年 Apple. All rights reserved.
 //
 
-typedef NS_ENUM(NSInteger, WeaponType) {
-    WeaponTypeFlood,
-    WeaponTypeFreeze,
-    WeaponTypeFlare,
-    WeaponTypeHoly,
-    WeaponTypeUltima
-};
-
 static NSString * const imageName_floodJacket = @"pipo-btleffect125_jacket.png";
 static NSString * const imageName_freezeJacket = @"pipo-btleffect128_jacket.png";
 static NSString * const imageName_flareJacket = @"pipo-btleffect126_jacket.png";

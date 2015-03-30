@@ -12,4 +12,9 @@
 
 - (instancetype)initWithPoint:(CGPoint)center dropItemType:(DropItemType)type;
 
+@property (nonatomic, assign) DropItemType dropItemType;
+@property (nonatomic, assign) StatusUpType statusUpType;
+@property (nonatomic, assign) MagicType magicType;
+@property (nonatomic, assign) WeaponType weaponType;
+
 @end

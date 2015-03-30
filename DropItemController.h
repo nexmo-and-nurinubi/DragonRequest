@@ -13,5 +13,6 @@
 + (DropItemType)randDropItemType;
 + (BOOL)isCreateDropItem:(DropItemType)type;
 
++ (StatusUpType)randStatusUpType;
 
 @end

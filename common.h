@@ -127,6 +127,8 @@ typedef NS_ENUM(NSUInteger, DirectionType) {
 
 //DropItem情報
 #define DropItemImageSize               24
+#define powerHealingValue               20
+#define powerUpValue                    10
 
 //Score初期情報
 #define bossDeadScore                   100

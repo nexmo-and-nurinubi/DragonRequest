@@ -27,4 +27,8 @@
     }
 }
 
++ (StatusUpType)randStatusUpType {
+    return arc4random() % statusUpCount;
+}
+
 @end
