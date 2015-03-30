@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Developers</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>開発者
+			
+日本電子専門学校　山田くん
+
+日本電子専門学校　上山くん
+
+日本電子専門学校　長澤くん
+
+日本電子専門学校　鈴木くん
+
+帝京大学　李くん
+
+株式会社ヌリヌビ　新井先生
+
+株式会社ヌリヌビ　柴田先生
+
+ムンちゃん
+
+</string>
+		</dict>
+	</array>
+</dict>
+</plist>

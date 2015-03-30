@@ -8,26 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GameCenterManager.h"
+#import "CustomIOS7AlertView.h"
+
 #import "EnemyBoss.h"
 #import "EnemyMarine.h"
 #import "MyHero.h"
+#import "WeaponCollectionView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<GameCenterManagerDelegate,CustomIOS7AlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *actionTextView;
-
-@property (weak, nonatomic) IBOutlet UITextView *positionTextField;
-
-@property (weak, nonatomic) IBOutlet UIButton *resetBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *fieldView;
+@property (weak, nonatomic) IBOutlet WeaponCollectionView *weaponCollectionView;
 
 @property (nonatomic) int xPos;
 @property (nonatomic) int yPos;
-
-- (IBAction)moveAction:(id)sender;
-
-- (IBAction)resetAction:(id)sender;
-
 
 @end
 
